@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Scanner : MonoBehaviour
@@ -14,6 +13,7 @@ public class Scanner : MonoBehaviour
 
     private Transform _objectOnScan;
 
+    [SerializeField]
     private LineRenderer _lineOfSight;
     private List<Transform> _intersectedScannables = new();
 
@@ -22,7 +22,6 @@ public class Scanner : MonoBehaviour
     {
         _camera = Camera.main;
         _transform = transform;
-        _lineOfSight = transform.GetChild(0).GetComponent<LineRenderer>();
     }
 
     private void Update()
@@ -42,10 +41,12 @@ public class Scanner : MonoBehaviour
 
     private void ChooseScannable()
     {
-        if (_intersectedScannables.Count == 1) return;
+        if (_intersectedScannables.Count == 0) StopScanCurrent();
 
-        Transform featureToScan = null;
+        if (_intersectedScannables.Count <= 1) return;
+
         float currentOnScanDistance = _objectOnScan == null ? int.MaxValue : DistanceTo(_objectOnScan.position);
+        Transform featureToScan = _objectOnScan;
 
         foreach (Transform feature in _intersectedScannables)
         {
@@ -55,14 +56,17 @@ public class Scanner : MonoBehaviour
                 featureToScan = feature;
         }
 
-        if (featureToScan != null)
-        {
-            Scan(featureToScan);
-        }
+        if (featureToScan == _objectOnScan) return;
+
+        StopScanCurrent();
+        Scan(featureToScan);
     }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (!other.CompareTag("Scannable")) return;
+
         Transform transform = other.transform;
         if (!_intersectedScannables.Contains(transform) && IsWithinScanRadius(transform.position))
         {
@@ -73,6 +77,8 @@ public class Scanner : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
+        if (!other.CompareTag("Scannable")) return;
+
         Transform transform = other.transform;
         if (!_intersectedScannables.Contains(transform) && IsWithinScanRadius(transform.position))
         {
@@ -90,18 +96,14 @@ public class Scanner : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
+        if (!other.CompareTag("Scannable")) return;
+
         _intersectedScannables.Remove(other.transform);
     }
 
     private void Scan(Transform feature)
     {
         // TODO: cache scannable
-        if (_objectOnScan != null)
-        {
-            Scannable currentScannable = _objectOnScan.GetComponent<Scannable>();
-            currentScannable.StopScan();
-        }
-
         Debug.Log($"Scanning {feature.gameObject.name}");
         _objectOnScan = feature;
         // _objectOnScanDistance = DistanceTo(feature.position);
@@ -111,10 +113,11 @@ public class Scanner : MonoBehaviour
 
     private void StopScanCurrent()
     {
+        if (_objectOnScan == null) return;
         Scannable scannable = _objectOnScan.GetComponent<Scannable>();
         scannable.StopScan();
-        _objectOnScan = null;
         _intersectedScannables.Remove(_objectOnScan);
+        _objectOnScan = null;
     }
 
     private float DistanceTo(Vector3 position)
