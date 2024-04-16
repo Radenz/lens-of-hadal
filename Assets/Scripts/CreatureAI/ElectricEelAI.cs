@@ -76,6 +76,12 @@ public class ElectricEelAI : MonoBehaviour
 
     private void OnRoaming()
     {
+        if (!_ai.hasPath)
+        {
+            _ai.destination = _transform.RandomWithinRadius(_roamingRadius);
+            return;
+        }
+
         if (_ai.IsIdle())
         {
             _ai.destination = _transform.RandomWithinRadius(_roamingRadius);
