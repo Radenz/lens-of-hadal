@@ -93,13 +93,11 @@ public class PufferfishAI : MonoBehaviour
     private void OnDetectPlayer()
     {
         State = PufferfishState.Inflated;
-        OnStateChanged();
     }
 
     private void OnLosePlayer()
     {
         State = PufferfishState.Roaming;
-        OnStateChanged();
     }
 }
 
