@@ -6,119 +6,141 @@ using UnityEngine;
 public class PiranhaAI : MonoBehaviour
 {
     [SerializeField]
-    List<PathFindingBehavior> behaviors = new();
-
-    private readonly Dictionary<PiranhaState, PathFindingBehavior> _behaviorMap = new();
-
-    [SerializeField]
     private Rigidbody2D _rigidbody;
 
     [SerializeField]
     private RangeTrigger _detectionRange;
     [SerializeField]
     private RangeTrigger _aggresionRange;
-    // TODO: refactor, use IAstarAI interface
+
     [SerializeField]
-    AIPath _ai;
+    private float _roamingRadius;
+    [SerializeField]
+    private float _retreatRadius;
+    private float _aggresionRadius;
+
+    [SerializeField]
+    private float _speed;
+    [SerializeField]
+    private float _aggresiveSpeed;
+
+    [SerializeField]
+    private AIPath _ai;
 
     private PiranhaState _state = PiranhaState.Roaming;
-    private bool _aggressive = false;
-    private Vector2 _destination;
     private Transform _transform;
-
-    private Vector2 Position => _transform.position;
-
-    [SerializeField]
-    private float _idleMinTime = 0.3f;
-    [SerializeField]
-    private float _idleMaxTime = 2f;
-    private TimerSignal _idleTimer;
+    private Transform _player;
+    private PiranhaState State
+    {
+        get => _state;
+        set
+        {
+            _state = value;
+            OnStateChanged();
+        }
+    }
 
     private void Start()
     {
         _transform = transform;
 
-        foreach (PathFindingBehavior behavior in behaviors)
-        {
-            if (behavior is RoamingBehavior)
-            {
-                _behaviorMap.Add(PiranhaState.Roaming, behavior);
-            }
-
-            if (behavior is FollowPlayerBehavior)
-            {
-                _behaviorMap.Add(PiranhaState.Attacking, behavior);
-            }
-        }
-
         _detectionRange.Entered += OnDetectPlayer;
         _aggresionRange.Exited += OnLosePlayer;
+        _aggresionRadius = _aggresionRange.GetComponent<CircleCollider2D>().radius;
 
-        _idleTimer = Timer.Instance.SetTimer(BeginRoam, Random.Range(_idleMinTime, _idleMaxTime));
+        // TODO: refactor, use singleton player
+        _player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        _ai.maxSpeed = _speed;
+        _ai.destination = _transform.RandomWithinRadius(_roamingRadius);
     }
 
     private void Update()
     {
-        if (_state == PiranhaState.Idle) return;
-
-        if (HasReachedDestination())
-            OnDestinationReached();
-
-        if (_aggressive)
+        switch (State)
         {
-            _destination = _behaviorMap[_state].GetDestination();
-            _ai.destination = _destination;
+            case PiranhaState.Roaming:
+                OnRoaming();
+                break;
+            case PiranhaState.Attacking:
+                OnAttacking();
+                break;
+            case PiranhaState.Retreating:
+                OnRetreating();
+                break;
         }
     }
 
-    private void OnDestinationReached()
+    private void OnRoaming()
     {
-        if (_state == PiranhaState.Roaming)
+        if (_ai.IsIdle())
         {
-            _state = PiranhaState.Idle;
-            _idleTimer = Timer.Instance.SetTimer(BeginRoam, Random.Range(_idleMinTime, _idleMaxTime));
-        }
-
-        if (_state == PiranhaState.Attacking)
-        {
-            // TODO: select a random point, then try attacking again
-            _aggressive = false;
-            BeginRoam();
+            _ai.destination = _transform.RandomWithinRadius(_roamingRadius);
         }
     }
 
-    private void BeginRoam()
+    private void OnAttacking()
     {
-        Debug.Log("Being Roaming");
-        _state = PiranhaState.Roaming;
-        _destination = _behaviorMap[_state].GetDestination();
-        _ai.destination = _destination;
+        if (_ai.IsIdle())
+        {
+            State = PiranhaState.Retreating;
+        }
+        else
+        {
+            _ai.destination = _player.position;
+        }
+    }
+
+    private void OnRetreating()
+    {
+        if (_ai.IsIdle())
+        {
+            if (Vector2.Distance(_transform.position, _player.position) <= _aggresionRadius)
+            {
+                State = PiranhaState.Attacking;
+            }
+            else
+            {
+                State = PiranhaState.Roaming;
+            }
+
+        }
+    }
+
+    private void OnStateChanged()
+    {
+        switch (State)
+        {
+            case PiranhaState.Roaming:
+                _ai.destination = _transform.RandomWithinRadius(_roamingRadius);
+                _ai.maxSpeed = _speed;
+                break;
+            case PiranhaState.Attacking:
+                Debug.Log("A piranha is attacking");
+                _ai.destination = _player.position;
+                _ai.maxSpeed = _aggresiveSpeed;
+                break;
+            case PiranhaState.Retreating:
+                Debug.Log("A piranha is retreating");
+                _ai.destination = _transform.RandomOnRadius(_retreatRadius);
+                break;
+        }
     }
 
     private void OnDetectPlayer()
     {
-        _idleTimer?.Cancel();
-        _aggressive = true;
-        _ai.maxSpeed = 2;
-        _state = PiranhaState.Attacking;
-        _destination = _behaviorMap[_state].GetDestination();
+        State = PiranhaState.Attacking;
     }
 
     private void OnLosePlayer()
     {
-        _aggressive = false;
-        BeginRoam();
-    }
-
-    private bool HasReachedDestination()
-    {
-        return (Position - _destination).magnitude <= .5f;
+        State = PiranhaState.Roaming;
     }
 }
 
 public enum PiranhaState
 {
     Roaming,
-    Idle,
-    Attacking
+    Attacking,
+    Retreating
 }
