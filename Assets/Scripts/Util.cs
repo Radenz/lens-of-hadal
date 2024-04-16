@@ -35,6 +35,6 @@ public static class AIExtensions
 {
     public static bool IsIdle(this IAstarAI ai)
     {
-        return !ai.pathPending && (ai.reachedDestination || !ai.hasPath);
+        return !ai.pathPending && (ai.reachedDestination || ai.reachedEndOfPath || !ai.hasPath);
     }
 }
