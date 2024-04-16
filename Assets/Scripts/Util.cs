@@ -23,6 +23,12 @@ public static class MonoBehaviourExtensions
         Vector2 shift = Random.insideUnitCircle * radius;
         return (Vector2)transform.position + shift;
     }
+
+    public static Vector2 RandomOnRadius(this Transform transform, float radius)
+    {
+        Vector2 shift = Random.insideUnitCircle.normalized * radius;
+        return (Vector2)transform.position + shift;
+    }
 }
 
 public static class AIExtensions

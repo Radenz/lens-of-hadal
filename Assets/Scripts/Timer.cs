@@ -20,6 +20,12 @@ public class Timer : MonoBehaviour
 
         foreach (TimerHandle handle in _handles)
         {
+            if (handle.Cancelled)
+            {
+                disposedHandles.Add(handle);
+                continue;
+            }
+
             handle.CurrentTime += Time.deltaTime;
 
             if (handle.CurrentTime >= handle.TargetTime)
@@ -31,7 +37,7 @@ public class Timer : MonoBehaviour
 
         foreach (TimerHandle handle in disposedHandles)
         {
-            _handles.Remove(handle);
+            RemoveHandle(handle);
         }
     }
 
@@ -41,12 +47,18 @@ public class Timer : MonoBehaviour
         {
             CurrentTime = 0,
             TargetTime = seconds,
-            Callback = callback
+            Callback = callback,
+            Cancelled = false
         };
 
         _handles.Add(handle);
 
-        return new(() => RemoveHandle(handle));
+        return new(() => CancelHandle(handle));
+    }
+
+    private void CancelHandle(TimerHandle handle)
+    {
+        handle.Cancelled = true;
     }
 
     private void RemoveHandle(TimerHandle handle)
@@ -59,6 +71,7 @@ public class TimerHandle
 {
     public float CurrentTime;
     public float TargetTime;
+    public bool Cancelled;
     public Action Callback;
 }
 
