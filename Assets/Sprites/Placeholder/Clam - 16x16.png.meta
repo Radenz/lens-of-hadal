@@ -215,7 +215,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Clam - 16x16_0: 8089400689518481876
+      Clam - 16x16_1: 8467756595154783746
+      Clam - 16x16_2: -645718065969027948
+      Clam - 16x16_3: -4322740421057929732
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

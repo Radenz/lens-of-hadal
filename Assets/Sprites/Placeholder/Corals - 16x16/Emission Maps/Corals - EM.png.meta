@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Corals - EM_0: 2166721547951260894
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

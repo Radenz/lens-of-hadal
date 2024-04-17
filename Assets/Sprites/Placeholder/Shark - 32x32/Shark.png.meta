@@ -503,7 +503,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Shark_0: 5746764926269108267
+      Shark_1: 303420649233120723
+      Shark_10: -113069949435566741
+      Shark_11: -5098738669257863861
+      Shark_12: -1804030686354823259
+      Shark_13: 3222940141236203219
+      Shark_14: 2138600498061705106
+      Shark_15: -6662369581173553113
+      Shark_2: -2667083108151795400
+      Shark_3: -1188171541994365872
+      Shark_4: -6443143152671075294
+      Shark_5: -9221222104238743887
+      Shark_6: 606708205016773565
+      Shark_7: -1166654819748465478
+      Shark_8: -6582753985955235636
+      Shark_9: 4446947673199342103
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

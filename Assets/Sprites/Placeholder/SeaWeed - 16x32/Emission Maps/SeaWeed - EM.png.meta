@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SeaWeed - EM_0: -8189915858798662011
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

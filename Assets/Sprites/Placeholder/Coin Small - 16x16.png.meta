@@ -263,7 +263,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Coin Small - 16x16_0: -8967938911318902758
+      Coin Small - 16x16_1: -7992433996676981408
+      Coin Small - 16x16_2: 109751643132057349
+      Coin Small - 16x16_3: 1015177708703474020
+      Coin Small - 16x16_4: 639513269499496034
+      Coin Small - 16x16_5: 3501686524420551118
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

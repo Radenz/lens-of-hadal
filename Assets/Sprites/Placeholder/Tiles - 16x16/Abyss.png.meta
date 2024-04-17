@@ -215,7 +215,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Abyss_0: -5931932364317517272
+      Abyss_1: 2755468964844097192
+      Abyss_2: -6507495405270058025
+      Abyss_3: -8194664426638946268
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
