@@ -4,6 +4,9 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Movement : MonoBehaviour
 {
+    // TODO: cap velocity to _speed, accelerate based on _acceleration
+    [SerializeField]
+    private float _acceleration;
     [SerializeField]
     private float _speed;
     [SerializeField]
@@ -12,20 +15,26 @@ public class Movement : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private Vector2 _direction;
     private Vector2 _dashDirection;
+    private Vector2 _bounceDirection;
 
-    private bool _shouldDash = false;
     private bool _isDashing = false;
-    private float _dashTime = 0;
-    private float _dashCooldownTime = 0;
+    private bool _isBouncing = false;
+
+    [SerializeField]
+    private bool _canDash = true;
+    private bool _shouldDash = false;
+    private bool _shouldBounce = false;
+
+    private float _defaultDrag;
 
 
-    void Start()
+    private void Start()
     {
-        _dashCooldownTime = _dashProperties.Cooldown;
         _rigidbody = GetComponent<Rigidbody2D>();
+        _defaultDrag = _rigidbody.drag;
     }
 
-    void Update()
+    private void Update()
     {
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
@@ -33,48 +42,59 @@ public class Movement : MonoBehaviour
         _direction = new Vector2(h, v).normalized;
 
         if (Input.GetKeyDown(_dashProperties.Key))
-        {
-            if (_dashCooldownTime < _dashProperties.Cooldown)
-            {
-                return;
-            }
-
-            if (!_isDashing)
-            {
-                _dashCooldownTime = 0;
-                _shouldDash = true;
-            }
-        }
-
-        _dashCooldownTime += Time.deltaTime;
+            _shouldDash = true;
     }
 
     private void FixedUpdate()
     {
+        if (_isDashing || _isBouncing) return;
+
+        if (_shouldBounce)
+        {
+            _shouldBounce = false;
+            _rigidbody.velocity = Vector2.zero;
+            _rigidbody.AddForce(_bounceDirection);
+            return;
+        }
+
         if (_shouldDash)
-        {
-            _shouldDash = false;
-            _isDashing = true;
-            _dashTime = 0;
-            _dashDirection = 2 * _direction.normalized + _rigidbody.velocity.normalized;
-            _dashDirection = _dashDirection.normalized;
-            return;
-        }
-
-        if (_isDashing)
-        {
-            _rigidbody.velocity = _dashDirection * _dashProperties.Speed;
-            _dashTime += Time.deltaTime;
-
-            if (_dashTime >= _dashProperties.Duration)
-            {
-                _isDashing = false;
-            }
-            return;
-        }
+            Dash();
 
         _shouldDash = false;
-        _rigidbody.AddForce(_direction * _speed);
+        _rigidbody.AddForce(_direction * _acceleration);
+
+        if (_rigidbody.velocity.magnitude > _speed)
+        {
+            _rigidbody.velocity *= _speed / _rigidbody.velocity.magnitude;
+        }
+    }
+
+    public void Bounce(Vector2 direction, float strength)
+    {
+        _bounceDirection = direction.normalized * strength;
+        _shouldBounce = true;
+    }
+
+    private async void Dash()
+    {
+        _shouldDash = false;
+        if (!_canDash) return;
+
+        _canDash = false;
+        _isDashing = true;
+
+        // FIXME: get direction from input control
+        _dashDirection = 2 * _direction.normalized + _rigidbody.velocity.normalized;
+        _dashDirection = _dashDirection.normalized;
+        _rigidbody.velocity = _dashDirection * _dashProperties.Speed;
+        _rigidbody.drag = 0f;
+
+        await Awaitable.WaitForSecondsAsync(_dashProperties.Duration);
+        _isDashing = false;
+        _rigidbody.drag = _defaultDrag;
+
+        await Awaitable.WaitForSecondsAsync(_dashProperties.Cooldown);
+        _canDash = true;
     }
 }
 

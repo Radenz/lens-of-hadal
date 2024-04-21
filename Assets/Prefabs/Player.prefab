@@ -205,6 +205,7 @@ GameObject:
   - component: {fileID: 4431144432715467610}
   - component: {fileID: 8522675064028508534}
   - component: {fileID: 5557278146023008605}
+  - component: {fileID: 4502696038651330938}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -321,7 +322,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca7f4d9f1ea9fe640ac3089d5fbc08b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 3
+  _acceleration: 3
+  _speed: 15
   _dashProperties:
     Speed: 6
     Duration: 0.3
@@ -415,3 +417,16 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &4502696038651330938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7958039500952871995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2605db2d1396da046b92fff3c13fc159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _defaultHealthPoints: 3

@@ -7,6 +7,9 @@ public class PufferfishAI : MonoBehaviour
     private Rigidbody2D _rigidbody;
 
     [SerializeField]
+    private RangeTrigger _inflatedHitboxTrigger;
+
+    [SerializeField]
     private RangeTrigger _detectionRange;
     [SerializeField]
     private RangeTrigger _aggresionRange;
@@ -20,11 +23,14 @@ public class PufferfishAI : MonoBehaviour
     private float _speed;
     [SerializeField]
     private float _inflatedSpeed;
+    [SerializeField]
+    private float _bounceStrength;
 
     [SerializeField]
     AIPath _ai;
 
     private Transform _transform;
+    private Transform _playerTransform;
     private PufferfishState _state = PufferfishState.Roaming;
     private PufferfishState State
     {
@@ -42,6 +48,8 @@ public class PufferfishAI : MonoBehaviour
 
         _detectionRange.Entered += OnDetectPlayer;
         _aggresionRange.Exited += OnLosePlayer;
+        _inflatedHitboxTrigger.Entered += BouncePlayer;
+        _playerTransform = PlayerController.Instance.GetComponent<Transform>();
 
         _ai.maxSpeed = _speed;
         _ai.destination = _transform.RandomWithinRadius(_roamingRadius);
@@ -80,6 +88,17 @@ public class PufferfishAI : MonoBehaviour
         {
             _ai.destination = _transform.RandomWithinRadius(_inflatedRoamingRadius);
         }
+    }
+
+    private void BouncePlayer()
+    {
+        if (State != PufferfishState.Inflated) return;
+
+        Vector2 direction = _playerTransform.position - _transform.position;
+        PlayerController.Instance.Bounce(direction, _bounceStrength);
+        PlayerController.Instance.Damage();
+
+        State = PufferfishState.Roaming;
     }
 
     // TODO: switch sprite to inflated, activate collider & damage source
