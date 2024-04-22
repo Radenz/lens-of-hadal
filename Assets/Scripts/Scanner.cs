@@ -13,11 +13,12 @@ public class Scanner : MonoBehaviour
     private Camera _camera;
     private Transform _transform;
 
-    private Transform _objectOnScan;
+    // private Transform _objectOnScan;
+    private Scannable _objectOnScan;
 
     [SerializeField]
     private LineRenderer _lineOfSight;
-    private List<Transform> _intersectedScannables = new();
+    private List<Scannable> _intersectedScannables = new();
 
     public bool IsScanning => _direction.magnitude != 0;
 
@@ -33,11 +34,14 @@ public class Scanner : MonoBehaviour
     private void Update()
     {
         _direction = _playerInputActions.World.Scan.ReadValue<Vector2>();
-
-        Debug.Log(_direction);
-
         Vector3 position = _direction * 2.5f;
         _lineOfSight.SetPosition(1, position);
+
+        if (_objectOnScan != null && _objectOnScan.IsScanned)
+        {
+            _intersectedScannables.Remove(_objectOnScan);
+            StopScanCurrent();
+        }
     }
 
     private void FixedUpdate()
@@ -57,14 +61,14 @@ public class Scanner : MonoBehaviour
 
         if (_intersectedScannables.Count <= 1) return;
 
-        float currentOnScanDistance = _objectOnScan == null ? int.MaxValue : DistanceTo(_objectOnScan.position);
-        Transform featureToScan = _objectOnScan;
+        float currentOnScanDistance = _objectOnScan == null ? int.MaxValue : DistanceTo(_objectOnScan.Position);
+        Scannable featureToScan = _objectOnScan;
 
-        foreach (Transform feature in _intersectedScannables)
+        foreach (Scannable feature in _intersectedScannables)
         {
             if (feature == _objectOnScan) continue;
 
-            if (DistanceTo(feature.position) < currentOnScanDistance)
+            if (DistanceTo(feature.Position) < currentOnScanDistance)
                 featureToScan = feature;
         }
 
@@ -79,11 +83,13 @@ public class Scanner : MonoBehaviour
     {
         if (!other.CompareTag("Scannable")) return;
 
-        Transform transform = other.transform;
-        if (!_intersectedScannables.Contains(transform) && IsWithinScanRadius(transform.position))
+        Scannable scannable = other.GetComponent<Scannable>();
+        if (scannable.IsScanned) return;
+
+        if (!_intersectedScannables.Contains(scannable) && IsWithinScanRadius(scannable.Position))
         {
-            _intersectedScannables.Add(transform);
-            if (_intersectedScannables.Count == 1) Scan(transform);
+            _intersectedScannables.Add(scannable);
+            if (_intersectedScannables.Count == 1) Scan(scannable);
         }
     }
 
@@ -91,16 +97,18 @@ public class Scanner : MonoBehaviour
     {
         if (!other.CompareTag("Scannable")) return;
 
-        Transform transform = other.transform;
-        if (!_intersectedScannables.Contains(transform) && IsWithinScanRadius(transform.position))
+        Scannable scannable = other.GetComponent<Scannable>();
+        if (scannable.IsScanned) return;
+
+        if (!_intersectedScannables.Contains(scannable) && IsWithinScanRadius(scannable.Position))
         {
-            _intersectedScannables.Add(transform);
-            if (_intersectedScannables.Count == 1) Scan(transform);
+            _intersectedScannables.Add(scannable);
+            if (_intersectedScannables.Count == 1) Scan(scannable);
         }
 
-        if (_intersectedScannables.Contains(transform) && !IsWithinScanRadius(transform.position))
+        if (_intersectedScannables.Contains(scannable) && !IsWithinScanRadius(scannable.Position))
         {
-            _intersectedScannables.Remove(transform);
+            _intersectedScannables.Remove(scannable);
             if (_objectOnScan == transform)
                 StopScanCurrent();
         }
@@ -110,17 +118,14 @@ public class Scanner : MonoBehaviour
     {
         if (!other.CompareTag("Scannable")) return;
 
-        _intersectedScannables.Remove(other.transform);
+        Scannable scannable = other.GetComponent<Scannable>();
+        _intersectedScannables.Remove(scannable);
     }
 
-    private void Scan(Transform feature)
+    private void Scan(Scannable feature)
     {
-        // TODO: cache scannable
-        Debug.Log($"Scanning {feature.gameObject.name}");
         _objectOnScan = feature;
-        // _objectOnScanDistance = DistanceTo(feature.position);
-        Scannable scannable = feature.GetComponent<Scannable>();
-        scannable.StartScan();
+        feature.StartScan();
     }
 
     private void StopScanCurrent()
