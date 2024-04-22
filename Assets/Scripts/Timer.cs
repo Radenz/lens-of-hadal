@@ -18,8 +18,10 @@ public class Timer : MonoBehaviour
     {
         List<TimerHandle> disposedHandles = new();
 
-        foreach (TimerHandle handle in _handles)
+        // ! DO NOT use foreach since _handles can be modified during
+        for (int i = 0; i < _handles.Count; i++)
         {
+            TimerHandle handle = _handles[i];
             if (handle.Cancelled)
             {
                 disposedHandles.Add(handle);
