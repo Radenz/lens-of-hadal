@@ -12,6 +12,8 @@ public class PiranhaAI : MonoBehaviour
     private RangeTrigger _detectionRange;
     [SerializeField]
     private RangeTrigger _aggresionRange;
+    [SerializeField]
+    private RangeTrigger _attackHitboxTrigger;
 
     [SerializeField]
     private float _roamingRadius;
@@ -47,6 +49,7 @@ public class PiranhaAI : MonoBehaviour
         _detectionRange.Entered += OnDetectPlayer;
         _aggresionRange.Exited += OnLosePlayer;
         _aggresionRadius = _aggresionRange.GetComponent<CircleCollider2D>().radius;
+        _attackHitboxTrigger.Entered += OnAttack;
 
         // TODO: refactor, use singleton player
         _player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -87,14 +90,14 @@ public class PiranhaAI : MonoBehaviour
 
     private void OnAttacking()
     {
-        if (_ai.IsIdle())
-        {
-            State = PiranhaState.Retreating;
-        }
-        else
-        {
-            _ai.destination = _player.position;
-        }
+        _ai.destination = _player.position;
+    }
+
+    private void OnAttack()
+    {
+        if (State != PiranhaState.Attacking) return;
+        PlayerController.Instance.Damage();
+        State = PiranhaState.Retreating;
     }
 
     private void OnRetreating()
