@@ -69,8 +69,8 @@ public class ElectricEelAI : MonoBehaviour
 
     private void Zap()
     {
-        // TODO: damage player, show zap vfx, play zap sfx
-        Debug.Log("Zapping");
+        // TODO: show zap vfx, play zap sfx
+        PlayerController.Instance.Damage();
         _zapTimer = Timer.Instance.SetTimer(Zap, _zapCooldownTime);
     }
 
