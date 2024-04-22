@@ -206,6 +206,7 @@ GameObject:
   - component: {fileID: 8522675064028508534}
   - component: {fileID: 5557278146023008605}
   - component: {fileID: 4502696038651330938}
+  - component: {fileID: 13769516596573448}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -329,6 +330,16 @@ MonoBehaviour:
     Duration: 0.3
     Cooldown: 3
     Key: 9
+  _inputAction:
+    m_Name: Input
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: bad3800d-07d1-4cb1-b43e-d5d469a16c79
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  _canDash: 1
 --- !u!58 &8522675064028508534
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -430,3 +441,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _defaultHealthPoints: 3
+--- !u!114 &13769516596573448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7958039500952871995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 52c9856c9129595408394cca6f212593, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f1f61fd7-cb19-4de0-b52d-49df870107b6
+    m_ActionName: 'World/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: World
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}

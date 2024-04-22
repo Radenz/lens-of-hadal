@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Movement : MonoBehaviour
@@ -11,6 +12,8 @@ public class Movement : MonoBehaviour
     private float _speed;
     [SerializeField]
     private DashProperties _dashProperties;
+
+    private PlayerInputActions _playerInputActions;
 
     private Rigidbody2D _rigidbody;
     private Vector2 _direction;
@@ -32,21 +35,20 @@ public class Movement : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         _defaultDrag = _rigidbody.drag;
+        _playerInputActions = new();
+
+        _playerInputActions.World.Enable();
+        _playerInputActions.World.Dash.performed += _ => _shouldDash = true;
     }
 
-    private void Update()
-    {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
-
-        _direction = new Vector2(h, v).normalized;
-
-        if (Input.GetKeyDown(_dashProperties.Key))
-            _shouldDash = true;
-    }
+    // private void Update()
+    // {
+    // }
 
     private void FixedUpdate()
     {
+        _direction = _playerInputActions.World.Move.ReadValue<Vector2>();
+
         if (_isDashing || _isBouncing) return;
 
         if (_shouldBounce)

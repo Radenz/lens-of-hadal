@@ -8,6 +8,8 @@ public class Scanner : MonoBehaviour
     [SerializeField]
     private float _scanAngleRadius;
 
+    private PlayerInputActions _playerInputActions;
+
     private Camera _camera;
     private Transform _transform;
 
@@ -17,18 +19,22 @@ public class Scanner : MonoBehaviour
     private LineRenderer _lineOfSight;
     private List<Transform> _intersectedScannables = new();
 
+    public bool IsScanning => _direction.magnitude != 0;
+
 
     private void Start()
     {
         _camera = Camera.main;
         _transform = transform;
+        _playerInputActions = new();
+        _playerInputActions.World.Enable();
     }
 
     private void Update()
     {
-        Vector2 mousePosition = _camera.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 scannerPosition = _transform.position;
-        _direction = (mousePosition - scannerPosition).normalized;
+        _direction = _playerInputActions.World.Scan.ReadValue<Vector2>();
+
+        Debug.Log(_direction);
 
         Vector3 position = _direction * 2.5f;
         _lineOfSight.SetPosition(1, position);
@@ -36,6 +42,12 @@ public class Scanner : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!IsScanning)
+        {
+            StopScanCurrent();
+            return;
+        }
+
         ChooseScannable();
     }
 
