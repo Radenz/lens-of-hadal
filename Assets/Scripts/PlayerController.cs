@@ -35,5 +35,7 @@ public class PlayerController : MonoBehaviour
     public void Damage()
     {
         // TODO: impl health system
+        _healthPoints--;
+        Debug.Log("Player is damaged");
     }
 }
