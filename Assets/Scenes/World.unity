@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Piranha_1
       objectReference: {fileID: 0}
+    - target: {fileID: 3045631472178583046, guid: c2d65d7c0c54bd6469f82c1475a29223, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3846166903428966937, guid: c2d65d7c0c54bd6469f82c1475a29223, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.32
@@ -232,6 +236,10 @@ PrefabInstance:
     - target: {fileID: 7457342149956301026, guid: 6b8c2001973cb994297fd13042d64c83, type: 3}
       propertyPath: m_Name
       value: ElectricEel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457342149956301026, guid: 6b8c2001973cb994297fd13042d64c83, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -512,6 +520,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &276992651
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 609753256}
+    m_Modifications:
+    - target: {fileID: 1377186851564923910, guid: 0402187fc3a108d4096725be79d0f2c1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 17.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377186851564923910, guid: 0402187fc3a108d4096725be79d0f2c1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377186851564923910, guid: 0402187fc3a108d4096725be79d0f2c1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.5299159
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377186851564923910, guid: 0402187fc3a108d4096725be79d0f2c1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377186851564923910, guid: 0402187fc3a108d4096725be79d0f2c1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377186851564923910, guid: 0402187fc3a108d4096725be79d0f2c1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377186851564923910, guid: 0402187fc3a108d4096725be79d0f2c1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377186851564923910, guid: 0402187fc3a108d4096725be79d0f2c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377186851564923910, guid: 0402187fc3a108d4096725be79d0f2c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377186851564923910, guid: 0402187fc3a108d4096725be79d0f2c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457342149956301026, guid: 0402187fc3a108d4096725be79d0f2c1, type: 3}
+      propertyPath: m_Name
+      value: GiantSquid
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0402187fc3a108d4096725be79d0f2c1, type: 3}
 --- !u!1 &381574635
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,6 +861,10 @@ PrefabInstance:
     - target: {fileID: 3045631472178583046, guid: c2d65d7c0c54bd6469f82c1475a29223, type: 3}
       propertyPath: m_Name
       value: Piranha
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045631472178583046, guid: c2d65d7c0c54bd6469f82c1475a29223, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3846166903428966937, guid: c2d65d7c0c54bd6469f82c1475a29223, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1122,6 +1191,7 @@ Transform:
   - {fileID: 1847598371}
   - {fileID: 1435141142}
   - {fileID: 1145710595}
+  - {fileID: 1841949526}
   m_Father: {fileID: 1538266657}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &619394800
@@ -2009,6 +2079,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pufferfish
       objectReference: {fileID: 0}
+    - target: {fileID: 2203635375368680294, guid: bb9d276208ef5ca4aa2b0d07b275253f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8976736143953161905, guid: bb9d276208ef5ca4aa2b0d07b275253f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.143154
@@ -2557,6 +2631,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &1841949526 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1377186851564923910, guid: 0402187fc3a108d4096725be79d0f2c1, type: 3}
+  m_PrefabInstance: {fileID: 276992651}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1847598370
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2568,6 +2647,10 @@ PrefabInstance:
     - target: {fileID: 3045631472178583046, guid: c2d65d7c0c54bd6469f82c1475a29223, type: 3}
       propertyPath: m_Name
       value: Piranha_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045631472178583046, guid: c2d65d7c0c54bd6469f82c1475a29223, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3846166903428966937, guid: c2d65d7c0c54bd6469f82c1475a29223, type: 3}
       propertyPath: m_LocalPosition.x
