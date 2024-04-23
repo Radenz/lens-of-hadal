@@ -60,7 +60,11 @@ public class PlayerController : MonoBehaviour
         _dna += amount;
         DOTween.To(
             () => _animatedDna,
-            dna => _dnaHUDLabel.text = Mathf.RoundToInt(dna).ToString(),
+            dna =>
+            {
+                _animatedDna = dna;
+                _dnaHUDLabel.text = Mathf.RoundToInt(dna).ToString();
+            },
             _dna,
             _hudUpdateDuration
         )
