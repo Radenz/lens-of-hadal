@@ -16,7 +16,6 @@ public class Ink : MonoBehaviour
             .SetEase(Ease.Linear)
             .OnComplete(() =>
             {
-                Debug.Log("Destroying object");
                 Destroy(gameObject);
             });
     }
@@ -25,8 +24,7 @@ public class Ink : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // TODO: splat screen
-            Debug.Log("Splatting screen");
+            Splat.Instance.Activate();
         }
     }
 }
