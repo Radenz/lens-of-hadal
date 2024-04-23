@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Movement : MonoBehaviour
 {
+    public static Movement Instance;
+
     // TODO: cap velocity to _speed, accelerate based on _acceleration
     [SerializeField]
     private float _acceleration;
@@ -28,8 +30,15 @@ public class Movement : MonoBehaviour
     private bool _shouldDash = false;
     private bool _shouldBounce = false;
 
+    public event Action Dashing;
+    public event Action DashCooldownFinished;
+
     private float _defaultDrag;
 
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {
@@ -40,10 +49,6 @@ public class Movement : MonoBehaviour
         _playerInputActions.World.Enable();
         _playerInputActions.World.Dash.performed += _ => _shouldDash = true;
     }
-
-    // private void Update()
-    // {
-    // }
 
     private void FixedUpdate()
     {
@@ -85,10 +90,9 @@ public class Movement : MonoBehaviour
         _canDash = false;
         _isDashing = true;
 
-        // FIXME: get direction from input control
-        _dashDirection = 2 * _direction.normalized + _rigidbody.velocity.normalized;
-        _dashDirection = _dashDirection.normalized;
-        _rigidbody.velocity = _dashDirection * _dashProperties.Speed;
+        Dashing?.Invoke();
+
+        _rigidbody.velocity = _direction * _dashProperties.Speed;
         _rigidbody.drag = 0f;
 
         await Awaitable.WaitForSecondsAsync(_dashProperties.Duration);
@@ -96,6 +100,7 @@ public class Movement : MonoBehaviour
         _rigidbody.drag = _defaultDrag;
 
         await Awaitable.WaitForSecondsAsync(_dashProperties.Cooldown);
+        DashCooldownFinished?.Invoke();
         _canDash = true;
     }
 }
