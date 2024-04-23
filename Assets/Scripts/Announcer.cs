@@ -14,6 +14,7 @@ public class Announcer : Singleton<Announcer>
 
     [SerializeField]
     private float _duration = 2;
+    public float Duration => _duration;
 
     private readonly List<Announcement> _announcementQueue = new();
     private bool _isAnnouncing = false;
