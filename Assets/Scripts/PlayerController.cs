@@ -38,4 +38,14 @@ public class PlayerController : MonoBehaviour
         _healthPoints--;
         Debug.Log("Player is damaged");
     }
+
+    public void Shock(float duration)
+    {
+        _movement.Shock(duration);
+    }
+
+    public void AddDNA(int amount)
+    {
+        _dna += amount;
+    }
 }

@@ -82,6 +82,12 @@ public class Movement : MonoBehaviour
         _shouldBounce = true;
     }
 
+    public void Shock(float duration)
+    {
+        _rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
+        Timer.Instance.SetTimer(() => _rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation, duration);
+    }
+
     private async void Dash()
     {
         _shouldDash = false;

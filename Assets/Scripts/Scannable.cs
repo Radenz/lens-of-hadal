@@ -10,6 +10,8 @@ public class Scannable : MonoBehaviour
     private ScanProgressBar _scanProgressBarPrefab;
     [SerializeField]
     private float _scanDuration = 2;
+    [SerializeField]
+    private int _dnaReward = 40;
 
     [SerializeField]
     private float _scanTime;
@@ -36,10 +38,7 @@ public class Scannable : MonoBehaviour
             _scanTime -= Time.deltaTime;
 
         if (_scanTime < 0 && !IsScanned)
-        {
-            IsScanned = true;
-            StopScan();
-        }
+            FinishScan();
     }
 
     public void StartScan()
@@ -58,5 +57,14 @@ public class Scannable : MonoBehaviour
     {
         _isActivelyScanned = false;
         _scanProgressBar.SetActive(false);
+    }
+
+    public void FinishScan()
+    {
+        IsScanned = true;
+        StopScan();
+
+        // TODO: check if this part has been discovered
+        RewardManager.Instance.RewardDNA(_dnaReward);
     }
 }
