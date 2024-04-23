@@ -1,3 +1,5 @@
+using DG.Tweening;
+using TMPro;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -15,6 +17,15 @@ public class PlayerController : MonoBehaviour
     private int _dna = 0;
     private int _gold = 0;
     #endregion Player Attributes
+
+    [SerializeField]
+    private float _hudUpdateDuration = 0.6f;
+    private float _animatedDna = 0;
+
+    #region Attributes HUD
+    [SerializeField]
+    private TextMeshProUGUI _dnaHUDLabel;
+    #endregion Attributes HUD
 
     private void Awake()
     {
@@ -47,5 +58,12 @@ public class PlayerController : MonoBehaviour
     public void AddDNA(int amount)
     {
         _dna += amount;
+        DOTween.To(
+            () => _animatedDna,
+            dna => _dnaHUDLabel.text = Mathf.RoundToInt(dna).ToString(),
+            _dna,
+            _hudUpdateDuration
+        )
+            .SetDelay(Announcer.Instance.Duration);
     }
 }
