@@ -10,22 +10,19 @@ public class Scanner : MonoBehaviour
 
     private PlayerInputActions _playerInputActions;
 
-    private Camera _camera;
     private Transform _transform;
 
-    // private Transform _objectOnScan;
     private Scannable _objectOnScan;
 
     [SerializeField]
     private LineRenderer _lineOfSight;
-    private List<Scannable> _intersectedScannables = new();
+    private readonly List<Scannable> _intersectedScannables = new();
 
     public bool IsScanning => _direction.magnitude != 0;
 
 
     private void Start()
     {
-        _camera = Camera.main;
         _transform = transform;
         _playerInputActions = new();
         _playerInputActions.World.Enable();
@@ -51,8 +48,10 @@ public class Scanner : MonoBehaviour
             StopScanCurrent();
             return;
         }
-
-        ChooseScannable();
+        else
+        {
+            ChooseScannable();
+        }
     }
 
     private void ChooseScannable()
@@ -89,7 +88,7 @@ public class Scanner : MonoBehaviour
         if (!_intersectedScannables.Contains(scannable) && IsWithinScanRadius(scannable.Position))
         {
             _intersectedScannables.Add(scannable);
-            if (_intersectedScannables.Count == 1) Scan(scannable);
+            // if (_intersectedScannables.Count == 1) Scan(scannable);
         }
     }
 
@@ -103,7 +102,7 @@ public class Scanner : MonoBehaviour
         if (!_intersectedScannables.Contains(scannable) && IsWithinScanRadius(scannable.Position))
         {
             _intersectedScannables.Add(scannable);
-            if (_intersectedScannables.Count == 1) Scan(scannable);
+            // if (_intersectedScannables.Count == 1) Scan(scannable);
         }
 
         if (_intersectedScannables.Contains(scannable) && !IsWithinScanRadius(scannable.Position))
