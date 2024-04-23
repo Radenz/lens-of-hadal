@@ -23,6 +23,8 @@ public class ElectricEelAI : MonoBehaviour
 
     [SerializeField]
     private float _zapCooldownTime;
+    [SerializeField]
+    private float _zapShockDuration;
 
     [SerializeField]
     AIPath _ai;
@@ -69,8 +71,12 @@ public class ElectricEelAI : MonoBehaviour
 
     private void Zap()
     {
+        // ? Extra guard just in case flee state change missed
+        if (State == ElectricEelState.Roaming) return;
+
         // TODO: show zap vfx, play zap sfx
         PlayerController.Instance.Damage();
+        PlayerController.Instance.Shock(_zapShockDuration);
         _zapTimer = Timer.Instance.SetTimer(Zap, _zapCooldownTime);
     }
 

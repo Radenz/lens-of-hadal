@@ -335,6 +335,7 @@ MonoBehaviour:
   _speed: 1
   _fleeingSpeed: 2
   _zapCooldownTime: 3
+  _zapShockDuration: 1.2
   _ai: {fileID: 4096935875492654694}
 --- !u!114 &961011842666718627
 MonoBehaviour:
