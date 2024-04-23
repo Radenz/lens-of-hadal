@@ -69,11 +69,6 @@ public class Movement : MonoBehaviour
 
         _shouldDash = false;
         _rigidbody.AddForce(_direction * _acceleration);
-
-        if (_rigidbody.velocity.magnitude > _speed)
-        {
-            _rigidbody.velocity *= _speed / _rigidbody.velocity.magnitude;
-        }
     }
 
     public void Bounce(Vector2 direction, float strength)
