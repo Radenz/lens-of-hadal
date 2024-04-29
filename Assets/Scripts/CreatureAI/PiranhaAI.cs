@@ -50,6 +50,7 @@ public class PiranhaAI : MonoBehaviour
         _aggresionRange.Exited += OnLosePlayer;
         _aggresionRadius = _aggresionRange.GetComponent<CircleCollider2D>().radius;
         _attackHitboxTrigger.Entered += OnAttack;
+        _attackHitboxTrigger.Stay += OnAttack;
 
         // TODO: refactor, use singleton player
         _player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -125,12 +126,10 @@ public class PiranhaAI : MonoBehaviour
                 _ai.maxSpeed = _speed;
                 break;
             case PiranhaState.Attacking:
-                Debug.Log("A piranha is attacking");
                 _ai.destination = _player.position;
                 _ai.maxSpeed = _aggresiveSpeed;
                 break;
             case PiranhaState.Retreating:
-                Debug.Log("A piranha is retreating");
                 _ai.destination = _transform.RandomOnRadius(_retreatRadius);
                 break;
         }

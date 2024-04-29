@@ -4,6 +4,7 @@ using UnityEngine;
 public class RangeTrigger : MonoBehaviour
 {
     public event Action Entered;
+    public event Action Stay;
     public event Action Exited;
 
     [SerializeField]
@@ -13,6 +14,12 @@ public class RangeTrigger : MonoBehaviour
     {
         if (_tag.Length != 0 && !other.CompareTag(_tag)) return;
         Entered?.Invoke();
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (_tag.Length != 0 && !other.CompareTag(_tag)) return;
+        Stay?.Invoke();
     }
 
     private void OnTriggerExit2D(Collider2D other)
