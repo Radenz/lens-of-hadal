@@ -330,15 +330,7 @@ MonoBehaviour:
     Duration: 0.3
     Cooldown: 3
     Key: 9
-  _inputAction:
-    m_Name: Input
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: bad3800d-07d1-4cb1-b43e-d5d469a16c79
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
+    StaminaCost: 30
   _canDash: 1
 --- !u!58 &8522675064028508534
 CircleCollider2D:
@@ -440,7 +432,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2605db2d1396da046b92fff3c13fc159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _defaultHealthPoints: 3
+  _maxHealthPoints: 100
+  _maxStamina: 100
+  _recoveryDelay: 7
+  _recoverySpeed: 5
+  _staminaRecoveryDelay: 5
+  _staminaRecoverySpeed: 10
+  _respawnPoint: {fileID: 0}
+  _hudUpdateDuration: 0.6
+  _dnaHUDLabel: {fileID: 0}
+  _deathOverlay: {fileID: 0}
+  _healthBar: {fileID: 0}
+  _staminaBar: {fileID: 0}
 --- !u!114 &13769516596573448
 MonoBehaviour:
   m_ObjectHideFlags: 0

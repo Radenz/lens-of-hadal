@@ -27,6 +27,7 @@ public class Movement : MonoBehaviour
 
     [SerializeField]
     private bool _canDash = true;
+    private bool CanDash => _canDash && PlayerController.Instance.Stamina > _dashProperties.StaminaCost;
     private bool _shouldDash = false;
     private bool _shouldBounce = false;
 
@@ -91,10 +92,11 @@ public class Movement : MonoBehaviour
     private async void Dash()
     {
         _shouldDash = false;
-        if (!_canDash) return;
+        if (!CanDash) return;
 
         _canDash = false;
         _isDashing = true;
+        PlayerController.Instance.Stamina -= _dashProperties.StaminaCost;
 
         Dashing?.Invoke();
 
@@ -118,4 +120,5 @@ public struct DashProperties
     public float Duration;
     public float Cooldown;
     public KeyCode Key;
+    public float StaminaCost;
 }
