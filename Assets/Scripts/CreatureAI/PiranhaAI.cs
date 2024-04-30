@@ -97,7 +97,7 @@ public class PiranhaAI : MonoBehaviour
     private void OnAttack()
     {
         if (State != PiranhaState.Attacking) return;
-        PlayerController.Instance.Damage();
+        PlayerController.Instance.Damage(15);
         State = PiranhaState.Retreating;
     }
 
