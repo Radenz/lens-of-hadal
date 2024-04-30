@@ -71,6 +71,11 @@ public class Movement : MonoBehaviour
         _rigidbody.AddForce(_direction * _acceleration);
     }
 
+    public void Stop()
+    {
+        _rigidbody.velocity = Vector2.zero;
+    }
+
     public void Bounce(Vector2 direction, float strength)
     {
         _bounceDirection = direction.normalized * strength;
