@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using NaughtyAttributes;
 using UnityEngine;
 
+// TODO: immediate remove when module is dragged
 [ExecuteAlways]
 [RequireComponent(typeof(RectTransform))]
 public class ModuleGrid : MonoBehaviour
@@ -122,6 +123,16 @@ public class ModuleGrid : MonoBehaviour
             }
     }
 
+    public void Remove(Module module)
+    {
+        for (int y = _gridSize.y - 1; y >= 0; y--)
+            for (int x = 0; x < _gridSize.x; x++)
+            {
+                if (_modules[x, y] == module)
+                    _modules[x, y] = null;
+            }
+    }
+
     public bool TryPlace(Module module, Vector2 position)
     {
         if (PointToGridIndex(position, out (int, int) indexPair) && HasSlot(indexPair, module))
@@ -143,6 +154,9 @@ public class ModuleGrid : MonoBehaviour
         Vector2 finalPosition = localPosition + (Vector2)_transform.localPosition;
         module.transform.localPosition = finalPosition;
 
+        if (module.Grid != null)
+            module.Grid.Remove(module);
+
         for (int i = index[0]; i < index[0] + module.Size.x; i++)
         {
             for (int j = index[1]; j < index[1] + module.Size.y; j++)
@@ -151,6 +165,7 @@ public class ModuleGrid : MonoBehaviour
             }
         }
 
+        module.Grid = this;
         Place?.Invoke(this, module);
     }
 

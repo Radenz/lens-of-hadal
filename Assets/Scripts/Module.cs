@@ -18,6 +18,8 @@ public class Module : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     private Vector2 _initialPosition;
     private Vector2 _initialPointerPosition;
 
+    public ModuleGrid Grid;
+
     private void Awake()
     {
         _transform = (RectTransform)transform;
