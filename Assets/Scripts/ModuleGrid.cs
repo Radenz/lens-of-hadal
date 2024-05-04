@@ -1,11 +1,16 @@
 using System;
 using System.Threading.Tasks;
+using NaughtyAttributes;
 using UnityEngine;
 
 [ExecuteAlways]
 [RequireComponent(typeof(RectTransform))]
 public class ModuleGrid : MonoBehaviour
 {
+    [SerializeField]
+    private string _name;
+    public string Name => _name;
+
     private RectTransform _transform;
     private RectTransform _canvasTransform;
     private Matrix4x4 _mvpMatrix;
@@ -18,7 +23,7 @@ public class ModuleGrid : MonoBehaviour
     [SerializeField]
     private Vector2 _tileSize = new(160, 160);
 
-    public event Action<Module> Place;
+    public event Action<ModuleGrid, Module> Place;
 
     Rect _rect => _transform.rect;
     float _xStart => _rect.xMin + _transform.localPosition.x;
@@ -43,6 +48,22 @@ public class ModuleGrid : MonoBehaviour
     private void OnValidate()
     {
         RecalculateSize();
+    }
+
+    [Button]
+    private void LogModules()
+    {
+        string repr = "";
+        for (int y = _gridSize.y - 1; y >= 0; y--)
+        {
+            for (int x = 0; x < _gridSize.x; x++)
+            {
+                repr += _modules[x, y] != null ? "1" : "0";
+            }
+            repr += "\n";
+        }
+
+        Debug.Log(repr);
     }
 
     private async void RecalculateSize()
@@ -87,25 +108,50 @@ public class ModuleGrid : MonoBehaviour
         }
     }
 
+    public void Add(Module module)
+    {
+        // ? Iterate from top left
+        for (int y = _gridSize.y - 1; y >= 0; y--)
+            for (int x = 0; x < _gridSize.x; x++)
+            {
+                if (HasSlot((x, y), module))
+                {
+                    PlaceModule(module, new(x, y));
+                    return;
+                }
+            }
+    }
+
     public bool TryPlace(Module module, Vector2 position)
     {
         if (PointToGridIndex(position, out (int, int) indexPair) && HasSlot(indexPair, module))
         {
-            Vector2 index = new(indexPair.Item1, indexPair.Item2);
-            Vector2 anchor = _transform.rect.center;
-            Vector2 localRectMin = _transform.rect.min + index * _tileSize;
-            Vector2 localRectMax = localRectMin + module.Size * _tileSize;
-            Vector2 localAnchor = (localRectMin + localRectMax) / 2;
-            localAnchor.y *= -1;
-
-            Vector2 finalPosition = anchor - localAnchor + (Vector2)_transform.localPosition + (ModuleSystem.DragPosition * _tileSize);
-            module.transform.localPosition = finalPosition;
-
-            Place?.Invoke(module);
+            Vector2Int placementIndex = new(indexPair.Item1, indexPair.Item2);
+            PlaceModule(module, placementIndex - ModuleSystem.DragPosition);
             return true;
         }
 
         return false;
+    }
+
+    private void PlaceModule(Module module, Vector2Int index)
+    {
+        Vector2 rectBottomLeft = _transform.rect.center - _transform.rect.size / 2;
+        Vector2 bottomLeft = rectBottomLeft + index * _tileSize;
+        Vector2 topRight = bottomLeft + module.Size * _tileSize;
+        Vector2 localPosition = (bottomLeft + topRight) / 2;
+        Vector2 finalPosition = localPosition + (Vector2)_transform.localPosition;
+        module.transform.localPosition = finalPosition;
+
+        for (int i = index[0]; i < index[0] + module.Size.x; i++)
+        {
+            for (int j = index[1]; j < index[1] + module.Size.y; j++)
+            {
+                _modules[i, j] = module;
+            }
+        }
+
+        Place?.Invoke(this, module);
     }
 
     private bool PointToGridIndex(Vector2 position, out (int, int) index)

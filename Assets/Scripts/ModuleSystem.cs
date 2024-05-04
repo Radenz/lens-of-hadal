@@ -1,17 +1,21 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-// TODO: add DraggedModule's ModuleGrid source
 public class ModuleSystem : Singleton<ModuleSystem>
 {
     public static Module DraggedModule;
     public static Vector2Int DragPosition;
+
+    public event Action<Module> Equip;
+    public event Action<Module> Unequip;
 
     private readonly List<ModuleGrid> _grids = new();
 
     public void RegisterGrid(ModuleGrid grid)
     {
         _grids.Add(grid);
+        grid.Place += OnModulePlaced;
     }
 
     public bool TryPlaceModule(Module module, Vector2 position)
@@ -22,5 +26,14 @@ public class ModuleSystem : Singleton<ModuleSystem>
                 return grid.TryPlace(module, position);
         }
         return false;
+    }
+
+    private void OnModulePlaced(ModuleGrid grid, Module module)
+    {
+        if (grid.Name == "Upgrade")
+            Equip?.Invoke(module);
+
+        if (grid.Name == "Inventory")
+            Unequip?.Invoke(module);
     }
 }

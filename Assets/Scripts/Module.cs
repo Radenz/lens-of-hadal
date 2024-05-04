@@ -73,8 +73,6 @@ public class Module : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
         Vector2Int index = new(Mathf.FloorToInt(x), Mathf.FloorToInt(y));
         ModuleSystem.DragPosition = index;
-
-        Debug.Log("Dragging from " + index);
     }
 
     private void HandleDrag()
