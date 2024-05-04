@@ -1,9 +1,10 @@
+using System;
+using System.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 [ExecuteAlways]
 [RequireComponent(typeof(RectTransform))]
-public class ModuleGrid : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler
+public class ModuleGrid : MonoBehaviour
 {
     private RectTransform _transform;
     private RectTransform _canvasTransform;
@@ -15,11 +16,9 @@ public class ModuleGrid : MonoBehaviour, IPointerExitHandler, IPointerEnterHandl
     private Module[,] _modules;
 
     [SerializeField]
-    private Vector2 _tileSize
-        => new(_transform.rect.width / _gridSize.x, _transform.rect.height / _gridSize.y);
+    private Vector2 _tileSize = new(160, 160);
 
-    [SerializeField]
-    bool _logOnce = true;
+    public event Action<Module> Place;
 
     Rect _rect => _transform.rect;
     float _xStart => _rect.xMin + _transform.localPosition.x;
@@ -36,35 +35,29 @@ public class ModuleGrid : MonoBehaviour, IPointerExitHandler, IPointerEnterHandl
         _modules = new Module[_gridSize.x, _gridSize.y];
     }
 
-    private void Update()
+    private void Start()
     {
-        if (ModuleSystem.DraggedModule != null)
-            UpdateSlotEligiblity();
+        ModuleSystem.Instance.RegisterGrid(this);
     }
 
-    private void UpdateSlotEligiblity()
+    private void OnValidate()
     {
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            _canvasTransform,
-            Input.mousePosition,
-            null,
-            out Vector2 position
-        );
-
-        if (_transform.rect.Contains(position))
-            ModuleSystem.HoveredModuleGrid = this;
-        else if (ModuleSystem.HoveredModuleGrid == this)
-            ModuleSystem.HoveredModuleGrid = null;
+        RecalculateSize();
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
+    private async void RecalculateSize()
     {
-        ModuleSystem.HoveredModuleGrid = this;
+        await Task.Yield();
+        float height = _tileSize.y * _gridSize.y;
+        float width = _tileSize.x * _gridSize.x;
+        _transform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, width);
+        _transform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, height);
     }
 
-    public void OnPointerExit(PointerEventData eventData)
+    public bool ContainsPoint(Vector2 point)
     {
-        ModuleSystem.HoveredModuleGrid = null;
+        Vector2 localPoint = point - (Vector2)_transform.localPosition;
+        return _transform.rect.Contains(localPoint);
     }
 
     private void OnDrawGizmos()
@@ -92,26 +85,23 @@ public class ModuleGrid : MonoBehaviour, IPointerExitHandler, IPointerEnterHandl
             start.y += _tileSize.y;
             end.y += _tileSize.y;
         }
-
-        _logOnce = false;
     }
 
     public bool TryPlace(Module module, Vector2 position)
     {
-        if (PointToGridIndex(position, out (int, int) indexPair))
+        if (PointToGridIndex(position, out (int, int) indexPair) && HasSlot(indexPair, module))
         {
-            Vector2 tileSize = _tileSize;
             Vector2 index = new(indexPair.Item1, indexPair.Item2);
-            // TODO: adjust anchor to center and based on module size
-            Vector2 anchor = _transform.rect.min + tileSize * index;
+            Vector2 anchor = _transform.rect.center;
+            Vector2 localRectMin = _transform.rect.min + index * _tileSize;
+            Vector2 localRectMax = localRectMin + module.Size * _tileSize;
+            Vector2 localAnchor = (localRectMin + localRectMax) / 2;
+            localAnchor.y *= -1;
 
-            RectTransform moduleTransform = (RectTransform)module.transform;
-            Vector2 localAnchor = moduleTransform.rect.min;
-            Vector2 finalPosition = anchor - localAnchor + (Vector2)_transform.localPosition;
+            Vector2 finalPosition = anchor - localAnchor + (Vector2)_transform.localPosition + (ModuleSystem.DragPosition * _tileSize);
             module.transform.localPosition = finalPosition;
 
-            // TODO: notify module has been placed
-
+            Place?.Invoke(module);
             return true;
         }
 
@@ -121,14 +111,40 @@ public class ModuleGrid : MonoBehaviour, IPointerExitHandler, IPointerEnterHandl
     private bool PointToGridIndex(Vector2 position, out (int, int) index)
     {
         index = (0, 0);
-        if (!_transform.rect.Contains(position))
+        Vector2 localPosition = position - (Vector2)_transform.localPosition;
+        if (!_transform.rect.Contains(localPosition))
             return false;
 
-        Vector2 normalizedPoint = Rect.PointToNormalized(_transform.rect, position);
-        normalizedPoint *= _gridSize;
-        index = (Mathf.FloorToInt(normalizedPoint.x), Mathf.FloorToInt(normalizedPoint.y));
+        Vector2 relativePosition = localPosition - _transform.rect.min;
+        float x = relativePosition.x / _tileSize.x;
+        float y = relativePosition.y / _tileSize.y;
+        index = new(Mathf.FloorToInt(x), Mathf.FloorToInt(y));
         return true;
     }
 
+    private bool HasSlot((int, int) index, Module module)
+    {
+        Vector2Int startIndex = new Vector2Int(index.Item1, index.Item2) - ModuleSystem.DragPosition;
+        Vector2Int endIndex = startIndex + module.Size;
 
+        if (!HasIndex(startIndex) || !HasIndex(endIndex))
+            return false;
+
+        for (int x = startIndex[0]; x < endIndex[0]; x++)
+        {
+            for (int y = startIndex[1]; y < endIndex[1]; y++)
+            {
+                if (_modules[x, y] != null && _modules[x, y] != module)
+                    return false;
+            }
+        }
+
+        return true;
+    }
+
+    private bool HasIndex(Vector2Int index)
+    {
+        return index[0] >= 0 && index[0] <= _gridSize.x
+            && index[1] >= 0 && index[1] <= _gridSize.y;
+    }
 }
