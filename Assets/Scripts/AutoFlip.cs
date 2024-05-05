@@ -2,6 +2,11 @@ using UnityEngine;
 
 public class AutoFlip : MonoBehaviour
 {
+    [SerializeField]
+    private float _maxTiltAngle = 60;
+
+    public float Angle { get; private set; }
+
     private Transform _transform;
     private Rigidbody2D _rigidbody;
 
@@ -15,6 +20,7 @@ public class AutoFlip : MonoBehaviour
     {
         Vector2 velocity = _rigidbody.velocity;
         float angle = Vector2.SignedAngle(Vector2.right, velocity);
+        Angle = angle;
 
         if (angle == 0) return;
 
@@ -26,6 +32,11 @@ public class AutoFlip : MonoBehaviour
         else
         {
             SetFlipped(false);
+        }
+
+        if (Mathf.Abs(angle) > _maxTiltAngle)
+        {
+            angle = Mathf.Sign(angle) * _maxTiltAngle;
         }
 
         Vector3 rotation = _transform.localEulerAngles;
