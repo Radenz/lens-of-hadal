@@ -5,6 +5,12 @@ using UnityEngine.EventSystems;
 [ExecuteAlways]
 public class Module : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
+    [Header("Module Properties")]
+    [SerializeField]
+    private string _name;
+    public string Name => _name;
+
+    [Header("Sizing")]
     [SerializeField]
     private Vector2Int _size;
     public Vector2Int Size => _size;
@@ -24,7 +30,10 @@ public class Module : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     private void Awake()
     {
         _transform = (RectTransform)transform;
-        _canvasTransform = (RectTransform)GetComponentInParent<Canvas>().transform;
+        Canvas canvas = GetComponentInParent<Canvas>();
+        // ? We're on prefab editor
+        if (canvas == null) return;
+        _canvasTransform = (RectTransform)canvas.transform;
     }
 
     private void Update()

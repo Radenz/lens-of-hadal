@@ -123,6 +123,11 @@ public class ModuleGrid : MonoBehaviour
             }
     }
 
+    public void Expand((int, int) size)
+    {
+        // TODO: impl
+    }
+
     public void Remove(Module module)
     {
         for (int y = _gridSize.y - 1; y >= 0; y--)

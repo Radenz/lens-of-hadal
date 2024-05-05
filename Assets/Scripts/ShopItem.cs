@@ -1,12 +1,17 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 [ExecuteAlways]
 public class ShopItem : MonoBehaviour
 {
     [Header("Item Properties")]
     [SerializeField]
+    private string _id;
+    public string Id => _id;
+    [SerializeField]
     private string _name;
+    public string Name => _name;
 
     [Header("Cost")]
     [SerializeField]
@@ -18,6 +23,10 @@ public class ShopItem : MonoBehaviour
     [SerializeField]
     private int _scrapMetal;
 
+    // TODO: hook up all items
+    [Header("Action")]
+    [SerializeField]
+    private UnityEvent _onAssemble;
 
     [Header("UI Elements")]
     [SerializeField]
@@ -55,5 +64,7 @@ public class ShopItem : MonoBehaviour
             || CurrencySystem.Instance.Seaweed < _seaweed
             || CurrencySystem.Instance.ScrapMetal < _scrapMetal)
             return;
+
+        // TODO: give player upgrade module, etc.
     }
 }

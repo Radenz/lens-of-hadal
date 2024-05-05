@@ -10,6 +10,9 @@ public class ModuleSystem : Singleton<ModuleSystem>
     public event Action<Module> Equip;
     public event Action<Module> Unequip;
 
+    [Header("Item Names")]
+    public string FlashlightLv2 = "Flashlight2";
+
     private readonly List<ModuleGrid> _grids = new();
 
     public void RegisterGrid(ModuleGrid grid)
