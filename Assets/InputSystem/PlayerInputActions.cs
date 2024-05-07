@@ -15,7 +15,7 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
+public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
 {
     public InputActionAsset asset { get; }
     public @PlayerInputActions()
@@ -53,6 +53,24 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""DeployFlare"",
+                    ""type"": ""Button"",
+                    ""id"": ""ba1cfccb-77d5-42c9-8df2-3a6ef102d33d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""DeploySonar"",
+                    ""type"": ""Button"",
+                    ""id"": ""a48fce5c-9845-4844-a4c0-4bd2c5617c9e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -198,6 +216,28 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""action"": ""Scan"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""eb21cfd7-b666-432d-a397-6b8aff064089"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DeployFlare"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""78f70191-15e2-44c0-9194-d63d37a22e80"",
+                    ""path"": ""<Keyboard>/g"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DeploySonar"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -209,6 +249,8 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         m_World_Move = m_World.FindAction("Move", throwIfNotFound: true);
         m_World_Dash = m_World.FindAction("Dash", throwIfNotFound: true);
         m_World_Scan = m_World.FindAction("Scan", throwIfNotFound: true);
+        m_World_DeployFlare = m_World.FindAction("DeployFlare", throwIfNotFound: true);
+        m_World_DeploySonar = m_World.FindAction("DeploySonar", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -273,6 +315,8 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_World_Move;
     private readonly InputAction m_World_Dash;
     private readonly InputAction m_World_Scan;
+    private readonly InputAction m_World_DeployFlare;
+    private readonly InputAction m_World_DeploySonar;
     public struct WorldActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -280,6 +324,8 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         public InputAction @Move => m_Wrapper.m_World_Move;
         public InputAction @Dash => m_Wrapper.m_World_Dash;
         public InputAction @Scan => m_Wrapper.m_World_Scan;
+        public InputAction @DeployFlare => m_Wrapper.m_World_DeployFlare;
+        public InputAction @DeploySonar => m_Wrapper.m_World_DeploySonar;
         public InputActionMap Get() { return m_Wrapper.m_World; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -298,6 +344,12 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
             @Scan.started += instance.OnScan;
             @Scan.performed += instance.OnScan;
             @Scan.canceled += instance.OnScan;
+            @DeployFlare.started += instance.OnDeployFlare;
+            @DeployFlare.performed += instance.OnDeployFlare;
+            @DeployFlare.canceled += instance.OnDeployFlare;
+            @DeploySonar.started += instance.OnDeploySonar;
+            @DeploySonar.performed += instance.OnDeploySonar;
+            @DeploySonar.canceled += instance.OnDeploySonar;
         }
 
         private void UnregisterCallbacks(IWorldActions instance)
@@ -311,6 +363,12 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
             @Scan.started -= instance.OnScan;
             @Scan.performed -= instance.OnScan;
             @Scan.canceled -= instance.OnScan;
+            @DeployFlare.started -= instance.OnDeployFlare;
+            @DeployFlare.performed -= instance.OnDeployFlare;
+            @DeployFlare.canceled -= instance.OnDeployFlare;
+            @DeploySonar.started -= instance.OnDeploySonar;
+            @DeploySonar.performed -= instance.OnDeploySonar;
+            @DeploySonar.canceled -= instance.OnDeploySonar;
         }
 
         public void RemoveCallbacks(IWorldActions instance)
@@ -333,5 +391,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
         void OnScan(InputAction.CallbackContext context);
+        void OnDeployFlare(InputAction.CallbackContext context);
+        void OnDeploySonar(InputAction.CallbackContext context);
     }
 }

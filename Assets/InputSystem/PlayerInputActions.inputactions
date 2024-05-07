@@ -31,6 +31,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "DeployFlare",
+                    "type": "Button",
+                    "id": "ba1cfccb-77d5-42c9-8df2-3a6ef102d33d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DeploySonar",
+                    "type": "Button",
+                    "id": "a48fce5c-9845-4844-a4c0-4bd2c5617c9e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -176,6 +194,28 @@
                     "action": "Scan",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "eb21cfd7-b666-432d-a397-6b8aff064089",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DeployFlare",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "78f70191-15e2-44c0-9194-d63d37a22e80",
+                    "path": "<Keyboard>/g",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DeploySonar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

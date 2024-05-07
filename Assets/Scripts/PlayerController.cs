@@ -52,6 +52,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private AutoFlip _flipper;
+    private PlayerInputActions _playerInputActions;
+
     private int _dna = 0;
     private int _gold = 0;
     #endregion Player Attributes
@@ -92,6 +95,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private GameObject _flarePrefab;
+    [SerializeField]
+    private GameObject _sonarPrefab;
 
     private void Awake()
     {
@@ -102,11 +107,18 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        _flipper = GetComponent<AutoFlip>();
         _movement = GetComponent<Movement>();
         _healthBar.MaxValue = _maxHealthPoints;
         _staminaBar.MaxValue = _maxStamina;
         HealthPoints = _maxHealthPoints;
         Stamina = _maxStamina;
+
+        _playerInputActions = new();
+
+        _playerInputActions.World.Enable();
+        _playerInputActions.World.DeployFlare.performed += _ => DeployFlare();
+        _playerInputActions.World.DeploySonar.performed += _ => DeploySonar();
     }
 
     private void Update()
@@ -161,11 +173,38 @@ public class PlayerController : MonoBehaviour
         _movement.Shock(duration);
     }
 
+    // TODO: check quantity & reduce
     public void DeployFlare()
     {
         GameObject flare = Instantiate(_flarePrefab, _transform.position, Quaternion.identity);
-        Launch launch = flare.GetComponent<Launch>();
+        ArcLaunch arcLauncher = flare.GetComponent<ArcLaunch>();
 
+        Vector2 direction = _playerInputActions.World.Move.ReadValue<Vector2>();
+
+        if (direction.magnitude == 0)
+        {
+            float lookAngle = _flipper.Angle * Mathf.PI / 180;
+            direction = new(Mathf.Cos(lookAngle), Mathf.Sin(lookAngle));
+        }
+
+        arcLauncher.Direction = direction;
+    }
+
+    // TODO: check quantity & reduce
+    public void DeploySonar()
+    {
+        GameObject sonar = Instantiate(_sonarPrefab, _transform.position, Quaternion.identity);
+        ArcLaunch arcLauncher = sonar.GetComponent<ArcLaunch>();
+
+        Vector2 direction = _playerInputActions.World.Move.ReadValue<Vector2>();
+
+        if (direction.magnitude == 0)
+        {
+            float lookAngle = _flipper.Angle * Mathf.PI / 180;
+            direction = new(Mathf.Cos(lookAngle), Mathf.Sin(lookAngle));
+        }
+
+        arcLauncher.Direction = direction;
     }
 
     public void AddDNA(int amount)

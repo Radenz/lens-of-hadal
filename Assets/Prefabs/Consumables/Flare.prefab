@@ -199,8 +199,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _height: 0.1
-  _duration: 2
-  _bobCount: 29
+  _duration: 1
+  _bobCount: 30
 --- !u!114 &8974008128568171156
 MonoBehaviour:
   m_ObjectHideFlags: 0
