@@ -43,14 +43,13 @@ public class Scanner : MonoBehaviour
         }
 
         _light.SetActive(true);
-        float angle = Vector2.Angle(Vector2.right, _direction);
+        float angle = Vector2.SignedAngle(Vector2.right, _direction);
 
-        Vector3 position = _direction * _range;
         Vector3 lightAngles = _lightTransform.eulerAngles;
         lightAngles.z = -90 + angle;
         _lightTransform.eulerAngles = lightAngles;
-
         _playerFlip.SetAngle(angle);
+
 
         if (_objectOnScan != null && _objectOnScan.IsScanned)
         {
