@@ -9,8 +9,15 @@ public class Bob : MonoBehaviour
     private float _duration;
     [SerializeField]
     private int _bobCount;
+    [SerializeField]
+    private bool _startImmediately = false;
 
     private Tween _tween;
+
+    private void Start()
+    {
+        if (_startImmediately) StartBobbing();
+    }
 
     public void StartBobbing()
     {
