@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     // TODO: refactor singletons
     public static PlayerController Instance;
 
+    private Transform _transform;
     private Movement _movement;
 
     [SerializeField]
@@ -89,9 +90,13 @@ public class PlayerController : MonoBehaviour
     private Bar _staminaBar;
     #endregion Attributes HUD
 
+    [SerializeField]
+    private GameObject _flarePrefab;
+
     private void Awake()
     {
         Instance = this;
+        _transform = transform;
         _timeSinceLastDamage = 2f;
     }
 
@@ -154,6 +159,13 @@ public class PlayerController : MonoBehaviour
     public void Shock(float duration)
     {
         _movement.Shock(duration);
+    }
+
+    public void DeployFlare()
+    {
+        GameObject flare = Instantiate(_flarePrefab, _transform.position, Quaternion.identity);
+        Launch launch = flare.GetComponent<Launch>();
+
     }
 
     public void AddDNA(int amount)
