@@ -6,16 +6,20 @@ public class Scanner : MonoBehaviour
     [SerializeField]
     private Vector2 _direction;
     [SerializeField]
+    private float _range = 2.5f;
+    [SerializeField]
     private float _scanAngleRadius;
 
     private PlayerInputActions _playerInputActions;
 
     private Transform _transform;
+    [SerializeField]
+    private AutoFlip _playerFlip;
+    [SerializeField]
+    private Transform _lightTransform;
+    private GameObject _light;
 
     private Scannable _objectOnScan;
-
-    [SerializeField]
-    private LineRenderer _lineOfSight;
     private readonly List<Scannable> _intersectedScannables = new();
 
     public bool IsScanning => _direction.magnitude != 0;
@@ -24,6 +28,7 @@ public class Scanner : MonoBehaviour
     private void Start()
     {
         _transform = transform;
+        _light = _lightTransform.gameObject;
         _playerInputActions = new();
         _playerInputActions.World.Enable();
     }
@@ -31,8 +36,21 @@ public class Scanner : MonoBehaviour
     private void Update()
     {
         _direction = _playerInputActions.World.Scan.ReadValue<Vector2>();
-        Vector3 position = _direction * 2.5f;
-        _lineOfSight.SetPosition(1, position);
+        if (!IsScanning)
+        {
+            _light.SetActive(false);
+            return;
+        }
+
+        _light.SetActive(true);
+        float angle = Vector2.Angle(Vector2.right, _direction);
+
+        Vector3 position = _direction * _range;
+        Vector3 lightAngles = _lightTransform.eulerAngles;
+        lightAngles.z = -90 + angle;
+        _lightTransform.eulerAngles = lightAngles;
+
+        _playerFlip.SetAngle(angle);
 
         if (_objectOnScan != null && _objectOnScan.IsScanned)
         {

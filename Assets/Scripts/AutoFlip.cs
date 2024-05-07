@@ -3,6 +3,9 @@ using UnityEngine;
 public class AutoFlip : MonoBehaviour
 {
     [SerializeField]
+    private Scanner _scanner;
+
+    [SerializeField]
     private float _maxTiltAngle = 60;
 
     public float Angle { get; private set; }
@@ -23,7 +26,13 @@ public class AutoFlip : MonoBehaviour
         Angle = angle;
 
         if (angle == 0) return;
+        if (_scanner.IsScanning) return;
 
+        SetAngle(angle);
+    }
+
+    public void SetAngle(float angle)
+    {
         if (Mathf.Abs(angle) > 90f)
         {
             angle = -Mathf.Sign(angle) * (180 - Mathf.Abs(angle));

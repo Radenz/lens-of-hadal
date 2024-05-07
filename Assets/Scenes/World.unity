@@ -225,8 +225,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 2.3509998, y: 0.7369003, z: 0}
-    m_Extent: {x: 49.8871, y: 28.0077, z: 0}
+    m_Center: {x: 2.3506508, y: 0.73700047, z: 0}
+    m_Extent: {x: 49.88725, y: 28.008, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2020,7 +2020,16 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8648435158287270220, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
+      propertyPath: _playerFlip
+      value: 
+      objectReference: {fileID: 878865185}
+    - target: {fileID: 8648435158287270220, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
+      propertyPath: _lightTransform
+      value: 
+      objectReference: {fileID: 396569811}
+    m_RemovedComponents:
+    - {fileID: 7693071361322637062, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 355548723795319876, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
@@ -3548,6 +3557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7169d608e506134991f850e5052a58e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _scanner: {fileID: 1453847806}
   _maxTiltAngle: 45
 --- !u!1 &896728566
 GameObject:
@@ -5553,6 +5563,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 355548723795319876, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
   m_PrefabInstance: {fileID: 406684459}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1453847806 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8648435158287270220, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
+  m_PrefabInstance: {fileID: 406684459}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb23742e8b5ce1847ab3e352e28de754, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1501384861
 GameObject:
   m_ObjectHideFlags: 3
