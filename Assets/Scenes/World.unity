@@ -225,8 +225,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 2.3506508, y: 0.73700047, z: 0}
-    m_Extent: {x: 49.88725, y: 28.008, z: 0}
+    m_Center: {x: 2.3506012, y: 0.73705006, z: 0}
+    m_Extent: {x: 49.8872, y: 28.00785, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1380,7 +1380,6 @@ GameObject:
   - component: {fileID: 354960915}
   - component: {fileID: 354960914}
   - component: {fileID: 354960913}
-  - component: {fileID: 354960912}
   m_Layer: 5
   m_Name: Sonar Drone Button
   m_TagString: Untagged
@@ -1407,19 +1406,6 @@ RectTransform:
   m_AnchoredPosition: {x: -237, y: 467}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &354960912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 354960910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89ebcd0c35949664eb08b22e4430794e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _button: {fileID: 354960913}
 --- !u!114 &354960913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1470,7 +1456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ControlPath: <Keyboard>/tab
+  m_ControlPath: <Keyboard>/g
 --- !u!1 &355014067
 GameObject:
   m_ObjectHideFlags: 0
@@ -6730,7 +6716,6 @@ GameObject:
   - component: {fileID: 1708793586}
   - component: {fileID: 1708793585}
   - component: {fileID: 1708793584}
-  - component: {fileID: 1708793583}
   m_Layer: 5
   m_Name: Flare Button
   m_TagString: Untagged
@@ -6757,19 +6742,6 @@ RectTransform:
   m_AnchoredPosition: {x: -132, y: 467}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1708793583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1708793581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89ebcd0c35949664eb08b22e4430794e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _button: {fileID: 1708793584}
 --- !u!114 &1708793584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6820,7 +6792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ControlPath: <Keyboard>/tab
+  m_ControlPath: <Keyboard>/f
 --- !u!1 &1786323576
 GameObject:
   m_ObjectHideFlags: 0
