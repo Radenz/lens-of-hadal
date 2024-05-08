@@ -1,6 +1,8 @@
 using DG.Tweening;
+using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -17,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private float _maxStamina;
 
     #region Player Attributes
+    [SerializeField, ReadOnly]
     private float _healthPoints = 0;
     private float HealthPoints
     {
@@ -29,7 +32,11 @@ public class PlayerController : MonoBehaviour
             if (_healthPoints < 0)
                 _healthPoints = 0;
 
-            _healthBar.Value = _healthPoints;
+            float healthPercentage = _healthPoints / _maxHealthPoints;
+            float inverseHealthPercentage = 1 - healthPercentage;
+            float rawOverlayAlpha = inverseHealthPercentage * inverseHealthPercentage;
+            float alpha = 0.5f * rawOverlayAlpha;
+            _damageOverlay.color = new(1f, 1f, 1f, alpha);
         }
     }
 
@@ -87,7 +94,7 @@ public class PlayerController : MonoBehaviour
     private GameObject _deathOverlay;
 
     [SerializeField]
-    private Bar _healthBar;
+    private Image _damageOverlay;
 
     [SerializeField]
     private Bar _staminaBar;
@@ -109,7 +116,6 @@ public class PlayerController : MonoBehaviour
     {
         _flipper = GetComponent<AutoFlip>();
         _movement = GetComponent<Movement>();
-        _healthBar.MaxValue = _maxHealthPoints;
         _staminaBar.MaxValue = _maxStamina;
         HealthPoints = _maxHealthPoints;
         Stamina = _maxStamina;
