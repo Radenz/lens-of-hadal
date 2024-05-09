@@ -1,5 +1,7 @@
 
+using System.Linq;
 using Pathfinding;
+using TMPro;
 using UnityEngine;
 
 public static class ObjectExtensions
@@ -36,5 +38,28 @@ public static class AIExtensions
     public static bool IsIdle(this IAstarAI ai)
     {
         return !ai.pathPending && (ai.reachedDestination || ai.reachedEndOfPath || !ai.hasPath);
+    }
+}
+
+public static class TMProExtensions
+{
+    public static float TotalHeight(this TextMeshProUGUI textMesh)
+    {
+        TMP_LineInfo[] lines = textMesh.GetTextInfo(textMesh.text).lineInfo;
+        Debug.Log(textMesh.text);
+        Debug.Log(lines.Length);
+        float height = 0f;
+
+        foreach (TMP_LineInfo line in lines)
+        {
+            height += line.lineHeight;
+        }
+
+        return height;
+    }
+
+    public static void FitHeight(this TextMeshProUGUI textMesh)
+    {
+        textMesh.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, textMesh.TotalHeight());
     }
 }
