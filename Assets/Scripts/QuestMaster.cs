@@ -11,7 +11,7 @@ public class QuestMaster : Singleton<QuestMaster>
 
     [Header("Quest Settings")]
     [SerializeField]
-    private List<Quest> _quests;
+    private List<QuestData> _quests;
 
     [SerializeField]
     private GameObject _questPrefab;
@@ -30,7 +30,7 @@ public class QuestMaster : Singleton<QuestMaster>
     {
         if (_quests == null) return;
 
-        foreach (Quest quest in _quests)
+        foreach (QuestData quest in _quests)
         {
             if (quest == null) return;
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class QuestDisplay : MonoBehaviour
 {
     [HideInInspector]
-    public Quest Quest;
+    public QuestData Quest;
 
     [SerializeField]
     private TextMeshProUGUI _title;
