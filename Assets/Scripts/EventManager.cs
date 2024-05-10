@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
 
+// ? Hardcoding available events are not ideal, but
+// it works & requires less time. So be it.
 public class EventManager : Singleton<EventManager>
 {
     #region Currency Events
@@ -18,6 +20,11 @@ public class EventManager : Singleton<EventManager>
     public event Action<QuestData> AfterQuestUnlocked;
     public event Action<QuestData> QuestAccepted;
     public event Action<QuestData> QuestRewardClaimed;
+    #endregion
+
+    #region Levelling Events
+    public event Action<int> ExpChanged;
+    public event Action<int> LevelledUp;
     #endregion
 
     public void SetGold(int initialValue, int finalValue)
@@ -71,5 +78,15 @@ public class EventManager : Singleton<EventManager>
     public void HideDisplayQuest()
     {
         DisplayQuestHidden?.Invoke();
+    }
+
+    public void ChangeExp(int exp)
+    {
+        ExpChanged?.Invoke(exp);
+    }
+
+    public void LevelUp(int level)
+    {
+        LevelledUp?.Invoke(level);
     }
 }
