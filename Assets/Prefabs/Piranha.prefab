@@ -342,7 +342,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85376a89ec4a6a643a32c6cbe2c9f333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _name: 
   _scanProgressBarPrefab: {fileID: -6517321322075258958, guid: b818d12cacafa9d4fba70b000920323e, type: 3}
+  _scanDuration: 2
+  _dnaReward: 40
+  _scanTime: 0
 --- !u!114 &2589512322834676878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -502,7 +506,7 @@ GameObject:
   - component: {fileID: 2229821957572152529}
   m_Layer: 6
   m_Name: Piranha
-  m_TagString: Untagged
+  m_TagString: Creature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -816,7 +820,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85376a89ec4a6a643a32c6cbe2c9f333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _name: 
   _scanProgressBarPrefab: {fileID: -6517321322075258958, guid: b818d12cacafa9d4fba70b000920323e, type: 3}
+  _scanDuration: 2
+  _dnaReward: 40
+  _scanTime: 0
 --- !u!114 &5048607773017030533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1049,7 +1057,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85376a89ec4a6a643a32c6cbe2c9f333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _name: 
   _scanProgressBarPrefab: {fileID: -6517321322075258958, guid: b818d12cacafa9d4fba70b000920323e, type: 3}
+  _scanDuration: 2
+  _dnaReward: 40
+  _scanTime: 0
 --- !u!114 &6940762034942507117
 MonoBehaviour:
   m_ObjectHideFlags: 0

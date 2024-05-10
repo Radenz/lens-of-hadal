@@ -31,6 +31,10 @@ public class EventManager : Singleton<EventManager>
     public event Action<string> ModuleUnlocked;
     #endregion
 
+    #region Sonar Events
+    public event Action SonarPinged;
+    #endregion
+
 
     public void SetGold(int initialValue, int finalValue)
     {
@@ -93,5 +97,10 @@ public class EventManager : Singleton<EventManager>
     public void LevelUp(int level)
     {
         LevelledUp?.Invoke(level);
+    }
+
+    public void PingSonar()
+    {
+        SonarPinged?.Invoke();
     }
 }

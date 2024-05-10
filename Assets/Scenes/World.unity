@@ -225,8 +225,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 2.3505, y: 0.73644924, z: 0}
-    m_Extent: {x: 49.888, y: 28.008049, z: 0}
+    m_Center: {x: 2.3514004, y: 0.7361994, z: 0}
+    m_Extent: {x: 49.887703, y: 28.0085, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5386,7 +5386,7 @@ GameObject:
   - component: {fileID: 1256747999}
   - component: {fileID: 1256748000}
   m_Layer: 8
-  m_Name: Map Sprite
+  m_Name: Map Legend
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7380,6 +7380,7 @@ GameObject:
   - component: {fileID: 1671386528}
   - component: {fileID: 1671386527}
   - component: {fileID: 1671386529}
+  - component: {fileID: 1671386530}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -7484,6 +7485,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93284837fd61cb14e90ca081314e9e2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1671386530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671386521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d62180005c3af614e819cec834a097fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pingDelay: 3
 --- !u!1 &1696000107
 GameObject:
   m_ObjectHideFlags: 0
@@ -8649,7 +8663,7 @@ Transform:
   m_GameObject: {fileID: 1968140744}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.13, y: -19.55, z: 0}
+  m_LocalPosition: {x: 9.13, y: -19.55, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
