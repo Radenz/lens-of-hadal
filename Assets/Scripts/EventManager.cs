@@ -15,6 +15,7 @@ public class EventManager : Singleton<EventManager>
     public event Action DisplayQuestHidden;
     public event Action<QuestData> QuestCompleted;
     public event Action<QuestData> QuestUnlocked;
+    public event Action<QuestData> AfterQuestUnlocked;
     public event Action<QuestData> QuestAccepted;
     public event Action<QuestData> QuestRewardClaimed;
     #endregion
@@ -47,6 +48,7 @@ public class EventManager : Singleton<EventManager>
     public void UnlockQuest(QuestData quest)
     {
         QuestUnlocked?.Invoke(quest);
+        AfterQuestUnlocked?.Invoke(quest);
     }
 
     public void AcceptQuest(QuestData quest)
@@ -61,6 +63,8 @@ public class EventManager : Singleton<EventManager>
 
     public void CompleteQuest(QuestData quest)
     {
+        if (QuestManager.Instance.CurrentQuest == null) return;
+        if (QuestManager.Instance.CurrentQuest.Data != quest) return;
         QuestCompleted?.Invoke(quest);
     }
 

@@ -22,23 +22,19 @@ public class QuestManager : Singleton<QuestManager>
 
     private void OnEnable()
     {
+        EventManager.Instance.QuestAccepted += StartQuest;
         EventManager.Instance.QuestRewardClaimed += OnQuestCompleted;
-        EventManager.Instance.QuestUnlocked += OnQuestUnlocked;
+        EventManager.Instance.AfterQuestUnlocked += OnQuestUnlocked;
     }
 
     private void OnQuestUnlocked(QuestData quest)
     {
-        AfterQuestUnlocked(quest);
-    }
-
-    private async void AfterQuestUnlocked(QuestData quest)
-    {
-        await Awaitable.NextFrameAsync();
         _questStates[quest].IsUnlocked = true;
     }
 
     private void OnQuestCompleted(QuestData quest)
     {
+        Instantiate(CurrentQuest.Data.Reward);
         CurrentQuest = null;
         _questStates[quest].IsRewardClaimed = true;
     }
@@ -53,14 +49,19 @@ public class QuestManager : Singleton<QuestManager>
         CurrentQuest.StartQuest();
     }
 
-    public bool HasUnlocked(QuestData quest)
+    public bool IsUnlocked(QuestData quest)
     {
         return _questStates[quest].IsUnlocked;
+    }
+
+    public bool IsCompleted(QuestData quest)
+    {
+        return _questStates[quest].IsRewardClaimed;
     }
 }
 
 public class QuestState
 {
-    public bool IsUnlocked;
-    public bool IsRewardClaimed;
+    public bool IsUnlocked = false;
+    public bool IsRewardClaimed = false;
 }

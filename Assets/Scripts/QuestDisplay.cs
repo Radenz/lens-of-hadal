@@ -26,6 +26,10 @@ public class QuestDisplay : MonoBehaviour
     private void Start()
     {
         EventManager.Instance.QuestAccepted += OnAccept;
+        EventManager.Instance.QuestCompleted += OnComplete;
+        EventManager.Instance.QuestRewardClaimed += OnClaimReward;
+
+        _acceptButton.SetActive(true);
         PopulateFields();
         _title.ForceMeshUpdate(true);
         _description.ForceMeshUpdate(true);
@@ -38,10 +42,33 @@ public class QuestDisplay : MonoBehaviour
         if (quest != Quest)
         {
             _acceptButton.SetActive(false);
+            return;
         }
 
         _acceptButton.SetActive(false);
         _inProgressLabel.SetActive(true);
+    }
+
+    private void OnComplete(QuestData quest)
+    {
+        if (quest != Quest) return;
+        _inProgressLabel.SetActive(false);
+        _claimRewardButton.SetActive(true);
+    }
+
+    private void OnClaimReward(QuestData quest)
+    {
+        if (quest != Quest)
+        {
+            if (Quest.IsCompleted())
+                return;
+
+            _acceptButton.SetActive(true);
+            return;
+        }
+
+        _claimRewardButton.SetActive(false);
+        _completedLabel.SetActive(true);
     }
 
     [Button]
@@ -72,17 +99,12 @@ public class QuestDisplay : MonoBehaviour
 
     public void Accept()
     {
-        // TODO: impl
-    }
-
-    public void Complete()
-    {
-        // TODO: impl
+        EventManager.Instance.AcceptQuest(Quest);
     }
 
     public void ClaimReward()
     {
-        // TODO: impl
+        EventManager.Instance.ClaimQuestReward(Quest);
     }
 
     public float Height()

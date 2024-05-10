@@ -12,4 +12,13 @@ public class QuestData : ScriptableObject
 
     public GameObject[] Steps;
 
+    public GameObject Reward;
+}
+
+public static class QuestDataHelper
+{
+    public static bool IsCompleted(this QuestData quest)
+    {
+        return QuestManager.Instance.IsCompleted(quest);
+    }
 }

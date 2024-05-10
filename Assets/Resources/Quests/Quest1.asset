@@ -15,4 +15,5 @@ MonoBehaviour:
   Title: Getting Rich
   Description: Gather materials from the sea
   Steps:
-  - {fileID: 0}
+  - {fileID: 7507566420466533683, guid: 35a932a634fc4bd4c8604a3db250e6e6, type: 3}
+  Reward: {fileID: 3045631472178583046, guid: c2d65d7c0c54bd6469f82c1475a29223, type: 3}

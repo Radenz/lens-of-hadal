@@ -33,7 +33,7 @@ public class QuestMaster : Singleton<QuestMaster>
 
     private void OnQuestUnlocked(QuestData quest)
     {
-        if (QuestManager.Instance.HasUnlocked(quest)) return;
+        if (QuestManager.Instance.IsUnlocked(quest)) return;
 
         if (_transform.childCount > 0)
         {

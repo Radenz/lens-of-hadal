@@ -10,4 +10,11 @@ public class QuestHooks : MonoBehaviour
     {
         EventManager.Instance.UnlockQuest(Quest);
     }
+
+
+    [Button]
+    public void CompleteQuest()
+    {
+        EventManager.Instance.CompleteQuest(Quest);
+    }
 }
