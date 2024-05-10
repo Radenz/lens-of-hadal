@@ -138,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &447464441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,7 +186,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 447464440}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -234,6 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f4df2e798459b34fb6ddcd9f48412c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _canvas: {fileID: 0}
 --- !u!1 &1223478049
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,7 +394,7 @@ RectTransform:
   m_Father: {fileID: 2136834226}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -591,7 +592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4365c446f5ff564d8491b549cd2e2f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _topMargin: 24
+  _topMargin: 0
   _quests:
   - {fileID: 11400000, guid: c06508e44cc26b24886e6cc18f50856b, type: 2}
   - {fileID: 11400000, guid: c5d074d84c004654eaccaeac3aa06506, type: 2}
@@ -631,9 +632,9 @@ RectTransform:
   m_Father: {fileID: 1747933580}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -17, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2070152800
 MonoBehaviour:

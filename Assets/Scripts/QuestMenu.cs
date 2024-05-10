@@ -2,13 +2,16 @@ using UnityEngine;
 
 public class QuestMenu : Singleton<QuestMenu>
 {
+    [SerializeField]
+    private Canvas _canvas;
+
     public void Show()
     {
-        gameObject.SetActive(true);
+        _canvas.enabled = true;
     }
 
     public void Hide()
     {
-        gameObject.SetActive(false);
+        _canvas.enabled = false;
     }
 }

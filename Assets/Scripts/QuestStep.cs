@@ -10,8 +10,14 @@ public abstract class QuestStep : MonoBehaviour
 
     protected virtual void Start()
     {
-        EventManager.Instance.SetQuestDisplay(Quest.Data.Title, GetDescription());
+        Quest = QuestManager.Instance.CurrentQuest;
+        UpdateDisplay();
         CheckCompletion();
+    }
+
+    protected void UpdateDisplay()
+    {
+        EventManager.Instance.SetQuestDisplay(Quest.Data.Title, GetDescription());
     }
 
     protected virtual string GetDescription()
@@ -25,5 +31,5 @@ public abstract class QuestStep : MonoBehaviour
         Destroy(gameObject);
     }
 
-    protected abstract bool CheckCompletion();
+    protected abstract void CheckCompletion();
 }

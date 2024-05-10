@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Quest : MonoBehaviour
+public class Quest
 {
     public QuestData Data;
     public bool IsCompleted = false;
@@ -27,14 +27,12 @@ public class Quest : MonoBehaviour
         if (Data.Steps.Length == _stepIndex)
         {
             IsCompleted = true;
-            EventManager.Instance.CompleteQuest();
+            EventManager.Instance.CompleteQuest(Data);
         }
     }
 
     private void StartStep()
     {
-        GameObject obj = Instantiate(Data.Steps[_stepIndex]);
-        QuestStep questStep = obj.GetComponent<QuestStep>();
-        questStep.Quest = this;
+        Object.Instantiate(Data.Steps[_stepIndex]);
     }
 }

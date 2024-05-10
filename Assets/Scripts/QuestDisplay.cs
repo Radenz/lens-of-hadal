@@ -23,6 +23,27 @@ public class QuestDisplay : MonoBehaviour
     [SerializeField]
     private GameObject _completedLabel;
 
+    private void Start()
+    {
+        EventManager.Instance.QuestAccepted += OnAccept;
+        PopulateFields();
+        _title.ForceMeshUpdate(true);
+        _description.ForceMeshUpdate(true);
+        RecomputeLayout();
+        AddOffsetY(-Height());
+    }
+
+    private void OnAccept(QuestData quest)
+    {
+        if (quest != Quest)
+        {
+            _acceptButton.SetActive(false);
+        }
+
+        _acceptButton.SetActive(false);
+        _inProgressLabel.SetActive(true);
+    }
+
     [Button]
     public void MakeAnonymous()
     {
@@ -78,6 +99,14 @@ public class QuestDisplay : MonoBehaviour
         transform_.anchoredPosition = position;
     }
 
+    private void AddOffsetY(float diff)
+    {
+        RectTransform transform_ = (RectTransform)transform;
+        Vector2 position = transform_.anchoredPosition;
+        position.y += diff;
+        transform_.anchoredPosition = position;
+    }
+
     [Button]
     public void RecomputeLayout()
     {
@@ -92,8 +121,6 @@ public class QuestDisplay : MonoBehaviour
         Vector2 position = descriptionTransform.anchoredPosition;
         position.y = -titleTransform.rect.height;
         descriptionTransform.anchoredPosition = position;
-        Debug.Log(_description.TotalHeight());
-        Debug.Log(descriptionTransform.rect.height);
 
         position = buttonTransform.anchoredPosition;
         position.y = -(titleTransform.rect.height + descriptionTransform.rect.height);

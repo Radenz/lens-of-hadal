@@ -2,12 +2,15 @@ using System.Collections.Generic;
 using NaughtyAttributes;
 using UnityEngine;
 
-[ExecuteAlways]
 public class QuestMaster : Singleton<QuestMaster>
 {
+    private Transform _transform;
+
     [Header("Display Settings")]
     [SerializeField]
     private float _topMargin = 24;
+
+    private float _totalHeight;
 
     [Header("Quest Settings")]
     [SerializeField]
@@ -15,6 +18,32 @@ public class QuestMaster : Singleton<QuestMaster>
 
     [SerializeField]
     private GameObject _questPrefab;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        _transform = transform;
+        _topMargin = _totalHeight;
+    }
+
+    private void OnEnable()
+    {
+        EventManager.Instance.QuestUnlocked += OnQuestUnlocked;
+    }
+
+    private void OnQuestUnlocked(QuestData quest)
+    {
+        if (_transform.childCount > 0)
+        {
+            RectTransform lastChild = (RectTransform)_transform.GetChild(_transform.childCount - 1);
+            _totalHeight = lastChild.rect.height;
+        }
+
+        GameObject obj = Instantiate(_questPrefab, _transform);
+        QuestDisplay display = obj.GetComponent<QuestDisplay>();
+        display.Quest = quest;
+        display.SetOffsetY(-_totalHeight);
+    }
 
     [Button]
     private void Clear()

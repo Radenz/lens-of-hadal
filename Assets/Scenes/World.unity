@@ -225,8 +225,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 2.3506985, y: 0.7365999, z: 0}
-    m_Extent: {x: 49.887802, y: 28.0083, z: 0}
+    m_Center: {x: 2.3510494, y: 0.7367506, z: 0}
+    m_Extent: {x: 49.88745, y: 28.00895, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3472,6 +3472,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f53031364de48948bbd09bd1058c532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _title: {fileID: 0}
+  _description: {fileID: 0}
 --- !u!1 &794066740
 GameObject:
   m_ObjectHideFlags: 0
@@ -6729,6 +6731,9 @@ GameObject:
   - component: {fileID: 1671386524}
   - component: {fileID: 1671386523}
   - component: {fileID: 1671386525}
+  - component: {fileID: 1671386528}
+  - component: {fileID: 1671386527}
+  - component: {fileID: 1671386526}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -6794,6 +6799,46 @@ MonoBehaviour:
   _virtualCameras:
   - {fileID: 1510408525}
   - {fileID: 181989276}
+--- !u!114 &1671386526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671386521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7323a60c441ed74498f82be4076207e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Quest: {fileID: 0}
+--- !u!114 &1671386527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671386521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7247a60d22576a54bac5bde031de06c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1671386528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671386521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff83ac08d040a1c44a9b89ce7003666e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _quests:
+  - {fileID: 11400000, guid: c06508e44cc26b24886e6cc18f50856b, type: 2}
+  - {fileID: 11400000, guid: c5d074d84c004654eaccaeac3aa06506, type: 2}
 --- !u!1 &1696000107
 GameObject:
   m_ObjectHideFlags: 0

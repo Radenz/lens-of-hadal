@@ -13,8 +13,9 @@ public class CurrencySystem : Singleton<CurrencySystem>
         get => _gold;
         set
         {
+            int initialValue = _gold;
             _gold = value;
-            EventManager.Instance.SetGold(value);
+            EventManager.Instance.SetGold(initialValue, value);
         }
     }
 
@@ -23,8 +24,9 @@ public class CurrencySystem : Singleton<CurrencySystem>
         get => _energyPowder;
         set
         {
+            int initialValue = _energyPowder;
             _energyPowder = value;
-            EventManager.Instance.SetEnergyPowder(value);
+            EventManager.Instance.SetEnergyPowder(initialValue, value);
         }
     }
 
@@ -33,8 +35,9 @@ public class CurrencySystem : Singleton<CurrencySystem>
         get => _seaweed;
         set
         {
+            int initialValue = _seaweed;
             _seaweed = value;
-            EventManager.Instance.SetSeaweed(value);
+            EventManager.Instance.SetSeaweed(initialValue, value);
         }
     }
 
@@ -43,8 +46,9 @@ public class CurrencySystem : Singleton<CurrencySystem>
         get => _scrapMetal;
         set
         {
+            int initialValue = _scrapMetal;
             _scrapMetal = value;
-            EventManager.Instance.SetScrapMetal(value);
+            EventManager.Instance.SetScrapMetal(initialValue, value);
         }
     }
 }

@@ -12,15 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f47281e9fbe0024f8e0b8d55fb4031f, type: 3}
   m_Name: Quest1
   m_EditorClassIdentifier: 
-  Title: Abc
-  Description: This is description of quest 1
-  Items:
-  - Description: agqeg
-    Countable: 1
-    Counter: 0
-    Target: 0
-    IsCompleted: 0
-    Validator:
-      Type: 3
-      Quantity: 0
-      Name: 
+  Title: Getting Rich
+  Description: Gather materials from the sea
+  Steps:
+  - {fileID: 0}
