@@ -27,6 +27,11 @@ public class EventManager : Singleton<EventManager>
     public event Action<int> LevelledUp;
     #endregion
 
+    #region Shop Events
+    public event Action<string> ModuleUnlocked;
+    #endregion
+
+
     public void SetGold(int initialValue, int finalValue)
     {
         GoldChanged?.Invoke(initialValue, finalValue);
