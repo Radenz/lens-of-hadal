@@ -28,6 +28,12 @@ public class QuestManager : Singleton<QuestManager>
 
     private void OnQuestUnlocked(QuestData quest)
     {
+        AfterQuestUnlocked(quest);
+    }
+
+    private async void AfterQuestUnlocked(QuestData quest)
+    {
+        await Awaitable.NextFrameAsync();
         _questStates[quest].IsUnlocked = true;
     }
 
@@ -45,6 +51,11 @@ public class QuestManager : Singleton<QuestManager>
             Data = quest
         };
         CurrentQuest.StartQuest();
+    }
+
+    public bool HasUnlocked(QuestData quest)
+    {
+        return _questStates[quest].IsUnlocked;
     }
 }
 
