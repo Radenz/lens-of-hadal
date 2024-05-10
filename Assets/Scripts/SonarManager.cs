@@ -12,7 +12,6 @@ public class SonarManager : MonoBehaviour
 
     private void Ping()
     {
-        Debug.Log("Pinging Sonar");
         EventManager.Instance.PingSonar();
         Timer.Instance.SetTimer(Ping, _pingDelay);
     }
