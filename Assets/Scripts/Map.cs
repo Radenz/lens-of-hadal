@@ -2,15 +2,18 @@ using UnityEngine;
 
 public class Map : Singleton<Map>
 {
+    [SerializeField]
+    private Canvas _canvas;
+
     public void Show()
     {
-        Time.timeScale = 0;
+        // _canvas.enabled = true;
         gameObject.SetActive(true);
     }
 
     public void Hide()
     {
-        Time.timeScale = 1;
         gameObject.SetActive(false);
+        // _canvas.enabled = false;
     }
 }
