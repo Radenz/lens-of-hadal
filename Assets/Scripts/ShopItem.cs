@@ -2,7 +2,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-[ExecuteAlways]
 public class ShopItem : MonoBehaviour
 {
     [Header("Item Properties")]
@@ -24,9 +23,8 @@ public class ShopItem : MonoBehaviour
     private int _scrapMetal;
 
     // TODO: hook up all items
-    [Header("Action")]
     [SerializeField]
-    private UnityEvent _onAssemble;
+    private bool _disableOnAssemble = false;
 
     [Header("UI Elements")]
     [SerializeField]
@@ -65,6 +63,13 @@ public class ShopItem : MonoBehaviour
             || CurrencySystem.Instance.ScrapMetal < _scrapMetal)
             return;
 
-        // TODO: give player upgrade module, etc.
+        CurrencySystem.Instance.EnergyPowder -= _energyPowder;
+        CurrencySystem.Instance.Seaweed -= _seaweed;
+        CurrencySystem.Instance.ScrapMetal -= _scrapMetal;
+
+        EventManager.Instance.AssembleItem(_id);
+
+        if (_disableOnAssemble)
+            gameObject.SetActive(false);
     }
 }

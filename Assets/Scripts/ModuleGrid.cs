@@ -1,10 +1,10 @@
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using NaughtyAttributes;
 using UnityEngine;
 
 // TODO: immediate remove when module is dragged
-[ExecuteAlways]
 [RequireComponent(typeof(RectTransform))]
 public class ModuleGrid : MonoBehaviour
 {
@@ -26,6 +26,8 @@ public class ModuleGrid : MonoBehaviour
 
     public event Action<ModuleGrid, Module> Place;
 
+    private static event Action<Module> PlaceInventory;
+
     Rect _rect => _transform.rect;
     float _xStart => _rect.xMin + _transform.localPosition.x;
     float _yStart => _rect.yMin + _transform.localPosition.y;
@@ -39,6 +41,9 @@ public class ModuleGrid : MonoBehaviour
         _canvasTransform = (RectTransform)canvas.transform;
         _mvpMatrix = _canvasTransform.localToWorldMatrix;
         _modules = new Module[_gridSize.x, _gridSize.y];
+
+        if (Name == "Inventory")
+            PlaceInventory += Add;
     }
 
     private void Start()
@@ -125,7 +130,36 @@ public class ModuleGrid : MonoBehaviour
 
     public void Expand((int, int) size)
     {
-        // TODO: impl
+        Vector2Int initialSize = _gridSize;
+        _gridSize = new(size.Item1, size.Item2);
+        Module[,] modules = _modules;
+        _modules = new Module[_gridSize.x, _gridSize.y];
+
+        Dictionary<Module, Vector2Int> modulePositions = new();
+
+        for (int y = initialSize.y - 1; y >= 0; y--)
+            for (int x = 0; x < initialSize.x; x++)
+            {
+                if (modules[x, y] != null)
+                {
+                    modulePositions[modules[x, y]] = new(x, _gridSize.y - 1 - y);
+                }
+            }
+        ReadjustSizeAndModules(modulePositions);
+    }
+
+    private async void ReadjustSizeAndModules(Dictionary<Module, Vector2Int> modulePositions)
+    {
+        await Task.Yield();
+        float height = _tileSize.y * _gridSize.y;
+        float width = _tileSize.x * _gridSize.x;
+        _transform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, width);
+        _transform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, height);
+        await Awaitable.NextFrameAsync();
+        foreach (KeyValuePair<Module, Vector2Int> entry in modulePositions)
+        {
+            PlaceModule(entry.Key, entry.Value);
+        }
     }
 
     public void Remove(Module module)
@@ -140,6 +174,7 @@ public class ModuleGrid : MonoBehaviour
 
     public bool TryPlace(Module module, Vector2 position)
     {
+        Debug.Log("?????");
         if (PointToGridIndex(position, out (int, int) indexPair) && HasSlot(indexPair, module))
         {
             Vector2Int placementIndex = new(indexPair.Item1, indexPair.Item2);
@@ -162,6 +197,9 @@ public class ModuleGrid : MonoBehaviour
         if (module.Grid != null)
             module.Grid.Remove(module);
 
+        if (Name == "Upgrade")
+            EnsureNoConflictingModules(module);
+
         for (int i = index[0]; i < index[0] + module.Size.x; i++)
         {
             for (int j = index[1]; j < index[1] + module.Size.y; j++)
@@ -174,10 +212,26 @@ public class ModuleGrid : MonoBehaviour
         Place?.Invoke(this, module);
     }
 
+    private void EnsureNoConflictingModules(Module module)
+    {
+        for (int y = _gridSize.y - 1; y >= 0; y--)
+            for (int x = 0; x < _gridSize.x; x++)
+            {
+                if (_modules[x, y] != null && _modules[x, y].GroupTag == module.GroupTag)
+                    PlaceToInventory(_modules[x, y]);
+            }
+    }
+
+    private void PlaceToInventory(Module module)
+    {
+        PlaceInventory?.Invoke(module);
+    }
+
     private bool PointToGridIndex(Vector2 position, out (int, int) index)
     {
         index = (0, 0);
         Vector2 localPosition = position - (Vector2)_transform.localPosition;
+        Debug.Log(localPosition);
         if (!_transform.rect.Contains(localPosition))
             return false;
 
@@ -185,6 +239,7 @@ public class ModuleGrid : MonoBehaviour
         float x = relativePosition.x / _tileSize.x;
         float y = relativePosition.y / _tileSize.y;
         index = new(Mathf.FloorToInt(x), Mathf.FloorToInt(y));
+        Debug.Log(index);
         return true;
     }
 

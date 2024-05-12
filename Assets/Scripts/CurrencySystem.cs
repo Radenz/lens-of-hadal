@@ -1,11 +1,17 @@
 // TODO: hook up with UI
 using System;
+using NaughtyAttributes;
+using UnityEngine;
 
 public class CurrencySystem : Singleton<CurrencySystem>
 {
+    [SerializeField]
     private int _gold;
+    [SerializeField]
     private int _energyPowder;
+    [SerializeField]
     private int _seaweed;
+    [SerializeField]
     private int _scrapMetal;
 
     public int Gold

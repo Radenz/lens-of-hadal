@@ -61,11 +61,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec98e7e63e0b22148a2682d2f2139b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _id: 
   _name: Item
   _gold: 0
   _energyPowder: 0
   _seaweed: 0
   _scrapMetal: 0
+  _disableOnAssemble: 0
   _nameLabel: {fileID: 3758314300186212898}
   _unlockButton: {fileID: 7862240027886829814}
   _assembleButton: {fileID: 8023792187888210639}
@@ -452,6 +454,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7935012175301798371, guid: bfc7b1cda5bf5f943af984a835efd49b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 96
+      objectReference: {fileID: 0}
+    - target: {fileID: 7935012175301798371, guid: bfc7b1cda5bf5f943af984a835efd49b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 24
+      objectReference: {fileID: 0}
     - target: {fileID: 9049184674453085092, guid: bfc7b1cda5bf5f943af984a835efd49b, type: 3}
       propertyPath: m_text
       value: UNLOCK
@@ -612,6 +622,14 @@ PrefabInstance:
     - target: {fileID: 6942657530882109722, guid: bfc7b1cda5bf5f943af984a835efd49b, type: 3}
       propertyPath: m_Color.r
       value: 0.0930719
+      objectReference: {fileID: 0}
+    - target: {fileID: 7935012175301798371, guid: bfc7b1cda5bf5f943af984a835efd49b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 96
+      objectReference: {fileID: 0}
+    - target: {fileID: 7935012175301798371, guid: bfc7b1cda5bf5f943af984a835efd49b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 8702176657417613713, guid: bfc7b1cda5bf5f943af984a835efd49b, type: 3}
       propertyPath: m_Color.b

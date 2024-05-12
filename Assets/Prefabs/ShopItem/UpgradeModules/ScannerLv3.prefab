@@ -89,6 +89,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: Scanner3
+  _groupTag: Scanner
   _size: {x: 1, y: 1}
   _tileSize: {x: 96, y: 96}
   Grid: {fileID: 0}

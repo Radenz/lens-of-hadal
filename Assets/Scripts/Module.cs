@@ -9,6 +9,10 @@ public class Module : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     [SerializeField]
     private string _name;
     public string Name => _name;
+    [SerializeField]
+    private string _groupTag;
+    public string GroupTag => _groupTag;
+
 
     [Header("Sizing")]
     [SerializeField]

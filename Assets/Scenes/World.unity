@@ -225,8 +225,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 2.3508492, y: 0.7371502, z: 0}
-    m_Extent: {x: 49.88855, y: 28.00825, z: 0}
+    m_Center: {x: 2.3504505, y: 0.73604965, z: 0}
+    m_Extent: {x: 49.88835, y: 28.00845, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3363,8 +3363,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -6.4151993, y: 3.5247998, z: 0}
-    m_Extent: {x: 40.0435, y: 14.8503, z: 0}
+    m_Center: {x: -6.4151993, y: 3.52595, z: 0}
+    m_Extent: {x: 40.0433, y: 14.85005, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3967,8 +3967,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -6.4149, y: 3.52525, z: 0}
-    m_Extent: {x: 40.0431, y: 14.8490505, z: 0}
+    m_Center: {x: -6.4146004, y: 3.5249, z: 0}
+    m_Extent: {x: 40.0438, y: 14.850599, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4009,7 +4009,7 @@ GameObject:
   - component: {fileID: 837221057}
   - component: {fileID: 837221056}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Debug
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4028,6 +4028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExpAmount: 0
+  ItemId: 
 --- !u!4 &837221057
 Transform:
   m_ObjectHideFlags: 0
@@ -7559,6 +7560,7 @@ GameObject:
   - component: {fileID: 1671386527}
   - component: {fileID: 1671386529}
   - component: {fileID: 1671386530}
+  - component: {fileID: 1671386531}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -7676,6 +7678,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pingDelay: 3
+--- !u!114 &1671386531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671386521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f20f11429ff4a8f41b19808c54c5762b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1696000107
 GameObject:
   m_ObjectHideFlags: 0

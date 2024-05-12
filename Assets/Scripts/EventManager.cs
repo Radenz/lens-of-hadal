@@ -28,10 +28,19 @@ public class EventManager : Singleton<EventManager>
     #endregion
 
     #region Shop Events
-    public event Action<string> ModuleUnlocked;
+    public event Action<string> ShopItemShown;
+    public event Action<string> ShopItemUnlocked;
+    public event Action<string> ShopItemAssembled;
     #endregion
 
-    #region Sonar Events
+    #region Consumables Events
+    public event Action<int> FlashlightEquipped;
+    public event Action<int> ScannerEquipped;
+
+    public event Action<int> SonarQuantityChanged;
+    public event Action<int> FlareQuantityChanged;
+
+
     public event Action SonarPinged;
     #endregion
 
@@ -102,5 +111,26 @@ public class EventManager : Singleton<EventManager>
     public void PingSonar()
     {
         SonarPinged?.Invoke();
+    }
+
+    // FIX: rename terminology to buy blueprint
+    public void UnlockItem(string id)
+    {
+        ShopItemShown?.Invoke(id);
+    }
+
+    public void AssembleItem(string id)
+    {
+        ShopItemAssembled?.Invoke(id);
+    }
+
+    public void ChangeSonarQuantity(int quantity)
+    {
+        SonarQuantityChanged?.Invoke(quantity);
+    }
+
+    public void ChangeFlareQuantity(int quantity)
+    {
+        FlareQuantityChanged?.Invoke(quantity);
     }
 }
