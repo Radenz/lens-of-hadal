@@ -7,9 +7,6 @@ public class ModuleSystem : Singleton<ModuleSystem>
     public static Module DraggedModule;
     public static Vector2Int DragPosition;
 
-    public event Action<Module> Equip;
-    public event Action<Module> Unequip;
-
     [Header("Item Names")]
     public string FlashlightLv2 = "Flashlight2";
 
@@ -35,9 +32,9 @@ public class ModuleSystem : Singleton<ModuleSystem>
     private void OnModulePlaced(ModuleGrid grid, Module module)
     {
         if (grid.Name == "Upgrade")
-            Equip?.Invoke(module);
+            EventManager.Instance.EquipItem(module.Name);
 
         if (grid.Name == "Inventory")
-            Unequip?.Invoke(module);
+            EventManager.Instance.UnequipItem(module.Name);
     }
 }

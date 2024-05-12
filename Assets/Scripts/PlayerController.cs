@@ -2,6 +2,7 @@ using DG.Tweening;
 using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
@@ -17,6 +18,9 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private float _maxStamina;
+
+    [SerializeField]
+    private Light2D _flashlight;
 
     #region Player Attributes
     [SerializeField, ReadOnly]
@@ -63,7 +67,6 @@ public class PlayerController : MonoBehaviour
     private PlayerInputActions _playerInputActions;
 
     private int _dna = 0;
-    private int _gold = 0;
     #endregion Player Attributes
 
     [SerializeField]
@@ -125,6 +128,9 @@ public class PlayerController : MonoBehaviour
         _playerInputActions.World.Enable();
         _playerInputActions.World.DeployFlare.performed += _ => DeployFlare();
         _playerInputActions.World.DeploySonar.performed += _ => DeploySonar();
+
+        EventManager.Instance.FlashlightEquipped += OnFlashlightEquipped;
+        EventManager.Instance.FlashlightUnequipped += OnFlashlightUnequipped;
     }
 
     private void Update()
@@ -135,6 +141,28 @@ public class PlayerController : MonoBehaviour
             Recover();
         if (_shouldRecoverStamina && Stamina < _maxStamina)
             RecoverStamina();
+    }
+
+    private void OnFlashlightEquipped(int level)
+    {
+        if (level == 2)
+        {
+            _flashlight.intensity = 1.1f;
+            _flashlight.pointLightOuterRadius = 6f;
+            return;
+        }
+
+        if (level == 3)
+        {
+            _flashlight.intensity = 1.2f;
+            _flashlight.pointLightOuterRadius = 7f;
+        }
+    }
+
+    private void OnFlashlightUnequipped()
+    {
+        _flashlight.intensity = 1f;
+        _flashlight.pointLightOuterRadius = 5f;
     }
 
     private void Recover()

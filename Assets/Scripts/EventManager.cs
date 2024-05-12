@@ -35,7 +35,9 @@ public class EventManager : Singleton<EventManager>
 
     #region Consumables Events
     public event Action<int> FlashlightEquipped;
+    public event Action FlashlightUnequipped;
     public event Action<int> ScannerEquipped;
+    public event Action ScannerUnequipped;
 
     public event Action<int> SonarQuantityChanged;
     public event Action<int> FlareQuantityChanged;
@@ -132,5 +134,39 @@ public class EventManager : Singleton<EventManager>
     public void ChangeFlareQuantity(int quantity)
     {
         FlareQuantityChanged?.Invoke(quantity);
+    }
+
+    public void EquipItem(string id)
+    {
+        switch (id)
+        {
+            case "Flashlight2":
+                FlashlightEquipped?.Invoke(2);
+                break;
+            case "Flashlight3":
+                FlashlightEquipped?.Invoke(3);
+                break;
+            case "Scanner2":
+                ScannerEquipped?.Invoke(2);
+                break;
+            case "Scanner3":
+                ScannerEquipped?.Invoke(3);
+                break;
+        }
+    }
+
+    public void UnequipItem(string id)
+    {
+        switch (id)
+        {
+            case "Flashlight2":
+            case "Flashlight3":
+                FlashlightUnequipped?.Invoke();
+                break;
+            case "Scanner2":
+            case "Scanner3":
+                ScannerUnequipped?.Invoke();
+                break;
+        }
     }
 }

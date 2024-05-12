@@ -5,8 +5,11 @@ public class Scanner : MonoBehaviour
 {
     [SerializeField]
     private Vector2 _direction;
-    [SerializeField]
     private float _range = 2.5f;
+
+    [SerializeField]
+    private CircleCollider2D _rangeCollider;
+
     [SerializeField]
     private float _scanAngleRadius;
 
@@ -31,6 +34,9 @@ public class Scanner : MonoBehaviour
         _light = _lightTransform.gameObject;
         _playerInputActions = new();
         _playerInputActions.World.Enable();
+
+        EventManager.Instance.ScannerEquipped += OnScannerEquipped;
+        EventManager.Instance.ScannerUnequipped += OnScannerUnequipped;
     }
 
     private void Update()
@@ -69,6 +75,28 @@ public class Scanner : MonoBehaviour
         {
             ChooseScannable();
         }
+    }
+
+    private void OnScannerEquipped(int level)
+    {
+        if (level == 2)
+        {
+            SetRange(2.7f);
+            return;
+        }
+
+        if (level == 3)
+            SetRange(3f);
+    }
+
+    private void OnScannerUnequipped()
+    {
+        SetRange(2.5f);
+    }
+
+    private void SetRange(float range)
+    {
+        _rangeCollider.radius = range;
     }
 
     private void ChooseScannable()
