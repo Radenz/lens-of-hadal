@@ -174,7 +174,6 @@ public class ModuleGrid : MonoBehaviour
 
     public bool TryPlace(Module module, Vector2 position)
     {
-        Debug.Log("?????");
         if (PointToGridIndex(position, out (int, int) indexPair) && HasSlot(indexPair, module))
         {
             Vector2Int placementIndex = new(indexPair.Item1, indexPair.Item2);
@@ -231,7 +230,6 @@ public class ModuleGrid : MonoBehaviour
     {
         index = (0, 0);
         Vector2 localPosition = position - (Vector2)_transform.localPosition;
-        Debug.Log(localPosition);
         if (!_transform.rect.Contains(localPosition))
             return false;
 
@@ -239,7 +237,6 @@ public class ModuleGrid : MonoBehaviour
         float x = relativePosition.x / _tileSize.x;
         float y = relativePosition.y / _tileSize.y;
         index = new(Mathf.FloorToInt(x), Mathf.FloorToInt(y));
-        Debug.Log(index);
         return true;
     }
 

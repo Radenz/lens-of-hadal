@@ -31,6 +31,7 @@ public class ModuleSystem : Singleton<ModuleSystem>
         return false;
     }
 
+    // TODO: hook up with its effects
     private void OnModulePlaced(ModuleGrid grid, Module module)
     {
         if (grid.Name == "Upgrade")
