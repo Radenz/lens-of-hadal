@@ -1,6 +1,4 @@
-// TODO: hook up with UI
 using System;
-using NaughtyAttributes;
 using UnityEngine;
 
 public class CurrencySystem : Singleton<CurrencySystem>
@@ -56,6 +54,18 @@ public class CurrencySystem : Singleton<CurrencySystem>
             _scrapMetal = value;
             EventManager.Instance.SetScrapMetal(initialValue, value);
         }
+    }
+
+    private void Start()
+    {
+        EventManager.Instance.Rewarded += OnRewarded;
+    }
+
+    private void OnRewarded(int energyPowder, int seaweed, int scrapMetal)
+    {
+        EnergyPowder += energyPowder;
+        Seaweed += seaweed;
+        ScrapMetal += scrapMetal;
     }
 }
 

@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using UnityEngine;
 
 public class Scannable : MonoBehaviour
@@ -10,8 +11,6 @@ public class Scannable : MonoBehaviour
     private ScanProgressBar _scanProgressBarPrefab;
     [SerializeField]
     private float _scanDuration = 2;
-    [SerializeField]
-    private int _dnaReward = 40;
 
     [SerializeField]
     private float _scanTime;
@@ -23,6 +22,14 @@ public class Scannable : MonoBehaviour
 
     private GameObject ScanProgressBarObject => _scanProgressBarPrefab.gameObject;
     private GameObject _scanProgressBar;
+
+    [Header("Rewards")]
+    [SerializeField, MinMaxSlider(0, 100)]
+    private Vector2Int _energyPowder;
+    [SerializeField, MinMaxSlider(0, 100)]
+    private Vector2Int _seaweed;
+    [SerializeField, MinMaxSlider(0, 100)]
+    private Vector2Int _scrapMetal;
 
     private void Awake()
     {
@@ -61,10 +68,15 @@ public class Scannable : MonoBehaviour
 
     public void FinishScan()
     {
+        Debug.Log("Rewarding");
         IsScanned = true;
         StopScan();
 
-        // TODO: check if this part has been discovered
-        RewardManager.Instance.RewardDNA(_dnaReward);
+        int energyPowder = Random.Range(_energyPowder.x, _energyPowder.y);
+        int seaweed = Random.Range(_seaweed.x, _seaweed.y);
+        int scrapMetal = Random.Range(_scrapMetal.x, _scrapMetal.y);
+
+        EventManager.Instance.RewardPlayer(energyPowder, seaweed, scrapMetal);
+        Announcer.Instance.AnnounceScan(_name, energyPowder, seaweed, scrapMetal);
     }
 }

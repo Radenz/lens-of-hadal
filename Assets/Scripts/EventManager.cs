@@ -10,6 +10,7 @@ public class EventManager : Singleton<EventManager>
     public event Action<int, int> SeaweedChanged;
     public event Action<int, int> ScrapMetalChanged;
     public event Action<int, int> EnergyPowderChanged;
+    public event Action<int, int, int> Rewarded;
     #endregion
 
     #region Quest Events
@@ -198,5 +199,10 @@ public class EventManager : Singleton<EventManager>
     public void EnablePlayerActions()
     {
         PlayerActionsEnabled?.Invoke();
+    }
+
+    public void RewardPlayer(int energyPowder, int seaweed, int scrapMetal)
+    {
+        Rewarded?.Invoke(energyPowder, seaweed, scrapMetal);
     }
 }

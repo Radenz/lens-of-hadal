@@ -103,7 +103,7 @@ public class Scanner : MonoBehaviour
     {
         if (_intersectedScannables.Count == 0) StopScanCurrent();
 
-        if (_intersectedScannables.Count <= 1) return;
+        if (_intersectedScannables.Count <= 1 && _objectOnScan != null) return;
 
         float currentOnScanDistance = _objectOnScan == null ? int.MaxValue : DistanceTo(_objectOnScan.Position);
         Scannable featureToScan = _objectOnScan;

@@ -5,12 +5,23 @@ using UnityEngine;
 
 public class Announcer : Singleton<Announcer>
 {
+    [Header("References")]
     [SerializeField]
     private GameObject _announcement;
     [SerializeField]
     private TextMeshProUGUI _title;
     [SerializeField]
-    private TextMeshProUGUI _dnaRewardLabel;
+    private GameObject _energyPowderRewardLabel;
+    [SerializeField]
+    private TextMeshProUGUI _energyPowderRewardLabelText;
+    [SerializeField]
+    private GameObject _seaweedRewardLabel;
+    [SerializeField]
+    private TextMeshProUGUI _seaweedRewardLabelText;
+    [SerializeField]
+    private GameObject _scrapMetalRewardLabel;
+    [SerializeField]
+    private TextMeshProUGUI _scrapMetalRewardLabelText;
 
     [SerializeField]
     private float _duration = 2;
@@ -34,7 +45,52 @@ public class Announcer : Singleton<Announcer>
         Announcement announcement = _announcementQueue[0];
         _announcementQueue.RemoveRange(0, 1);
 
-        _dnaRewardLabel.text = announcement.DnaReward.ToString();
+        int unusedCurrencies = 0;
+        List<GameObject> usedLabels = new();
+
+        if (announcement.EnergyPowderReward == 0)
+        {
+            unusedCurrencies++;
+            _energyPowderRewardLabel.SetActive(false);
+        }
+        else
+        {
+            usedLabels.Add(_energyPowderRewardLabel);
+        }
+        _energyPowderRewardLabelText.text = announcement.EnergyPowderReward.ToString();
+
+        if (announcement.SeaweedReward == 0)
+        {
+            unusedCurrencies++;
+            _seaweedRewardLabel.SetActive(false);
+        }
+        else
+        {
+            usedLabels.Add(_seaweedRewardLabel);
+        }
+        _seaweedRewardLabelText.text = announcement.SeaweedReward.ToString();
+
+        if (announcement.ScrapMetalReward == 0)
+        {
+            unusedCurrencies++;
+            _scrapMetalRewardLabel.SetActive(false);
+        }
+        else
+        {
+            usedLabels.Add(_scrapMetalRewardLabel);
+        }
+        _scrapMetalRewardLabelText.text = announcement.ScrapMetalReward.ToString();
+
+        float offset = -140 * (usedLabels.Count - 1);
+
+        foreach (GameObject label in usedLabels)
+        {
+            Vector3 position = label.transform.localPosition;
+            position.x = offset;
+            offset += 280;
+            label.transform.localPosition = position;
+        }
+
         _title.text = announcement.Title.ToString();
         _isAnnouncing = true;
         _announcement.SetActive(true);
@@ -47,37 +103,50 @@ public class Announcer : Singleton<Announcer>
         _announcement.SetActive(false);
     }
 
-    public void AnnounceNewBodyPart(int dnaReward)
+    public void AnnounceScan(string creatureName, int energyPowder, int seaweed, int scrapMetal)
     {
         _announcementQueue.Add(new()
         {
-            Title = NEW_BODY_PART_TITLE,
-            DnaReward = dnaReward
+            Title = "CREATURE SCANNED",
+            EnergyPowderReward = energyPowder,
+            SeaweedReward = seaweed,
+            ScrapMetalReward = scrapMetal,
         });
     }
 
-    public void AnnounceNewCreature(string creatureName, int dnaReward)
-    {
-        _announcementQueue.Add(new()
-        {
-            Title = NEW_CREATURE_TITLE,
-            DnaReward = dnaReward
-        });
-    }
+    // public void AnnounceNewBodyPart(int dnaReward)
+    // {
+    //     _announcementQueue.Add(new()
+    //     {
+    //         Title = NEW_BODY_PART_TITLE,
+    //         DnaReward = dnaReward
+    //     });
+    // }
 
-    public void AnnounceScan(int dnaReward)
-    {
-        _announcementQueue.Add(new()
-        {
-            Title = BODY_PART_TITLE,
-            DnaReward = dnaReward
-        });
-    }
+    // public void AnnounceNewCreature(string creatureName, int dnaReward)
+    // {
+    //     _announcementQueue.Add(new()
+    //     {
+    //         Title = NEW_CREATURE_TITLE,
+    //         DnaReward = dnaReward
+    //     });
+    // }
+
+    // public void AnnounceScan(int dnaReward)
+    // {
+    //     _announcementQueue.Add(new()
+    //     {
+    //         Title = BODY_PART_TITLE,
+    //         DnaReward = dnaReward
+    //     });
+    // }
 }
 
 struct Announcement
 {
     public string Title;
     public string Name;
-    public int DnaReward;
+    public int EnergyPowderReward;
+    public int SeaweedReward;
+    public int ScrapMetalReward;
 }
