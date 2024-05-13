@@ -30,6 +30,8 @@ public class Scannable : MonoBehaviour
     private Vector2Int _seaweed;
     [SerializeField, MinMaxSlider(0, 100)]
     private Vector2Int _scrapMetal;
+    [SerializeField]
+    private int _exp;
 
     private void Awake()
     {
@@ -68,7 +70,6 @@ public class Scannable : MonoBehaviour
 
     public void FinishScan()
     {
-        Debug.Log("Rewarding");
         IsScanned = true;
         StopScan();
 
@@ -78,5 +79,7 @@ public class Scannable : MonoBehaviour
 
         EventManager.Instance.RewardPlayer(energyPowder, seaweed, scrapMetal);
         Announcer.Instance.AnnounceScan(_name, energyPowder, seaweed, scrapMetal);
+
+        LevelManager.Instance.AddExp(_exp);
     }
 }
