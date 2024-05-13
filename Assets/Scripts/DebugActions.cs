@@ -27,4 +27,14 @@ public class DebugActions : MonoBehaviour
     {
         EventManager.Instance.AssembleItem(ItemId);
     }
+
+    [Header("Mutant Anglerfish")]
+    [Label("Spawn Point")]
+    public Vector3 AnglerfishSpawnPoint;
+    public GameObject AnglerfishPrefab;
+    [Button]
+    public void SpawnMutantAnglerfish()
+    {
+        Instantiate(AnglerfishPrefab, AnglerfishSpawnPoint, Quaternion.identity);
+    }
 }
