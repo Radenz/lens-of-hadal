@@ -51,6 +51,11 @@ public class EventManager : Singleton<EventManager>
     public event Action CreaturesEnabled;
     #endregion
 
+    #region Player Events
+    public event Action PlayerActionsDisabled;
+    public event Action PlayerActionsEnabled;
+    #endregion
+
 
     public void SetGold(int initialValue, int finalValue)
     {
@@ -183,5 +188,15 @@ public class EventManager : Singleton<EventManager>
     public void EnableCreatures()
     {
         CreaturesEnabled?.Invoke();
+    }
+
+    public void DisablePlayerActions()
+    {
+        PlayerActionsDisabled?.Invoke();
+    }
+
+    public void EnablePlayerActions()
+    {
+        PlayerActionsEnabled?.Invoke();
     }
 }

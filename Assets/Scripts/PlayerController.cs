@@ -89,6 +89,8 @@ public class PlayerController : MonoBehaviour
     private float _hudUpdateDuration = 0.6f;
     private float _animatedDna = 0;
 
+    private bool _disableActions = false;
+
     #region Attributes HUD
     [SerializeField]
     private TextMeshProUGUI _dnaHUDLabel;
@@ -131,10 +133,14 @@ public class PlayerController : MonoBehaviour
 
         EventManager.Instance.FlashlightEquipped += OnFlashlightEquipped;
         EventManager.Instance.FlashlightUnequipped += OnFlashlightUnequipped;
+        EventManager.Instance.PlayerActionsDisabled += OnDisableActions;
+        EventManager.Instance.PlayerActionsEnabled += OnEnableActions;
     }
 
     private void Update()
     {
+        if (_disableActions) return;
+
         _timeSinceLastDamage += Time.deltaTime;
         _timeSinceLastStaminaDrain += Time.deltaTime;
         if (_shouldRecover && HealthPoints < _maxHealthPoints)
@@ -157,6 +163,18 @@ public class PlayerController : MonoBehaviour
             _flashlight.intensity = 1.2f;
             _flashlight.pointLightOuterRadius = 7f;
         }
+    }
+
+    private void OnDisableActions()
+    {
+        _disableActions = true;
+        _movement.enabled = false;
+    }
+
+    private void OnEnableActions()
+    {
+        _disableActions = false;
+        _movement.enabled = true;
     }
 
     private void OnFlashlightUnequipped()
@@ -210,6 +228,7 @@ public class PlayerController : MonoBehaviour
     // TODO: check quantity & reduce
     public void DeployFlare()
     {
+        if (_disableActions) return;
         GameObject flare = Instantiate(_flarePrefab, _transform.position, Quaternion.identity);
         ArcLaunch arcLauncher = flare.GetComponent<ArcLaunch>();
 
@@ -227,6 +246,7 @@ public class PlayerController : MonoBehaviour
     // TODO: check quantity & reduce
     public void DeploySonar()
     {
+        if (_disableActions) return;
         GameObject sonar = Instantiate(_sonarPrefab, _transform.position, Quaternion.identity);
         ArcLaunch arcLauncher = sonar.GetComponent<ArcLaunch>();
 
