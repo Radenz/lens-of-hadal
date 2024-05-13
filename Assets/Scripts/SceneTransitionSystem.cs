@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class SceneTransitionSystem : MonoBehaviour
+public class SceneTransitionSystem : Singleton<SceneTransitionSystem>
 {
     [SerializeField]
     private Image _scrim;

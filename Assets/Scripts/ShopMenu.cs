@@ -14,4 +14,9 @@ public class ShopMenu : Singleton<ShopMenu>
     {
         _canvas.enabled = false;
     }
+
+    public void Close()
+    {
+        SceneTransitionSystem.Instance.OpenWorld();
+    }
 }

@@ -28,6 +28,7 @@ public class PiranhaAI : MonoBehaviour
 
     [SerializeField]
     private AIPath _ai;
+    private float _lastMaxSpeed;
 
     private PiranhaState _state = PiranhaState.Roaming;
     private Transform _transform;
@@ -57,6 +58,19 @@ public class PiranhaAI : MonoBehaviour
 
         _ai.maxSpeed = _speed;
         _ai.destination = _transform.RandomWithinRadius(_roamingRadius);
+        EventManager.Instance.CreaturesDisabled += DisableAI;
+        EventManager.Instance.CreaturesEnabled += EnableAI;
+    }
+
+    private void DisableAI()
+    {
+        _lastMaxSpeed = _ai.maxSpeed;
+        _ai.maxSpeed = 0;
+    }
+
+    private void EnableAI()
+    {
+        _ai.maxSpeed = _lastMaxSpeed;
     }
 
     private void Update()

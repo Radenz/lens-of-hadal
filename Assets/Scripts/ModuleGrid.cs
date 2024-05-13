@@ -87,32 +87,32 @@ public class ModuleGrid : MonoBehaviour
         return _transform.rect.Contains(localPoint);
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.matrix = _mvpMatrix;
-        Vector2 tileSize = _tileSize;
+    // private void OnDrawGizmos()
+    // {
+    //     Gizmos.matrix = _mvpMatrix;
+    //     Vector2 tileSize = _tileSize;
 
-        Vector3 start = new(_xStart, _yStart, 0);
-        Vector3 end = new(_xStart, _yEnd, 0);
+    //     Vector3 start = new(_xStart, _yStart, 0);
+    //     Vector3 end = new(_xStart, _yEnd, 0);
 
-        Gizmos.color = Color.green;
-        for (int i = 0; i <= _gridSize.x; i++)
-        {
-            Gizmos.DrawLine(start, end);
-            start.x += tileSize.x;
-            end.x += _tileSize.x;
-        }
+    //     Gizmos.color = Color.green;
+    //     for (int i = 0; i <= _gridSize.x; i++)
+    //     {
+    //         Gizmos.DrawLine(start, end);
+    //         start.x += tileSize.x;
+    //         end.x += _tileSize.x;
+    //     }
 
-        start = new(_xStart, _yStart, 0);
-        end = new(_xEnd, _yStart, 0);
+    //     start = new(_xStart, _yStart, 0);
+    //     end = new(_xEnd, _yStart, 0);
 
-        for (int i = 0; i <= _gridSize.y; i++)
-        {
-            Gizmos.DrawLine(start, end);
-            start.y += _tileSize.y;
-            end.y += _tileSize.y;
-        }
-    }
+    //     for (int i = 0; i <= _gridSize.y; i++)
+    //     {
+    //         Gizmos.DrawLine(start, end);
+    //         start.y += _tileSize.y;
+    //         end.y += _tileSize.y;
+    //     }
+    // }
 
     public void Add(Module module)
     {

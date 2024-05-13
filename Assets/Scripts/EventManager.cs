@@ -46,6 +46,11 @@ public class EventManager : Singleton<EventManager>
     public event Action SonarPinged;
     #endregion
 
+    #region Creature Events
+    public event Action CreaturesDisabled;
+    public event Action CreaturesEnabled;
+    #endregion
+
 
     public void SetGold(int initialValue, int finalValue)
     {
@@ -168,5 +173,15 @@ public class EventManager : Singleton<EventManager>
                 ScannerUnequipped?.Invoke();
                 break;
         }
+    }
+
+    public void DisableCreatures()
+    {
+        CreaturesDisabled?.Invoke();
+    }
+
+    public void EnableCreatures()
+    {
+        CreaturesEnabled?.Invoke();
     }
 }

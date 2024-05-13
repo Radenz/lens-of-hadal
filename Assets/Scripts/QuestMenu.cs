@@ -14,4 +14,9 @@ public class QuestMenu : Singleton<QuestMenu>
     {
         _canvas.enabled = false;
     }
+
+    public void Close()
+    {
+        SceneTransitionSystem.Instance.OpenWorld();
+    }
 }
