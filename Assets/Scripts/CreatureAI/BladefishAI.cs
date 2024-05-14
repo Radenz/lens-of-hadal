@@ -70,7 +70,8 @@ public class BladefishAI : MonoBehaviour
 
     private void OnSwingHit()
     {
-        throw new NotImplementedException();
+        if (!_swinging) return;
+        PlayerController.Instance.Damage(30);
     }
 
     private void DisableAI()
