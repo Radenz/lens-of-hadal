@@ -3,6 +3,11 @@ using UnityEngine;
 
 public class PufferfishAI : MonoBehaviour
 {
+    [Header("Settings")]
+    [SerializeField]
+    private float _damage = 10;
+
+    [Header("Others")]
     [SerializeField]
     private Rigidbody2D _rigidbody;
 
@@ -110,7 +115,7 @@ public class PufferfishAI : MonoBehaviour
 
         Vector2 direction = _playerTransform.position - _transform.position;
         PlayerController.Instance.Bounce(direction, _bounceStrength);
-        PlayerController.Instance.Damage();
+        PlayerController.Instance.Damage(_damage);
 
         State = PufferfishState.Roaming;
     }

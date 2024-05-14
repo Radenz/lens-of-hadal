@@ -5,6 +5,12 @@ using UnityEngine;
 // TODO: smoothen bite & run speed
 public class PiranhaAI : MonoBehaviour
 {
+    [Header("Settings")]
+    [SerializeField]
+    private float _damage = 15;
+
+
+    [Header("Others")]
     [SerializeField]
     private Rigidbody2D _rigidbody;
 
@@ -20,6 +26,7 @@ public class PiranhaAI : MonoBehaviour
     [SerializeField]
     private float _retreatRadius;
     private float _aggresionRadius;
+
 
     [SerializeField]
     private float _speed;
@@ -111,7 +118,7 @@ public class PiranhaAI : MonoBehaviour
     private void OnAttack()
     {
         if (State != PiranhaState.Attacking) return;
-        PlayerController.Instance.Damage(15);
+        PlayerController.Instance.Damage(_damage);
         State = PiranhaState.Retreating;
     }
 

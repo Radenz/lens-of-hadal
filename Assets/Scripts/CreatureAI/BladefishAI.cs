@@ -9,6 +9,11 @@ using UnityEngine;
 // TODO: smoothen bite & run speed
 public class BladefishAI : MonoBehaviour
 {
+    [Header("Settings")]
+    [SerializeField]
+    private float _damage = 30;
+
+    [Header("Others")]
     [SerializeField]
     private Rigidbody2D _rigidbody;
 
@@ -81,7 +86,7 @@ public class BladefishAI : MonoBehaviour
         // if (!_swinging || _hasHit) return;
         // _hasHit = true;
         _blade.enabled = false;
-        PlayerController.Instance.Damage(30);
+        PlayerController.Instance.Damage(_damage);
     }
 
     private void DisableAI()

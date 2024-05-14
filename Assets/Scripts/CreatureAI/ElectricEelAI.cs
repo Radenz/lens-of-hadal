@@ -3,6 +3,11 @@ using UnityEngine;
 
 public class ElectricEelAI : MonoBehaviour
 {
+    [Header("Settings")]
+    [SerializeField]
+    private float _damage = 6;
+
+    [Header("Others")]
     [SerializeField]
     private Rigidbody2D _rigidbody;
 
@@ -90,7 +95,7 @@ public class ElectricEelAI : MonoBehaviour
         if (State == ElectricEelState.Roaming) return;
 
         // TODO: show zap vfx, play zap sfx
-        PlayerController.Instance.Damage();
+        PlayerController.Instance.Damage(_damage);
         PlayerController.Instance.Shock(_zapShockDuration);
         _zapTimer = Timer.Instance.SetTimer(Zap, _zapCooldownTime);
     }
