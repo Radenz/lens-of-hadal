@@ -1,5 +1,6 @@
 public class LevelManager : Singleton<LevelManager>
 {
+
     private int _exp;
     private int _levelUpExp = 10;
     private int _level = 1;
@@ -8,6 +9,12 @@ public class LevelManager : Singleton<LevelManager>
     public int LevelUpExp => _levelUpExp;
     public int Exp => _exp;
     public float ExpPortion => (float)_exp / LevelUpExp;
+
+    private static int GetRequiredExp(int level)
+    {
+        return 10 + (level - 1) * 5;
+    }
+
 
     private void Start()
     {
@@ -21,7 +28,6 @@ public class LevelManager : Singleton<LevelManager>
         {
             _exp -= _levelUpExp;
             _level += 1;
-            // TODO: change LevelUpExp
             LevelUp();
             return;
         }
@@ -31,7 +37,7 @@ public class LevelManager : Singleton<LevelManager>
 
     private void LevelUp()
     {
-        // TODO: invoke ChangeLevelUpExp
+        _levelUpExp = GetRequiredExp(_level);
         EventManager.Instance.ChangeExp(_exp);
         EventManager.Instance.LevelUp(_level);
     }
