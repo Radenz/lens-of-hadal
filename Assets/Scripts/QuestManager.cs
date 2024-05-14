@@ -27,6 +27,12 @@ public class QuestManager : Singleton<QuestManager>
         EventManager.Instance.AfterQuestUnlocked += OnQuestUnlocked;
     }
 
+    private void Start()
+    {
+        EventManager.Instance.UnlockQuest(_quests[0]);
+        EventManager.Instance.AcceptQuest(_quests[0]);
+    }
+
     private void OnQuestUnlocked(QuestData quest)
     {
         _questStates[quest].IsUnlocked = true;

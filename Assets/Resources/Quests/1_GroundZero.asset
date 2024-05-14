@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f47281e9fbe0024f8e0b8d55fb4031f, type: 3}
-  m_Name: Quest1
+  m_Name: 1_GroundZero
   m_EditorClassIdentifier: 
-  Title: Getting Rich
-  Description: Gather materials from the sea
+  Title: Ground Zero
+  Description: Complete the tutorial mission.
   Steps:
-  - {fileID: 7507566420466533683, guid: 35a932a634fc4bd4c8604a3db250e6e6, type: 3}
+  - {fileID: 1899234668314591961, guid: c65265abb73c24a4ca9a9317e6d7eef5, type: 3}
+  - {fileID: 1899234668314591961, guid: c647ccda5ad3db2418c95625a6770c2b, type: 3}
   Reward: {fileID: 3045631472178583046, guid: c2d65d7c0c54bd6469f82c1475a29223, type: 3}

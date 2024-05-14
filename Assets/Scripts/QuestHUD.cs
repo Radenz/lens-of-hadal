@@ -1,3 +1,4 @@
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
@@ -8,6 +9,8 @@ public class QuestHUD : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI _description;
 
+    private ManagedTween _tween = new();
+
     private void Start()
     {
         EventManager.Instance.DisplayQuestChanged += UpdateQuestDisplay;
@@ -16,12 +19,13 @@ public class QuestHUD : MonoBehaviour
 
     private void UpdateQuestDisplay(string title, string description)
     {
+        _tween.PlayNext(transform.DOLocalMoveX(-Mathf.Abs(transform.localPosition.x), 0.2f));
         _title.text = title;
         _description.text = description;
     }
 
     private void HideDisplayQuest()
     {
-        // TODO
+        _tween.PlayNext(transform.DOLocalMoveX(Mathf.Abs(transform.localPosition.x), 0.2f));
     }
 }
