@@ -349,6 +349,7 @@ MonoBehaviour:
   _energyPowder: {x: 0, y: 0}
   _seaweed: {x: 0, y: 0}
   _scrapMetal: {x: 0, y: 0}
+  _exp: 0
 --- !u!114 &2589512322834676878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -829,6 +830,7 @@ MonoBehaviour:
   _energyPowder: {x: 1, y: 5}
   _seaweed: {x: 1, y: 3}
   _scrapMetal: {x: 0, y: 0}
+  _exp: 5
 --- !u!114 &5048607773017030533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1068,6 +1070,7 @@ MonoBehaviour:
   _energyPowder: {x: 0, y: 0}
   _seaweed: {x: 0, y: 0}
   _scrapMetal: {x: 0, y: 0}
+  _exp: 0
 --- !u!114 &6940762034942507117
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,8 +1,8 @@
 public class LevelManager : Singleton<LevelManager>
 {
     private int _exp;
-    private int _levelUpExp = 20;
-    private int _level;
+    private int _levelUpExp = 10;
+    private int _level = 1;
 
     public int Level => _level;
     public int LevelUpExp => _levelUpExp;
