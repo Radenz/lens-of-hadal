@@ -53,7 +53,7 @@ public class ModuleGrid : MonoBehaviour
 
     private void OnValidate()
     {
-        RecalculateSize();
+        // RecalculateSize();
     }
 
     [Button]

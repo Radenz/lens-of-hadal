@@ -23,6 +23,11 @@ public class Scannable : MonoBehaviour
     private GameObject ScanProgressBarObject => _scanProgressBarPrefab.gameObject;
     private GameObject _scanProgressBar;
 
+    [SerializeField]
+    private SpriteRenderer _spriteRenderer;
+    [SerializeField]
+    private float _textOffset = 5;
+
     [Header("Rewards")]
     [SerializeField, MinMaxSlider(0, 100)]
     private Vector2Int _energyPowder;
@@ -60,6 +65,9 @@ public class Scannable : MonoBehaviour
             return;
         }
         _scanProgressBar = Instantiate(ScanProgressBarObject, transform);
+        ScanProgressBar bar = _scanProgressBar.GetComponent<ScanProgressBar>();
+        bar.Sprite = _spriteRenderer.sprite;
+        bar.YOffset = _textOffset;
     }
 
     public void StopScan()
