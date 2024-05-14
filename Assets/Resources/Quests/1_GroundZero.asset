@@ -16,5 +16,5 @@ MonoBehaviour:
   Description: Complete the tutorial mission.
   Steps:
   - {fileID: 1899234668314591961, guid: c65265abb73c24a4ca9a9317e6d7eef5, type: 3}
-  - {fileID: 1899234668314591961, guid: c647ccda5ad3db2418c95625a6770c2b, type: 3}
+  - {fileID: 7614436792568056827, guid: c647ccda5ad3db2418c95625a6770c2b, type: 3}
   Reward: {fileID: 3045631472178583046, guid: c2d65d7c0c54bd6469f82c1475a29223, type: 3}

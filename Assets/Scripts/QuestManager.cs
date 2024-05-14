@@ -29,6 +29,12 @@ public class QuestManager : Singleton<QuestManager>
 
     private void Start()
     {
+        StartFirstQuest();
+    }
+
+    private async void StartFirstQuest()
+    {
+        await Awaitable.NextFrameAsync();
         EventManager.Instance.UnlockQuest(_quests[0]);
         EventManager.Instance.AcceptQuest(_quests[0]);
     }

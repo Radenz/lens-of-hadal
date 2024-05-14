@@ -85,6 +85,7 @@ public class Scannable : MonoBehaviour
         int seaweed = Random.Range(_seaweed.x, _seaweed.y);
         int scrapMetal = Random.Range(_scrapMetal.x, _scrapMetal.y);
 
+        EventManager.Instance.ScanCreature(_name);
         EventManager.Instance.RewardPlayer(energyPowder, seaweed, scrapMetal);
         Announcer.Instance.AnnounceScan(_name, energyPowder, seaweed, scrapMetal);
 

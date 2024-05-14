@@ -114,6 +114,15 @@ public class Announcer : Singleton<Announcer>
         });
     }
 
+    public void AnnounceQuest(int gold)
+    {
+        _announcementQueue.Add(new()
+        {
+            Title = "QUEST COMPLETED",
+            GoldReward = gold
+        });
+    }
+
     // public void AnnounceNewBodyPart(int dnaReward)
     // {
     //     _announcementQueue.Add(new()
@@ -149,4 +158,5 @@ struct Announcement
     public int EnergyPowderReward;
     public int SeaweedReward;
     public int ScrapMetalReward;
+    public int GoldReward;
 }

@@ -50,6 +50,7 @@ public class EventManager : Singleton<EventManager>
     #region Creature Events
     public event Action CreaturesDisabled;
     public event Action CreaturesEnabled;
+    public event Action<string> CreatureScanned;
     #endregion
 
     #region Player Events
@@ -179,6 +180,11 @@ public class EventManager : Singleton<EventManager>
                 ScannerUnequipped?.Invoke();
                 break;
         }
+    }
+
+    public void ScanCreature(string name)
+    {
+        CreatureScanned?.Invoke(name);
     }
 
     public void DisableCreatures()
