@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using DG.Tweening;
+using NaughtyAttributes;
 using Pathfinding;
 using UnityEngine;
 
@@ -24,7 +26,11 @@ public class BladefishAI : MonoBehaviour
     [SerializeField]
     private float _retreatRadius;
     private float _aggresionRadius;
+    [SerializeField, ReadOnly]
     private bool _swinging = false;
+    // private bool _hasHit = false;
+    [SerializeField]
+    private BoxCollider2D _blade;
 
     [SerializeField]
     private float _speed;
@@ -58,6 +64,7 @@ public class BladefishAI : MonoBehaviour
         _attackHitboxTrigger.Entered += OnAttack;
         _attackHitboxTrigger.Stay += OnAttack;
         _bladeTrigger.Entered += OnSwingHit;
+        // _bladeTrigger.Stay += OnSwingHit;
 
         // TODO: refactor, use singleton player
         _player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -71,6 +78,9 @@ public class BladefishAI : MonoBehaviour
     private void OnSwingHit()
     {
         if (!_swinging) return;
+        // if (!_swinging || _hasHit) return;
+        // _hasHit = true;
+        _blade.enabled = false;
         PlayerController.Instance.Damage(30);
     }
 
@@ -120,28 +130,33 @@ public class BladefishAI : MonoBehaviour
 
     private void OnAttack()
     {
-        if (State != BladefishState.Attacking) return;
+        if (State != BladefishState.Attacking || _swinging) return;
         Swing();
     }
 
-    private void Swing()
+    private async void Swing()
     {
-        _swinging = false;
+        _swinging = true;
+        await Awaitable.WaitForSecondsAsync(0.3f);
+        // _hasHit = false;
         Vector3 angles = _bladeTrigger.transform.localEulerAngles;
         angles.z = 45;
         _bladeTrigger.transform.localEulerAngles = angles;
-        _swinging = true;
         angles.z = -45;
+        DisableAI();
+        _blade.enabled = true;
         _bladeTrigger.transform.DOLocalRotate(angles, 1f).OnComplete(AfterSwing);
     }
 
     private void AfterSwing()
     {
-        _swinging = false;
         if (Vector2.Distance(_transform.position, _player.position) <= _aggresionRadius)
             State = BladefishState.Attacking;
         else
             State = BladefishState.Roaming;
+        EnableAI();
+        _swinging = false;
+        _blade.enabled = false;
     }
 
     private void OnStateChanged()
