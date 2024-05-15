@@ -12,9 +12,10 @@ public class ShopItem : MonoBehaviour
     private string _name;
     public string Name => _name;
 
-    [Header("Cost")]
+    [Header("Unlock Cost")]
     [SerializeField]
     private int _gold;
+    [Header("Assemble Cost")]
     [SerializeField]
     private int _energyPowder;
     [SerializeField]
