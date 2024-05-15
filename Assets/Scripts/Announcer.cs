@@ -22,6 +22,10 @@ public class Announcer : Singleton<Announcer>
     private GameObject _scrapMetalRewardLabel;
     [SerializeField]
     private TextMeshProUGUI _scrapMetalRewardLabelText;
+    [SerializeField]
+    private GameObject _goldRewardLabel;
+    [SerializeField]
+    private TextMeshProUGUI _goldRewardLabelText;
 
     [SerializeField]
     private float _duration = 2;
@@ -80,6 +84,17 @@ public class Announcer : Singleton<Announcer>
             usedLabels.Add(_scrapMetalRewardLabel);
         }
         _scrapMetalRewardLabelText.text = announcement.ScrapMetalReward.ToString();
+
+        if (announcement.GoldReward == 0)
+        {
+            unusedCurrencies++;
+            _goldRewardLabel.SetActive(false);
+        }
+        else
+        {
+            usedLabels.Add(_goldRewardLabel);
+        }
+        _goldRewardLabelText.text = announcement.ScrapMetalReward.ToString();
 
         float offset = -140 * (usedLabels.Count - 1);
 
