@@ -345,8 +345,13 @@ MonoBehaviour:
   _name: 
   _scanProgressBarPrefab: {fileID: -6517321322075258958, guid: b818d12cacafa9d4fba70b000920323e, type: 3}
   _scanDuration: 2
-  _dnaReward: 40
   _scanTime: 0
+  _spriteRenderer: {fileID: 0}
+  _textOffset: 5
+  _energyPowder: {x: 0, y: 0}
+  _seaweed: {x: 0, y: 0}
+  _scrapMetal: {x: 0, y: 0}
+  _exp: 0
 --- !u!114 &2589512322834676878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -678,6 +683,8 @@ MonoBehaviour:
   _rigidbody: {fileID: 6562847590079970757}
   _roamingRadius: 0
   _retreatRadius: 0
+  _lureLightIntensity: 0.5
+  _attackHitbox: {fileID: 6122238388119112151}
   _ai: {fileID: 5268793032968392490}
   _sprite: {fileID: 1456289847380572231}
   SpawnPoint: {x: 0, y: 0, z: 0}
@@ -822,8 +829,13 @@ MonoBehaviour:
   _name: 
   _scanProgressBarPrefab: {fileID: -6517321322075258958, guid: b818d12cacafa9d4fba70b000920323e, type: 3}
   _scanDuration: 2
-  _dnaReward: 40
   _scanTime: 0
+  _spriteRenderer: {fileID: 0}
+  _textOffset: 5
+  _energyPowder: {x: 0, y: 0}
+  _seaweed: {x: 0, y: 0}
+  _scrapMetal: {x: 0, y: 0}
+  _exp: 0
 --- !u!114 &5048607773017030533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1143,8 +1155,13 @@ MonoBehaviour:
   _name: 
   _scanProgressBarPrefab: {fileID: -6517321322075258958, guid: b818d12cacafa9d4fba70b000920323e, type: 3}
   _scanDuration: 2
-  _dnaReward: 40
   _scanTime: 0
+  _spriteRenderer: {fileID: 0}
+  _textOffset: 5
+  _energyPowder: {x: 0, y: 0}
+  _seaweed: {x: 0, y: 0}
+  _scrapMetal: {x: 0, y: 0}
+  _exp: 0
 --- !u!114 &6940762034942507117
 MonoBehaviour:
   m_ObjectHideFlags: 0
