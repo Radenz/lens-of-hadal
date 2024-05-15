@@ -327,8 +327,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 6.762451, y: -2.26725, z: 0}
-    m_Extent: {x: 87.62755, y: 34.30145, z: 0}
+    m_Center: {x: 6.761299, y: -2.2670517, z: 0}
+    m_Extent: {x: 87.6272, y: 34.30085, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4428,8 +4428,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -7.8664494, y: -17.5996, z: 0}
-    m_Extent: {x: 47.03945, y: 29.315199, z: 0}
+    m_Center: {x: -7.866249, y: -17.599651, z: 0}
+    m_Extent: {x: 47.03965, y: 29.31435, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5371,8 +5371,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.85499954, y: -1.7195005, z: 0}
-    m_Extent: {x: 59.8777, y: 25.592499, z: 0}
+    m_Center: {x: -0.85370064, y: -1.7191505, z: 0}
+    m_Extent: {x: 59.878098, y: 25.59305, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -9955,7 +9955,19 @@ MonoBehaviour:
   _tag: Player
   _onTriggered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 837221056}
+        m_TargetAssemblyTypeName: DebugActions, Assembly-CSharp
+        m_MethodName: SpawnMutantAnglerfish
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!61 &1472074570
 BoxCollider2D:
   m_ObjectHideFlags: 0

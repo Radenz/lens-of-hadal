@@ -63,6 +63,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Piranha
       objectReference: {fileID: 0}
+    - target: {fileID: 3566303040667855351, guid: c2d65d7c0c54bd6469f82c1475a29223, type: 3}
+      propertyPath: _damage
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3846166903428966937, guid: c2d65d7c0c54bd6469f82c1475a29223, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.45

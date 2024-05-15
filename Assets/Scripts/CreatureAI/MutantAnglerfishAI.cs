@@ -7,6 +7,10 @@ using UnityEngine.Rendering.Universal;
 
 public class MutantAnglerfishAI : MonoBehaviour
 {
+    [Header("Settings")]
+    private float _damage = 50;
+
+    [Header("Others")]
     [SerializeField]
     private Rigidbody2D _rigidbody;
 
@@ -19,6 +23,9 @@ public class MutantAnglerfishAI : MonoBehaviour
     [SerializeField]
     private float _lureLightIntensity = 0.5f;
 
+
+    [SerializeField]
+    private RangeTrigger _attackHitbox;
 
     [SerializeField]
     private AIPath _ai;
@@ -36,13 +43,14 @@ public class MutantAnglerfishAI : MonoBehaviour
 
     private MutantAnglerfishState _state = MutantAnglerfishState.Hidden;
     private bool _isMoving = false;
+    private bool _canAttack = false;
 
     private void Start()
     {
         _transform = transform;
 
         // _aggresionRadius = _aggresionRange.GetComponent<CircleCollider2D>().radius;
-
+        _attackHitbox.Entered += OnAttack;
         // TODO: refactor, use singleton player
         _player = GameObject.FindGameObjectWithTag("Player").transform;
 
@@ -65,6 +73,12 @@ public class MutantAnglerfishAI : MonoBehaviour
         Hide();
     }
 
+    private void OnAttack()
+    {
+        if (!_canAttack) return;
+        PlayerController.Instance.Damage(_damage);
+    }
+
     private async void Emerge()
     {
         await Task.Yield();
@@ -73,6 +87,7 @@ public class MutantAnglerfishAI : MonoBehaviour
         _sprite.SetActive(true);
         Vector3 position = _player.RandomOnRadius(8f);
         _transform.position = position;
+        _canAttack = true;
         await Shine().AsyncWaitForCompletion();
         Vector3 direction = _player.position - _transform.position;
         Vector3 finalPosition = direction.normalized * 8 + _player.position;
@@ -86,6 +101,7 @@ public class MutantAnglerfishAI : MonoBehaviour
         _isMoving = true;
         _state = MutantAnglerfishState.Hidden;
         await Dim().AsyncWaitForCompletion();
+        _canAttack = false;
         _sprite.SetActive(false);
         await Task.Delay(2000);
         _isMoving = false;

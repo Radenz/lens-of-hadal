@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c383f8d11c5453e408aacc3069d77f93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _description: 
+  _description: Go to the marked location.
   _range: {fileID: 0}
 --- !u!58 &510699773063207758
 CircleCollider2D:
