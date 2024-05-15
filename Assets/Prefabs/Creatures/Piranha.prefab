@@ -159,7 +159,7 @@ SpriteRenderer:
   m_SortingLayerID: 2091877501
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6429493399158520243, guid: 6e04fc773b0ff8d419410773c3a65352, type: 3}
+  m_Sprite: {fileID: -8389596254231219563, guid: 2880906d148e6c341b918ce1ccfa4106, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -347,6 +347,7 @@ MonoBehaviour:
   _scanDuration: 2
   _scanTime: 0
   _spriteRenderer: {fileID: 0}
+  _textOffset: 5
   _energyPowder: {x: 0, y: 0}
   _seaweed: {x: 0, y: 0}
   _scrapMetal: {x: 0, y: 0}
@@ -545,6 +546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21d9d2e81674475469bf20ec7ccce1b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 25
   _rigidbody: {fileID: 6562847590079970757}
   _detectionRange: {fileID: 5023998313401594405}
   _aggresionRange: {fileID: 8587315421901680420}
@@ -774,6 +776,7 @@ MonoBehaviour:
   _scanDuration: 2
   _scanTime: 0
   _spriteRenderer: {fileID: 3122924831791938811}
+  _textOffset: 5
   _energyPowder: {x: 1, y: 5}
   _seaweed: {x: 1, y: 3}
   _scrapMetal: {x: 0, y: 0}
@@ -1015,6 +1018,7 @@ MonoBehaviour:
   _scanDuration: 2
   _scanTime: 0
   _spriteRenderer: {fileID: 0}
+  _textOffset: 5
   _energyPowder: {x: 0, y: 0}
   _seaweed: {x: 0, y: 0}
   _scrapMetal: {x: 0, y: 0}

@@ -327,8 +327,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 6.7621, y: -2.2667007, z: 0}
-    m_Extent: {x: 87.6274, y: 34.3017, z: 0}
+    m_Center: {x: 6.762451, y: -2.26725, z: 0}
+    m_Extent: {x: 87.62755, y: 34.30145, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2561,6 +2561,10 @@ PrefabInstance:
       propertyPath: m_LinearDrag
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4431144432715467610, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
+      propertyPath: _dashProperties.StaminaCost
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4502696038651330938, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
       propertyPath: _healthBar
       value: 
@@ -4424,8 +4428,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -7.8660984, y: -17.5998, z: 0}
-    m_Extent: {x: 47.038498, y: 29.315102, z: 0}
+    m_Center: {x: -7.8664494, y: -17.5996, z: 0}
+    m_Extent: {x: 47.03945, y: 29.315199, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5367,8 +5371,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.85504913, y: -1.7199497, z: 0}
-    m_Extent: {x: 59.87785, y: 25.59355, z: 0}
+    m_Center: {x: -0.85499954, y: -1.7195005, z: 0}
+    m_Extent: {x: 59.8777, y: 25.592499, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
