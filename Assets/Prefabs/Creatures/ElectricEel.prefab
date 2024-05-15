@@ -125,6 +125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5913460334642390947}
   - component: {fileID: 6992694534029183798}
+  - component: {fileID: 4830176959764712424}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -201,6 +202,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4830176959764712424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6753645906978918027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bebe82b775e19b46af27dbd5308d25f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ai: {fileID: 4096935875492654694}
 --- !u!1 &7166641978962039249
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,7 +350,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -347,7 +361,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &4543150616395686495
 MonoBehaviour:
   m_ObjectHideFlags: 0
