@@ -546,7 +546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21d9d2e81674475469bf20ec7ccce1b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 25
+  _damage: 30
   _rigidbody: {fileID: 6562847590079970757}
   _detectionRange: {fileID: 5023998313401594405}
   _aggresionRange: {fileID: 8587315421901680420}

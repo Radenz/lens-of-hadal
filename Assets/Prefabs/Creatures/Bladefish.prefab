@@ -680,6 +680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f8c36ed9dd9fa341af94b0012d87d1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 50
   _rigidbody: {fileID: 6562847590079970757}
   _detectionRange: {fileID: 5023998313401594405}
   _aggresionRange: {fileID: 8587315421901680420}

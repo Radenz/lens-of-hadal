@@ -680,6 +680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47b007ca0c2c7e24bbf405f88a8c7a58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 60
   _rigidbody: {fileID: 6562847590079970757}
   _roamingRadius: 0
   _retreatRadius: 0

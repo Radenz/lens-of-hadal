@@ -327,8 +327,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 6.761299, y: -2.2670517, z: 0}
-    m_Extent: {x: 87.6272, y: 34.30085, z: 0}
+    m_Center: {x: 6.7618523, y: -2.26725, z: 0}
+    m_Extent: {x: 87.627045, y: 34.30165, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4428,8 +4428,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -7.866249, y: -17.599651, z: 0}
-    m_Extent: {x: 47.03965, y: 29.31435, z: 0}
+    m_Center: {x: -7.8654003, y: -17.59955, z: 0}
+    m_Extent: {x: 47.039, y: 29.31495, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5371,8 +5371,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.85370064, y: -1.7191505, z: 0}
-    m_Extent: {x: 59.878098, y: 25.59305, z: 0}
+    m_Center: {x: -0.8547993, y: -1.7189999, z: 0}
+    m_Extent: {x: 59.878098, y: 25.5933, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -11290,6 +11290,8 @@ MonoBehaviour:
   _seaweedRewardLabelText: {fileID: 1412040443}
   _scrapMetalRewardLabel: {fileID: 859127732}
   _scrapMetalRewardLabelText: {fileID: 373557818}
+  _goldRewardLabel: {fileID: 0}
+  _goldRewardLabelText: {fileID: 0}
   _duration: 2
 --- !u!114 &1671386524
 MonoBehaviour:
