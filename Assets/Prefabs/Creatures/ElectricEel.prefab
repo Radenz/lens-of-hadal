@@ -374,7 +374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc6928dcbd00d394ca287f4dd56525fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 6
+  _damage: 20
   _rigidbody: {fileID: 6570103364093839564}
   _detectionRange: {fileID: 7889474229006490485}
   _fleeingRange: {fileID: 7847607436234664453}
