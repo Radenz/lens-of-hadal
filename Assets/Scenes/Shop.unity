@@ -493,7 +493,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 297831781}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -778,7 +778,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4410382215570248620, guid: b7e175bdc9849d14494a72a19831d13f, type: 3}
       propertyPath: _gold
-      value: 300
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4410382215570248620, guid: b7e175bdc9849d14494a72a19831d13f, type: 3}
       propertyPath: _name
@@ -2586,7 +2586,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4410382215570248620, guid: b7e175bdc9849d14494a72a19831d13f, type: 3}
       propertyPath: _gold
-      value: 250
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4410382215570248620, guid: b7e175bdc9849d14494a72a19831d13f, type: 3}
       propertyPath: _name
