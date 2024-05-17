@@ -1,17 +1,23 @@
 using Common.Persistence;
+using UnityEngine;
 
 public class BestiaryManager : Singleton<BestiaryManager>, IBind<CreatureData>
 {
     private CreatureData _data;
 
+    [SerializeField]
+    private Bestiary _bestiary;
+
     private void Start()
     {
         EventManager.Instance.CreatureDNAIncreased += OnCreatureDNAIncreased;
+        EventManager.Instance.CreatureDiscovered += OnCreatureDiscovered;
     }
 
     void IBind<CreatureData>.Bind(CreatureData data)
     {
         _data = data;
+        _bestiary.Bind(data);
     }
 
     private void OnCreatureDNAIncreased(string name, float dna)
@@ -24,5 +30,10 @@ public class BestiaryManager : Singleton<BestiaryManager>, IBind<CreatureData>
             creatureData.IsDiscovered = true;
             EventManager.Instance.DiscoverCreature(name);
         }
+    }
+
+    private void OnCreatureDiscovered(string name)
+    {
+        _data.FromName(name).IsDiscovered = true;
     }
 }

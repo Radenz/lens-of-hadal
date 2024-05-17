@@ -1,6 +1,7 @@
+using Common.Persistence;
 using UnityEngine;
 
-public class Bestiary : Singleton<Bestiary>
+public class Bestiary : Singleton<Bestiary>, IBind<CreatureData>
 {
     [SerializeField]
     private GameObject[] _pages;
@@ -22,6 +23,17 @@ public class Bestiary : Singleton<Bestiary>
             if (page) page.SetActive(false);
         }
         ShowPage(0);
+    }
+
+    public void Bind(CreatureData data)
+    {
+        foreach (GameObject page in _pages)
+        {
+            if (page.TryGetComponent(out BestiaryEntry entry))
+            {
+                entry.Bind(data);
+            }
+        }
     }
 
     public void PrevPage()

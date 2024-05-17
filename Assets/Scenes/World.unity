@@ -332,8 +332,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 6.7613525, y: -2.2663498, z: 0}
-    m_Extent: {x: 87.62745, y: 34.30165, z: 0}
+    m_Center: {x: 6.761101, y: -2.2662487, z: 0}
+    m_Extent: {x: 87.6275, y: 34.30155, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5625,8 +5625,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -7.8666496, y: -17.5991, z: 0}
-    m_Extent: {x: 47.03865, y: 29.315199, z: 0}
+    m_Center: {x: -7.8664, y: -17.59895, z: 0}
+    m_Extent: {x: 47.0384, y: 29.31435, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6571,8 +6571,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.8540993, y: -1.7187996, z: 0}
-    m_Extent: {x: 59.8784, y: 25.5931, z: 0}
+    m_Center: {x: -0.8539505, y: -1.7203007, z: 0}
+    m_Extent: {x: 59.87725, y: 25.5933, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6615,6 +6615,7 @@ GameObject:
   m_Component:
   - component: {fileID: 837221057}
   - component: {fileID: 837221056}
+  - component: {fileID: 837221058}
   m_Layer: 0
   m_Name: Debug
   m_TagString: Untagged
@@ -6653,6 +6654,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &837221058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837221055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06a87a2e5bb5fe34d90a4968694546ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Exp: 0
+  Gold: 0
+  EnergyPowder: 0
+  Seaweed: 0
+  ScrapMetal: 0
+  CreatureId: 
 --- !u!1 &859127732
 GameObject:
   m_ObjectHideFlags: 0
@@ -13635,6 +13654,7 @@ GameObject:
   - component: {fileID: 1671386530}
   - component: {fileID: 1671386531}
   - component: {fileID: 1671386532}
+  - component: {fileID: 1671386533}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -13778,6 +13798,19 @@ MonoBehaviour:
   _bgmBackgroundLayer: {fileID: 1507016847}
   _bgmBossfightLayer: {fileID: 648881344}
   _crossfadeDuration: 2
+--- !u!114 &1671386533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671386521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b15698a6f3cb1c64f9405d83021dec64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bestiary: {fileID: 1641881453}
 --- !u!1 &1677002802
 GameObject:
   m_ObjectHideFlags: 0

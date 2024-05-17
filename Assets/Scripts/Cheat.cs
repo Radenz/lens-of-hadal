@@ -25,4 +25,12 @@ public class Cheat : MonoBehaviour
         CurrencySystem.Instance.Seaweed += Seaweed;
         CurrencySystem.Instance.ScrapMetal += ScrapMetal;
     }
+
+    public string CreatureId;
+
+    [Button]
+    public void DiscoverCreature()
+    {
+        EventManager.Instance.DiscoverCreature(CreatureId);
+    }
 }

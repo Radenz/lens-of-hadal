@@ -8,6 +8,7 @@ public class Creature : ScriptableObject
 {
     public string Id;
     public string Name;
+    public string Description;
     public Sprite Sprite;
     public float BestiarySpriteScale;
     [MinMaxSlider(0, 100)]

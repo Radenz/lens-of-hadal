@@ -1,12 +1,15 @@
+using Common.Persistence;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// TODO: IBind<CreatureData>
-public class BestiaryEntry : MonoBehaviour
+// TODO: dna progress bar
+public class BestiaryEntry : MonoBehaviour, IBind<CreatureData>
 {
     [SerializeField]
     private Creature _creature;
+
+    private CreatureInstanceData _data;
 
     [SerializeField]
     private Image _spriteImage;
@@ -14,7 +17,6 @@ public class BestiaryEntry : MonoBehaviour
     private TMP_Text _nameLabel;
     [SerializeField]
     private TMP_Text _descriptionsLabel;
-
 
     private void Start()
     {
@@ -29,10 +31,35 @@ public class BestiaryEntry : MonoBehaviour
             _creature.Sprite.rect.height * _creature.BestiarySpriteScale
         );
         EventManager.Instance.CreatureDiscovered += OnCreatureDiscovered;
+
+        // ? We do need to check because the object is set to inactive
+        // ? This is to cover the scenario when the creature is not
+        // ? discovered at Bind time but discovered later before
+        // ? bestiary is opened (before event listener is registered)
+        CheckIfDiscovered();
     }
 
     private void OnCreatureDiscovered(string id)
     {
-        _spriteImage.color = Color.white;
+        if (id == _creature.Id)
+            _spriteImage.color = Color.white;
+    }
+
+    public void Bind(CreatureData data)
+    {
+        _data = data.FromName(_creature.Id);
+        CheckIfDiscovered();
+    }
+
+    private void CheckIfDiscovered()
+    {
+        if (_data == null) return;
+
+        if (_data.IsDiscovered)
+        {
+            _spriteImage.color = Color.white;
+            _nameLabel.text = _creature.Name;
+            _descriptionsLabel.text = _creature.Description;
+        }
     }
 }
