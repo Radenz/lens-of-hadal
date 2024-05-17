@@ -20,6 +20,7 @@ public class CreatureData : ISaveable
             Creatures.GiantSquid => GiantSquid,
             Creatures.Bladefish => Bladefish,
             Creatures.MutantAnglerfish => MutantAnglerfish,
+            Creatures.Kraken => null,
             _ => throw new ArgumentException("Invalid creature id")
         };
     }

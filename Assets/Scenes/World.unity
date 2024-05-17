@@ -332,8 +332,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 6.762451, y: -2.2665005, z: 0}
-    m_Extent: {x: 87.62765, y: 34.301903, z: 0}
+    m_Center: {x: 6.7613983, y: -2.2662506, z: 0}
+    m_Extent: {x: 87.627, y: 34.30175, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5630,8 +5630,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -7.866949, y: -17.5993, z: 0}
-    m_Extent: {x: 47.038948, y: 29.314, z: 0}
+    m_Center: {x: -7.8659496, y: -17.598799, z: 0}
+    m_Extent: {x: 47.03975, y: 29.3146, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6576,8 +6576,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.8546009, y: -1.7189999, z: 0}
-    m_Extent: {x: 59.878098, y: 25.5932, z: 0}
+    m_Center: {x: -0.8550987, y: -1.7193499, z: 0}
+    m_Extent: {x: 59.8778, y: 25.594051, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -13270,16 +13270,53 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2431286303746017704, guid: b2f3df2923ac5df43a2ce682cf1fcfc6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -260
+      objectReference: {fileID: 0}
     - target: {fileID: 3447142061283597044, guid: b2f3df2923ac5df43a2ce682cf1fcfc6, type: 3}
       propertyPath: _creature
       value: 
-      objectReference: {fileID: 11400000, guid: 1be2889e9eb2e684587507a9ff5b7c3b, type: 2}
+      objectReference: {fileID: 11400000, guid: b4e883565e024e841b892c2881ecb533, type: 2}
+    - target: {fileID: 5238354877035410182, guid: b2f3df2923ac5df43a2ce682cf1fcfc6, type: 3}
+      propertyPath: m_fontSize
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238354877035410182, guid: b2f3df2923ac5df43a2ce682cf1fcfc6, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238354877035410182, guid: b2f3df2923ac5df43a2ce682cf1fcfc6, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238354877035410182, guid: b2f3df2923ac5df43a2ce682cf1fcfc6, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238354877035410182, guid: b2f3df2923ac5df43a2ce682cf1fcfc6, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238354877035410182, guid: b2f3df2923ac5df43a2ce682cf1fcfc6, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238354877035410182, guid: b2f3df2923ac5df43a2ce682cf1fcfc6, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190335
+      objectReference: {fileID: 0}
     - target: {fileID: 5626491691816299075, guid: b2f3df2923ac5df43a2ce682cf1fcfc6, type: 3}
       propertyPath: m_Name
       value: Kraken?
       objectReference: {fileID: 0}
+    - target: {fileID: 8410291929304616181, guid: b2f3df2923ac5df43a2ce682cf1fcfc6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -480
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7631883661880746204, guid: b2f3df2923ac5df43a2ce682cf1fcfc6, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2f3df2923ac5df43a2ce682cf1fcfc6, type: 3}

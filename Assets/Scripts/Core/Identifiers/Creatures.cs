@@ -6,4 +6,5 @@ public static class Creatures
     public const string GiantSquid = "GiantSquid";
     public const string Bladefish = "Bladefish";
     public const string MutantAnglerfish = "MutantAnglerfish";
+    public const string Kraken = "Kraken";
 }
