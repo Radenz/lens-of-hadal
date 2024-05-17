@@ -9,8 +9,8 @@ public class ScanProgressBar : MonoBehaviour
 
     public float YOffset;
 
-    private static Color _startColor = new(1, 0, 0, 0.25f);
-    private static Color _endColor = new(0, 1, 0, 0.25f);
+    private static Color _startColor = new(1, 0, 0, 0.125f);
+    private static Color _endColor = new(0, 1, 0, 0.125f);
 
     private void Start()
     {
