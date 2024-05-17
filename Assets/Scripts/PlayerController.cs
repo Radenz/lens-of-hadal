@@ -1,42 +1,31 @@
-using DG.Tweening;
-using NaughtyAttributes;
+using Common.Persistence;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
 {
-    // TODO: refactor singletons
-    public static PlayerController Instance;
-
+    private PlayerData _data;
     private Transform _transform;
     private Movement _movement;
-
-    [SerializeField]
-    private float _maxHealthPoints;
-
-    [SerializeField]
-    private float _maxStamina;
 
     [SerializeField]
     private Light2D _flashlight;
 
     #region Player Attributes
-    [SerializeField, ReadOnly]
-    private float _healthPoints = 0;
     private float HealthPoints
     {
-        get => _healthPoints;
+        get => _data.HealthPoints;
         set
         {
-            _healthPoints = value;
-            if (_healthPoints > _maxHealthPoints)
-                _healthPoints = _maxHealthPoints;
-            if (_healthPoints < 0)
-                _healthPoints = 0;
+            _data.HealthPoints = value;
+            if (_data.HealthPoints > _data.MaxHealthPoints)
+                _data.HealthPoints = _data.MaxHealthPoints;
+            if (_data.HealthPoints < 0)
+                _data.HealthPoints = 0;
 
-            float healthPercentage = _healthPoints / _maxHealthPoints;
+            float healthPercentage = _data.HealthPoints / _data.MaxHealthPoints;
             float inverseHealthPercentage = 1 - healthPercentage;
             float rawOverlayAlpha = inverseHealthPercentage * inverseHealthPercentage;
             float alpha = 0.5f * rawOverlayAlpha;
@@ -44,29 +33,27 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private float _stamina = 0;
     public float Stamina
     {
-        get => _stamina;
+        get => _data.Stamina;
         set
         {
-            if (value < _stamina)
+            if (value < _data.Stamina)
                 _timeSinceLastStaminaDrain = 0;
 
-            _stamina = value;
-            if (_stamina > _maxStamina)
-                _stamina = _maxStamina;
-            if (_stamina < 0)
-                _stamina = 0;
+            _data.Stamina = value;
+            if (_data.Stamina > _data.MaxStamina)
+                _data.Stamina = _data.MaxStamina;
+            if (_data.Stamina < 0)
+                _data.Stamina = 0;
 
-            _staminaBar.Value = _stamina;
+            _staminaBar.Value = _data.Stamina;
         }
     }
 
     private AutoFlip _flipper;
     private PlayerInputActions _playerInputActions;
 
-    private int _dna = 0;
     #endregion Player Attributes
 
     [SerializeField]
@@ -84,10 +71,6 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private Transform _respawnPoint;
-
-    [SerializeField]
-    private float _hudUpdateDuration = 0.6f;
-    private float _animatedDna = 0;
 
     private bool _disableActions = false;
 
@@ -110,9 +93,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GameObject _sonarPrefab;
 
-    private void Awake()
+    protected override void Awake()
     {
-        Instance = this;
+        base.Awake();
         _transform = transform;
         _timeSinceLastDamage = 2f;
     }
@@ -121,9 +104,9 @@ public class PlayerController : MonoBehaviour
     {
         _flipper = GetComponent<AutoFlip>();
         _movement = GetComponent<Movement>();
-        _staminaBar.MaxValue = _maxStamina;
-        HealthPoints = _maxHealthPoints;
-        Stamina = _maxStamina;
+
+        // TODO: use event
+        _staminaBar.MaxValue = _data.MaxStamina;
 
         _playerInputActions = new();
 
@@ -137,32 +120,48 @@ public class PlayerController : MonoBehaviour
         EventManager.Instance.PlayerActionsEnabled += OnEnableActions;
     }
 
+    void IBind<PlayerData>.Bind(PlayerData data)
+    {
+        _data = data;
+        OnFlashlightEquipped(_data.FlashlightLevel);
+    }
+
     private void Update()
     {
         if (_disableActions) return;
 
         _timeSinceLastDamage += Time.deltaTime;
         _timeSinceLastStaminaDrain += Time.deltaTime;
-        if (_shouldRecover && HealthPoints < _maxHealthPoints)
+        if (_shouldRecover && HealthPoints < _data.MaxHealthPoints)
             Recover();
-        if (_shouldRecoverStamina && Stamina < _maxStamina)
+        if (_shouldRecoverStamina && Stamina < _data.MaxStamina)
             RecoverStamina();
     }
 
     private void OnFlashlightEquipped(int level)
     {
-        if (level == 2)
+        // TODO: refactor to static data
+        switch (level)
         {
-            _flashlight.intensity = 1.1f;
-            _flashlight.pointLightOuterRadius = 6f;
-            return;
+            case 1:
+                _flashlight.intensity = 1f;
+                _flashlight.pointLightOuterRadius = 5f;
+                break;
+            case 2:
+                _flashlight.intensity = 1.1f;
+                _flashlight.pointLightOuterRadius = 6f;
+                break;
+            case 3:
+                _flashlight.intensity = 1.2f;
+                _flashlight.pointLightOuterRadius = 7f;
+                break;
         }
+    }
 
-        if (level == 3)
-        {
-            _flashlight.intensity = 1.2f;
-            _flashlight.pointLightOuterRadius = 7f;
-        }
+    private void OnFlashlightUnequipped()
+    {
+        OnFlashlightEquipped(1);
+
     }
 
     private void OnDisableActions()
@@ -177,11 +176,6 @@ public class PlayerController : MonoBehaviour
         _movement.enabled = true;
     }
 
-    private void OnFlashlightUnequipped()
-    {
-        _flashlight.intensity = 1f;
-        _flashlight.pointLightOuterRadius = 5f;
-    }
 
     private void Recover()
     {
@@ -210,7 +204,7 @@ public class PlayerController : MonoBehaviour
     {
         Time.timeScale = 1;
         _movement.Stop();
-        HealthPoints = _maxHealthPoints;
+        HealthPoints = _data.MaxHealthPoints;
         transform.position = _respawnPoint.position;
     }
 
@@ -259,21 +253,5 @@ public class PlayerController : MonoBehaviour
         }
 
         arcLauncher.Direction = direction;
-    }
-
-    public void AddDNA(int amount)
-    {
-        _dna += amount;
-        DOTween.To(
-            () => _animatedDna,
-            dna =>
-            {
-                _animatedDna = dna;
-                _dnaHUDLabel.text = Mathf.RoundToInt(dna).ToString();
-            },
-            _dna,
-            _hudUpdateDuration
-        )
-            .SetDelay(Announcer.Instance.Duration);
     }
 }

@@ -34,10 +34,6 @@ public class Announcer : Singleton<Announcer>
     private readonly List<Announcement> _announcementQueue = new();
     private bool _isAnnouncing = false;
 
-    private static readonly string NEW_BODY_PART_TITLE = "NEW BODY PART DISCOVERED";
-    private static readonly string NEW_CREATURE_TITLE = "NEW CREATURE DISCOVERED";
-    private static readonly string BODY_PART_TITLE = "BODY PART SCANNED";
-
     private void Update()
     {
         if (!_isAnnouncing && _announcementQueue.Count != 0)

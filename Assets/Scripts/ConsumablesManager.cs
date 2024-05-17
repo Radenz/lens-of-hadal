@@ -1,25 +1,31 @@
-public class ConsumablesManager : Singleton<ConsumablesManager>
+using Common.Persistence;
+
+public class ConsumablesManager : Singleton<ConsumablesManager>, IBind<ConsumableData>
 {
-    private int _sonarDrone = 0;
-    private int _flare = 0;
+    private ConsumableData _data;
 
     public int SonarDrone
     {
-        get => _sonarDrone;
+        get => _data.SonarDrone;
         set
         {
-            _sonarDrone = value;
+            _data.SonarDrone = value;
             EventManager.Instance.ChangeSonarQuantity(value);
         }
     }
 
     public int Flare
     {
-        get => _flare;
+        get => _data.Flare;
         set
         {
-            _flare = value;
+            _data.Flare = value;
             EventManager.Instance.ChangeFlareQuantity(value);
         }
+    }
+
+    void IBind<ConsumableData>.Bind(ConsumableData data)
+    {
+        _data = data;
     }
 }
