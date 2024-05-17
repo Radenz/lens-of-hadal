@@ -47,7 +47,7 @@ public class BestiaryEntry : MonoBehaviour, IBind<CreatureData>
 
     public void Bind(CreatureData data)
     {
-        _data = data.FromName(_creature.Id);
+        _data = data.FromId(_creature.Id);
         CheckIfDiscovered();
     }
 

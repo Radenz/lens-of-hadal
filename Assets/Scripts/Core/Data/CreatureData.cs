@@ -10,9 +10,9 @@ public class CreatureData : ISaveable
     public CreatureInstanceData Bladefish = new();
     public CreatureInstanceData MutantAnglerfish = new();
 
-    public CreatureInstanceData FromName(string name)
+    public CreatureInstanceData FromId(string id)
     {
-        return name switch
+        return id switch
         {
             Creatures.Piranha => Piranha,
             Creatures.ElectricEel => ElectricEel,
@@ -20,7 +20,7 @@ public class CreatureData : ISaveable
             Creatures.GiantSquid => GiantSquid,
             Creatures.Bladefish => Bladefish,
             Creatures.MutantAnglerfish => MutantAnglerfish,
-            _ => throw new ArgumentException("Invalid creature name")
+            _ => throw new ArgumentException("Invalid creature id")
         };
     }
 }

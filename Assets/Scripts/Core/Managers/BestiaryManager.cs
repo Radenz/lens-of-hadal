@@ -22,7 +22,7 @@ public class BestiaryManager : Singleton<BestiaryManager>, IBind<CreatureData>
 
     private void OnCreatureDNAIncreased(string name, float dna)
     {
-        CreatureInstanceData creatureData = _data.FromName(name);
+        CreatureInstanceData creatureData = _data.FromId(name);
         creatureData.DiscoveryProgress += dna;
         if (creatureData.DiscoveryProgress >= 100)
         {
@@ -34,6 +34,6 @@ public class BestiaryManager : Singleton<BestiaryManager>, IBind<CreatureData>
 
     private void OnCreatureDiscovered(string name)
     {
-        _data.FromName(name).IsDiscovered = true;
+        _data.FromId(name).IsDiscovered = true;
     }
 }

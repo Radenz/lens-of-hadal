@@ -1,3 +1,5 @@
+using System.Threading.Tasks;
+using Cinemachine;
 using Common.Persistence;
 using TMPro;
 using UnityEngine;
@@ -9,6 +11,10 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
     private PlayerData _data;
     private Transform _transform;
     private Movement _movement;
+
+    [SerializeField]
+    private CinemachineVirtualCamera _playerVCam;
+    private CinemachineBasicMultiChannelPerlin _playerVCamNoise;
 
     [SerializeField]
     private Light2D _flashlight;
@@ -118,6 +124,8 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
         EventManager.Instance.FlashlightUnequipped += OnFlashlightUnequipped;
         EventManager.Instance.PlayerActionsDisabled += OnDisableActions;
         EventManager.Instance.PlayerActionsEnabled += OnEnableActions;
+
+        _playerVCamNoise = _playerVCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
     }
 
     void IBind<PlayerData>.Bind(PlayerData data)
@@ -197,7 +205,21 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
         HealthPoints -= amount;
         _timeSinceLastDamage = 0f;
         if (HealthPoints == 0)
+        {
             Die();
+            return;
+        }
+
+
+        Shake();
+    }
+
+    private async void Shake()
+    {
+        await Task.Yield();
+        _playerVCamNoise.m_AmplitudeGain = 3;
+        await Awaitable.WaitForSecondsAsync(0.4f);
+        _playerVCamNoise.m_AmplitudeGain = 0;
     }
 
     public void Respawn()
