@@ -23,7 +23,6 @@ public class ShopItem : MonoBehaviour
     [SerializeField]
     private int _scrapMetal;
 
-    // TODO: hook up all items
     [SerializeField]
     private bool _disableOnAssemble = false;
 
@@ -52,6 +51,8 @@ public class ShopItem : MonoBehaviour
             return;
 
         CurrencySystem.Instance.Gold -= _gold;
+
+        EventManager.Instance.BuyItem(_id);
 
         _unlockButton.gameObject.SetActive(false);
         _assembleButton.gameObject.SetActive(true);

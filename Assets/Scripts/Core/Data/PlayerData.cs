@@ -1,6 +1,5 @@
 using Common.Persistence;
 
-// TODO: scanner level
 public class PlayerData : ISaveable
 {
     public float MaxHealthPoints = 100;
@@ -9,4 +8,5 @@ public class PlayerData : ISaveable
     public float Stamina = 100;
 
     public int FlashlightLevel = 1;
+    public int ScannerLevel = 1;
 }

@@ -29,8 +29,8 @@ public class EventManager : Singleton<EventManager>
     #endregion
 
     #region Shop Events
-    public event Action<string> ShopItemShown;
     public event Action<string> ShopItemUnlocked;
+    public event Action<string> ShopItemPurchased;
     public event Action<string> ShopItemAssembled;
     #endregion
 
@@ -129,10 +129,14 @@ public class EventManager : Singleton<EventManager>
         SonarPinged?.Invoke();
     }
 
-    // FIX: rename terminology to buy blueprint
     public void UnlockItem(string id)
     {
-        ShopItemShown?.Invoke(id);
+        ShopItemUnlocked?.Invoke(id);
+    }
+
+    public void BuyItem(string id)
+    {
+        ShopItemPurchased?.Invoke(id);
     }
 
     public void AssembleItem(string id)
@@ -154,16 +158,16 @@ public class EventManager : Singleton<EventManager>
     {
         switch (id)
         {
-            case "Flashlight2":
+            case ShopItems.FlashlightLv2:
                 FlashlightEquipped?.Invoke(2);
                 break;
-            case "Flashlight3":
+            case ShopItems.FlashlightLv3:
                 FlashlightEquipped?.Invoke(3);
                 break;
-            case "Scanner2":
+            case ShopItems.ScannerLv2:
                 ScannerEquipped?.Invoke(2);
                 break;
-            case "Scanner3":
+            case ShopItems.ScannerLv3:
                 ScannerEquipped?.Invoke(3);
                 break;
         }
@@ -173,12 +177,12 @@ public class EventManager : Singleton<EventManager>
     {
         switch (id)
         {
-            case "Flashlight2":
-            case "Flashlight3":
+            case ShopItems.FlashlightLv2:
+            case ShopItems.FlashlightLv3:
                 FlashlightUnequipped?.Invoke();
                 break;
-            case "Scanner2":
-            case "Scanner3":
+            case ShopItems.ScannerLv2:
+            case ShopItems.ScannerLv3:
                 ScannerUnequipped?.Invoke();
                 break;
         }

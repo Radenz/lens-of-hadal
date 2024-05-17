@@ -1,8 +1,11 @@
 using System.Collections.Generic;
+using Common.Persistence;
 using UnityEngine;
 
-public class Scanner : MonoBehaviour
+public class Scanner : MonoBehaviour, IBind<PlayerData>
 {
+    private PlayerData _data;
+
     [SerializeField]
     private Vector2 _direction;
 
@@ -69,21 +72,32 @@ public class Scanner : MonoBehaviour
         }
     }
 
+
+    void IBind<PlayerData>.Bind(PlayerData data)
+    {
+        _data = data;
+        OnScannerEquipped(_data.ScannerLevel);
+    }
+
     private void OnScannerEquipped(int level)
     {
-        if (level == 2)
+        switch (level)
         {
-            SetRange(2.7f);
-            return;
+            case 1:
+                SetRange(2.5f);
+                break;
+            case 2:
+                SetRange(2.7f);
+                break;
+            case 3:
+                SetRange(3f);
+                break;
         }
-
-        if (level == 3)
-            SetRange(3f);
     }
 
     private void OnScannerUnequipped()
     {
-        SetRange(2.5f);
+        OnScannerEquipped(1);
     }
 
     private void SetRange(float range)
@@ -184,4 +198,5 @@ public class Scanner : MonoBehaviour
 
         return angle < _scanAngleRadius;
     }
+
 }

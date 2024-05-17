@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -27,7 +28,7 @@ public class ShopSystem : Singleton<ShopSystem>
 
     private void Start()
     {
-        EventManager.Instance.ShopItemShown += UnlockItem;
+        EventManager.Instance.ShopItemUnlocked += UnlockItem;
         EventManager.Instance.ShopItemAssembled += AssembleItem;
     }
 
@@ -45,61 +46,33 @@ public class ShopSystem : Singleton<ShopSystem>
     // ? I hate this but time is tight
     public void AssembleItem(string id)
     {
-        if (id == "DivingSuit2")
+        switch (id)
         {
-            ResizeUpgradeModule(1);
-            return;
+            case ShopItems.DivingSuitLv2:
+                ResizeUpgradeModule(1);
+                return;
+            case ShopItems.DivingSuitLv3:
+                ResizeUpgradeModule(2);
+                return;
+            case ShopItems.Flare:
+                ConsumablesManager.Instance.Flare += 1;
+                return;
+            case ShopItems.SonarDrone:
+                ConsumablesManager.Instance.SonarDrone += 1;
+                return;
         }
 
-        if (id == "DivingSuit3")
+        GameObject obj = id switch
         {
-            ResizeUpgradeModule(2);
-            return;
-        }
+            ShopItems.FlashlightLv2 => _flashlightLv2,
+            ShopItems.FlashlightLv3 => _flashlightLv3,
+            ShopItems.ScannerLv2 => _scannerLv2,
+            ShopItems.ScannerLv3 => _scannerLv3,
+            _ => throw new ArgumentException("Invalid item id"),
+        };
 
-        if (id == "Flashlight2")
-        {
-            GameObject obj = Instantiate(_flashlightLv2, _shopUITransform);
-            Module module = obj.GetComponent<Module>();
-            _inventorySlot.Add(module);
-            return;
-        }
-
-        if (id == "Flashlight3")
-        {
-            GameObject obj = Instantiate(_flashlightLv3, _shopUITransform);
-            Module module = obj.GetComponent<Module>();
-            _inventorySlot.Add(module);
-            return;
-        }
-
-        if (id == "Scanner2")
-        {
-            GameObject obj = Instantiate(_scannerLv2, _shopUITransform);
-            Module module = obj.GetComponent<Module>();
-            _inventorySlot.Add(module);
-            return;
-        }
-
-        if (id == "Scanner3")
-        {
-            GameObject obj = Instantiate(_scannerLv3, _shopUITransform);
-            Module module = obj.GetComponent<Module>();
-            _inventorySlot.Add(module);
-            return;
-        }
-
-        if (id == "Flare")
-        {
-            ConsumablesManager.Instance.Flare += 1;
-            return;
-        }
-
-        if (id == "SonarDrone")
-        {
-            ConsumablesManager.Instance.SonarDrone += 1;
-            return;
-        }
+        Module module = obj.GetComponent<Module>();
+        _inventorySlot.Add(module);
     }
 
     private void ResizeUpgradeModule(int size)

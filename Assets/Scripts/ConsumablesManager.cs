@@ -24,8 +24,40 @@ public class ConsumablesManager : Singleton<ConsumablesManager>, IBind<Consumabl
         }
     }
 
+    private void Start()
+    {
+        EventManager.Instance.ShopItemUnlocked += OnItemUnlocked;
+        EventManager.Instance.ShopItemPurchased += OnItemPurchased;
+    }
+
     void IBind<ConsumableData>.Bind(ConsumableData data)
     {
         _data = data;
+    }
+
+    private void OnItemUnlocked(string id)
+    {
+        switch (id)
+        {
+            case ShopItems.Flare:
+                _data.IsFlareUnlocked = true;
+                break;
+            case ShopItems.SonarDrone:
+                _data.IsFlareUnlocked = true;
+                break;
+        }
+    }
+
+    private void OnItemPurchased(string id)
+    {
+        switch (id)
+        {
+            case ShopItems.Flare:
+                _data.IsFlareBought = true;
+                break;
+            case ShopItems.SonarDrone:
+                _data.IsSonarDroneBought = true;
+                break;
+        }
     }
 }
