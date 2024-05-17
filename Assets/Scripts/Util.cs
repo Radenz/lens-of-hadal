@@ -33,6 +33,25 @@ public static class MonoBehaviourExtensions
     }
 }
 
+public static class TransformExtensions
+{
+    public static Vector3 With(this Vector3 vec, float? x, float? y, float? z)
+    {
+        vec.x = x ?? vec.x;
+        vec.y = y ?? vec.z;
+        vec.z = z ?? vec.z;
+        return vec;
+    }
+
+    public static Vector3 Add(this Vector3 vec, float x = 0, float y = 0, float z = 0)
+    {
+        vec.x += x;
+        vec.y += y;
+        vec.z += z;
+        return vec;
+    }
+}
+
 public static class AIExtensions
 {
     public static bool IsIdle(this IAstarAI ai)

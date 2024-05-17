@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 497cfdb14299bfe4c91b1e6918051ef6
+guid: 3f82278632e74614882c79db8a9076dc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3965861685183340402
-    second: ELECTRIC EEL (SMALL)_0
+      213: 2045492094208909694
+    second: Paper_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,22 +113,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ELECTRIC EEL (SMALL)_0
+      name: Paper_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 1
         y: 1
-        width: 43
-        height: 23
+        width: 361
+        height: 416
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 191, z: 0, w: 188}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 27f5fadc032990730800000000000000
-      internalID: 3965861685183340402
+      spriteID: e712132e83c036c10800000000000000
+      internalID: 2045492094208909694
       vertices: []
       indices: 
       edges: []
@@ -136,7 +136,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 648f786638bfe794f814a2d6bc7d426b
     internalID: 0
     vertices: []
     indices: 
@@ -144,7 +144,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ELECTRIC EEL (SMALL)_0: 3965861685183340402
+      Paper_0: 2045492094208909694
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
