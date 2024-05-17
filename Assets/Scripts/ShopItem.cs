@@ -1,9 +1,12 @@
+using Common.Persistence;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ShopItem : MonoBehaviour
+public class ShopItem : MonoBehaviour, IBind<ItemData>
 {
+    ItemInstanceData _data;
+
     [Header("Item Properties")]
     [SerializeField]
     private string _id;
@@ -56,6 +59,8 @@ public class ShopItem : MonoBehaviour
 
         _unlockButton.gameObject.SetActive(false);
         _assembleButton.gameObject.SetActive(true);
+
+        _data.IsPurchased = true;
     }
 
     private void OnAssemble()
@@ -73,5 +78,31 @@ public class ShopItem : MonoBehaviour
 
         if (_disableOnAssemble)
             gameObject.SetActive(false);
+
+        if (_data.TryDowncast(out UpgradableItemData upgradableItemData))
+            upgradableItemData.IsAssembled = true;
+    }
+
+    public void Bind(ItemData data)
+    {
+        _data = data.FromId(_id);
+
+        if (_data.TryDowncast(out UpgradableItemData upgradableItemData)
+            && upgradableItemData.IsAssembled)
+        {
+            gameObject.SetActive(false);
+            return;
+        }
+
+        if (_data.IsPurchased)
+        {
+            _unlockButton.gameObject.SetActive(false);
+            _assembleButton.gameObject.SetActive(true);
+        }
+
+        if (_data.IsUnlocked)
+        {
+            gameObject.SetActive(true);
+        }
     }
 }

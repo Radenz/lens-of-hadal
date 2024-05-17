@@ -1,11 +1,15 @@
 using System;
 using System.Collections.Generic;
+using Common.Persistence;
 using UnityEngine;
 
-public class ShopSystem : Singleton<ShopSystem>
+public class ShopSystem : Singleton<ShopSystem>, IBind<ItemData>
 {
+    private ItemData _data;
+
     [SerializeField]
     private List<ShopItem> _items;
+    private readonly Dictionary<string, ShopItem> _shopItems = new();
 
     [SerializeField]
     private ModuleGrid _upgradeSlot;
@@ -26,21 +30,35 @@ public class ShopSystem : Singleton<ShopSystem>
     [SerializeField]
     private GameObject _scannerLv3;
 
+    protected override void Awake()
+    {
+        base.Awake();
+        foreach (ShopItem item in _items)
+        {
+            _shopItems[item.Id] = item;
+        }
+    }
+
     private void Start()
     {
         EventManager.Instance.ShopItemUnlocked += UnlockItem;
         EventManager.Instance.ShopItemAssembled += AssembleItem;
     }
 
-    public void UnlockItem(string id)
+    void IBind<ItemData>.Bind(ItemData data)
     {
+        _data = data;
         foreach (ShopItem item in _items)
         {
-            if (item.Id == id)
-            {
-                item.gameObject.SetActive(true);
-            }
+            item.Bind(_data);
         }
+    }
+
+    public void UnlockItem(string id)
+    {
+        ShopItem item = _shopItems[id];
+        item.gameObject.SetActive(true);
+        _data.FromId(id).IsUnlocked = true;
     }
 
     // ? I hate this but time is tight

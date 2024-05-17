@@ -23,11 +23,27 @@ namespace Common.Persistence
 
         void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
-            if (scene.name != "World") return;
+            switch (scene.name)
+            {
+                case "World":
+                    OnWorldLoaded();
+                    break;
+                case "Shop":
+                    OnShopLoaded();
+                    break;
+            }
+        }
 
+        void OnWorldLoaded()
+        {
             Bind<PlayerController, PlayerData>(Data.PlayerData);
             Bind<ConsumablesManager, ConsumableData>(Data.ConsumableData);
             Bind<BestiaryManager, CreatureData>(Data.CreatureData);
+        }
+
+        void OnShopLoaded()
+        {
+            Bind<ShopSystem, ItemData>(Data.ItemData);
         }
 
         private void LoadGame()

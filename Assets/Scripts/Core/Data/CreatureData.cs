@@ -3,12 +3,12 @@ using Common.Persistence;
 
 public class CreatureData : ISaveable
 {
-    public CreatureInstanceData Piranha;
-    public CreatureInstanceData ElectricEel;
-    public CreatureInstanceData Pufferfish;
-    public CreatureInstanceData GiantSquid;
-    public CreatureInstanceData Bladefish;
-    public CreatureInstanceData MutantAnglerfish;
+    public CreatureInstanceData Piranha = new();
+    public CreatureInstanceData ElectricEel = new();
+    public CreatureInstanceData Pufferfish = new();
+    public CreatureInstanceData GiantSquid = new();
+    public CreatureInstanceData Bladefish = new();
+    public CreatureInstanceData MutantAnglerfish = new();
 
     public CreatureInstanceData FromName(string name)
     {

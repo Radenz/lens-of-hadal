@@ -6,6 +6,7 @@ namespace Common.Persistence
         public PlayerData PlayerData;
         public ConsumableData ConsumableData;
         public CreatureData CreatureData;
+        public ItemData ItemData;
     }
 }
 
