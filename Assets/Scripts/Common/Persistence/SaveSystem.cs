@@ -27,6 +27,7 @@ namespace Common.Persistence
 
             Bind<PlayerController, PlayerData>(Data.PlayerData);
             Bind<ConsumablesManager, ConsumableData>(Data.ConsumableData);
+            Bind<BestiaryManager, CreatureData>(Data.CreatureData);
         }
 
         private void LoadGame()

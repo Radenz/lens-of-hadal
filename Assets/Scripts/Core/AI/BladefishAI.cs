@@ -9,7 +9,7 @@ using UnityEngine;
 // TODO: smoothen bite & run speed
 public class BladefishAI : MonoBehaviour
 {
-    [Header("Settings")]
+    [Header("Config")]
     [SerializeField]
     private float _damage = 30;
 

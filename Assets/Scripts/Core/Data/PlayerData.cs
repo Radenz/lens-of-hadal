@@ -1,5 +1,6 @@
 using Common.Persistence;
 
+// TODO: scanner level
 public class PlayerData : ISaveable
 {
     public float MaxHealthPoints = 100;

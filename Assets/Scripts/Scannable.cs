@@ -3,6 +3,18 @@ using UnityEngine;
 
 public class Scannable : MonoBehaviour
 {
+    [Header("Rewards")]
+    [SerializeField, MinMaxSlider(0, 100)]
+    private Vector2 _dna;
+    [SerializeField, MinMaxSlider(0, 100)]
+    private Vector2Int _energyPowder;
+    [SerializeField, MinMaxSlider(0, 100)]
+    private Vector2Int _seaweed;
+    [SerializeField, MinMaxSlider(0, 100)]
+    private Vector2Int _scrapMetal;
+    [SerializeField]
+    private int _exp;
+
     [SerializeField]
     private string _name;
     public string Name => _name;
@@ -28,16 +40,6 @@ public class Scannable : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     [SerializeField]
     private float _textOffset = 5;
-
-    [Header("Rewards")]
-    [SerializeField, MinMaxSlider(0, 100)]
-    private Vector2Int _energyPowder;
-    [SerializeField, MinMaxSlider(0, 100)]
-    private Vector2Int _seaweed;
-    [SerializeField, MinMaxSlider(0, 100)]
-    private Vector2Int _scrapMetal;
-    [SerializeField]
-    private int _exp;
 
     private void Awake()
     {
@@ -87,11 +89,13 @@ public class Scannable : MonoBehaviour
     {
         IsScanned = true;
 
+        float dna = Random.Range(_dna.x, _dna.y);
         int energyPowder = Random.Range(_energyPowder.x, _energyPowder.y);
         int seaweed = Random.Range(_seaweed.x, _seaweed.y);
         int scrapMetal = Random.Range(_scrapMetal.x, _scrapMetal.y);
 
         EventManager.Instance.ScanCreature(_name);
+        EventManager.Instance.IncreaseCreatureDNA(_name, dna);
         EventManager.Instance.RewardPlayer(energyPowder, seaweed, scrapMetal);
         Announcer.Instance.AnnounceScan(_name, energyPowder, seaweed, scrapMetal);
 

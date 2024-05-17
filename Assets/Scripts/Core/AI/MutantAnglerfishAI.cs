@@ -7,7 +7,7 @@ using UnityEngine.Rendering.Universal;
 
 public class MutantAnglerfishAI : MonoBehaviour
 {
-    [Header("Settings")]
+    [Header("Config")]
     [SerializeField]
     private float _damage = 50;
 

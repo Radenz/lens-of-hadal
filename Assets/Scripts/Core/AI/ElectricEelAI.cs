@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ElectricEelAI : MonoBehaviour
 {
-    [Header("Settings")]
+    [Header("Config")]
     [SerializeField]
     private float _damage = 6;
 

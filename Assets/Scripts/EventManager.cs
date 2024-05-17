@@ -51,6 +51,8 @@ public class EventManager : Singleton<EventManager>
     public event Action CreaturesDisabled;
     public event Action CreaturesEnabled;
     public event Action<string> CreatureScanned;
+    public event Action<string, float> CreatureDNAIncreased;
+    public event Action<string> CreatureDiscovered;
     #endregion
 
     #region Player Events
@@ -185,6 +187,16 @@ public class EventManager : Singleton<EventManager>
     public void ScanCreature(string name)
     {
         CreatureScanned?.Invoke(name);
+    }
+
+    public void IncreaseCreatureDNA(string name, float dna)
+    {
+        CreatureDNAIncreased?.Invoke(name, dna);
+    }
+
+    public void DiscoverCreature(string name)
+    {
+        CreatureDiscovered?.Invoke(name);
     }
 
     public void DisableCreatures()
