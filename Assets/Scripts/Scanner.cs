@@ -54,13 +54,6 @@ public class Scanner : MonoBehaviour
         lightAngles.z = -90 + angle;
         _lightTransform.eulerAngles = lightAngles;
         _playerFlip.SetAngle(angle);
-
-
-        if (_objectOnScan != null && _objectOnScan.IsScanned)
-        {
-            _intersectedScannables.Remove(_objectOnScan);
-            StopScanCurrent();
-        }
     }
 
     private void FixedUpdate()
@@ -127,7 +120,6 @@ public class Scanner : MonoBehaviour
         if (!other.CompareTag("Scannable")) return;
 
         Scannable scannable = other.GetComponent<Scannable>();
-        if (scannable.IsScanned) return;
 
         if (!_intersectedScannables.Contains(scannable) && IsWithinScanRadius(scannable.Position))
         {
@@ -141,7 +133,6 @@ public class Scanner : MonoBehaviour
         if (!other.CompareTag("Scannable")) return;
 
         Scannable scannable = other.GetComponent<Scannable>();
-        if (scannable.IsScanned) return;
 
         if (!_intersectedScannables.Contains(scannable) && IsWithinScanRadius(scannable.Position))
         {

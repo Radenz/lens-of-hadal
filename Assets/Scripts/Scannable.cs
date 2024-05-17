@@ -49,7 +49,7 @@ public class Scannable : MonoBehaviour
 
     private void Update()
     {
-        if (_isActivelyScanned)
+        if (_isActivelyScanned && !IsScanned)
             UpdateTimeAndColor();
 
         if (_scanTime < 0 && !IsScanned)
@@ -86,7 +86,6 @@ public class Scannable : MonoBehaviour
     public void FinishScan()
     {
         IsScanned = true;
-        StopScan();
 
         int energyPowder = Random.Range(_energyPowder.x, _energyPowder.y);
         int seaweed = Random.Range(_seaweed.x, _seaweed.y);
