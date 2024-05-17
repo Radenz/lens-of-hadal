@@ -5,7 +5,6 @@ public class Scanner : MonoBehaviour
 {
     [SerializeField]
     private Vector2 _direction;
-    private float _range = 2.5f;
 
     [SerializeField]
     private CircleCollider2D _rangeCollider;

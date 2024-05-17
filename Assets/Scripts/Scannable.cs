@@ -14,6 +14,7 @@ public class Scannable : MonoBehaviour
 
     [SerializeField]
     private float _scanTime;
+    private float ScanProgress => 1 - (_scanTime / _scanDuration);
     private bool _isActivelyScanned;
     private Transform _transform;
 
@@ -49,12 +50,19 @@ public class Scannable : MonoBehaviour
     private void Update()
     {
         if (_isActivelyScanned)
-            _scanTime -= Time.deltaTime;
+            UpdateTimeAndColor();
 
         if (_scanTime < 0 && !IsScanned)
             FinishScan();
     }
 
+    private void UpdateTimeAndColor()
+    {
+        _scanTime -= Time.deltaTime;
+        _scanProgressBar.GetComponent<ScanProgressBar>().SetProgress(ScanProgress);
+    }
+
+    [Button]
     public void StartScan()
     {
         _isActivelyScanned = true;
@@ -66,7 +74,6 @@ public class Scannable : MonoBehaviour
         }
         _scanProgressBar = Instantiate(ScanProgressBarObject, transform);
         ScanProgressBar bar = _scanProgressBar.GetComponent<ScanProgressBar>();
-        bar.Sprite = _spriteRenderer.sprite;
         bar.YOffset = _textOffset;
     }
 

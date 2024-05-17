@@ -1,22 +1,27 @@
-using DG.Tweening;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
 
 public class ScanProgressBar : MonoBehaviour
 {
     [SerializeField]
-    private Light2D _glowLight;
+    private ParticleSystem _glowParticles;
     [SerializeField]
     private Transform _textTransform;
 
-    public Sprite Sprite;
     public float YOffset;
+
+    private static Color _startColor = new(1, 0, 0, 0.25f);
+    private static Color _endColor = new(0, 1, 0, 0.25f);
 
     private void Start()
     {
         Vector3 position = _textTransform.localPosition;
         position.y = YOffset;
         _textTransform.localPosition = position;
-        _glowLight.lightCookieSprite = Sprite;
+    }
+
+    public void SetProgress(float progress)
+    {
+        var module = _glowParticles.main;
+        module.startColor = Color.Lerp(_startColor, _endColor, progress);
     }
 }
