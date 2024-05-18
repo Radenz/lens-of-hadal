@@ -7,6 +7,8 @@ public class AutoFlip : MonoBehaviour
 
     [SerializeField]
     private float _maxTiltAngle = 60;
+    [SerializeField]
+    private float _smoothingFactor = 0.5f;
 
     public float Angle { get; private set; }
 
@@ -23,12 +25,12 @@ public class AutoFlip : MonoBehaviour
     {
         Vector2 velocity = _rigidbody.velocity;
         float angle = Vector2.SignedAngle(Vector2.right, velocity);
-        Angle = angle;
+        Angle = Mathf.Lerp(Angle, angle, _smoothingFactor);
 
         if (angle == 0) return;
         if (_scanner.IsScanning) return;
 
-        SetAngle(angle);
+        SetAngle(Angle);
     }
 
     public void SetAngle(float angle)
