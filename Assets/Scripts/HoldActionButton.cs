@@ -9,6 +9,8 @@ public class HoldActionButton : MonoBehaviour, IPointerDownHandler, IPointerUpHa
 {
     public event Action Execute;
 
+    private bool _disabled = false;
+
     [Header("Look")]
     [SerializeField]
     private string _text;
@@ -90,12 +92,23 @@ public class HoldActionButton : MonoBehaviour, IPointerDownHandler, IPointerUpHa
 
     public void OnPointerDown(PointerEventData _)
     {
-        Debug.Log("Holding");
+        if (_disabled) return;
         _isHolding = true;
     }
 
     public void OnPointerUp(PointerEventData _)
     {
+        if (_disabled) return;
         _isHolding = false;
+    }
+
+    public void Disable()
+    {
+        _frame.color = _frame.color.With(a: 0.5f);
+        _progressBar.color = _progressBar.color.With(a: 0.5f);
+        _background.color = _background.color.With(a: 0.5f);
+        _label.color = _label.color.With(a: 0.5f);
+
+        _disabled = true;
     }
 }

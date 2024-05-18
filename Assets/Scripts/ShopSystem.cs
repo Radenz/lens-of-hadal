@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Common.Persistence;
+using NaughtyAttributes;
 using UnityEngine;
 
 public class ShopSystem : Singleton<ShopSystem>, IBind<ItemData>
@@ -8,8 +9,17 @@ public class ShopSystem : Singleton<ShopSystem>, IBind<ItemData>
     private ItemData _data;
 
     [SerializeField]
-    private List<ShopItem> _items;
-    private readonly Dictionary<string, ShopItem> _shopItems = new();
+    private List<GameObject> _items;
+
+
+    [Header("References")]
+    [SerializeField]
+    private GameObject _shopItemMenuPrefab;
+
+    [SerializeField]
+    private GameObject _shelfItemContainer;
+    [SerializeField]
+    private GameObject _shelfItemMenu;
 
     [SerializeField]
     private ModuleGrid _upgradeSlot;
@@ -33,10 +43,6 @@ public class ShopSystem : Singleton<ShopSystem>, IBind<ItemData>
     protected override void Awake()
     {
         base.Awake();
-        foreach (ShopItem item in _items)
-        {
-            _shopItems[item.Id] = item;
-        }
     }
 
     private void Start()
@@ -48,17 +54,33 @@ public class ShopSystem : Singleton<ShopSystem>, IBind<ItemData>
     void IBind<ItemData>.Bind(ItemData data)
     {
         _data = data;
-        foreach (ShopItem item in _items)
-        {
-            item.Bind(_data);
-        }
+    }
+
+    public void ShowItem(Item item)
+    {
+        _shelfItemContainer.SetActive(false);
+        _shelfItemMenu.SetActive(true);
+        GameObject obj = Instantiate(_shopItemMenuPrefab, _shelfItemMenu.transform);
+        ShopItemMenu menu = obj.GetComponent<ShopItemMenu>();
+        menu.Bind(item);
+        menu.Bind(_data.FromId(item.Id));
+    }
+
+    public void CloseItem()
+    {
+        _shelfItemContainer.SetActive(true);
+        _shelfItemMenu.SetActive(false);
     }
 
     public void UnlockItem(string id)
     {
-        ShopItem item = _shopItems[id];
-        item.gameObject.SetActive(true);
         _data.FromId(id).IsUnlocked = true;
+
+        foreach (GameObject item in _items)
+        {
+            if (item.GetComponent<ShopItem>().Item.Id == id)
+                item.SetActive(true);
+        }
     }
 
     // ? I hate this but time is tight
@@ -80,7 +102,7 @@ public class ShopSystem : Singleton<ShopSystem>, IBind<ItemData>
                 return;
         }
 
-        GameObject obj = id switch
+        GameObject prefab = id switch
         {
             ShopItems.FlashlightLv2 => _flashlightLv2,
             ShopItems.FlashlightLv3 => _flashlightLv3,
@@ -89,6 +111,7 @@ public class ShopSystem : Singleton<ShopSystem>, IBind<ItemData>
             _ => throw new ArgumentException("Invalid item id"),
         };
 
+        GameObject obj = Instantiate(prefab, _shopUITransform);
         Module module = obj.GetComponent<Module>();
         _inventorySlot.Add(module);
     }

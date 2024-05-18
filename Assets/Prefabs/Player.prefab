@@ -298,6 +298,7 @@ GameObject:
   - component: {fileID: 4502696038651330938}
   - component: {fileID: 13769516596573448}
   - component: {fileID: 8787826608072123726}
+  - component: {fileID: 3563243131116576353}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -535,6 +536,14 @@ MonoBehaviour:
   _scanner: {fileID: 8648435158287270220}
   _maxTiltAngle: 45
   _smoothingFactor: 0.2
+--- !u!81 &3563243131116576353
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7958039500952871995}
+  m_Enabled: 1
 --- !u!1 &8743118357881080166
 GameObject:
   m_ObjectHideFlags: 0

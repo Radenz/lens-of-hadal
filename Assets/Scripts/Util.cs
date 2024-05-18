@@ -52,6 +52,18 @@ public static class TransformExtensions
     }
 }
 
+public static class ColorExtensions
+{
+    public static Color With(this Color color, float? r = null, float? g = null, float? b = null, float? a = null)
+    {
+        color.r = r ?? color.r;
+        color.g = g ?? color.g;
+        color.b = b ?? color.b;
+        color.a = a ?? color.a;
+        return color;
+    }
+}
+
 public static class AIExtensions
 {
     public static bool IsIdle(this IAstarAI ai)

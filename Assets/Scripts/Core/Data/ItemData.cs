@@ -30,7 +30,7 @@ public class ItemData : ISaveable
 }
 
 
-public class ItemInstanceData
+public class ItemInstanceData : ISaveable
 {
     public bool IsUnlocked = false;
     public bool IsPurchased = false;

@@ -332,8 +332,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 6.7617493, y: -2.2668495, z: 0}
-    m_Extent: {x: 87.62815, y: 34.30215, z: 0}
+    m_Center: {x: 6.7613487, y: -2.2666512, z: 0}
+    m_Extent: {x: 87.62775, y: 34.30075, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3196,7 +3196,6 @@ GameObject:
   m_Component:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
-  - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
   m_Layer: 0
@@ -3206,14 +3205,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &519420029
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
 --- !u!114 &519420030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5361,8 +5352,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -7.8664, y: -17.599049, z: 0}
-    m_Extent: {x: 47.038902, y: 29.31475, z: 0}
+    m_Center: {x: -7.865551, y: -17.59955, z: 0}
+    m_Extent: {x: 47.03865, y: 29.314451, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6252,8 +6243,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.8543987, y: -1.7196007, z: 0}
-    m_Extent: {x: 59.878, y: 25.5926, z: 0}
+    m_Center: {x: -0.8551502, y: -1.7198505, z: 0}
+    m_Extent: {x: 59.877647, y: 25.59305, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -12038,7 +12029,7 @@ Transform:
   m_GameObject: {fileID: 1507016845}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.2, y: 7.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12064,7 +12055,7 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 0.65
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
@@ -12116,7 +12107,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.15555556
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -14481,8 +14472,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.04034999, y: 0.058249995, z: 0}
-    m_Extent: {x: 0.40035, y: 0.34655, z: 0}
+    m_Center: {x: 0.041549996, y: 0.0582, z: 0}
+    m_Extent: {x: 0.39985, y: 0.347, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
