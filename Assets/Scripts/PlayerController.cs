@@ -12,6 +12,20 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
     private Transform _transform;
     private Movement _movement;
 
+    [Header("Consumables")]
+    [SerializeField]
+    private float _flareCooldown = 3f;
+    [SerializeField]
+    private float _sonarCooldown = 3f;
+    [SerializeField]
+    private GameObject _flarePrefab;
+    [SerializeField]
+    private GameObject _sonarPrefab;
+    private bool _canDeployFlare = true;
+    private bool _canDeploySonar = true;
+
+
+    [Header("Setup")]
     [SerializeField]
     private CinemachineVirtualCamera _playerVCam;
     private CinemachineBasicMultiChannelPerlin _playerVCamNoise;
@@ -62,6 +76,7 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
 
     #endregion Player Attributes
 
+    [Header("Attributes")]
     [SerializeField]
     private float _recoveryDelay = 7f;
     [SerializeField]
@@ -81,6 +96,7 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
     private bool _disableActions = false;
 
     #region Attributes HUD
+    [Header("HUD")]
     [SerializeField]
     private TextMeshProUGUI _dnaHUDLabel;
 
@@ -94,10 +110,6 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
     private Bar _staminaBar;
     #endregion Attributes HUD
 
-    [SerializeField]
-    private GameObject _flarePrefab;
-    [SerializeField]
-    private GameObject _sonarPrefab;
 
     protected override void Awake()
     {
@@ -241,10 +253,13 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
         _movement.Shock(duration);
     }
 
-    // TODO: check quantity & reduce
     public void DeployFlare()
     {
         if (_disableActions) return;
+        if (_canDeployFlare) return;
+        if (ConsumablesManager.Instance.Flare == 0) return;
+        ConsumablesManager.Instance.Flare -= 1;
+
         GameObject flare = Instantiate(_flarePrefab, _transform.position, Quaternion.identity);
         ArcLaunch arcLauncher = flare.GetComponent<ArcLaunch>();
 
@@ -257,12 +272,27 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
         }
 
         arcLauncher.Direction = direction;
+
+        EventManager.Instance.DeployFlare();
+        CooldownFlare();
     }
 
-    // TODO: check quantity & reduce
+    private async void CooldownFlare()
+    {
+        _canDeployFlare = false;
+        await Task.Yield();
+        await Awaitable.WaitForSecondsAsync(_flareCooldown);
+        _canDeployFlare = true;
+        EventManager.Instance.CooldownFlare();
+    }
+
     public void DeploySonar()
     {
         if (_disableActions) return;
+        if (_canDeploySonar) return;
+        if (ConsumablesManager.Instance.SonarDrone == 0) return;
+        ConsumablesManager.Instance.SonarDrone -= 1;
+
         GameObject sonar = Instantiate(_sonarPrefab, _transform.position, Quaternion.identity);
         ArcLaunch arcLauncher = sonar.GetComponent<ArcLaunch>();
 
@@ -275,5 +305,17 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
         }
 
         arcLauncher.Direction = direction;
+
+        EventManager.Instance.DeploySonar();
+        CooldownSonar();
+    }
+
+    private async void CooldownSonar()
+    {
+        _canDeploySonar = false;
+        await Task.Yield();
+        await Awaitable.WaitForSecondsAsync(_sonarCooldown);
+        _canDeploySonar = true;
+        EventManager.Instance.CooldownSonar();
     }
 }

@@ -43,6 +43,10 @@ public class EventManager : Singleton<EventManager>
     public event Action<int> SonarQuantityChanged;
     public event Action<int> FlareQuantityChanged;
 
+    public event Action SonarDeployed;
+    public event Action SonarCooldownFinished;
+    public event Action FlareDeployed;
+    public event Action FlareCooldownFinished;
 
     public event Action SonarPinged;
     #endregion
@@ -123,6 +127,27 @@ public class EventManager : Singleton<EventManager>
     {
         LevelledUp?.Invoke(level);
     }
+
+    public void DeploySonar()
+    {
+        SonarDeployed?.Invoke();
+    }
+
+    public void DeployFlare()
+    {
+        FlareDeployed?.Invoke();
+    }
+
+    public void CooldownSonar()
+    {
+        SonarCooldownFinished?.Invoke();
+    }
+
+    public void CooldownFlare()
+    {
+        FlareCooldownFinished?.Invoke();
+    }
+
 
     public void PingSonar()
     {
