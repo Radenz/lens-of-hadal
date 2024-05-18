@@ -25,9 +25,18 @@ public class AutoFlip : MonoBehaviour
     {
         Vector2 velocity = _rigidbody.velocity;
         float angle = Vector2.SignedAngle(Vector2.right, velocity);
-        Angle = Mathf.Lerp(Angle, angle, _smoothingFactor);
-
         if (angle == 0) return;
+
+        if (Mathf.Sign(angle) == Mathf.Sign(Angle) || Mathf.Abs(angle) < 90f)
+        {
+            Angle = Mathf.Lerp(Angle, angle, _smoothingFactor);
+        }
+        else
+        {
+            float wrappedAngle = angle - 360 * Mathf.Sign(angle);
+            Angle = Mathf.Lerp(Angle, wrappedAngle, _smoothingFactor);
+        }
+
         if (_scanner.IsScanning) return;
 
         SetAngle(Angle);
