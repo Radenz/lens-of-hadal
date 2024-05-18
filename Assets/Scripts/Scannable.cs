@@ -1,6 +1,8 @@
 using NaughtyAttributes;
 using UnityEngine;
 
+// TODO: store Creature SO instead
+// TODO: remove text on finished
 public class Scannable : MonoBehaviour
 {
     [Header("Rewards")]

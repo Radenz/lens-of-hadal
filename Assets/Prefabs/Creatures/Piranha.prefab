@@ -342,16 +342,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85376a89ec4a6a643a32c6cbe2c9f333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _dna: {x: 0, y: 0}
+  _energyPowder: {x: 0, y: 0}
+  _seaweed: {x: 0, y: 0}
+  _scrapMetal: {x: 0, y: 0}
+  _exp: 0
   _name: 
   _scanProgressBarPrefab: {fileID: -6517321322075258958, guid: b818d12cacafa9d4fba70b000920323e, type: 3}
   _scanDuration: 2
   _scanTime: 0
   _spriteRenderer: {fileID: 0}
   _textOffset: 5
-  _energyPowder: {x: 0, y: 0}
-  _seaweed: {x: 0, y: 0}
-  _scrapMetal: {x: 0, y: 0}
-  _exp: 0
 --- !u!114 &2589512322834676878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -771,16 +772,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85376a89ec4a6a643a32c6cbe2c9f333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _dna: {x: 0, y: 0}
+  _energyPowder: {x: 1, y: 5}
+  _seaweed: {x: 1, y: 3}
+  _scrapMetal: {x: 0, y: 0}
+  _exp: 5
   _name: 
   _scanProgressBarPrefab: {fileID: -6517321322075258958, guid: b818d12cacafa9d4fba70b000920323e, type: 3}
   _scanDuration: 2
   _scanTime: 0
   _spriteRenderer: {fileID: 3122924831791938811}
-  _textOffset: 5
-  _energyPowder: {x: 1, y: 5}
-  _seaweed: {x: 1, y: 3}
-  _scrapMetal: {x: 0, y: 0}
-  _exp: 5
+  _textOffset: 1
 --- !u!114 &5048607773017030533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1013,16 +1015,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85376a89ec4a6a643a32c6cbe2c9f333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _dna: {x: 0, y: 0}
+  _energyPowder: {x: 0, y: 0}
+  _seaweed: {x: 0, y: 0}
+  _scrapMetal: {x: 0, y: 0}
+  _exp: 0
   _name: 
   _scanProgressBarPrefab: {fileID: -6517321322075258958, guid: b818d12cacafa9d4fba70b000920323e, type: 3}
   _scanDuration: 2
   _scanTime: 0
   _spriteRenderer: {fileID: 0}
   _textOffset: 5
-  _energyPowder: {x: 0, y: 0}
-  _seaweed: {x: 0, y: 0}
-  _scrapMetal: {x: 0, y: 0}
-  _exp: 0
 --- !u!114 &6940762034942507117
 MonoBehaviour:
   m_ObjectHideFlags: 0
