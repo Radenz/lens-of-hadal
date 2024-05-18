@@ -5,6 +5,9 @@ using UnityEngine;
 public class AudioManager : Singleton<AudioManager>
 {
     [SerializeField]
+    private AudioSource _genericPlayer;
+
+    [SerializeField]
     private AudioSource _bgmBackgroundLayer;
 
     [SerializeField]
@@ -24,6 +27,12 @@ public class AudioManager : Singleton<AudioManager>
         _bgmBossfightLayer.Play();
         _bgmBossfightLayer.volume = 0;
         _bgmBackgroundLayer.loop = true;
+    }
+
+    // TODO: layering
+    public void Play(AudioClip audioClip)
+    {
+        _genericPlayer.PlayOneShot(audioClip);
     }
 
     [Button]

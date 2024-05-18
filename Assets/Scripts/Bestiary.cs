@@ -4,6 +4,9 @@ using UnityEngine;
 public class Bestiary : Singleton<Bestiary>, IBind<CreatureData>
 {
     [SerializeField]
+    private AudioClip _pageFlipAudio;
+
+    [SerializeField]
     private GameObject[] _pages;
     private int _currentPage;
 
@@ -39,11 +42,13 @@ public class Bestiary : Singleton<Bestiary>, IBind<CreatureData>
     public void PrevPage()
     {
         ShowPage(_currentPage - 1);
+        AudioManager.Instance.Play(_pageFlipAudio);
     }
 
     public void NextPage()
     {
         ShowPage(_currentPage + 1);
+        AudioManager.Instance.Play(_pageFlipAudio);
     }
 
     public void ShowPage(int pageNumber)
@@ -67,10 +72,12 @@ public class Bestiary : Singleton<Bestiary>, IBind<CreatureData>
     public void Show()
     {
         gameObject.SetActive(true);
+        AudioManager.Instance.Play(_pageFlipAudio);
     }
 
     public void Hide()
     {
         gameObject.SetActive(false);
+        AudioManager.Instance.Play(_pageFlipAudio);
     }
 }
