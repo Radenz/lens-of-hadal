@@ -66,13 +66,11 @@ public class Bestiary : Singleton<Bestiary>, IBind<CreatureData>
 
     public void Show()
     {
-        Time.timeScale = 0;
         gameObject.SetActive(true);
     }
 
     public void Hide()
     {
-        Time.timeScale = 1;
         gameObject.SetActive(false);
     }
 }

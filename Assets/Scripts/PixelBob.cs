@@ -13,8 +13,6 @@ public class PixelBob : MonoBehaviour
     [SerializeField]
     private Axis _axis;
     [SerializeField]
-    private int _bobCount;
-    [SerializeField]
     private bool _startImmediately = false;
     private bool _isOffset = false;
 
