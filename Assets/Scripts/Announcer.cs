@@ -8,6 +8,14 @@ public class Announcer : Singleton<Announcer>
     [Header("References")]
     [SerializeField]
     private GameObject _announcement;
+
+    [SerializeField]
+    private GameObject _scanAnnouncementPrefab;
+    [SerializeField]
+    private GameObject _discoveryAnnouncementPrefab;
+    [SerializeField]
+    private GameObject _rewardAnnouncementPrefab;
+
     [SerializeField]
     private TextMeshProUGUI _title;
     [SerializeField]
@@ -31,7 +39,7 @@ public class Announcer : Singleton<Announcer>
     private float _duration = 2;
     public float Duration => _duration;
 
-    private readonly List<Announcement> _announcementQueue = new();
+    private readonly List<AnnouncementT> _announcementQueue = new();
     private bool _isAnnouncing = false;
 
     private void Update()
@@ -42,7 +50,7 @@ public class Announcer : Singleton<Announcer>
 
     private void AnnounceLeastRecent()
     {
-        Announcement announcement = _announcementQueue[0];
+        AnnouncementT announcement = _announcementQueue[0];
         _announcementQueue.RemoveRange(0, 1);
 
         int unusedCurrencies = 0;
@@ -125,6 +133,16 @@ public class Announcer : Singleton<Announcer>
         });
     }
 
+    public void AnnounceScan(Creature creature, int energyPowder, int seaweed, int scrapMetal)
+    {
+        GameObject obj = Instantiate(_scanAnnouncementPrefab);
+        ScanAnnouncement announcement = obj.GetComponent<ScanAnnouncement>();
+        announcement.Creature = creature;
+        announcement.EnergyPowder = energyPowder;
+        announcement.Seaweed = seaweed;
+        announcement.ScrapMetal = scrapMetal;
+    }
+
     public void AnnounceQuest(int gold)
     {
         _announcementQueue.Add(new()
@@ -162,7 +180,7 @@ public class Announcer : Singleton<Announcer>
     // }
 }
 
-struct Announcement
+struct AnnouncementT
 {
     public string Title;
     public string Name;

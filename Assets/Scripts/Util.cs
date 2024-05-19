@@ -35,7 +35,7 @@ public static class MonoBehaviourExtensions
 
 public static class TransformExtensions
 {
-    public static Vector3 With(this Vector3 vec, float? x, float? y, float? z)
+    public static Vector3 With(this Vector3 vec, float? x = null, float? y = null, float? z = null)
     {
         vec.x = x ?? vec.x;
         vec.y = y ?? vec.z;

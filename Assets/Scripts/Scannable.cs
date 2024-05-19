@@ -87,7 +87,7 @@ public class Scannable : MonoBehaviour
         EventManager.Instance.ScanCreature(_creature.Id);
         EventManager.Instance.IncreaseCreatureDNA(_creature.Id, dna);
         EventManager.Instance.RewardPlayer(energyPowder, seaweed, scrapMetal);
-        Announcer.Instance.AnnounceScan(_creature.Name, energyPowder, seaweed, scrapMetal);
+        Announcer.Instance.AnnounceScan(_creature, energyPowder, seaweed, scrapMetal);
 
         LevelManager.Instance.AddExp(_creature.ExpPerScan);
     }
