@@ -10,20 +10,26 @@ public class MutantAnglerfishAI : MonoBehaviour
     [Header("Config")]
     [SerializeField]
     private float _damage = 50;
+    [SerializeField]
+    private float _dashImpulse = 20;
 
     [Header("Others")]
     [SerializeField]
     private Rigidbody2D _rigidbody;
 
     [SerializeField]
+    private Scannable _scannable;
+
+    private Vector2 _spawnBoundMin;
+    private Vector2 _spawnBoundMax;
+
+    [SerializeField]
     private float _roamingRadius;
     [SerializeField]
     private float _retreatRadius;
-    private float _aggresionRadius;
 
     [SerializeField]
     private float _lureLightIntensity = 0.5f;
-
 
     [SerializeField]
     private RangeTrigger _attackHitbox;
@@ -46,9 +52,17 @@ public class MutantAnglerfishAI : MonoBehaviour
     private bool _isMoving = false;
     private bool _canAttack = false;
 
+    private ManagedTween _lightTween = new();
+    private bool _isDestroyed = false;
+
     private void Start()
     {
         _transform = transform;
+
+        GameObject obj = GameObject.FindGameObjectWithTag("MutantAnglerfishSpawnBound");
+        BoxCollider2D boundCollider = obj.GetComponent<BoxCollider2D>();
+        _spawnBoundMin = boundCollider.bounds.min;
+        _spawnBoundMax = boundCollider.bounds.max;
 
         // _aggresionRadius = _aggresionRange.GetComponent<CircleCollider2D>().radius;
         _attackHitbox.Entered += OnAttack;
@@ -74,25 +88,44 @@ public class MutantAnglerfishAI : MonoBehaviour
         Hide();
     }
 
+    private void OnDestroy()
+    {
+        _lightTween.Kill();
+        _isDestroyed = true;
+    }
+
     private void OnAttack()
     {
         if (!_canAttack) return;
         PlayerController.Instance.Damage(_damage);
     }
 
+    private Vector2 PickEmergePoint()
+    {
+        float x = Random.Range(_spawnBoundMin.x, _spawnBoundMax.x);
+        float y = Random.Range(_spawnBoundMin.y, _spawnBoundMax.y);
+        return new Vector2(x, y);
+    }
+
     private async void Emerge()
     {
+        _scannable.gameObject.SetActive(true);
         await Task.Yield();
+
         _isMoving = true;
         _state = MutantAnglerfishState.Emerged;
         _sprite.SetActive(true);
-        Vector3 position = _player.RandomOnRadius(8f);
-        _transform.position = position;
+        _transform.position = PickEmergePoint();
         _canAttack = true;
-        await Shine().AsyncWaitForCompletion();
+
+        Tween shine = Shine();
+        _lightTween.Kill();
+        _lightTween.Play(shine);
+        await shine.AsyncWaitForCompletion();
+
         Vector3 direction = _player.position - _transform.position;
-        Vector3 finalPosition = direction.normalized * 8 + _player.position;
-        await _transform.DOMove(finalPosition, 2f).SetEase(Ease.Linear).AsyncWaitForCompletion();
+        _rigidbody.AddForce(direction.normalized * _dashImpulse);
+        await Awaitable.WaitForSecondsAsync(1.5f);
         _isMoving = false;
     }
 
@@ -101,21 +134,40 @@ public class MutantAnglerfishAI : MonoBehaviour
         await Task.Yield();
         _isMoving = true;
         _state = MutantAnglerfishState.Hidden;
-        await Dim().AsyncWaitForCompletion();
+
+        Tween dim = Dim();
+        _lightTween.Kill();
+        _lightTween.Play(dim);
+        await dim.AsyncWaitForCompletion();
+        if (_isDestroyed) return;
+
+        _scannable.gameObject.SetActive(false);
         _canAttack = false;
-        _sprite.SetActive(false);
-        await Task.Delay(2000);
+        _sprite?.SetActive(false);
+        _rigidbody.velocity = Vector3.zero;
+
+        await Awaitable.WaitForSecondsAsync(2f);
         _isMoving = false;
     }
 
     private Tween Shine(float duration = 1f)
     {
-        return DOTween.To(() => _lure.intensity, intensity => _lure.intensity = intensity, _lureLightIntensity, duration).SetEase(Ease.InQuad);
+        return DOTween.To(
+            () => _lure.intensity,
+            intensity => _lure.intensity = intensity,
+            _lureLightIntensity,
+            duration
+        ).SetEase(Ease.InQuad);
     }
 
     private Tween Dim(float duration = 1f)
     {
-        return DOTween.To(() => _lure.intensity, intensity => _lure.intensity = intensity, 0f, duration).SetEase(Ease.OutQuad);
+        return DOTween.To(
+            () => _lure.intensity,
+            intensity => _lure.intensity = intensity,
+            0f,
+            duration
+        ).SetEase(Ease.OutQuad);
     }
 }
 

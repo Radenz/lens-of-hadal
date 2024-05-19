@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class GoToMarkedLocation : QuestStep
 {
-    [SerializeField]
-    private CircleCollider2D _range;
     private bool _isReached = false;
 
     protected override void Start()

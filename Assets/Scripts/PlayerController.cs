@@ -226,7 +226,6 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
             return;
         }
 
-
         Shake();
     }
 
@@ -244,12 +243,15 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
         _movement.Stop();
         HealthPoints = _data.MaxHealthPoints;
         transform.position = _respawnPoint.position;
+        CameraManager.Instance.ChooseCamera(_playerVCam);
+        EventManager.Instance.Respawn();
     }
 
     private void Die()
     {
         Time.timeScale = 0;
         _deathOverlay.SetActive(true);
+        EventManager.Instance.Die();
     }
 
     public void Shock(float duration)

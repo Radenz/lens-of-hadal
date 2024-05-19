@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using UnityEngine;
 
 public abstract class QuestStep : MonoBehaviour
@@ -6,6 +7,7 @@ public abstract class QuestStep : MonoBehaviour
     public Quest Quest;
 
     [SerializeField]
+    [ResizableTextArea]
     protected string _description;
 
     protected virtual void Start()

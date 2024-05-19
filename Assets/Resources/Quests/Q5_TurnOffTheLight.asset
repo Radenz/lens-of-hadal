@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f47281e9fbe0024f8e0b8d55fb4031f, type: 3}
-  m_Name: 1_GroundZero
+  m_Name: Q5_TurnOffTheLight
   m_EditorClassIdentifier: 
-  Title: Ground Zero
-  Description: Complete the tutorial mission.
+  Title: Turn Off The Light
+  Description: 'Discover the creature lurking
+
+    in the deep dark.'
   Steps:
-  - {fileID: 1899234668314591961, guid: c65265abb73c24a4ca9a9317e6d7eef5, type: 3}
-  - {fileID: 7614436792568056827, guid: c647ccda5ad3db2418c95625a6770c2b, type: 3}
-  Reward: {fileID: 3045631472178583046, guid: c2d65d7c0c54bd6469f82c1475a29223, type: 3}
+  - {fileID: 4100855609101528229, guid: 1e20d40cc2ae53b488d0a1861ef67cc0, type: 3}
+  - {fileID: 8558878075661889301, guid: ffd6d25eeb8d0da4484f592c398af972, type: 3}
+  Reward: {fileID: 7404967860883267302, guid: 65c58df932b04aa46a1a6decc9b91962, type: 3}

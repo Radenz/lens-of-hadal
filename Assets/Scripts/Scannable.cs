@@ -50,6 +50,7 @@ public class Scannable : MonoBehaviour
     {
         _scanTime -= Time.deltaTime;
         _scanProgressBarContainer.GetComponent<ScanProgressBar>().SetProgress(ScanProgress);
+        EventManager.Instance.UpdateScanProgress(_creature.Id, ScanProgress);
     }
 
     [Button]

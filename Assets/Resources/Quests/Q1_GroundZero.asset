@@ -10,19 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f47281e9fbe0024f8e0b8d55fb4031f, type: 3}
-  m_Name: Quest2
+  m_Name: Q1_GroundZero
   m_EditorClassIdentifier: 
-  Title: Abc
-  Description: 'This is description
-
-    Of Quest 2'
-  Items:
-  - Description: agqeg
-    Countable: 1
-    Counter: 0
-    Target: 0
-    IsCompleted: 0
-    Validator:
-      Type: 3
-      Quantity: 0
-      Name: 
+  Title: Ground Zero
+  Description: Complete the tutorial mission.
+  Steps:
+  - {fileID: 3976076664689881749, guid: 890a1952baea6bb4dbe01afd6d40d737, type: 3}
+  Reward: {fileID: 7404967860883267302, guid: 65c58df932b04aa46a1a6decc9b91962, type: 3}

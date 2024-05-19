@@ -52,6 +52,7 @@ public class EventManager : Singleton<EventManager>
     #endregion
 
     #region Creature Events
+    public event Action<string, float> ScanProgressUpdated;
     public event Action CreaturesDisabled;
     public event Action CreaturesEnabled;
     public event Action<string> CreatureScanned;
@@ -62,6 +63,8 @@ public class EventManager : Singleton<EventManager>
     #region Player Events
     public event Action PlayerActionsDisabled;
     public event Action PlayerActionsEnabled;
+    public event Action PlayerDead;
+    public event Action PlayerRespawned;
     #endregion
 
 
@@ -228,6 +231,11 @@ public class EventManager : Singleton<EventManager>
         CreatureDiscovered?.Invoke(name);
     }
 
+    public void UpdateScanProgress(string creatureId, float progress)
+    {
+        ScanProgressUpdated?.Invoke(creatureId, progress);
+    }
+
     public void DisableCreatures()
     {
         CreaturesDisabled?.Invoke();
@@ -251,5 +259,15 @@ public class EventManager : Singleton<EventManager>
     public void RewardPlayer(int energyPowder, int seaweed, int scrapMetal)
     {
         Rewarded?.Invoke(energyPowder, seaweed, scrapMetal);
+    }
+
+    public void Die()
+    {
+        PlayerDead?.Invoke();
+    }
+
+    public void Respawn()
+    {
+        PlayerRespawned?.Invoke();
     }
 }
