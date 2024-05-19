@@ -12,6 +12,7 @@ public class SceneTransitionSystem : Singleton<SceneTransitionSystem>
     private float _fadeDuration = 0.6f;
 
     private GameplayScene _currentScene = GameplayScene.World;
+    public GameplayScene CurrentScene => _currentScene;
 
     private void Start()
     {
