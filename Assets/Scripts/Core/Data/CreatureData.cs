@@ -28,6 +28,7 @@ public class CreatureData : ISaveable
 
 public class CreatureInstanceData
 {
+    public float DNAGathered = 0f;
     public bool IsDiscovered = false;
     public float DiscoveryProgress = 0f;
 }

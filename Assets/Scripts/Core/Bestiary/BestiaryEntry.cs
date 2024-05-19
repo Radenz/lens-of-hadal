@@ -33,7 +33,7 @@ public class BestiaryEntry : MonoBehaviour, IBind<CreatureData>
             _creature.Sprite.rect.height * _creature.BestiarySpriteScale
         );
         EventManager.Instance.CreatureDiscovered += OnCreatureDiscovered;
-        EventManager.Instance.CreatureDNAUpdated += OnCreatureDNAUpdated;
+        EventManager.Instance.DNAGained += OnCreatureDNAGained;
 
         if (_dnaBar != null)
             _dnaBar.MaxValue = 100;
@@ -52,10 +52,10 @@ public class BestiaryEntry : MonoBehaviour, IBind<CreatureData>
             _spriteImage.color = Color.white;
     }
 
-    private void OnCreatureDNAUpdated(string id, float dna)
+    private void OnCreatureDNAGained(Creature creature, float dna)
     {
-        if (id != _creature.Id) return;
-        _dnaBar.Value = dna;
+        if (creature != _creature) return;
+        _dnaBar.Value += Mathf.Min(_dnaBar.Value + dna, 100);
     }
 
     public void Bind(CreatureData data)

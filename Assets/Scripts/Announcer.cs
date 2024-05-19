@@ -122,17 +122,6 @@ public class Announcer : Singleton<Announcer>
         _announcement.SetActive(false);
     }
 
-    public void AnnounceScan(string creatureName, int energyPowder, int seaweed, int scrapMetal)
-    {
-        _announcementQueue.Add(new()
-        {
-            Title = "CREATURE SCANNED",
-            EnergyPowderReward = energyPowder,
-            SeaweedReward = seaweed,
-            ScrapMetalReward = scrapMetal,
-        });
-    }
-
     public void AnnounceScan(Creature creature, int energyPowder, int seaweed, int scrapMetal)
     {
         GameObject obj = Instantiate(_scanAnnouncementPrefab);
@@ -141,6 +130,13 @@ public class Announcer : Singleton<Announcer>
         announcement.EnergyPowder = energyPowder;
         announcement.Seaweed = seaweed;
         announcement.ScrapMetal = scrapMetal;
+    }
+
+    public void AnnounceDiscovery(Creature creature)
+    {
+        GameObject obj = Instantiate(_discoveryAnnouncementPrefab);
+        DiscoveryAnnouncement announcement = obj.GetComponent<DiscoveryAnnouncement>();
+        announcement.Creature = creature;
     }
 
     public void AnnounceQuest(int gold)

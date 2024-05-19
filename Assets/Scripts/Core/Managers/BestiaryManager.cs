@@ -10,7 +10,7 @@ public class BestiaryManager : Singleton<BestiaryManager>, IBind<CreatureData>
 
     private void Start()
     {
-        EventManager.Instance.CreatureDNAUpdated += OnCreatureDNAIncreased;
+        EventManager.Instance.DNAGained += OnCreatureDNAGained;
         EventManager.Instance.CreatureDiscovered += OnCreatureDiscovered;
     }
 
@@ -20,15 +20,16 @@ public class BestiaryManager : Singleton<BestiaryManager>, IBind<CreatureData>
         _bestiary.Bind(data);
     }
 
-    private void OnCreatureDNAIncreased(string name, float dna)
+    private void OnCreatureDNAGained(Creature creature, float dna)
     {
-        CreatureInstanceData creatureData = _data.FromId(name);
+        CreatureInstanceData creatureData = _data.FromId(creature.Id);
         creatureData.DiscoveryProgress += dna;
         if (creatureData.DiscoveryProgress >= 100)
         {
             creatureData.DiscoveryProgress = 100;
             creatureData.IsDiscovered = true;
-            EventManager.Instance.DiscoverCreature(name);
+
+            Announcer.Instance.AnnounceDiscovery(creature);
         }
     }
 

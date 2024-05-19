@@ -56,7 +56,7 @@ public class EventManager : Singleton<EventManager>
     public event Action CreaturesDisabled;
     public event Action CreaturesEnabled;
     public event Action<string> CreatureScanned;
-    public event Action<string, float> CreatureDNAUpdated;
+    public event Action<Creature, float> DNAGained;
     public event Action<string> CreatureDiscovered;
     #endregion
 
@@ -221,11 +221,12 @@ public class EventManager : Singleton<EventManager>
         CreatureScanned?.Invoke(name);
     }
 
-    public void UpdateCreatureDNA(string name, float dna)
+    public void GainDNA(Creature creature, float dna)
     {
-        CreatureDNAUpdated?.Invoke(name, dna);
+        DNAGained?.Invoke(creature, dna);
     }
 
+    [Obsolete]
     public void DiscoverCreature(string name)
     {
         CreatureDiscovered?.Invoke(name);
