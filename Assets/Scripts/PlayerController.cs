@@ -12,6 +12,8 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
     private Transform _transform;
     private Movement _movement;
 
+    public Vector3 Position => _transform.position;
+
     [Header("Consumables")]
     [SerializeField]
     private float _flareCooldown = 3f;
