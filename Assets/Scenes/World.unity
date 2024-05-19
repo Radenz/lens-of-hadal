@@ -12832,6 +12832,10 @@ PrefabInstance:
       propertyPath: _creature
       value: 
       objectReference: {fileID: 11400000, guid: b4e883565e024e841b892c2881ecb533, type: 2}
+    - target: {fileID: 3447142061283597044, guid: b2f3df2923ac5df43a2ce682cf1fcfc6, type: 3}
+      propertyPath: _descriptionsLabel
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5238354877035410182, guid: b2f3df2923ac5df43a2ce682cf1fcfc6, type: 3}
       propertyPath: m_fontSize
       value: 120
@@ -14442,7 +14446,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 178}
-  m_SizeDelta: {x: 300, y: 70}
+  m_SizeDelta: {x: 470, y: 38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1820247014
 MonoBehaviour:

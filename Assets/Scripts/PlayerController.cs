@@ -127,6 +127,7 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
 
         // TODO: use event
         _staminaBar.MaxValue = _data.MaxStamina;
+        _staminaBar.Value = _data.Stamina;
 
         _playerInputActions = new();
 

@@ -14,6 +14,8 @@ public class BestiaryEntry : MonoBehaviour, IBind<CreatureData>
     [SerializeField]
     private Image _spriteImage;
     [SerializeField]
+    private Bar _dnaBar;
+    [SerializeField]
     private TMP_Text _nameLabel;
     [SerializeField]
     private TMP_Text _descriptionsLabel;
@@ -31,6 +33,9 @@ public class BestiaryEntry : MonoBehaviour, IBind<CreatureData>
             _creature.Sprite.rect.height * _creature.BestiarySpriteScale
         );
         EventManager.Instance.CreatureDiscovered += OnCreatureDiscovered;
+        EventManager.Instance.CreatureDNAUpdated += OnCreatureDNAUpdated;
+
+        _dnaBar.MaxValue = 100;
 
         // ? We do need to check because the object is set to inactive
         // ? This is to cover the scenario when the creature is not
@@ -43,6 +48,12 @@ public class BestiaryEntry : MonoBehaviour, IBind<CreatureData>
     {
         if (id == _creature.Id)
             _spriteImage.color = Color.white;
+    }
+
+    private void OnCreatureDNAUpdated(string id, float dna)
+    {
+        if (id != _creature.Id) return;
+        _dnaBar.Value = dna;
     }
 
     public void Bind(CreatureData data)
@@ -60,6 +71,7 @@ public class BestiaryEntry : MonoBehaviour, IBind<CreatureData>
             _spriteImage.color = Color.white;
             _nameLabel.text = _creature.Name;
             _descriptionsLabel.text = _creature.Description;
+            _dnaBar.Value = 100;
         }
     }
 }

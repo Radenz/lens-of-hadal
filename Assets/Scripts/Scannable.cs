@@ -85,7 +85,7 @@ public class Scannable : MonoBehaviour
         int scrapMetal = Random.Range(_creature.ScrapMetalPerScan.x, _creature.ScrapMetalPerScan.y);
 
         EventManager.Instance.ScanCreature(_creature.Id);
-        EventManager.Instance.IncreaseCreatureDNA(_creature.Id, dna);
+        EventManager.Instance.UpdateCreatureDNA(_creature.Id, dna);
         EventManager.Instance.RewardPlayer(energyPowder, seaweed, scrapMetal);
         Announcer.Instance.AnnounceScan(_creature, energyPowder, seaweed, scrapMetal);
 

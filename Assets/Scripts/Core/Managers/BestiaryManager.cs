@@ -10,7 +10,7 @@ public class BestiaryManager : Singleton<BestiaryManager>, IBind<CreatureData>
 
     private void Start()
     {
-        EventManager.Instance.CreatureDNAIncreased += OnCreatureDNAIncreased;
+        EventManager.Instance.CreatureDNAUpdated += OnCreatureDNAIncreased;
         EventManager.Instance.CreatureDiscovered += OnCreatureDiscovered;
     }
 
