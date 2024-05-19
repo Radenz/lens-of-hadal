@@ -98,6 +98,8 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
     #region Attributes HUD
     [Header("HUD")]
     [SerializeField]
+    private GameObject _hudContainer;
+    [SerializeField]
     private TextMeshProUGUI _dnaHUDLabel;
 
     [SerializeField]
@@ -188,12 +190,14 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
     {
         _disableActions = true;
         _movement.enabled = false;
+        _hudContainer.SetActive(false);
     }
 
     private void OnEnableActions()
     {
         _disableActions = false;
         _movement.enabled = true;
+        _hudContainer.SetActive(true);
     }
 
 
