@@ -11,6 +11,14 @@ public class Creature : ScriptableObject
     public string Description;
     public Sprite Sprite;
     public float BestiarySpriteScale;
+    [Header("Rewards")]
+    public int ExpPerScan;
     [MinMaxSlider(0, 100)]
     public Vector2 DNAPerScan;
+    [MinMaxSlider(0, 100)]
+    public Vector2Int EnergyPowderPerScan;
+    [MinMaxSlider(0, 100)]
+    public Vector2Int SeaweedPerScan;
+    [MinMaxSlider(0, 100)]
+    public Vector2Int ScrapMetalPerScan;
 }

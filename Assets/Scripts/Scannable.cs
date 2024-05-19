@@ -1,28 +1,14 @@
 using NaughtyAttributes;
 using UnityEngine;
 
-// TODO: store Creature SO instead
 // TODO: remove text on finished
 public class Scannable : MonoBehaviour
 {
-    [Header("Rewards")]
-    [SerializeField, MinMaxSlider(0, 100)]
-    private Vector2 _dna;
-    [SerializeField, MinMaxSlider(0, 100)]
-    private Vector2Int _energyPowder;
-    [SerializeField, MinMaxSlider(0, 100)]
-    private Vector2Int _seaweed;
-    [SerializeField, MinMaxSlider(0, 100)]
-    private Vector2Int _scrapMetal;
     [SerializeField]
-    private int _exp;
+    private Creature _creature;
 
     [SerializeField]
-    private string _name;
-    public string Name => _name;
-
-    [SerializeField]
-    private ScanProgressBar _scanProgressBarPrefab;
+    private GameObject _scanProgressBarPrefab;
     [SerializeField]
     private float _scanDuration = 2;
 
@@ -35,8 +21,8 @@ public class Scannable : MonoBehaviour
     public bool IsScanned { get; private set; }
     public Vector2 Position => _transform.position;
 
-    private GameObject ScanProgressBarObject => _scanProgressBarPrefab.gameObject;
-    private GameObject _scanProgressBar;
+    private GameObject _scanProgressBarContainer;
+    private ScanProgressBar _scanProgressBar;
 
     [SerializeField]
     private SpriteRenderer _spriteRenderer;
@@ -63,7 +49,7 @@ public class Scannable : MonoBehaviour
     private void UpdateTimeAndColor()
     {
         _scanTime -= Time.deltaTime;
-        _scanProgressBar.GetComponent<ScanProgressBar>().SetProgress(ScanProgress);
+        _scanProgressBarContainer.GetComponent<ScanProgressBar>().SetProgress(ScanProgress);
     }
 
     [Button]
@@ -71,36 +57,37 @@ public class Scannable : MonoBehaviour
     {
         _isActivelyScanned = true;
 
-        if (_scanProgressBar != null)
+        if (_scanProgressBarContainer != null)
         {
-            _scanProgressBar.SetActive(true);
+            _scanProgressBarContainer.SetActive(true);
             return;
         }
-        _scanProgressBar = Instantiate(ScanProgressBarObject, transform);
-        ScanProgressBar bar = _scanProgressBar.GetComponent<ScanProgressBar>();
-        bar.YOffset = _textOffset;
+        _scanProgressBarContainer = Instantiate(_scanProgressBarPrefab, transform);
+        _scanProgressBar = _scanProgressBarContainer.GetComponent<ScanProgressBar>();
+        _scanProgressBar.YOffset = _textOffset;
     }
 
     public void StopScan()
     {
         _isActivelyScanned = false;
-        _scanProgressBar.SetActive(false);
+        _scanProgressBarContainer.SetActive(false);
     }
 
     public void FinishScan()
     {
         IsScanned = true;
+        _scanProgressBar.HideText();
 
-        float dna = Random.Range(_dna.x, _dna.y);
-        int energyPowder = Random.Range(_energyPowder.x, _energyPowder.y);
-        int seaweed = Random.Range(_seaweed.x, _seaweed.y);
-        int scrapMetal = Random.Range(_scrapMetal.x, _scrapMetal.y);
+        float dna = Random.Range(_creature.DNAPerScan.x, _creature.DNAPerScan.y);
+        int energyPowder = Random.Range(_creature.EnergyPowderPerScan.x, _creature.EnergyPowderPerScan.y);
+        int seaweed = Random.Range(_creature.SeaweedPerScan.x, _creature.SeaweedPerScan.y);
+        int scrapMetal = Random.Range(_creature.ScrapMetalPerScan.x, _creature.ScrapMetalPerScan.y);
 
-        EventManager.Instance.ScanCreature(_name);
-        EventManager.Instance.IncreaseCreatureDNA(_name, dna);
+        EventManager.Instance.ScanCreature(_creature.Id);
+        EventManager.Instance.IncreaseCreatureDNA(_creature.Id, dna);
         EventManager.Instance.RewardPlayer(energyPowder, seaweed, scrapMetal);
-        Announcer.Instance.AnnounceScan(_name, energyPowder, seaweed, scrapMetal);
+        Announcer.Instance.AnnounceScan(_creature.Name, energyPowder, seaweed, scrapMetal);
 
-        LevelManager.Instance.AddExp(_exp);
+        LevelManager.Instance.AddExp(_creature.ExpPerScan);
     }
 }

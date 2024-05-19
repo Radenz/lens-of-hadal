@@ -342,13 +342,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85376a89ec4a6a643a32c6cbe2c9f333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dna: {x: 0, y: 0}
-  _energyPowder: {x: 0, y: 0}
-  _seaweed: {x: 0, y: 0}
-  _scrapMetal: {x: 0, y: 0}
-  _exp: 0
-  _name: 
-  _scanProgressBarPrefab: {fileID: -6517321322075258958, guid: b818d12cacafa9d4fba70b000920323e, type: 3}
+  _creature: {fileID: 0}
+  _scanProgressBarPrefab: {fileID: 0}
   _scanDuration: 2
   _scanTime: 0
   _spriteRenderer: {fileID: 0}
@@ -772,13 +767,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85376a89ec4a6a643a32c6cbe2c9f333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dna: {x: 0, y: 0}
-  _energyPowder: {x: 1, y: 5}
-  _seaweed: {x: 1, y: 3}
-  _scrapMetal: {x: 0, y: 0}
-  _exp: 5
-  _name: 
-  _scanProgressBarPrefab: {fileID: -6517321322075258958, guid: b818d12cacafa9d4fba70b000920323e, type: 3}
+  _creature: {fileID: 11400000, guid: 6e443ab1cd372704aba366ca0fabd9a9, type: 2}
+  _scanProgressBarPrefab: {fileID: 2265630043084495933, guid: b818d12cacafa9d4fba70b000920323e, type: 3}
   _scanDuration: 2
   _scanTime: 0
   _spriteRenderer: {fileID: 3122924831791938811}
@@ -1015,13 +1005,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85376a89ec4a6a643a32c6cbe2c9f333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dna: {x: 0, y: 0}
-  _energyPowder: {x: 0, y: 0}
-  _seaweed: {x: 0, y: 0}
-  _scrapMetal: {x: 0, y: 0}
-  _exp: 0
-  _name: 
-  _scanProgressBarPrefab: {fileID: -6517321322075258958, guid: b818d12cacafa9d4fba70b000920323e, type: 3}
+  _creature: {fileID: 0}
+  _scanProgressBarPrefab: {fileID: 0}
   _scanDuration: 2
   _scanTime: 0
   _spriteRenderer: {fileID: 0}

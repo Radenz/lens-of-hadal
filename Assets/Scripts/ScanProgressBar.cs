@@ -24,4 +24,9 @@ public class ScanProgressBar : MonoBehaviour
         var module = _glowParticles.main;
         module.startColor = Color.Lerp(_startColor, _endColor, progress);
     }
+
+    public void HideText()
+    {
+        _textTransform.gameObject.SetActive(false);
+    }
 }
