@@ -262,7 +262,7 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
     public void DeployFlare()
     {
         if (_disableActions) return;
-        if (_canDeployFlare) return;
+        if (!_canDeployFlare) return;
         if (ConsumablesManager.Instance.Flare == 0) return;
         ConsumablesManager.Instance.Flare -= 1;
 
@@ -295,7 +295,7 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
     public void DeploySonar()
     {
         if (_disableActions) return;
-        if (_canDeploySonar) return;
+        if (!_canDeploySonar) return;
         if (ConsumablesManager.Instance.SonarDrone == 0) return;
         ConsumablesManager.Instance.SonarDrone -= 1;
 
