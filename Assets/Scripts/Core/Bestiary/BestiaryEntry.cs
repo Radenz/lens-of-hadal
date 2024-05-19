@@ -35,7 +35,9 @@ public class BestiaryEntry : MonoBehaviour, IBind<CreatureData>
         EventManager.Instance.CreatureDiscovered += OnCreatureDiscovered;
         EventManager.Instance.CreatureDNAUpdated += OnCreatureDNAUpdated;
 
-        _dnaBar.MaxValue = 100;
+        if (_dnaBar != null)
+            _dnaBar.MaxValue = 100;
+
 
         // ? We do need to check because the object is set to inactive
         // ? This is to cover the scenario when the creature is not
