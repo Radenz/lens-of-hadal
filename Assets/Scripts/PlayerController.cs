@@ -109,7 +109,7 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
     private Image _damageOverlay;
 
     [SerializeField]
-    private Bar _staminaBar;
+    private StaminaBar _staminaBar;
     #endregion Attributes HUD
 
 
