@@ -13,6 +13,12 @@ MonoBehaviour:
   m_Name: MutantAnglerfish
   m_EditorClassIdentifier: 
   Id: MutantAnglerfish
-  Name: MutantAnglerfish
+  Name: Mutant Anglerfish
+  Description: 
   Sprite: {fileID: -8389596254231219563, guid: 2880906d148e6c341b918ce1ccfa4106, type: 3}
   BestiarySpriteScale: 8
+  ExpPerScan: 50
+  DNAPerScan: {x: 100, y: 100}
+  EnergyPowderPerScan: {x: 0, y: 0}
+  SeaweedPerScan: {x: 0, y: 0}
+  ScrapMetalPerScan: {x: 0, y: 0}

@@ -1,9 +1,7 @@
-using System.Threading.Tasks;
 using Cinemachine;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
 
-public class Q5_Hooks : MonoBehaviour
+public class Q5_ScanTheAnglerfish : QuestStep
 {
     [SerializeField]
     private BoxCollider2D _boundCollider;
@@ -23,13 +21,30 @@ public class Q5_Hooks : MonoBehaviour
     [SerializeField]
     private GameObject _cutsceneLurePrefab;
 
-    private void Start()
+    private bool _hasScannedAnglerfish = false;
+
+    protected override void Start()
     {
+        base.Start();
+
         EventManager.Instance.PlayerDead += OnPlayerDead;
         EventManager.Instance.PlayerRespawned += OnPlayerRespawned;
         _enterTrigger.Entered += OnPlayerEntered;
 
+        EventManager.Instance.CreatureScanned += OnCreatureScanned;
+
         SpawnAnglerfish();
+    }
+
+    protected override string GetDescription()
+    {
+        return "Scan The Mutant Anglerfish";
+    }
+
+    private void OnCreatureScanned(string id)
+    {
+        if (id == Creatures.MutantAnglerfish)
+            _hasScannedAnglerfish = true;
     }
 
     private void OnPlayerDead()
@@ -73,5 +88,11 @@ public class Q5_Hooks : MonoBehaviour
         Destroy(_anglerfish);
         Destroy(_bossfightBar);
         _anglerfish = null;
+    }
+
+    protected override void CheckCompletion()
+    {
+        if (_hasScannedAnglerfish)
+            Finish();
     }
 }
