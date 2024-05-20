@@ -296,6 +296,7 @@ GameObject:
   - component: {fileID: 961011842666718627}
   - component: {fileID: 4096935875492654694}
   - component: {fileID: 8281789248233367903}
+  - component: {fileID: 552124995996849088}
   m_Layer: 0
   m_Name: GiantSquid
   m_TagString: Creature
@@ -439,3 +440,15 @@ MonoBehaviour:
   _fleeingSpeed: 1.2
   _inkCooldownTime: 60
   _ai: {fileID: 4096935875492654694}
+--- !u!114 &552124995996849088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7457342149956301026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a41c4b0266e02c498b8b6d99cac3bf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

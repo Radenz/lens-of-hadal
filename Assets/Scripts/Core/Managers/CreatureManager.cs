@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 
 public class CreatureManager : Singleton<CreatureManager>
@@ -12,6 +13,11 @@ public class CreatureManager : Singleton<CreatureManager>
 
     private readonly List<CreatureDespawner> _creatures = new();
     public int CreatureCount => _creatures.Count;
+
+    public void LogCount()
+    {
+        Debug.Log(CreatureCount);
+    }
 
     public void Register(CreatureDespawner creature)
     {

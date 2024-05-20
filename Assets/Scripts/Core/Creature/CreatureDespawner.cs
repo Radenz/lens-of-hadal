@@ -12,7 +12,7 @@ public class CreatureDespawner : MonoBehaviour
 
     private void Update()
     {
-        if (DistanceToPlayer() < CreatureManager.Instance.DespawnRadius)
+        if (DistanceToPlayer() > CreatureManager.Instance.DespawnRadius)
             Despawn();
     }
 
