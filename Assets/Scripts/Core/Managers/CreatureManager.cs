@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CreatureManager : Singleton<CreatureManager>
 {
-    [SerializeField]
+    [field: SerializeField]
     public int MaxCreatures { get; private set; }
     [field: SerializeField]
     public float SpawnRadius { get; private set; }

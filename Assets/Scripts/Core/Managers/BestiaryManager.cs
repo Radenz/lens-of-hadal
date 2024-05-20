@@ -27,9 +27,11 @@ public class BestiaryManager : Singleton<BestiaryManager>, IBind<CreatureData>
         if (creatureData.DiscoveryProgress >= 100)
         {
             creatureData.DiscoveryProgress = 100;
-            creatureData.IsDiscovered = true;
 
-            Announcer.Instance.AnnounceDiscovery(creature);
+            if (!creatureData.IsDiscovered)
+                Announcer.Instance.AnnounceDiscovery(creature);
+
+            creatureData.IsDiscovered = true;
         }
     }
 
