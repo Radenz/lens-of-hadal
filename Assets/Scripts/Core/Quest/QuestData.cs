@@ -12,7 +12,7 @@ public class QuestData : ScriptableObject
 
     public GameObject[] Steps;
 
-    public GameObject Reward;
+    public Reward Reward;
 }
 
 public static class QuestDataHelper

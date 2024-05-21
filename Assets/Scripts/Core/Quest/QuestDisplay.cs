@@ -63,6 +63,8 @@ public class QuestDisplay : MonoBehaviour
             if (Quest.IsCompleted())
                 return;
 
+            quest.Reward.Give();
+
             _acceptButton.SetActive(true);
             return;
         }
