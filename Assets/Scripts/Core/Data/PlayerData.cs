@@ -1,5 +1,6 @@
 using Common.Persistence;
 
+// TODO: add exp & level
 public class PlayerData : ISaveable
 {
     public float MaxHealthPoints = 100;

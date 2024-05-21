@@ -1,8 +1,12 @@
+using UnityEngine;
+
 public class LevelManager : Singleton<LevelManager>
 {
+    [SerializeField]
+    private Reward[] _levelUpRewards;
 
     private int _exp;
-    private int _levelUpExp = 10;
+    private int _levelUpExp = 100;
     private int _level = 1;
 
     public int Level => _level;
@@ -12,7 +16,7 @@ public class LevelManager : Singleton<LevelManager>
 
     private static int GetRequiredExp(int level)
     {
-        return 10 + (level - 1) * 5;
+        return 100 + (level - 1) * 30;
     }
 
 
@@ -40,5 +44,17 @@ public class LevelManager : Singleton<LevelManager>
         _levelUpExp = GetRequiredExp(_level);
         EventManager.Instance.ChangeExp(_exp);
         EventManager.Instance.LevelUp(_level);
+
+        Reward reward = _levelUpRewards.Length > _level - 2
+            ? _levelUpRewards[_level - 2]
+            : null;
+
+        if (reward != null)
+        {
+            if (reward.Gold != 0)
+                CurrencySystem.Instance.Gold += reward.Gold;
+            if (reward.Item != null)
+                ShopSystem.Instance.ShowItem(reward.Item);
+        }
     }
 }
