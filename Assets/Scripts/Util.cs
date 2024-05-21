@@ -38,8 +38,15 @@ public static class TransformExtensions
     public static Vector3 With(this Vector3 vec, float? x = null, float? y = null, float? z = null)
     {
         vec.x = x ?? vec.x;
-        vec.y = y ?? vec.z;
+        vec.y = y ?? vec.y;
         vec.z = z ?? vec.z;
+        return vec;
+    }
+
+    public static Vector2 With(this Vector2 vec, float? x = null, float? y = null)
+    {
+        vec.x = x ?? vec.x;
+        vec.y = y ?? vec.y;
         return vec;
     }
 

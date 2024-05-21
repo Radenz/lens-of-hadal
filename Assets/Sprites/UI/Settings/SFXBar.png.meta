@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: f0155637a6f00c641bec2f18b1ed67a0
+guid: c21603dbd6108f7499f4e13e96176240
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8820715720815460284
-    second: Ship_0
+      213: 2322918672749307902
+    second: SFXBar_0
+  - first:
+      213: 4058029408428467462
+    second: SFXBar_1
+  - first:
+      213: 6991925867367776390
+    second: SFXBar_2
+  - first:
+      213: 4865962390952112028
+    second: SFXBar_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ship_0
+      name: SFXIcon
       rect:
         serializedVersion: 2
-        x: 2
-        y: 20
-        width: 294
-        height: 162
+        x: 319
+        y: 474
+        width: 144
+        height: 92
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,8 +136,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 440471c39c5869580800000000000000
-      internalID: -8820715720815460284
+      spriteID: ef7285bb93aac3020800000000000000
+      internalID: 2322918672749307902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderFill
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 515
+        width: 288
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08e961c97282afe41b5181198c2d79ce
+      internalID: -1833350390
       vertices: []
       indices: 
       edges: []
@@ -136,7 +166,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 89731cca92a46ca4e9a6f5f5d24147db
     internalID: 0
     vertices: []
     indices: 
@@ -144,7 +174,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Ship_0: -8820715720815460284
+      SFXBar_1: 4058029408428467462
+      SFXBar_2: 6991925867367776390
+      SFXBar_3: 4865962390952112028
+      SFXIcon: 2322918672749307902
+      SliderFill: -1833350390
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: f0155637a6f00c641bec2f18b1ed67a0
+guid: adf426137e00cd543821297104f6b416
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8820715720815460284
-    second: Ship_0
+      213: 8367341487375946563
+    second: OpacityBar_0
+  - first:
+      213: 8712855272588019355
+    second: OpacityBar_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,22 +116,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ship_0
+      name: HUDIcon
       rect:
         serializedVersion: 2
-        x: 2
-        y: 20
-        width: 294
-        height: 162
+        x: 319
+        y: 361
+        width: 103
+        height: 71
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 440471c39c5869580800000000000000
-      internalID: -8820715720815460284
+      spriteID: 3439e6d20c4ce1470800000000000000
+      internalID: 8367341487375946563
       vertices: []
       indices: 
       edges: []
@@ -136,7 +139,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4692b374955565a44ad2143d90fb2ca9
     internalID: 0
     vertices: []
     indices: 
@@ -144,7 +147,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Ship_0: -8820715720815460284
+      HUDIcon: 8367341487375946563
+      OpacityBar_1: 8712855272588019355
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
