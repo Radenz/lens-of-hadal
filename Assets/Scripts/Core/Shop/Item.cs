@@ -15,4 +15,6 @@ public class Item : ScriptableObject
     public int EnergyPowder;
     public int Seaweed;
     public int ScrapMetal;
+
+    public bool IsOneTimePurchase;
 }

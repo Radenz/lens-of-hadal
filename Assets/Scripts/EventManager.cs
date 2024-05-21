@@ -31,7 +31,7 @@ public class EventManager : Singleton<EventManager>
     #region Shop Events
     public event Action<string> ShopItemUnlocked;
     public event Action<string> ShopItemPurchased;
-    public event Action<string> ShopItemAssembled;
+    public event Action<Item> ShopItemAssembled;
     #endregion
 
     #region Consumables Events
@@ -167,9 +167,9 @@ public class EventManager : Singleton<EventManager>
         ShopItemPurchased?.Invoke(id);
     }
 
-    public void AssembleItem(string id)
+    public void AssembleItem(Item item)
     {
-        ShopItemAssembled?.Invoke(id);
+        ShopItemAssembled?.Invoke(item);
     }
 
     public void ChangeSonarQuantity(int quantity)

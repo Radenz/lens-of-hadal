@@ -15,6 +15,8 @@ public class RewardAnnouncement : MonoBehaviour
     [SerializeField]
     private Image _image;
     [SerializeField]
+    private TextMeshProUGUI _label;
+    [SerializeField]
     private GameObject _goldLabelContainer;
     [SerializeField]
     private TextMeshProUGUI _goldLabel;
@@ -36,6 +38,7 @@ public class RewardAnnouncement : MonoBehaviour
         else
         {
             _image.sprite = Item.Sprite;
+            _label.text = Item.Name;
             components.Add(_image.gameObject);
         }
 

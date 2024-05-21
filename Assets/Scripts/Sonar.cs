@@ -13,6 +13,11 @@ public class Sonar : MonoBehaviour
         EventManager.Instance.SonarPinged += OnSonarPinged;
     }
 
+    private void OnDestroy()
+    {
+        EventManager.Instance.SonarPinged -= OnSonarPinged;
+    }
+
     private void OnSonarPinged()
     {
         Debug.Log($"Ping Received. Will spawn {_detectedCreatures.Count} markers.");

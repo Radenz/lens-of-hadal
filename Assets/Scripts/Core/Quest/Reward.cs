@@ -12,7 +12,7 @@ public class Reward : ScriptableObject
         if (Gold > 0)
             CurrencySystem.Instance.Gold += Gold;
         if (Item != null)
-            ShopSystem.Instance.ShowItem(Item);
+            EventManager.Instance.UnlockItem(Item.Id);
 
         Announcer.Instance.AnnounceReward(this);
 

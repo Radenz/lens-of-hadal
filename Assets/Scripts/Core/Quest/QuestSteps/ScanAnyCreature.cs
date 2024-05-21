@@ -19,6 +19,11 @@ public class ScanAnyCreature : QuestStep
         EventManager.Instance.CreatureScanned += OnCreatureScanned;
     }
 
+    private void OnDestroy()
+    {
+        EventManager.Instance.CreatureScanned -= OnCreatureScanned;
+    }
+
     private void OnCreatureScanned(string id)
     {
         _scanned++;

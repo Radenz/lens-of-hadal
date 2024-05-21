@@ -14,6 +14,11 @@ public class CollectSeaweed : QuestStep
         EventManager.Instance.SeaweedChanged += OnGatherSeaweed;
     }
 
+    private void OnDestroy()
+    {
+        EventManager.Instance.SeaweedChanged -= OnGatherSeaweed;
+    }
+
     private void OnGatherSeaweed(int initialValue, int finalValue)
     {
         _currentValue += finalValue - initialValue;

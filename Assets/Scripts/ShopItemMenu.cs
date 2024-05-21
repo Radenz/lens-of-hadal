@@ -9,8 +9,7 @@ public class ShopItemMenu : MonoBehaviour, IBind<ItemInstanceData>
     Item _item;
     ItemInstanceData _data;
 
-    [SerializeField]
-    private bool _disableOnAssemble = false;
+    public bool DisableOnAssemble = false;
 
     [Header("UI Containers")]
     [SerializeField] private GameObject _unlockCostLabels;
@@ -54,6 +53,9 @@ public class ShopItemMenu : MonoBehaviour, IBind<ItemInstanceData>
 
         EventManager.Instance.BuyItem(_item.Id);
 
+        _unlockCostLabels.SetActive(false);
+        _assembleCostLabels.SetActive(true);
+
         _unlockButton.gameObject.SetActive(false);
         _assembleButton.gameObject.SetActive(true);
 
@@ -69,10 +71,10 @@ public class ShopItemMenu : MonoBehaviour, IBind<ItemInstanceData>
         CurrencySystem.Instance.Seaweed -= _item.Seaweed;
         CurrencySystem.Instance.ScrapMetal -= _item.ScrapMetal;
 
-        EventManager.Instance.AssembleItem(_item.Id);
+        EventManager.Instance.AssembleItem(_item);
 
-        if (_disableOnAssemble)
-            ConfigureLabels();
+        if (DisableOnAssemble)
+            ConfigureLabels(false, false);
 
         if (_data.TryDowncast(out UpgradableItemData upgradableItemData))
             upgradableItemData.IsAssembled = true;

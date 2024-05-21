@@ -482,10 +482,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Title: 
-  Sprite: {fileID: 0}
-  SpriteDescription: 
+  Item: {fileID: 0}
   Gold: 0
   _image: {fileID: 7582270006596927937}
+  _label: {fileID: 1832924062373991635}
   _goldLabelContainer: {fileID: 8037808615629942119}
   _goldLabel: {fileID: 2607976924784605111}
 --- !u!1 &6115440898516172405

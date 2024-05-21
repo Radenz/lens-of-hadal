@@ -36,6 +36,13 @@ public class Q5_ScanTheAnglerfish : QuestStep
         SpawnAnglerfish();
     }
 
+    private void OnDestroy()
+    {
+        EventManager.Instance.PlayerDead -= OnPlayerDead;
+        EventManager.Instance.PlayerRespawned -= OnPlayerRespawned;
+        EventManager.Instance.CreatureScanned -= OnCreatureScanned;
+    }
+
     protected override string GetDescription()
     {
         return "Scan The Mutant Anglerfish";

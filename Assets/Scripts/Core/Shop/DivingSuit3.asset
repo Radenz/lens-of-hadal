@@ -20,3 +20,4 @@ MonoBehaviour:
   EnergyPowder: 20
   Seaweed: 10
   ScrapMetal: 5
+  IsOneTimePurchase: 1

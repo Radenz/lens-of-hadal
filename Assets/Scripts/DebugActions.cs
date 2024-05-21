@@ -16,17 +16,17 @@ public class DebugActions : MonoBehaviour
     [Header("Shop Item")]
     [Label("Id")]
     public string ItemId;
-    [Button]
-    public void UnlockItem()
-    {
-        EventManager.Instance.UnlockItem(ItemId);
-    }
+    // [Button]
+    // public void UnlockItem()
+    // {
+    //     EventManager.Instance.UnlockItem(ItemId);
+    // }
 
-    [Button]
-    public void AssembleItem()
-    {
-        EventManager.Instance.AssembleItem(ItemId);
-    }
+    // [Button]
+    // public void AssembleItem()
+    // {
+    //     EventManager.Instance.AssembleItem(ItemId);
+    // }
 
     [Header("Mutant Anglerfish")]
     [Label("Spawn Point")]

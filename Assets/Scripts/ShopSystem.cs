@@ -64,6 +64,9 @@ public class ShopSystem : Singleton<ShopSystem>, IBind<ItemData>
         ShopItemMenu menu = obj.GetComponent<ShopItemMenu>();
         menu.Bind(item);
         menu.Bind(_data.FromId(item.Id));
+
+        if (item.IsOneTimePurchase)
+            menu.DisableOnAssemble = true;
     }
 
     public void CloseItem()
@@ -83,9 +86,21 @@ public class ShopSystem : Singleton<ShopSystem>, IBind<ItemData>
         }
     }
 
-    // ? I hate this but time is tight
-    public void AssembleItem(string id)
+    public void HideItem(string id)
     {
+        foreach (GameObject item in _items)
+        {
+            if (item.GetComponent<ShopItem>().Item.Id == id)
+                item.SetActive(false);
+        }
+    }
+
+    // ? I hate this but time is tight
+    public void AssembleItem(Item item)
+    {
+        if (item.IsOneTimePurchase) HideItem(item.Id);
+        string id = item.Id;
+
         switch (id)
         {
             case ShopItems.DivingSuitLv2:
