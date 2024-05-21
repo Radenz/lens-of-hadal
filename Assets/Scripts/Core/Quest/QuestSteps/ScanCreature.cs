@@ -3,7 +3,7 @@ using UnityEngine;
 public class ScanCreature : QuestStep
 {
     [SerializeField]
-    private string _name;
+    private Creature _creature;
     private bool _hasScanned = false;
 
     protected override void Start()
@@ -12,9 +12,9 @@ public class ScanCreature : QuestStep
         EventManager.Instance.CreatureScanned += OnCreatureScanned;
     }
 
-    private void OnCreatureScanned(string name)
+    private void OnCreatureScanned(string id)
     {
-        if (name == _name) _hasScanned = true;
+        if (_creature.Id == id) _hasScanned = true;
         CheckCompletion();
     }
 

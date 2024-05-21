@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f47281e9fbe0024f8e0b8d55fb4031f, type: 3}
-  m_Name: Q1_GroundZero
+  m_Name: Q2_FirstDive
   m_EditorClassIdentifier: 
-  Title: Ground Zero
-  Description: Complete the tutorial mission.
+  Title: First Dive
+  Description: Scan 6 creatures.
   Steps:
-  - {fileID: 3976076664689881749, guid: 890a1952baea6bb4dbe01afd6d40d737, type: 3}
-  - {fileID: 6118116641743976019, guid: 87367fce2f1967f47a02c472d0cf0930, type: 3}
-  Reward: {fileID: 11400000, guid: 9c1b30e5bfb02ea478524b7ba0fe84b5, type: 2}
+  - {fileID: 8873579398680176031, guid: 840e10798f767f3499769fdf4fd420d1, type: 3}
+  Reward: {fileID: 11400000, guid: c62e50ec04bc03440a5b7598ce317b6f, type: 2}

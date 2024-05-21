@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f47281e9fbe0024f8e0b8d55fb4031f, type: 3}
-  m_Name: Q1_GroundZero
+  m_Name: Q3_HideAndSeek
   m_EditorClassIdentifier: 
-  Title: Ground Zero
-  Description: Complete the tutorial mission.
+  Title: Hide and Seek
+  Description: Discover different creatures with deceitful defense mechanism.
   Steps:
-  - {fileID: 3976076664689881749, guid: 890a1952baea6bb4dbe01afd6d40d737, type: 3}
-  - {fileID: 6118116641743976019, guid: 87367fce2f1967f47a02c472d0cf0930, type: 3}
-  Reward: {fileID: 11400000, guid: 9c1b30e5bfb02ea478524b7ba0fe84b5, type: 2}
+  - {fileID: 7908224247629096286, guid: 4aad2d6e814b21c439bc0f4869912980, type: 3}
+  Reward: {fileID: 11400000, guid: e1d86916092c91b46974efe0f391d186, type: 2}

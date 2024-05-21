@@ -27,6 +27,11 @@ public abstract class QuestStep : MonoBehaviour
         return _description;
     }
 
+    protected void UpdateDescription()
+    {
+        EventManager.Instance.SetQuestDisplay(Quest.Data.Title, GetDescription());
+    }
+
     protected void Finish()
     {
         Quest.Proceed();

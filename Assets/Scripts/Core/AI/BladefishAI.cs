@@ -6,12 +6,13 @@ using NaughtyAttributes;
 using Pathfinding;
 using UnityEngine;
 
-// TODO: smoothen bite & run speed
 public class BladefishAI : MonoBehaviour
 {
     [Header("Config")]
     [SerializeField]
     private float _damage = 30;
+    [SerializeField]
+    private float _attackCooldown;
 
     [Header("Others")]
     [SerializeField]
@@ -150,7 +151,9 @@ public class BladefishAI : MonoBehaviour
         angles.z = -45;
         DisableAI();
         _blade.enabled = true;
-        _bladeTrigger.transform.DOLocalRotate(angles, 1f).OnComplete(AfterSwing);
+        await _bladeTrigger.transform.DOLocalRotate(angles, 1f).AsyncWaitForCompletion();
+        await Awaitable.WaitForSecondsAsync(_attackCooldown);
+        AfterSwing();
     }
 
     private void AfterSwing()

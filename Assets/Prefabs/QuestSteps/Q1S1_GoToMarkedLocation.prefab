@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3976076664689881749}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.25, y: -7.18, z: 12.629757}
+  m_LocalPosition: {x: -6.54, y: -17.68, z: 12.629757}
   m_LocalScale: {x: 8, y: 8, z: 8}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -48,7 +48,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _description: Go to the marked location.
-  _range: {fileID: 5670406966064283024}
 --- !u!212 &5769826831882450710
 SpriteRenderer:
   m_ObjectHideFlags: 0

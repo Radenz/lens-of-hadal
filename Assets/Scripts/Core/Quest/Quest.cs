@@ -28,6 +28,8 @@ public class Quest
         {
             IsCompleted = true;
             EventManager.Instance.CompleteQuest(Data);
+            EventManager.Instance.HideDisplayQuest();
+            EventManager.Instance.SetQuestDisplay("Quest Completed", "Go back to the ship to claim your reward");
         }
     }
 
