@@ -60,7 +60,7 @@ public class RewardAnnouncement : MonoBehaviour
 
     public void Close()
     {
-        if (SceneTransitionSystem.Instance.CurrentScene != GameplayScene.World)
+        if (SceneTransitionSystem.Instance.CurrentScene == GameplayScene.World)
             EventManager.Instance.EnableCreatures();
 
         Destroy(gameObject);
