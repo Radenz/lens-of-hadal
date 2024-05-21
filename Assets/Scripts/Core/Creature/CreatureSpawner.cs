@@ -36,24 +36,29 @@ public class CreatureSpawner : MonoBehaviour
 
     private void AttemptPeriodicSpawn()
     {
-        float distanceToPlayer = DistanceToPlayer();
+        if (CreatureManager.Instance.CreatureCount < CreatureManager.Instance.MaxCreatures)
+        {
+            Vector3 spawnPoint = PickSpawnPoint();
+            float distanceToPlayer = DistanceToPlayer(spawnPoint);
 
-        if (CreatureManager.Instance.CreatureCount < CreatureManager.Instance.MaxCreatures
-            && distanceToPlayer >= CreatureManager.Instance.SpawnRadius
-            && distanceToPlayer < CreatureManager.Instance.DespawnRadius
-        )
-            Spawn();
+
+            if (distanceToPlayer >= CreatureManager.Instance.SpawnRadius
+                && distanceToPlayer < CreatureManager.Instance.DespawnRadius
+            )
+                Spawn(spawnPoint);
+        }
+
         _signal = Timer.Instance.SetTimer(AttemptPeriodicSpawn, SpawnAttemptInterval());
     }
 
-    private float DistanceToPlayer()
+    private float DistanceToPlayer(Vector3 position)
     {
-        return Vector2.Distance(_transform.position, PlayerController.Instance.Position);
+        return Vector2.Distance(position, PlayerController.Instance.Position);
     }
 
-    private void Spawn()
+    private void Spawn(Vector3 position)
     {
-        Instantiate(_creaturePrefab, PickSpawnPoint(), Quaternion.identity);
+        Instantiate(_creaturePrefab, position, Quaternion.identity);
     }
 
     private Vector3 PickSpawnPoint()
