@@ -187,6 +187,7 @@ MonoBehaviour:
   Power: 6
   Duration: 1
   GravityStrength: 0.3
+  _dropGravity: 0.2
 --- !u!114 &2880846745229182649
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -16,6 +16,9 @@ public class ArcLaunch : MonoBehaviour
     private Vector2 _initialPosition;
     private Bob _bob;
 
+    [SerializeField]
+    private float _dropGravity = 0f;
+
     private void Awake()
     {
         _bob = GetComponent<Bob>();
@@ -42,9 +45,8 @@ public class ArcLaunch : MonoBehaviour
 
     private void SetStasis()
     {
-        _rigidbody.gravityScale = 0;
+        _rigidbody.gravityScale = _dropGravity;
         _rigidbody.drag = 5;
-        Timer.Instance.SetTimer(() => _bob.StartBobbing(), 0.3f);
     }
 
     [Button]
