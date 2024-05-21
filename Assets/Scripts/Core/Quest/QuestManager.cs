@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class QuestManager : Singleton<QuestManager>
@@ -36,6 +38,7 @@ public class QuestManager : Singleton<QuestManager>
     {
         await Awaitable.NextFrameAsync();
         EventManager.Instance.UnlockQuest(_quests[0]);
+        await Awaitable.NextFrameAsync();
         EventManager.Instance.AcceptQuest(_quests[0]);
     }
 
@@ -49,6 +52,16 @@ public class QuestManager : Singleton<QuestManager>
         Instantiate(CurrentQuest.Data.Reward);
         CurrentQuest = null;
         _questStates[quest].IsRewardClaimed = true;
+
+        int index = Array.IndexOf(_quests, quest);
+        if (index == -1)
+        {
+            Debug.LogError("Illegal quest");
+            return;
+        }
+
+        if (_quests.Length == index + 1) return;
+        EventManager.Instance.UnlockQuest(_quests[index + 1]);
     }
 
     public void StartQuest(QuestData quest)
