@@ -50,11 +50,6 @@ public class LevelManager : Singleton<LevelManager>
             : null;
 
         if (reward != null)
-        {
-            if (reward.Gold != 0)
-                CurrencySystem.Instance.Gold += reward.Gold;
-            if (reward.Item != null)
-                ShopSystem.Instance.ShowItem(reward.Item);
-        }
+            reward.Give();
     }
 }

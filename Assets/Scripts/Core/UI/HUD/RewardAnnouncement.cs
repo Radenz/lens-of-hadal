@@ -8,9 +8,7 @@ public class RewardAnnouncement : MonoBehaviour
 {
     public string Title;
 
-    public Sprite Sprite;
-    public string SpriteDescription;
-
+    public Item Item;
     public int Gold;
 
     [Header("References")]
@@ -30,13 +28,14 @@ public class RewardAnnouncement : MonoBehaviour
         int usedComponents = 2;
         List<GameObject> components = new();
 
-        if (Sprite == null)
+        if (Item == null)
         {
             _image.gameObject.SetActive(false);
             usedComponents--;
         }
         else
         {
+            _image.sprite = Item.Sprite;
             components.Add(_image.gameObject);
         }
 
@@ -47,6 +46,7 @@ public class RewardAnnouncement : MonoBehaviour
         }
         else
         {
+            _goldLabel.text = Gold.ToString();
             components.Add(_goldLabelContainer);
         }
 

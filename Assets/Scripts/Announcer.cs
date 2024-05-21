@@ -139,13 +139,12 @@ public class Announcer : Singleton<Announcer>
         announcement.Creature = creature;
     }
 
-    public void AnnounceQuest(int gold)
+    public void AnnounceReward(Reward reward)
     {
-        _announcementQueue.Add(new()
-        {
-            Title = "QUEST COMPLETED",
-            GoldReward = gold
-        });
+        GameObject obj = Instantiate(_rewardAnnouncementPrefab);
+        RewardAnnouncement announcement = obj.GetComponent<RewardAnnouncement>();
+        announcement.Gold = reward.Gold;
+        announcement.Item = reward.Item;
     }
 
     // public void AnnounceNewBodyPart(int dnaReward)
