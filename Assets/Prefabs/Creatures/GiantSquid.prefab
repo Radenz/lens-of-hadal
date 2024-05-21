@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 8281789248233367903}
   - component: {fileID: 552124995996849088}
   - component: {fileID: 2362966511773697687}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GiantSquid
   m_TagString: Creature
   m_Icon: {fileID: 0}
