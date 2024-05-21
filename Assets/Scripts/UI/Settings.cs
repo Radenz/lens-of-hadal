@@ -1,4 +1,5 @@
 using DG.Tweening;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,7 +24,7 @@ public class Settings : Singleton<Settings>
 
         _container.SetActive(true);
         _scrim.raycastTarget = true;
-        rectTransform.DOLocalMoveY(rectTransform.localPosition.y - height, 0.2f);
+        rectTransform.DOAnchorPosY(0, 0.2f).SetUpdate(true);
     }
 
     public void Close()
@@ -31,7 +32,7 @@ public class Settings : Singleton<Settings>
         RectTransform rectTransform = (RectTransform)_panel.transform;
         float height = rectTransform.rect.height;
 
-        rectTransform.DOLocalMoveY(rectTransform.localPosition.y + height, 0.2f).OnComplete(() =>
+        rectTransform.DOAnchorPosY(height, 0.2f).SetUpdate(true).OnComplete(() =>
         {
             _scrim.raycastTarget = false;
             _container.SetActive(false);
