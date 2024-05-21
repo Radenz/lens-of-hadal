@@ -342,8 +342,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 6.761051, y: -2.266199, z: 0}
-    m_Extent: {x: 87.62755, y: 34.301903, z: 0}
+    m_Center: {x: 6.7624016, y: -2.266899, z: 0}
+    m_Extent: {x: 87.627304, y: 34.3012, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6646,8 +6646,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -4.309948, y: -32.11515, z: 0}
-    m_Extent: {x: 94.002045, y: 36.546753, z: 0}
+    m_Center: {x: -4.3097, y: -32.115753, z: 0}
+    m_Extent: {x: 94.0011, y: 36.54615, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7510,8 +7510,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -4.4836006, y: -5.9417, z: 0}
-    m_Extent: {x: 89.139694, y: 29.8158, z: 0}
+    m_Center: {x: -4.483597, y: -5.9414988, z: 0}
+    m_Extent: {x: 89.1399, y: 29.8157, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -16424,6 +16424,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93284837fd61cb14e90ca081314e9e2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _levelUpRewards:
+  - {fileID: 11400000, guid: d2269dd51b245174bb99f804a82b60b8, type: 2}
+  - {fileID: 11400000, guid: 4aee139ae44584c4086b67dbf3482ddc, type: 2}
+  - {fileID: 11400000, guid: dc022945d0220ed488fc90d593993bd1, type: 2}
+  - {fileID: 11400000, guid: 2ea1555f90f3dbf4da0c1f9e4350be3c, type: 2}
+  - {fileID: 11400000, guid: 4313f3c864a9b65409975f9d74dee0ee, type: 2}
+  - {fileID: 11400000, guid: 6fca90add96c1b047822dc41119358a6, type: 2}
+  - {fileID: 11400000, guid: 71a9bcdbaef2db1438ac1a8b9e37e045, type: 2}
+  - {fileID: 11400000, guid: d982b871d90c6fa4892a04befb2ccdaa, type: 2}
+  - {fileID: 11400000, guid: 68990ab40c69b05438dcf859c546f090, type: 2}
 --- !u!114 &1671386530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17512,8 +17522,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.040900007, y: 0.057899997, z: 0}
-    m_Extent: {x: 0.4001, y: 0.34649998, z: 0}
+    m_Center: {x: 0.041050002, y: 0.058149993, z: 0}
+    m_Extent: {x: 0.39945, y: 0.34695, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

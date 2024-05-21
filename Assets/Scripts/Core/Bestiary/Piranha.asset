@@ -17,7 +17,7 @@ MonoBehaviour:
   Description: 
   Sprite: {fileID: -8389596254231219563, guid: 2880906d148e6c341b918ce1ccfa4106, type: 3}
   BestiarySpriteScale: 8
-  ExpPerScan: 3
+  ExpPerScan: 25
   DNAPerScan: {x: 100, y: 100}
   EnergyPowderPerScan: {x: 1, y: 3}
   SeaweedPerScan: {x: 1, y: 3}
