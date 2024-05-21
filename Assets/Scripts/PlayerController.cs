@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using Cinemachine;
 using Common.Persistence;
+using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
@@ -52,8 +53,13 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
             float rawOverlayAlpha = inverseHealthPercentage * inverseHealthPercentage;
             float alpha = 0.5f * rawOverlayAlpha;
             _damageOverlay.color = new(1f, 1f, 1f, alpha);
+
+            _debugHealth = value;
         }
     }
+
+    [SerializeField, ReadOnly]
+    private float _debugHealth;
 
     public float Stamina
     {
