@@ -20,6 +20,11 @@ public class BestiaryManager : Singleton<BestiaryManager>, IBind<CreatureData>
         _bestiary.Bind(data);
     }
 
+    public bool IsCreatureDiscovered(Creature creature)
+    {
+        return _data.FromId(creature.Id).IsDiscovered;
+    }
+
     private void OnCreatureDNAGained(Creature creature, float dna)
     {
         CreatureInstanceData creatureData = _data.FromId(creature.Id);

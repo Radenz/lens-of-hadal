@@ -31,6 +31,8 @@ public class ScanAnnouncement : MonoBehaviour
     private void Start()
     {
         _image.sprite = Creature.Sprite;
+        if (BestiaryManager.Instance.IsCreatureDiscovered(Creature))
+            _image.color = Color.white;
 
         int unusedCurrencies = 0;
         List<GameObject> usedLabels = new();
