@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using Pathfinding;
 using UnityEngine;
 
@@ -60,6 +61,7 @@ public class ElectricEelAI : MonoBehaviour
 
         _ai.maxSpeed = _speed;
         _ai.destination = _transform.RandomWithinRadius(_roamingRadius);
+        _ai.SearchPath();
 
         EventManager.Instance.CreaturesDisabled += DisableAI;
         EventManager.Instance.CreaturesEnabled += EnableAI;
@@ -108,15 +110,22 @@ public class ElectricEelAI : MonoBehaviour
             return;
         }
 
-        if (_ai.IsIdle())
+        if (!CanReachDestination() || _ai.IsIdle())
         {
             _ai.destination = _transform.RandomWithinRadius(_roamingRadius);
         }
     }
 
+    private bool CanReachDestination()
+    {
+        GraphNode node1 = AstarPath.active.GetNearest(_ai.destination, NNConstraint.Default).node;
+        GraphNode node2 = AstarPath.active.GetNearest(_transform.position, NNConstraint.Default).node;
+        return PathUtilities.IsPathPossible(node1, node2);
+    }
+
     private void OnFleeing(bool isForced = false)
     {
-        if (_ai.IsIdle() || isForced)
+        if (_ai.IsIdle() || !CanReachDestination() || isForced)
         {
             Vector2 relativePosition = _transform.position - _player.position;
             Vector2 fleePosition = _transform.RandomOnRadius(_fleeingRadius) - (Vector2)_player.position;

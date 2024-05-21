@@ -1,4 +1,5 @@
 using Common.Persistence;
+using NaughtyAttributes;
 
 public class ConsumablesManager : Singleton<ConsumablesManager>, IBind<ConsumableData>
 {
@@ -22,6 +23,18 @@ public class ConsumablesManager : Singleton<ConsumablesManager>, IBind<Consumabl
             _consumableData.Flare = value;
             EventManager.Instance.ChangeFlareQuantity(value);
         }
+    }
+
+    [Button]
+    public void AddFlare()
+    {
+        Flare++;
+    }
+
+    [Button]
+    public void AddSonar()
+    {
+        SonarDrone++;
     }
 
     void IBind<ConsumableData>.Bind(ConsumableData data)
