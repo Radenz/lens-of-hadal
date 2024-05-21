@@ -125,7 +125,7 @@ public class MutantAnglerfishAI : MonoBehaviour
 
         Vector3 direction = _player.position - _transform.position;
         _rigidbody.AddForce(direction.normalized * _dashImpulse);
-        await Awaitable.WaitForSecondsAsync(1.5f);
+        await Awaitable.WaitForSecondsAsync(3.5f);
         _isMoving = false;
     }
 

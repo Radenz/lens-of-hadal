@@ -14,5 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: Bladefish
   Name: Bladefish
+  Description: 
   Sprite: {fileID: -6450574622688271893, guid: 043272d888a6ece4bac0a2512fa0b11a, type: 3}
   BestiarySpriteScale: 2
+  ExpPerScan: 35
+  DNAPerScan: {x: 20, y: 30}
+  EnergyPowderPerScan: {x: 0, y: 0}
+  SeaweedPerScan: {x: 4, y: 8}
+  ScrapMetalPerScan: {x: 0, y: 2}

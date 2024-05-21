@@ -220,7 +220,7 @@ MonoBehaviour:
   _aggresionRange: {fileID: 2543846954983996035}
   _roamingRadius: 5
   _inflatedRoamingRadius: 3
-  _speed: 1
+  _speed: 0.5
   _inflatedSpeed: 0.3
   _bounceStrength: 250
   _ai: {fileID: 7353464936212607631}

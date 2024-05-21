@@ -437,9 +437,9 @@ MonoBehaviour:
   _inkPrefab: {fileID: 5169203076105226079, guid: 41d4df7ac190fc3409e896b104b08272, type: 3}
   _roamingRadius: 3
   _fleeingRadius: 7
-  _speed: 1
-  _fleeingSpeed: 1.2
-  _inkCooldownTime: 60
+  _speed: 0.5
+  _fleeingSpeed: 3
+  _inkCooldownTime: 25
   _ai: {fileID: 4096935875492654694}
 --- !u!114 &552124995996849088
 MonoBehaviour:

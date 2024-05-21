@@ -28,6 +28,9 @@ namespace Common.Persistence
                 case "World":
                     OnWorldLoaded();
                     break;
+                case "TestWorld":
+                    OnWorldLoaded();
+                    break;
                 case "Shop":
                     OnShopLoaded();
                     break;

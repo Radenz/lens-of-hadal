@@ -24,6 +24,17 @@ public class ConsumablesManager : Singleton<ConsumablesManager>, IBind<Consumabl
             EventManager.Instance.ChangeFlareQuantity(value);
         }
     }
+    [Button]
+    public void addFlare()
+    {
+        Flare++;
+    }
+
+    [Button]
+    public void addSonar()
+    {
+        SonarDrone++;
+    }
 
     [Button]
     public void AddFlare()

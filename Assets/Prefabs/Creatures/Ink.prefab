@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Direction: {x: 0, y: 0}
   Power: 1
-  Duration: 0.6
+  Duration: 1.2
 --- !u!114 &5938467957846623255
 MonoBehaviour:
   m_ObjectHideFlags: 0

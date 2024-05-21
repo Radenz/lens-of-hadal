@@ -446,10 +446,10 @@ MonoBehaviour:
   _fleeingRange: {fileID: 7847607436234664453}
   _roamingRadius: 3
   _fleeingRadius: 5
-  _speed: 1
-  _fleeingSpeed: 2
+  _speed: 0.75
+  _fleeingSpeed: 2.5
   _zapCooldownTime: 3
-  _zapShockDuration: 1.2
+  _zapShockDuration: 2
   _ai: {fileID: 4096935875492654694}
 --- !u!114 &961011842666718627
 MonoBehaviour:

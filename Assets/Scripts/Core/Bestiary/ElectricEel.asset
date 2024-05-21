@@ -14,5 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: ElectricEel
   Name: Electric Eel
+  Description: 
   Sprite: {fileID: 3965861685183340402, guid: 497cfdb14299bfe4c91b1e6918051ef6, type: 3}
   BestiarySpriteScale: 4
+  ExpPerScan: 28
+  DNAPerScan: {x: 10, y: 15}
+  EnergyPowderPerScan: {x: 1, y: 3}
+  SeaweedPerScan: {x: 0, y: 0}
+  ScrapMetalPerScan: {x: 0, y: 0}
