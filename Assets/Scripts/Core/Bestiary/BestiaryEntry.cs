@@ -37,7 +37,8 @@ public class BestiaryEntry : MonoBehaviour, IBind<CreatureData>
 
         if (_dnaBar != null)
             _dnaBar.MaxValue = 100;
-
+        if (_data != null)
+            _dnaBar.Value = _data.DiscoveryProgress;
 
         // ? We do need to check because the object is set to inactive
         // ? This is to cover the scenario when the creature is not
@@ -61,6 +62,7 @@ public class BestiaryEntry : MonoBehaviour, IBind<CreatureData>
     public void Bind(CreatureData data)
     {
         _data = data.FromId(_creature.Id);
+        _dnaBar.Value = _data.DiscoveryProgress;
         CheckIfDiscovered();
     }
 

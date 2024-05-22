@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 1588462421006900106}
   - component: {fileID: 6880028709504750772}
   - component: {fileID: 1658748855133864602}
+  - component: {fileID: 4237667314926142350}
   m_Layer: 6
   m_Name: Scannable
-  m_TagString: Untagged
+  m_TagString: Scannable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _creature: {fileID: 11400000, guid: 843f114b2f5893d4e8b1132e62c88fd5, type: 2}
   _scanProgressBarPrefab: {fileID: 2265630043084495933, guid: b818d12cacafa9d4fba70b000920323e, type: 3}
-  _scanDuration: 2
+  _scanDuration: 4
   _scanTime: 0
   _spriteRenderer: {fileID: 6992694534029183798}
   _textOffset: 1
@@ -64,6 +65,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _orientation: {fileID: 5913460334642390947}
+--- !u!58 &4237667314926142350
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005398170029550159}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5
 --- !u!1 &5123256556684876920
 GameObject:
   m_ObjectHideFlags: 0

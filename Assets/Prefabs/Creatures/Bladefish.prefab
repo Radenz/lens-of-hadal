@@ -817,12 +817,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85376a89ec4a6a643a32c6cbe2c9f333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _creature: {fileID: 0}
-  _scanProgressBarPrefab: {fileID: 0}
-  _scanDuration: 2
+  _creature: {fileID: 11400000, guid: b145a32b3cf0079448e5cbdaaad8a123, type: 2}
+  _scanProgressBarPrefab: {fileID: 2265630043084495933, guid: b818d12cacafa9d4fba70b000920323e, type: 3}
+  _scanDuration: 10
   _scanTime: 0
-  _spriteRenderer: {fileID: 0}
-  _textOffset: 5
+  _spriteRenderer: {fileID: 3122924831791938811}
+  _textOffset: 1
 --- !u!114 &5048607773017030533
 MonoBehaviour:
   m_ObjectHideFlags: 0
