@@ -151,6 +151,7 @@ public class PiranhaAI : MonoBehaviour
                 break;
             case PiranhaState.Retreating:
                 _ai.destination = _transform.RandomOnRadius(_retreatRadius);
+                // TODO: increase
                 break;
         }
     }

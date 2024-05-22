@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class DebugActions : MonoBehaviour
 {
+    private void Start()
+    {
+        Application.targetFrameRate = 60;
+    }
+
     [Header("Exp")]
     [Label("Amount")]
     public int ExpAmount;
