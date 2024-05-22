@@ -21,6 +21,11 @@ public class AutoOrientation : MonoBehaviour
 
         if (angle == 0) return;
 
+        SetAngle(angle);
+    }
+
+    public void SetAngle(float angle)
+    {
         if (Mathf.Abs(angle) > 90f)
         {
             angle = -Mathf.Sign(angle) * (180 - Mathf.Abs(angle));

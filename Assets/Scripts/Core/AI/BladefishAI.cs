@@ -16,6 +16,8 @@ public class BladefishAI : MonoBehaviour
 
     [Header("Others")]
     [SerializeField]
+    private AutoOrientation _orientation;
+    [SerializeField]
     private Rigidbody2D _rigidbody;
 
     [SerializeField]
@@ -59,6 +61,8 @@ public class BladefishAI : MonoBehaviour
             OnStateChanged();
         }
     }
+
+    private bool _aiming = false;
 
     private void Start()
     {
@@ -112,6 +116,13 @@ public class BladefishAI : MonoBehaviour
                 OnAttacking();
                 break;
         }
+
+        if (_aiming)
+        {
+            Vector2 direction = PlayerController.Instance.Position - _transform.position;
+            float angle = Vector2.SignedAngle(Vector2.right, direction);
+            _orientation.SetAngle(angle);
+        }
     }
 
     private void OnRoaming()
@@ -137,32 +148,50 @@ public class BladefishAI : MonoBehaviour
     private void OnAttack()
     {
         if (State != BladefishState.Attacking || _swinging) return;
-        Swing();
+        Stab();
     }
 
-    private async void Swing()
+    private async void Stab()
     {
+        // _swinging = true;
+        // await Awaitable.WaitForSecondsAsync(0.3f);
+        // // _hasHit = false;
+        // Vector3 angles = _bladeTrigger.transform.localEulerAngles;
+        // angles.z = 45;
+        // _bladeTrigger.transform.localEulerAngles = angles;
+        // angles.z = -45;
+        // DisableAI();
+        // _blade.enabled = true;
+        // await _bladeTrigger.transform.DOLocalRotate(angles, 1f).AsyncWaitForCompletion();
+        // await Awaitable.WaitForSecondsAsync(_attackCooldown);
+        // AfterSwing();
+
         _swinging = true;
-        await Awaitable.WaitForSecondsAsync(0.3f);
-        // _hasHit = false;
-        Vector3 angles = _bladeTrigger.transform.localEulerAngles;
-        angles.z = 45;
-        _bladeTrigger.transform.localEulerAngles = angles;
-        angles.z = -45;
-        DisableAI();
+        _ai.enabled = false;
+
+        _aiming = true;
+        await Awaitable.WaitForSecondsAsync(1f);
+        // _ai.destination = PlayerController.Instance.Position;
+        _aiming = false;
         _blade.enabled = true;
-        await _bladeTrigger.transform.DOLocalRotate(angles, 1f).AsyncWaitForCompletion();
+        Vector2 stabDirection = PlayerController.Instance.Position - _transform.position;
+        stabDirection = stabDirection.normalized;
+        _rigidbody.velocity = stabDirection * 40f;
+        _rigidbody.drag = 5f;
+
+        await Awaitable.WaitForSecondsAsync(1f);
         await Awaitable.WaitForSecondsAsync(_attackCooldown);
         AfterSwing();
     }
 
     private void AfterSwing()
     {
+        _rigidbody.drag = 0f;
         if (Vector2.Distance(_transform.position, _player.position) <= _aggresionRadius)
             State = BladefishState.Attacking;
         else
             State = BladefishState.Roaming;
-        EnableAI();
+        _ai.enabled = true;
         _swinging = false;
         _blade.enabled = false;
     }

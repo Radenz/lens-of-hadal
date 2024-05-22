@@ -455,7 +455,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1.5
+  m_Radius: 2.8
 --- !u!114 &6122238388119112151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -656,6 +656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 50
   _attackCooldown: 2
+  _orientation: {fileID: 887548900048771928}
   _rigidbody: {fileID: 6562847590079970757}
   _detectionRange: {fileID: 5023998313401594405}
   _aggresionRange: {fileID: 8587315421901680420}
@@ -916,7 +917,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 1.1442037, y: -0.032304794}
+  m_Offset: {x: 1.9951715, y: 0.010964915}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -926,7 +927,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.4152098, y: 0.22554523}
+  m_Size: {x: 3.1171455, y: 0.31208465}
   m_EdgeRadius: 0
 --- !u!1 &5163958030231466377
 GameObject:
