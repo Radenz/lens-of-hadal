@@ -363,14 +363,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca7f4d9f1ea9fe640ac3089d5fbc08b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _acceleration: 3
+  _acceleration: 4.5
   _speed: 15
   _dashProperties:
     Speed: 6
     Duration: 0.3
-    Cooldown: 3
+    Cooldown: 2
     Key: 9
-    StaminaCost: 30
+    StaminaCost: 15
   _canDash: 1
 --- !u!58 &8522675064028508534
 CircleCollider2D:
@@ -449,7 +449,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 5
+  m_PointLightOuterRadius: 7.95
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -478,11 +478,13 @@ MonoBehaviour:
   _sonarPrefab: {fileID: 0}
   _playerVCam: {fileID: 0}
   _flashlight: {fileID: 0}
-  _recoveryDelay: 7
-  _recoverySpeed: 5
-  _staminaRecoveryDelay: 5
-  _staminaRecoverySpeed: 10
+  _debugHealth: 0
+  _recoveryDelay: 5
+  _recoverySpeed: 10
+  _staminaRecoveryDelay: 3.5
+  _staminaRecoverySpeed: 15
   _respawnPoint: {fileID: 0}
+  _hudContainer: {fileID: 0}
   _dnaHUDLabel: {fileID: 0}
   _deathOverlay: {fileID: 0}
   _damageOverlay: {fileID: 0}
