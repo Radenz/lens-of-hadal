@@ -62,7 +62,6 @@ public class BestiaryEntry : MonoBehaviour, IBind<CreatureData>
     public void Bind(CreatureData data)
     {
         _data = data.FromId(_creature.Id);
-        _dnaBar.Value = _data.DiscoveryProgress;
         CheckIfDiscovered();
     }
 
