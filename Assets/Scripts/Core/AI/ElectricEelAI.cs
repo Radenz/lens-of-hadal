@@ -123,6 +123,12 @@ public class ElectricEelAI : MonoBehaviour
         return PathUtilities.IsPathPossible(node1, node2);
     }
 
+    [Button]
+    private void CheckReachability()
+    {
+        Debug.Log("Can reach? " + CanReachDestination());
+    }
+
     private void OnFleeing(bool isForced = false)
     {
         if (_ai.IsIdle() || !CanReachDestination() || isForced)
