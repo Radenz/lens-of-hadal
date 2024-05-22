@@ -1,0 +1,8 @@
+D:/GAME DEV/Unity/LensOfHadal/.utmp/RelWithDebInfo/316054k6/arm64-v8a/CMakeFiles/edit_cache.dir
+D:/GAME DEV/Unity/LensOfHadal/.utmp/RelWithDebInfo/316054k6/arm64-v8a/CMakeFiles/rebuild_cache.dir
+D:/GAME DEV/Unity/LensOfHadal/.utmp/RelWithDebInfo/316054k6/arm64-v8a/GameActivity/CMakeFiles/game.dir
+D:/GAME DEV/Unity/LensOfHadal/.utmp/RelWithDebInfo/316054k6/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+D:/GAME DEV/Unity/LensOfHadal/.utmp/RelWithDebInfo/316054k6/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir
+D:/GAME DEV/Unity/LensOfHadal/.utmp/RelWithDebInfo/316054k6/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+D:/GAME DEV/Unity/LensOfHadal/.utmp/RelWithDebInfo/316054k6/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+D:/GAME DEV/Unity/LensOfHadal/.utmp/RelWithDebInfo/316054k6/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir
