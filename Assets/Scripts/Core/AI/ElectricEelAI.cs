@@ -10,6 +10,8 @@ public class ElectricEelAI : MonoBehaviour
 
     [Header("Others")]
     [SerializeField]
+    private GameObject _zapPrefab;
+    [SerializeField]
     private Rigidbody2D _rigidbody;
 
     [SerializeField]
@@ -49,7 +51,7 @@ public class ElectricEelAI : MonoBehaviour
         }
     }
 
-    private TimerSignal _zapTimer;
+    private bool _canZap = true;
 
     private void Start()
     {
@@ -95,11 +97,27 @@ public class ElectricEelAI : MonoBehaviour
     {
         // ? Extra guard just in case flee state change missed
         if (State == ElectricEelState.Roaming) return;
+        _canZap = false;
 
-        // TODO: show zap vfx, play zap sfx
+        // TODO: play zap sfx
         PlayerController.Instance.Damage(_damage);
         PlayerController.Instance.Shock(_zapShockDuration);
-        _zapTimer = Timer.Instance.SetTimer(Zap, _zapCooldownTime);
+        SpawnZap(_transform.position, PlayerController.Instance.Position);
+
+        Timer.Instance.SetTimer(() => _canZap = true, _zapCooldownTime);
+    }
+
+    private void SpawnZap(Vector2 from, Vector2 to)
+    {
+        float length = Vector2.Distance(from, to);
+        Vector2 center = (from + to) / 2;
+        Vector2 direction = to - from;
+
+        float angle = Vector2.SignedAngle(Vector2.up, direction);
+
+        GameObject zap = Instantiate(_zapPrefab, center, Quaternion.identity);
+        zap.transform.localScale = zap.transform.localScale.With(y: length);
+        zap.transform.localEulerAngles = zap.transform.localEulerAngles.With(z: angle);
     }
 
     private void OnRoaming()
@@ -131,6 +149,8 @@ public class ElectricEelAI : MonoBehaviour
 
     private void OnFleeing(bool isForced = false)
     {
+        if (_canZap) Zap();
+
         if (_ai.IsIdle() || !CanReachDestination() || isForced)
         {
             Vector2 relativePosition = _transform.position - _player.position;
@@ -152,10 +172,8 @@ public class ElectricEelAI : MonoBehaviour
         {
             case ElectricEelState.Roaming:
                 _ai.maxSpeed = _speed;
-                _zapTimer?.Cancel();
                 break;
             case ElectricEelState.Fleeing:
-                _zapTimer = Timer.Instance.SetTimer(Zap, _zapCooldownTime);
                 _ai.maxSpeed = _fleeingSpeed;
                 OnFleeing(isForced: true);
                 break;

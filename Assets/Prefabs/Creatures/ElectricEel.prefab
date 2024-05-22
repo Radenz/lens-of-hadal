@@ -478,6 +478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 20
+  _zapPrefab: {fileID: 7934661190764542453, guid: 186c43387b8ed474ea4cd6fbc0dac865, type: 3}
   _rigidbody: {fileID: 6570103364093839564}
   _detectionRange: {fileID: 7889474229006490485}
   _fleeingRange: {fileID: 7847607436234664453}
