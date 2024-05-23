@@ -5,6 +5,8 @@ public class Sonar : MonoBehaviour
 {
     [SerializeField]
     private GameObject _sonarMarker;
+    [SerializeField]
+    private GameObject _spriteOutlineMarker;
 
     // private readonly HashSet<Transform> _detectedCreatures = new();
     private readonly HashSet<CreatureDespawner> _detectedCreatures = new();
@@ -24,6 +26,14 @@ public class Sonar : MonoBehaviour
         foreach (CreatureDespawner creature in _detectedCreatures)
         {
             Instantiate(_sonarMarker, creature.Position, Quaternion.identity);
+            GameObject obj = Instantiate(
+                _spriteOutlineMarker,
+                creature.SpriteTransform.position,
+                creature.SpriteTransform.rotation
+                );
+
+            obj.transform.localScale = creature.SpriteTransform.lossyScale;
+            obj.GetComponent<SpriteRenderer>().sprite = creature.Creature.Sprite;
         }
     }
 

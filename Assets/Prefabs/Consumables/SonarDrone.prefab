@@ -82,6 +82,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sonarMarker: {fileID: 6024717853837733863, guid: 6c8c09e944ca75e42aec44f0e1d9a50e, type: 3}
+  _spriteOutlineMarker: {fileID: 6180729861516331864, guid: de9c4f71a859728468292ac6ee390711, type: 3}
+  Creature: {fileID: 0}
 --- !u!1 &4488514115086791621
 GameObject:
   m_ObjectHideFlags: 0

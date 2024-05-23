@@ -699,6 +699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Creature: {fileID: 11400000, guid: 6e443ab1cd372704aba366ca0fabd9a9, type: 2}
+  _spriteTransform: {fileID: 1600517870929192107}
 --- !u!1 &3646628143172976175
 GameObject:
   m_ObjectHideFlags: 0
