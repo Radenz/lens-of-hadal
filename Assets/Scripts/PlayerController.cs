@@ -35,6 +35,8 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
 
     [SerializeField]
     private Light2D _flashlight;
+    [SerializeField]
+    private SpriteRenderer _spriteRenderer;
 
     #region Player Attributes
     private float HealthPoints
@@ -57,6 +59,8 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
             _debugHealth = value;
         }
     }
+
+    private bool _isInvincible = false;
 
     [SerializeField, ReadOnly]
     private float _debugHealth;
@@ -85,6 +89,8 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
     #endregion Player Attributes
 
     [Header("Attributes")]
+    [SerializeField]
+    private float _invincibilityDuration = 2f;
     [SerializeField]
     private float _recoveryDelay = 7f;
     [SerializeField]
@@ -192,7 +198,6 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
     private void OnFlashlightUnequipped()
     {
         OnFlashlightEquipped(1);
-
     }
 
     private void OnDisableActions()
@@ -227,6 +232,8 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
 
     public void Damage(float amount = 1)
     {
+        if (_isInvincible) return;
+
         HealthPoints -= amount;
         _timeSinceLastDamage = 0f;
         if (HealthPoints == 0)
@@ -236,6 +243,8 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
         }
 
         Shake();
+        Blink();
+        _isInvincible = true;
     }
 
     private async void Shake()
@@ -244,6 +253,24 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
         _playerVCamNoise.m_AmplitudeGain = 3;
         await Awaitable.WaitForSecondsAsync(0.4f);
         _playerVCamNoise.m_AmplitudeGain = 0;
+    }
+
+    private async void Blink()
+    {
+        await Task.Yield();
+        float invincibleTime = _invincibilityDuration;
+        Color color = _spriteRenderer.color;
+
+        while (invincibleTime > 0)
+        {
+            color = color.With(a: 1 - color.a);
+            _spriteRenderer.color = color;
+            await Awaitable.WaitForSecondsAsync(invincibleTime > .2f ? .2f : invincibleTime);
+            invincibleTime -= .2f;
+        }
+
+        _spriteRenderer.color = color.With(a: 1);
+        _isInvincible = false;
     }
 
     public void Respawn()

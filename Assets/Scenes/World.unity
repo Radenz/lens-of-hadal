@@ -492,8 +492,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 6.761448, y: -2.2668514, z: 0}
-    m_Extent: {x: 87.62695, y: 34.30065, z: 0}
+    m_Center: {x: 6.7613983, y: -2.2669487, z: 0}
+    m_Extent: {x: 87.6276, y: 34.30125, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4864,6 +4864,10 @@ PrefabInstance:
       propertyPath: _damageOverlay
       value: 
       objectReference: {fileID: 993017404}
+    - target: {fileID: 4502696038651330938, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
+      propertyPath: _spriteRenderer
+      value: 
+      objectReference: {fileID: 1613785637}
     - target: {fileID: 5557278146023008605, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
       propertyPath: m_Intensity
       value: 1
@@ -7036,8 +7040,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -4.3098526, y: -32.11485, z: 0}
-    m_Extent: {x: 94.00245, y: 36.54575, z: 0}
+    m_Center: {x: -4.310402, y: -32.11455, z: 0}
+    m_Extent: {x: 94.002, y: 36.54665, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7902,8 +7906,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -4.4837, y: -5.9418497, z: 0}
-    m_Extent: {x: 89.1398, y: 29.81475, z: 0}
+    m_Center: {x: -4.4837494, y: -5.9422493, z: 0}
+    m_Extent: {x: 89.13955, y: 29.81625, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17201,6 +17205,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!212 &1613785637 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1034385811945248429, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
+  m_PrefabInstance: {fileID: 406684459}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1641881451
 GameObject:
   m_ObjectHideFlags: 0
