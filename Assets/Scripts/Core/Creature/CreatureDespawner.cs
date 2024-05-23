@@ -2,7 +2,10 @@ using UnityEngine;
 
 public class CreatureDespawner : MonoBehaviour
 {
+    public Creature Creature;
+
     private Transform _transform;
+    public Vector3 Position => _transform.position;
 
     private void Start()
     {

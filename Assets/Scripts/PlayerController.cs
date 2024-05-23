@@ -175,6 +175,7 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
             RecoverStamina();
     }
 
+    // TODO: affect reveal light
     private void OnFlashlightEquipped(int level)
     {
         // TODO: refactor to static data

@@ -138,7 +138,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: ea48d8ab31e7bf44991f2c2ac0aaabd8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -698,6 +698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a41c4b0266e02c498b8b6d99cac3bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Creature: {fileID: 11400000, guid: 6e443ab1cd372704aba366ca0fabd9a9, type: 2}
 --- !u!1 &3646628143172976175
 GameObject:
   m_ObjectHideFlags: 0

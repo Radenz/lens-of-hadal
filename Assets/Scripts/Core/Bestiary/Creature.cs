@@ -10,6 +10,7 @@ public class Creature : ScriptableObject
     public string Name;
     public string Description;
     public Sprite Sprite;
+    public Sprite OutlineSprite;
     public float BestiarySpriteScale;
     [Header("Rewards")]
     public int ExpPerScan;
