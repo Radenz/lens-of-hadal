@@ -25,6 +25,11 @@ public class BestiaryManager : Singleton<BestiaryManager>, IBind<CreatureData>
         return _data.FromId(creature.Id).IsDiscovered;
     }
 
+    public float GetCreatureDNA(Creature creature)
+    {
+        return _data.FromId(creature.Id).DiscoveryProgress;
+    }
+
     private void OnCreatureDNAGained(Creature creature, float dna)
     {
         CreatureInstanceData creatureData = _data.FromId(creature.Id);

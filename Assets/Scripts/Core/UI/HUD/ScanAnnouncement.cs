@@ -16,6 +16,8 @@ public class ScanAnnouncement : MonoBehaviour
     [SerializeField]
     private Image _image;
     [SerializeField]
+    private Bar _discoveryBar;
+    [SerializeField]
     private GameObject _energyPowderRewardLabelContainer;
     [SerializeField]
     private TextMeshProUGUI _energyPowderRewardLabel;
@@ -32,7 +34,15 @@ public class ScanAnnouncement : MonoBehaviour
     {
         _image.sprite = Creature.Sprite;
         if (BestiaryManager.Instance.IsCreatureDiscovered(Creature))
+        {
             _image.color = Color.white;
+            _discoveryBar.gameObject.SetActive(false);
+        }
+        else
+        {
+            _discoveryBar.MaxValue = 100;
+            _discoveryBar.Value = BestiaryManager.Instance.GetCreatureDNA(Creature);
+        }
 
         int unusedCurrencies = 0;
         List<GameObject> usedLabels = new();

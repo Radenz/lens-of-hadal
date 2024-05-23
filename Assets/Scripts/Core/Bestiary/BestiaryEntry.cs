@@ -3,7 +3,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// TODO: dna progress bar
 public class BestiaryEntry : MonoBehaviour, IBind<CreatureData>
 {
     [SerializeField]
