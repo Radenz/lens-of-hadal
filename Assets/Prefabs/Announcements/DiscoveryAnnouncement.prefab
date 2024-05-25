@@ -5390,6 +5390,7 @@ MonoBehaviour:
   _nameLabel: {fileID: 8907010467906557263}
   _nameLabelOutline: {fileID: 6375258275078966206}
   _image: {fileID: 7627395775124165069}
+  _sfx: {fileID: 8300000, guid: 1c3610ca5436e3546bf1f83bbdbb9715, type: 3}
 --- !u!1 &5458670735729831698
 GameObject:
   m_ObjectHideFlags: 0

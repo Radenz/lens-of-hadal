@@ -30,8 +30,13 @@ public class ScanAnnouncement : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI _scrapMetalRewardLabel;
 
+    [SerializeField]
+    private AudioClip _sfx;
+
     private void Start()
     {
+        AudioManager.Instance.PlaySFX(_sfx);
+
         _image.sprite = Creature.Sprite;
         if (BestiaryManager.Instance.IsCreatureDiscovered(Creature))
         {

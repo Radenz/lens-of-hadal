@@ -1064,6 +1064,7 @@ MonoBehaviour:
   _seaweedRewardLabel: {fileID: 6409641059925124089}
   _scrapMetalRewardLabelContainer: {fileID: 8401929503758397786}
   _scrapMetalRewardLabel: {fileID: 3866867287878388881}
+  _sfx: {fileID: 8300000, guid: 7687c6d080a519046a53e562b6955c1c, type: 3}
 --- !u!1 &5519066064166516966
 GameObject:
   m_ObjectHideFlags: 0

@@ -488,6 +488,7 @@ MonoBehaviour:
   _label: {fileID: 1832924062373991635}
   _goldLabelContainer: {fileID: 8037808615629942119}
   _goldLabel: {fileID: 2607976924784605111}
+  _sfx: {fileID: 8300000, guid: 1c3610ca5436e3546bf1f83bbdbb9715, type: 3}
 --- !u!1 &6115440898516172405
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,10 +21,14 @@ public class RewardAnnouncement : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI _goldLabel;
 
-    private const float Offset = 50;
+    private const float Offset = -160;
+
+    [SerializeField]
+    private AudioClip _sfx;
 
     private void Start()
     {
+        AudioManager.Instance.PlaySFX(_sfx);
         EventManager.Instance.DisableCreatures();
 
         int usedComponents = 2;
@@ -56,7 +60,7 @@ public class RewardAnnouncement : MonoBehaviour
         float offset = -Offset / 2 * (usedComponents - 1);
         foreach (GameObject component in components)
         {
-            component.transform.localPosition = component.transform.localPosition.Add(y: offset);
+            component.transform.localPosition = component.transform.localPosition.With(y: offset);
             offset += Offset;
         }
     }

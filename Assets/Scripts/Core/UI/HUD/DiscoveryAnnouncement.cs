@@ -17,8 +17,12 @@ public class DiscoveryAnnouncement : MonoBehaviour
     [SerializeField]
     private Image _image;
 
+    [SerializeField]
+    private AudioClip _sfx;
+
     private void Start()
     {
+        AudioManager.Instance.PlaySFX(_sfx);
         _image.sprite = Creature.Sprite;
         _nameLabel.text = Creature.Name;
         _nameLabelOutline.text = Creature.Name;
