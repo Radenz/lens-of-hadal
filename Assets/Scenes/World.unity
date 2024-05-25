@@ -492,8 +492,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 6.7612, y: -2.2667503, z: 0}
-    m_Extent: {x: 87.6275, y: 34.30225, z: 0}
+    m_Center: {x: 6.761799, y: -2.267149, z: 0}
+    m_Extent: {x: 87.627106, y: 34.301453, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4821,17 +4821,9 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4502696038651330938, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
-      propertyPath: _hurtSFX
-      value: 
-      objectReference: {fileID: 8300000, guid: 354035c223f4ea94a92dd15740472430, type: 3}
-    - target: {fileID: 4502696038651330938, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
       propertyPath: _healthBar
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 4502696038651330938, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
-      propertyPath: _flashlight
-      value: 
-      objectReference: {fileID: 878865188}
     - target: {fileID: 4502696038651330938, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
       propertyPath: _maxStamina
       value: 50
@@ -4849,14 +4841,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 307688570}
     - target: {fileID: 4502696038651330938, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
-      propertyPath: _flarePrefab
-      value: 
-      objectReference: {fileID: 727482696579698286, guid: 4da2aaab5c97cab499eae512de9af331, type: 3}
-    - target: {fileID: 4502696038651330938, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
-      propertyPath: _sonarPrefab
-      value: 
-      objectReference: {fileID: 6659705380726420833, guid: 788163c48ece23848bc3201e5c0373a5, type: 3}
-    - target: {fileID: 4502696038651330938, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
       propertyPath: _deathOverlay
       value: 
       objectReference: {fileID: 701933718}
@@ -4872,10 +4856,6 @@ PrefabInstance:
       propertyPath: _damageOverlay
       value: 
       objectReference: {fileID: 993017404}
-    - target: {fileID: 4502696038651330938, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
-      propertyPath: _spriteRenderer
-      value: 
-      objectReference: {fileID: 1613785637}
     - target: {fileID: 5557278146023008605, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
       propertyPath: m_Intensity
       value: 1
@@ -7052,8 +7032,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -4.309349, y: -32.1155, z: 0}
-    m_Extent: {x: 94.00205, y: 36.545998, z: 0}
+    m_Center: {x: -4.308899, y: -32.1147, z: 0}
+    m_Extent: {x: 94.0018, y: 36.5458, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7918,8 +7898,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -4.4829483, y: -5.942299, z: 0}
-    m_Extent: {x: 89.13945, y: 29.8158, z: 0}
+    m_Center: {x: -4.4829025, y: -5.9422503, z: 0}
+    m_Extent: {x: 89.1399, y: 29.815552, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -8250,17 +8230,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7169d608e506134991f850e5052a58e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &878865188 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5557278146023008605, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
-  m_PrefabInstance: {fileID: 406684459}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &887582153
@@ -17218,11 +17187,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!212 &1613785637 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 1034385811945248429, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
-  m_PrefabInstance: {fileID: 406684459}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1641881451
 GameObject:
   m_ObjectHideFlags: 0

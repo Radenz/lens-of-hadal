@@ -87,6 +87,7 @@ MonoBehaviour:
   _scanAngleRadius: 30
   _playerFlip: {fileID: 0}
   _lightTransform: {fileID: 0}
+  _scanSFX: {fileID: 0}
 --- !u!1 &2641673937549814270
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,7 +457,7 @@ MonoBehaviour:
     Cooldown: 2
     Key: 9
     StaminaCost: 15
-  _canDash: 1
+  _dashSFX: {fileID: 0}
 --- !u!58 &8522675064028508534
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -559,11 +560,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _flareCooldown: 3
   _sonarCooldown: 3
-  _flarePrefab: {fileID: 0}
-  _sonarPrefab: {fileID: 0}
+  _flarePrefab: {fileID: 727482696579698286, guid: 4da2aaab5c97cab499eae512de9af331, type: 3}
+  _sonarPrefab: {fileID: 6659705380726420833, guid: 788163c48ece23848bc3201e5c0373a5, type: 3}
   _playerVCam: {fileID: 0}
-  _flashlight: {fileID: 0}
-  _spriteRenderer: {fileID: 0}
+  _flashlight: {fileID: 5557278146023008605}
+  _spriteRenderer: {fileID: 1034385811945248429}
   _debugHealth: 0
   _invincibilityDuration: 2
   _recoveryDelay: 5
@@ -576,6 +577,8 @@ MonoBehaviour:
   _deathOverlay: {fileID: 0}
   _damageOverlay: {fileID: 0}
   _staminaBar: {fileID: 0}
+  _hurtSFX: {fileID: 8300000, guid: 354035c223f4ea94a92dd15740472430, type: 3}
+  _deploySFX: {fileID: 8300000, guid: e1b5a6e308c6dab468d06e061edaece4, type: 3}
 --- !u!114 &13769516596573448
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -130,6 +130,8 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
     [Header("SFXs")]
     [SerializeField]
     private AudioClip _hurtSFX;
+    [SerializeField]
+    private AudioClip _deploySFX;
 
     protected override void Awake()
     {
@@ -309,6 +311,8 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
         if (ConsumablesManager.Instance.Flare == 0) return;
         ConsumablesManager.Instance.Flare -= 1;
 
+        AudioManager.Instance.PlaySFX(_deploySFX);
+
         GameObject flare = Instantiate(_flarePrefab, _transform.position, Quaternion.identity);
         ArcLaunch arcLauncher = flare.GetComponent<ArcLaunch>();
 
@@ -341,6 +345,8 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
         if (!_canDeploySonar) return;
         if (ConsumablesManager.Instance.SonarDrone == 0) return;
         ConsumablesManager.Instance.SonarDrone -= 1;
+
+        AudioManager.Instance.PlaySFX(_deploySFX);
 
         GameObject sonar = Instantiate(_sonarPrefab, _transform.position, Quaternion.identity);
         ArcLaunch arcLauncher = sonar.GetComponent<ArcLaunch>();

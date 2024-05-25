@@ -7,12 +7,15 @@ public class Sonar : MonoBehaviour
     private GameObject _sonarMarker;
     [SerializeField]
     private GameObject _spriteOutlineMarker;
+    [SerializeField]
+    private AudioSource _pingAudio;
 
     // private readonly HashSet<Transform> _detectedCreatures = new();
     private readonly HashSet<CreatureDespawner> _detectedCreatures = new();
 
     private void Start()
     {
+        _pingAudio.volume = Settings.SFXVolume;
         EventManager.Instance.SonarPinged += OnSonarPinged;
     }
 
@@ -23,6 +26,8 @@ public class Sonar : MonoBehaviour
 
     private void OnSonarPinged()
     {
+        _pingAudio.Play();
+
         foreach (CreatureDespawner creature in _detectedCreatures)
         {
             Instantiate(_sonarMarker, creature.Position, Quaternion.identity);
