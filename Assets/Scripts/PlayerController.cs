@@ -61,6 +61,7 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
     }
 
     private bool _isInvincible = false;
+    public bool IsInvincible => _isInvincible;
 
     [SerializeField, ReadOnly]
     private float _debugHealth;
@@ -126,6 +127,9 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
     private StaminaBar _staminaBar;
     #endregion Attributes HUD
 
+    [Header("SFXs")]
+    [SerializeField]
+    private AudioClip _hurtSFX;
 
     protected override void Awake()
     {
@@ -234,6 +238,8 @@ public class PlayerController : Singleton<PlayerController>, IBind<PlayerData>
     public void Damage(float amount = 1)
     {
         if (_isInvincible) return;
+
+        AudioManager.Instance.PlaySFX(_hurtSFX);
 
         HealthPoints -= amount;
         _timeSinceLastDamage = 0f;

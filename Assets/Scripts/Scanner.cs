@@ -29,6 +29,8 @@ public class Scanner : MonoBehaviour, IBind<PlayerData>
 
     public bool IsScanning => _direction.magnitude != 0;
 
+    [SerializeField]
+    private AudioClip _scanSFX;
 
     private void Start()
     {
@@ -172,6 +174,7 @@ public class Scanner : MonoBehaviour, IBind<PlayerData>
 
     private void Scan(Scannable feature)
     {
+        AudioManager.Instance.PlaySFX(_scanSFX);
         _objectOnScan = feature;
         feature.StartScan();
     }

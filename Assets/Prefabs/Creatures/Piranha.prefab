@@ -553,6 +553,7 @@ MonoBehaviour:
   _speed: 1
   _aggresiveSpeed: 2
   _ai: {fileID: 5268793032968392490}
+  _biteSFX: {fileID: 8300000, guid: f1b782419b7186f4cbc9172dfe7a2a22, type: 3}
 --- !u!50 &6562847590079970757
 Rigidbody2D:
   serializedVersion: 4

@@ -488,6 +488,7 @@ MonoBehaviour:
   _fleeingSpeed: 2.5
   _zapCooldownTime: 3
   _zapShockDuration: 2
+  _zapSFX: {fileID: 8300000, guid: 3bec724904144a24789efd8a4c1f720a, type: 3}
   _ai: {fileID: 4096935875492654694}
 --- !u!114 &961011842666718627
 MonoBehaviour:
@@ -608,3 +609,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Creature: {fileID: 11400000, guid: 843f114b2f5893d4e8b1132e62c88fd5, type: 2}
+  _spriteTransform: {fileID: 0}

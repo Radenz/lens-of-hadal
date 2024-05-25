@@ -30,9 +30,9 @@ public class AudioManager : Singleton<AudioManager>
     }
 
     // TODO: layering
-    public void Play(AudioClip audioClip)
+    public void PlaySFX(AudioClip audioClip)
     {
-        _genericPlayer.PlayOneShot(audioClip);
+        _genericPlayer.PlayOneShot(audioClip, Settings.SFXVolume);
     }
 
     [Button]

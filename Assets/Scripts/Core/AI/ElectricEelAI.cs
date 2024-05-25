@@ -33,6 +33,8 @@ public class ElectricEelAI : MonoBehaviour
     private float _zapCooldownTime;
     [SerializeField]
     private float _zapShockDuration;
+    [SerializeField]
+    private AudioClip _zapSFX;
 
     [SerializeField]
     AIPath _ai;
@@ -99,7 +101,7 @@ public class ElectricEelAI : MonoBehaviour
         if (State == ElectricEelState.Roaming) return;
         _canZap = false;
 
-        // TODO: play zap sfx
+        AudioManager.Instance.PlaySFX(_zapSFX);
         PlayerController.Instance.Damage(_damage);
         PlayerController.Instance.Shock(_zapShockDuration);
         SpawnZap(_transform.position, PlayerController.Instance.Position);

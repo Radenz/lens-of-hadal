@@ -14,6 +14,8 @@ public class Movement : MonoBehaviour
     private float _speed;
     [SerializeField]
     private DashProperties _dashProperties;
+    [SerializeField]
+    private AudioClip _dashSFX;
 
     private PlayerInputActions _playerInputActions;
 
@@ -26,7 +28,6 @@ public class Movement : MonoBehaviour
     private bool _isDashing = false;
     private bool _isBouncing = false;
 
-    [SerializeField]
     private bool _canDash = true;
     private bool CanDash => _canDash && PlayerController.Instance.Stamina > _dashProperties.StaminaCost;
     private bool _shouldDash = false;
@@ -99,6 +100,7 @@ public class Movement : MonoBehaviour
         _canDash = false;
         _isDashing = true;
         PlayerController.Instance.Stamina -= _dashProperties.StaminaCost;
+        AudioManager.Instance.PlaySFX(_dashSFX);
 
         Dashing?.Invoke();
 

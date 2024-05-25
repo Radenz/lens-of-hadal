@@ -42,13 +42,13 @@ public class Bestiary : Singleton<Bestiary>, IBind<CreatureData>
     public void PrevPage()
     {
         ShowPage(_currentPage - 1);
-        AudioManager.Instance.Play(_pageFlipAudio);
+        AudioManager.Instance.PlaySFX(_pageFlipAudio);
     }
 
     public void NextPage()
     {
         ShowPage(_currentPage + 1);
-        AudioManager.Instance.Play(_pageFlipAudio);
+        AudioManager.Instance.PlaySFX(_pageFlipAudio);
     }
 
     public void ShowPage(int pageNumber)
@@ -72,12 +72,12 @@ public class Bestiary : Singleton<Bestiary>, IBind<CreatureData>
     public void Show()
     {
         gameObject.SetActive(true);
-        AudioManager.Instance.Play(_pageFlipAudio);
+        AudioManager.Instance.PlaySFX(_pageFlipAudio);
     }
 
     public void Hide()
     {
         gameObject.SetActive(false);
-        AudioManager.Instance.Play(_pageFlipAudio);
+        AudioManager.Instance.PlaySFX(_pageFlipAudio);
     }
 }

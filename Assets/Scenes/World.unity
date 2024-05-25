@@ -492,8 +492,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 6.76165, y: -2.2663498, z: 0}
-    m_Extent: {x: 87.62765, y: 34.30165, z: 0}
+    m_Center: {x: 6.7612, y: -2.2667503, z: 0}
+    m_Extent: {x: 87.6275, y: 34.30225, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4809,6 +4809,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4431144432715467610, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
+      propertyPath: _dashSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 2fce3d27eaf15e84c9ba3d35c3085c27, type: 3}
+    - target: {fileID: 4431144432715467610, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
       propertyPath: _dashProperties.Cooldown
       value: 2
       objectReference: {fileID: 0}
@@ -4816,6 +4820,10 @@ PrefabInstance:
       propertyPath: _dashProperties.StaminaCost
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 4502696038651330938, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
+      propertyPath: _hurtSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 354035c223f4ea94a92dd15740472430, type: 3}
     - target: {fileID: 4502696038651330938, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
       propertyPath: _healthBar
       value: 
@@ -4932,6 +4940,10 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 8648435158287270220, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
+      propertyPath: _scanSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 5948763a9c0b58d4584e36790f2b082d, type: 3}
     - target: {fileID: 8648435158287270220, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
       propertyPath: _playerFlip
       value: 
@@ -7040,8 +7052,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -4.309601, y: -32.11415, z: 0}
-    m_Extent: {x: 94.0026, y: 36.54625, z: 0}
+    m_Center: {x: -4.309349, y: -32.1155, z: 0}
+    m_Extent: {x: 94.00205, y: 36.545998, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7906,8 +7918,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -4.4832, y: -5.9420996, z: 0}
-    m_Extent: {x: 89.1402, y: 29.814999, z: 0}
+    m_Center: {x: -4.4829483, y: -5.942299, z: 0}
+    m_Extent: {x: 89.13945, y: 29.8158, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -8744,6 +8756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ee0bf7cfe38b674e847538475c08f96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _pageFlipAudio: {fileID: 8300000, guid: a719e870d008a6e4a8a8614ed93857d8, type: 3}
   _canvas: {fileID: 896728570}
 --- !u!1 &899806577
 GameObject:
@@ -17266,7 +17279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5446d236af227414a88cdef5a8a5965c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pageFlipAudio: {fileID: 8300000, guid: 0d2f94087c9214f4e8794312a36997d9, type: 3}
+  _pageFlipAudio: {fileID: 8300000, guid: a719e870d008a6e4a8a8614ed93857d8, type: 3}
   _pages:
   - {fileID: 1010234912}
   - {fileID: 1327506813}

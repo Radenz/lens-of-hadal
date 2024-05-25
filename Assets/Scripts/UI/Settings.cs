@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class Settings : Singleton<Settings>
 {
-    public static float MusicVolume;
-    public static float SFXVolume;
-    public static float HUDOpacity;
+    public static float MusicVolume = 1f;
+    public static float SFXVolume = 1f;
+    public static float HUDOpacity = 1f;
 
     [SerializeField]
     private GameObject _container;

@@ -49,6 +49,9 @@ public class PiranhaAI : MonoBehaviour
         }
     }
 
+    [SerializeField]
+    private AudioClip _biteSFX;
+
     private void Start()
     {
         _transform = transform;
@@ -117,6 +120,8 @@ public class PiranhaAI : MonoBehaviour
     private void OnAttack()
     {
         if (State != PiranhaState.Attacking) return;
+        if (!PlayerController.Instance.IsInvincible)
+            AudioManager.Instance.PlaySFX(_biteSFX);
         PlayerController.Instance.Damage(_damage);
         State = PiranhaState.Retreating;
     }
