@@ -86,13 +86,13 @@ public class GiantSquidAI : MonoBehaviour
 
     private void OnRoaming()
     {
-        if (!_ai.hasPath || _ai.IsIdle())
+        if (_ai.reachedDestination || _ai.reachedEndOfPath || !_ai.hasPath)
             _ai.destination = _transform.RandomWithinRadius(_roamingRadius);
     }
 
     private void OnFleeing(bool isForced = false)
     {
-        if (_ai.IsIdle() || isForced)
+        if (_ai.reachedDestination || _ai.reachedEndOfPath || !_ai.hasPath || isForced)
         {
             Vector2 relativePosition = _transform.position - _player.position;
             Vector2 fleePosition = _transform.RandomOnRadius(_fleeingRadius) - (Vector2)_player.position;

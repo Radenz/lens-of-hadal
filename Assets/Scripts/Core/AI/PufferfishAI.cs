@@ -89,13 +89,7 @@ public class PufferfishAI : MonoBehaviour
 
     private void OnRoaming()
     {
-        if (!_ai.hasPath)
-        {
-            _ai.destination = _transform.RandomWithinRadius(_roamingRadius);
-            return;
-        }
-
-        if (_ai.IsIdle())
+        if (_ai.reachedDestination || _ai.reachedEndOfPath || !_ai.hasPath)
         {
             _ai.destination = _transform.RandomWithinRadius(_roamingRadius);
         }
@@ -103,7 +97,7 @@ public class PufferfishAI : MonoBehaviour
 
     private void OnInflated()
     {
-        if (_ai.IsIdle())
+        if (_ai.reachedDestination || _ai.reachedEndOfPath || !_ai.hasPath)
         {
             _ai.destination = _transform.RandomWithinRadius(_inflatedRoamingRadius);
         }
