@@ -905,7 +905,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Creature: {fileID: 11400000, guid: 8d44e6b2a0db4aa408edb821183d79be, type: 2}
-  _spriteTransform: {fileID: 0}
+  _spriteTransform: {fileID: 3667536814147734794}
 --- !u!58 &2362966511773697687
 CircleCollider2D:
   m_ObjectHideFlags: 0
