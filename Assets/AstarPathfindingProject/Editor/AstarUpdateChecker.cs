@@ -218,41 +218,6 @@ namespace Pathfinding
 
         static void DownloadVersionInfo()
         {
-#pragma warning disable CS0618 // Type or member is obsolete
-            var script = AstarPath.active != null ? AstarPath.active : Object.FindObjectOfType(typeof(AstarPath)) as AstarPath;
-#pragma warning restore CS0618 // Type or member is obsolete
-
-            if (script != null)
-            {
-                script.ConfigureReferencesInternal();
-                if ((!Application.isPlaying && (script.data.graphs == null || script.data.graphs.Length == 0)) || script.data.graphs == null)
-                {
-                    script.data.DeserializeGraphs();
-                }
-            }
-
-#pragma warning disable CS0618 // Type or member is obsolete
-            bool mecanim = Object.FindObjectOfType(typeof(Animator)) != null;
-#pragma warning restore CS0618 // Type or member is obsolete
-            string query = updateURL +
-                           "?v=" + AstarPath.Version +
-                           "&pro=0" +
-                           "&check=" + updateCheckRate + "&distr=" + AstarPath.Distribution +
-                           "&unitypro=" + (Application.HasProLicense() ? "1" : "0") +
-                           "&inscene=" + (script != null ? "1" : "0") +
-                           "&targetplatform=" + EditorUserBuildSettings.activeBuildTarget +
-                           "&devplatform=" + Application.platform +
-                           "&mecanim=" + (mecanim ? "1" : "0") +
-                           "&hasNavmesh=" + (script != null && script.data.graphs.Any(g => g.GetType().Name == "NavMeshGraph") ? 1 : 0) +
-                           "&hasPoint=" + (script != null && script.data.graphs.Any(g => g.GetType().Name == "PointGraph") ? 1 : 0) +
-                           "&hasGrid=" + (script != null && script.data.graphs.Any(g => g.GetType().Name == "GridGraph") ? 1 : 0) +
-                           "&hasLayered=" + (script != null && script.data.graphs.Any(g => g.GetType().Name == "LayerGridGraph") ? 1 : 0) +
-                           "&hasRecast=" + (script != null && script.data.graphs.Any(g => g.GetType().Name == "RecastGraph") ? 1 : 0) +
-                           "&hasGrid=" + (script != null && script.data.graphs.Any(g => g.GetType().Name == "GridGraph") ? 1 : 0) +
-                           "&hasCustom=" + (script != null && script.data.graphs.Any(g => g != null && !g.GetType().FullName.Contains("Pathfinding.")) ? 1 : 0) +
-                           "&graphCount=" + (script != null ? script.data.graphs.Count(g => g != null) : 0) +
-                           "&unityversion=" + Application.unityVersion +
-                           "&branch=" + AstarPath.Branch;
         }
 
         /// <summary>Handles the data from the update page</summary>
