@@ -575,8 +575,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 6.7616997, y: -2.2667007, z: 0}
-    m_Extent: {x: 87.6268, y: 34.3009, z: 0}
+    m_Center: {x: 6.761299, y: -2.2666512, z: 0}
+    m_Extent: {x: 87.6278, y: 34.30045, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7899,8 +7899,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -4.309349, y: -32.114998, z: 0}
-    m_Extent: {x: 94.00225, y: 36.5465, z: 0}
+    m_Center: {x: -4.309597, y: -32.114452, z: 0}
+    m_Extent: {x: 94.002304, y: 36.54675, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -8761,8 +8761,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -4.4835014, y: -5.9418507, z: 0}
-    m_Extent: {x: 89.140305, y: 29.81505, z: 0}
+    m_Center: {x: -4.4830017, y: -5.94195, z: 0}
+    m_Extent: {x: 89.1392, y: 29.81555, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -19114,7 +19114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <MaxCreatures>k__BackingField: 15
   <SpawnRadius>k__BackingField: 9
-  <DespawnRadius>k__BackingField: 40
+  <DespawnRadius>k__BackingField: 25
 --- !u!114 &1671386536
 MonoBehaviour:
   m_ObjectHideFlags: 0

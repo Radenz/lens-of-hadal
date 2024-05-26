@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using NaughtyAttributes;
 using Pathfinding;
 using UnityEngine;
@@ -7,6 +8,8 @@ public class ElectricEelAI : MonoBehaviour
     [Header("Config")]
     [SerializeField]
     private float _damage = 6;
+    [SerializeField]
+    private float _zapDelay = 1f;
 
     [Header("Others")]
     [SerializeField]
@@ -18,6 +21,9 @@ public class ElectricEelAI : MonoBehaviour
     private RangeTrigger _detectionRange;
     [SerializeField]
     private RangeTrigger _fleeingRange;
+    [SerializeField]
+    private RangeTrigger _zapEscapeRange;
+
 
     [SerializeField]
     private float _roamingRadius;
@@ -54,6 +60,9 @@ public class ElectricEelAI : MonoBehaviour
     }
 
     private bool _canZap = true;
+    private bool _isTryingToZap = false;
+    private bool _shouldZap = false;
+    private bool _isZapEscaped = false;
 
     private void Start()
     {
@@ -62,6 +71,7 @@ public class ElectricEelAI : MonoBehaviour
 
         _detectionRange.Entered += OnDetectPlayer;
         _fleeingRange.Exited += OnLosePlayer;
+        _zapEscapeRange.Exited += OnZapEscape;
 
         _ai.maxSpeed = _speed;
         _ai.destination = _transform.RandomWithinRadius(_roamingRadius);
@@ -93,12 +103,32 @@ public class ElectricEelAI : MonoBehaviour
                 OnFleeing();
                 break;
         }
+
+        if (_shouldZap && _canZap)
+            TryZap();
+    }
+
+    private async void TryZap()
+    {
+        if (_isTryingToZap)
+            return;
+        _isTryingToZap = true;
+        _isZapEscaped = false;
+
+        // TODO: show vfx
+        await Awaitable.WaitForSecondsAsync(_zapDelay);
+
+        _isTryingToZap = false;
+
+        if (_isZapEscaped)
+            return;
+
+        Zap();
     }
 
     private void Zap()
     {
-        // ? Extra guard just in case flee state change missed
-        if (State == ElectricEelState.Roaming) return;
+        if (!_canZap) return;
         _canZap = false;
 
         AudioManager.Instance.PlaySFX(_zapSFX);
@@ -124,13 +154,7 @@ public class ElectricEelAI : MonoBehaviour
 
     private void OnRoaming()
     {
-        if (!_ai.hasPath)
-        {
-            _ai.destination = _transform.RandomWithinRadius(_roamingRadius);
-            return;
-        }
-
-        if (!CanReachDestination() || _ai.IsIdle())
+        if (_ai.reachedDestination || _ai.reachedEndOfPath || !_ai.hasPath)
         {
             _ai.destination = _transform.RandomWithinRadius(_roamingRadius);
         }
@@ -141,12 +165,6 @@ public class ElectricEelAI : MonoBehaviour
         GraphNode node1 = AstarPath.active.GetNearest(_ai.destination, NNConstraint.Default).node;
         GraphNode node2 = AstarPath.active.GetNearest(_transform.position, NNConstraint.Default).node;
         return PathUtilities.IsPathPossible(node1, node2);
-    }
-
-    [Button]
-    private void CheckReachability()
-    {
-        Debug.Log("Can reach? " + CanReachDestination());
     }
 
     private void OnFleeing(bool isForced = false)
@@ -185,11 +203,18 @@ public class ElectricEelAI : MonoBehaviour
     private void OnDetectPlayer()
     {
         State = ElectricEelState.Fleeing;
+        _shouldZap = true;
+    }
+
+    private void OnZapEscape()
+    {
+        _isZapEscaped = true;
     }
 
     private void OnLosePlayer()
     {
         State = ElectricEelState.Roaming;
+        _shouldZap = false;
     }
 }
 
