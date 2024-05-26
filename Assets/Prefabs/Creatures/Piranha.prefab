@@ -68,7 +68,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1.5
+  m_Radius: 3
 --- !u!114 &5023998313401594405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -608,7 +608,7 @@ MonoBehaviour:
   traversableTags: -1
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
-    value: 1
+    value: 7
 --- !u!114 &5268793032968392490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -644,12 +644,12 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 0.6
-  pickNextWaypointDist: 0.5
-  endReachedDistance: 0.2
+  slowdownDistance: 0.4
+  pickNextWaypointDist: 1
+  endReachedDistance: 0.5
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
-  whenCloseToDestination: 0
+  whenCloseToDestination: 1
   constrainInsideGraph: 0
 --- !u!58 &2229821957572152529
 CircleCollider2D:
@@ -870,7 +870,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 3
+  m_Radius: 5
 --- !u!114 &8587315421901680420
 MonoBehaviour:
   m_ObjectHideFlags: 0

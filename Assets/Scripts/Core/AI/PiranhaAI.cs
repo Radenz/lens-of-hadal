@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using Pathfinding;
 using UnityEngine;
 
@@ -100,13 +101,8 @@ public class PiranhaAI : MonoBehaviour
 
     private void OnRoaming()
     {
-        if (!_ai.hasPath)
-        {
-            _ai.destination = _transform.RandomWithinRadius(_roamingRadius);
-            return;
-        }
-
-        if (_ai.IsIdle())
+        // TODO: use this condition for roaming reach check
+        if (_ai.reachedDestination || _ai.reachedEndOfPath || !_ai.hasPath)
         {
             _ai.destination = _transform.RandomWithinRadius(_roamingRadius);
         }
@@ -128,7 +124,7 @@ public class PiranhaAI : MonoBehaviour
 
     private void OnRetreating()
     {
-        if (_ai.IsIdle())
+        if (_ai.reachedDestination)
         {
             if (Vector2.Distance(_transform.position, _player.position) <= _aggresionRadius)
             {

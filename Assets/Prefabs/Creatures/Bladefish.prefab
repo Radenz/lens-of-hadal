@@ -93,9 +93,9 @@ GameObject:
   - component: {fileID: 1600517870929192107}
   - component: {fileID: 3122924831791938811}
   - component: {fileID: 887548900048771928}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
-  m_TagString: Untagged
+  m_TagString: Creature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -138,7 +138,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: ea48d8ab31e7bf44991f2c2ac0aaabd8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -563,7 +563,7 @@ MonoBehaviour:
   traversableTags: -1
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
-    value: 1
+    value: 7
 --- !u!114 &5268793032968392490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -682,6 +682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Creature: {fileID: 11400000, guid: b145a32b3cf0079448e5cbdaaad8a123, type: 2}
+  _spriteTransform: {fileID: 0}
 --- !u!1 &3646628143172976175
 GameObject:
   m_ObjectHideFlags: 0

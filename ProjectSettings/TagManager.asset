@@ -12,6 +12,11 @@ TagManager:
   - AnglerfishLairVCam
   - AnglerfishLairVCamPoint
   - AnglerfishLairFocusVCam
+  - CreatureNavGraph
+  - CrackGraphNode
+  - CenterGraphNode
+  - LairGraph1Node
+  - LairGraph2Node
   layers:
   - Default
   - TransparentFX

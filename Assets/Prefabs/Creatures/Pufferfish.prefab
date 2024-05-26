@@ -94,9 +94,9 @@ GameObject:
   - component: {fileID: 242234207415032011}
   - component: {fileID: 3296768187321851452}
   - component: {fileID: 8011394409212936298}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
-  m_TagString: Untagged
+  m_TagString: Creature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -138,7 +138,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: ea48d8ab31e7bf44991f2c2ac0aaabd8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -239,9 +239,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8851639878421427968}
   - {fileID: 6988712663414151686}
   - {fileID: 2102389666502787875}
+  - {fileID: 8851639878421427968}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &7776202624563031484
@@ -321,7 +321,7 @@ MonoBehaviour:
   traversableTags: -1
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
-    value: 1
+    value: 7
 --- !u!114 &7353464936212607631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,6 +377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Creature: {fileID: 11400000, guid: 285cae1764cf52b4fa02630648a0e709, type: 2}
+  _spriteTransform: {fileID: 0}
 --- !u!1 &3467921283653227889
 GameObject:
   m_ObjectHideFlags: 0
