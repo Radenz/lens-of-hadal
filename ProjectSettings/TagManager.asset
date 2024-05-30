@@ -57,3 +57,9 @@ TagManager:
   - name: Creature
     uniqueID: 2091877501
     locked: 0
+  - name: Terrain
+    uniqueID: 2536656197
+    locked: 0
+  - name: Water
+    uniqueID: 2019821833
+    locked: 0
