@@ -10,6 +10,8 @@ public abstract class QuestStep : MonoBehaviour
     [ResizableTextArea]
     protected string _description;
 
+    public string Description => GetDescription();
+
     protected virtual void Start()
     {
         Quest = QuestManager.Instance.CurrentQuest;

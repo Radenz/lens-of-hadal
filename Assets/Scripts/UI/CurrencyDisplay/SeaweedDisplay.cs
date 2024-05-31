@@ -6,9 +6,13 @@ public class SeaweedDisplay : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI _label;
 
+    [SerializeField]
+    private bool _isStaticDisplay = false;
+
     private void Start()
     {
-        EventManager.Instance.SeaweedChanged += OnChanged;
+        if (!_isStaticDisplay)
+            EventManager.Instance.SeaweedChanged += OnChanged;
     }
 
     // TODO: animate, maybe

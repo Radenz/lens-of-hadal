@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using NaughtyAttributes;
 using TMPro;
@@ -28,8 +29,7 @@ public class Typewriter : MonoBehaviour
     private bool _isTyping = false;
     private int _charIndex = 0;
 
-    [SerializeField]
-    private UnityEvent _completed;
+    public event Action Completed;
 
     private void Start()
     {
@@ -78,7 +78,7 @@ public class Typewriter : MonoBehaviour
         _index++;
         if (_texts.Count <= _index)
         {
-            _completed?.Invoke();
+            Completed?.Invoke();
             if (_pauseTime)
                 Time.timeScale = 1f;
             return;

@@ -5,6 +5,7 @@ public class Quest
     public QuestData Data;
     public bool IsCompleted = false;
     private int _stepIndex;
+    public GameObject CurrentStep;
 
     public void StartQuest()
     {
@@ -35,6 +36,6 @@ public class Quest
 
     private void StartStep()
     {
-        Object.Instantiate(Data.Steps[_stepIndex]);
+        CurrentStep = Object.Instantiate(Data.Steps[_stepIndex]);
     }
 }

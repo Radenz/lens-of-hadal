@@ -17,6 +17,11 @@ TagManager:
   - CenterGraphNode
   - LairGraph1Node
   - LairGraph2Node
+  - ScanStick
+  - MovementStick
+  - DashButton
+  - MapButton
+  - BestiaryButton
   layers:
   - Default
   - TransparentFX

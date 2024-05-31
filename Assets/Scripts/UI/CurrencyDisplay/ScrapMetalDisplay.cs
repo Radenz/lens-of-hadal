@@ -5,10 +5,13 @@ public class ScrapMetalDisplay : MonoBehaviour
 {
     [SerializeField]
     private TextMeshProUGUI _label;
+    [SerializeField]
+    private bool _isStaticDisplay = false;
 
     private void Start()
     {
-        EventManager.Instance.ScrapMetalChanged += OnChanged;
+        if (!_isStaticDisplay)
+            EventManager.Instance.ScrapMetalChanged += OnChanged;
     }
 
     // TODO: animate, maybe
