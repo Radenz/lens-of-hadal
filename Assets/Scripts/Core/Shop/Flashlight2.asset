@@ -16,8 +16,8 @@ MonoBehaviour:
   Id: Flashlight2
   Name: Flashlight Lv 2
   Description: +20% Radius
-  Gold: 100
-  EnergyPowder: 20
-  Seaweed: 10
-  ScrapMetal: 5
+  Gold: 250
+  EnergyPowder: 0
+  Seaweed: 15
+  ScrapMetal: 0
   IsOneTimePurchase: 1

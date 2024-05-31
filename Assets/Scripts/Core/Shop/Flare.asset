@@ -17,9 +17,9 @@ MonoBehaviour:
   Name: Flare
   Description: 'Light up the deep sea
 
-    for 60 seconds'
-  Gold: 100
-  EnergyPowder: 20
-  Seaweed: 10
-  ScrapMetal: 5
+    for 10 seconds'
+  Gold: 10
+  EnergyPowder: 2
+  Seaweed: 5
+  ScrapMetal: 0
   IsOneTimePurchase: 0

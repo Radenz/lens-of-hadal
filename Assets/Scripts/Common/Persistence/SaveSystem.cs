@@ -31,6 +31,9 @@ namespace Common.Persistence
                 case "TestWorld":
                     OnWorldLoaded();
                     break;
+                case "WorldTerrainfill":
+                    OnWorldLoaded();
+                    break;
                 case "Shop":
                     OnShopLoaded();
                     break;

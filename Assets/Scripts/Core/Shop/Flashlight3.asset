@@ -16,8 +16,8 @@ MonoBehaviour:
   Id: Flashlight3
   Name: Flashlight Lv 3
   Description: +20% Radius
-  Gold: 100
-  EnergyPowder: 20
-  Seaweed: 10
-  ScrapMetal: 5
+  Gold: 450
+  EnergyPowder: 15
+  Seaweed: 30
+  ScrapMetal: 10
   IsOneTimePurchase: 1

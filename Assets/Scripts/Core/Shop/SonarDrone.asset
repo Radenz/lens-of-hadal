@@ -16,8 +16,8 @@ MonoBehaviour:
   Id: SonarDrone
   Name: Sonar Drone
   Description: Detects nearby creatures
-  Gold: 100
-  EnergyPowder: 20
-  Seaweed: 10
+  Gold: 40
+  EnergyPowder: 5
+  Seaweed: 35
   ScrapMetal: 5
   IsOneTimePurchase: 0

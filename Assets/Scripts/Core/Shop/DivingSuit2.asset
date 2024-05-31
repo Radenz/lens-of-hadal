@@ -16,8 +16,8 @@ MonoBehaviour:
   Id: DivingSuit2
   Name: Diving Suit Lv 2
   Description: Provides 1x1 upgrade slot
-  Gold: 100
-  EnergyPowder: 20
+  Gold: 300
+  EnergyPowder: 3
   Seaweed: 10
-  ScrapMetal: 5
+  ScrapMetal: 0
   IsOneTimePurchase: 1

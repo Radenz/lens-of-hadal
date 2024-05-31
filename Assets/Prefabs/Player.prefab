@@ -569,7 +569,7 @@ MonoBehaviour:
   _invincibilityDuration: 2
   _recoveryDelay: 5
   _recoverySpeed: 10
-  _staminaRecoveryDelay: 3.5
+  _staminaRecoveryDelay: 3
   _staminaRecoverySpeed: 15
   _respawnPoint: {fileID: 0}
   _hudContainer: {fileID: 0}
