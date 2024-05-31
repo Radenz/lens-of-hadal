@@ -8,6 +8,7 @@ public class Creature : ScriptableObject
 {
     public string Id;
     public string Name;
+    [ResizableTextArea]
     public string Description;
     public Sprite Sprite;
     public Sprite OutlineSprite;

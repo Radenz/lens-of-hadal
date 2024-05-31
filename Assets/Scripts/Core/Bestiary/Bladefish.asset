@@ -14,8 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: Bladefish
   Name: Bladefish
-  Description: 
+  Description: 'Bladefish inherits the anatomy of its predecessor''s, swordfish.
+
+    However,
+    its sword-like jaw is made of actual metal.'
   Sprite: {fileID: -6450574622688271893, guid: 043272d888a6ece4bac0a2512fa0b11a, type: 3}
+  OutlineSprite: {fileID: 0}
   BestiarySpriteScale: 2
   ExpPerScan: 35
   DNAPerScan: {x: 20, y: 30}

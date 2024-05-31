@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: Piranha
   Name: Sabertooth Piranha
-  Description: 
+  Description: 'A piranha mutated into having teeth of a saber.
+
+    It bites any
+    living being that it sees.'
   Sprite: {fileID: -8389596254231219563, guid: 2880906d148e6c341b918ce1ccfa4106, type: 3}
   OutlineSprite: {fileID: 0}
   BestiarySpriteScale: 8

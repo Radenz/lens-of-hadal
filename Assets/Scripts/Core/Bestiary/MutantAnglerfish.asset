@@ -14,8 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: MutantAnglerfish
   Name: Mutant Anglerfish
-  Description: 
+  Description: 'Years of being a predator and hunter of fishes, this anglerfish mutated
+    into a gigantic creature.
+
+    The mutant anglerfish is very aggressive against
+    any moving thing.'
   Sprite: {fileID: -8389596254231219563, guid: 2880906d148e6c341b918ce1ccfa4106, type: 3}
+  OutlineSprite: {fileID: 0}
   BestiarySpriteScale: 8
   ExpPerScan: 400
   DNAPerScan: {x: 100, y: 100}

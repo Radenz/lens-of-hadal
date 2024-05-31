@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: ElectricEel
   Name: Electric Eel
-  Description: 
+  Description: Beware! This kind of eel can shock you with electricity.
   Sprite: {fileID: 3965861685183340402, guid: 497cfdb14299bfe4c91b1e6918051ef6, type: 3}
+  OutlineSprite: {fileID: 0}
   BestiarySpriteScale: 4
   ExpPerScan: 28
   DNAPerScan: {x: 10, y: 15}
