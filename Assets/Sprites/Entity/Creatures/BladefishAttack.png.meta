@@ -1,0 +1,742 @@
+fileFormatVersion: 2
+guid: 5f2a4e308bb4b5847aef9f52a947cd6f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8301904634522090563
+    second: BladefishAttack_0
+  - first:
+      213: -2916907697176731001
+    second: BladefishAttack_1
+  - first:
+      213: -1206734355192322081
+    second: BladefishAttack_2
+  - first:
+      213: 5614511480966811107
+    second: BladefishAttack_3
+  - first:
+      213: 9080933228626119604
+    second: BladefishAttack_4
+  - first:
+      213: -2795653348568773802
+    second: BladefishAttack_5
+  - first:
+      213: 3659987745994128977
+    second: BladefishAttack_6
+  - first:
+      213: -8570596997455678601
+    second: BladefishAttack_7
+  - first:
+      213: 1765735519825925243
+    second: BladefishAttack_8
+  - first:
+      213: 161399745076943082
+    second: BladefishAttack_9
+  - first:
+      213: -5210522193407886094
+    second: BladefishAttack_10
+  - first:
+      213: -822363337913041508
+    second: BladefishAttack_11
+  - first:
+      213: 8190725559618044548
+    second: BladefishAttack_12
+  - first:
+      213: -3573425537625122066
+    second: BladefishAttack_13
+  - first:
+      213: -5553420897022328583
+    second: BladefishAttack_14
+  - first:
+      213: 3804608237242200649
+    second: BladefishAttack_15
+  - first:
+      213: 1105193265985425592
+    second: BladefishAttack_16
+  - first:
+      213: 62904563486569208
+    second: BladefishAttack_17
+  - first:
+      213: 5321520795062760901
+    second: BladefishAttack_18
+  - first:
+      213: -4618162031057348700
+    second: BladefishAttack_19
+  - first:
+      213: 3021667703228295795
+    second: BladefishAttack_20
+  - first:
+      213: 6102986841425852156
+    second: BladefishAttack_21
+  - first:
+      213: 9123567241810015181
+    second: BladefishAttack_22
+  - first:
+      213: -7105611472593870779
+    second: BladefishAttack_23
+  - first:
+      213: 5100622023434629511
+    second: BladefishAttack_24
+  - first:
+      213: 1749995166681083135
+    second: BladefishAttack_25
+  - first:
+      213: -5646359887761836201
+    second: BladefishAttack_26
+  - first:
+      213: -1058605622932652142
+    second: BladefishAttack_27
+  - first:
+      213: 7925724044446587565
+    second: BladefishAttack_28
+  - first:
+      213: 7642392788077992211
+    second: BladefishAttack_29
+  - first:
+      213: -5455507464379321839
+    second: BladefishAttack_30
+  - first:
+      213: 8967976672734962568
+    second: BladefishAttack_31
+  - first:
+      213: -6257668586294324143
+    second: BladefishAttack_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BladefishAttack_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1373
+        width: 117
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34cbbdb974a463370800000000000000
+      internalID: 8301904634522090563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BladefishAttack_1
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1311
+        width: 117
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 782ad2367ef0587d0800000000000000
+      internalID: -2916907697176731001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BladefishAttack_2
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1249
+        width: 121
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd7608c5f71d04fe0800000000000000
+      internalID: -1206734355192322081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BladefishAttack_5
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1187
+        width: 121
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65b4d6b6718d339d0800000000000000
+      internalID: -2795653348568773802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BladefishAttack_8
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1125
+        width: 121
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b74938a9917218810800000000000000
+      internalID: 1765735519825925243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BladefishAttack_11
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1063
+        width: 121
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9d7367b6e06694f0800000000000000
+      internalID: -822363337913041508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BladefishAttack_14
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1001
+        width: 121
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f0c0c01e194ee2b0800000000000000
+      internalID: -5553420897022328583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BladefishAttack_15
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 939
+        width: 121
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 942b85ab80facc430800000000000000
+      internalID: 3804608237242200649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BladefishAttack_16
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 877
+        width: 121
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b0173b7b6f665f00800000000000000
+      internalID: 1105193265985425592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BladefishAttack_17
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 815
+        width: 121
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f23e510e5b7fd000800000000000000
+      internalID: 62904563486569208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BladefishAttack_18
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 753
+        width: 121
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c5f19ee7f6d9d940800000000000000
+      internalID: 5321520795062760901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BladefishAttack_19
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 691
+        width: 121
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a751afc91ef8efb0800000000000000
+      internalID: -4618162031057348700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BladefishAttack_20
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 629
+        width: 123
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37a613044ce1fe920800000000000000
+      internalID: 3021667703228295795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BladefishAttack_21
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 567
+        width: 123
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf63210823a22b450800000000000000
+      internalID: 6102986841425852156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BladefishAttack_22
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 505
+        width: 121
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc3f974511c6d9e70800000000000000
+      internalID: 9123567241810015181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BladefishAttack_23
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 443
+        width: 121
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5402a18430cc36d90800000000000000
+      internalID: -7105611472593870779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BladefishAttack_24
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 381
+        width: 121
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 781fa50c4bc09c640800000000000000
+      internalID: 5100622023434629511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BladefishAttack_25
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 319
+        width: 121
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffc2dac055b394810800000000000000
+      internalID: 1749995166681083135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BladefishAttack_26
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 257
+        width: 122
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 757f0f7099914a1b0800000000000000
+      internalID: -5646359887761836201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BladefishAttack_29
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 195
+        width: 117
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3195567efbb3f0a60800000000000000
+      internalID: 7642392788077992211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BladefishAttack_30
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 133
+        width: 117
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 112bd2c9dd42a44b0800000000000000
+      internalID: -5455507464379321839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BladefishAttack_31
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 71
+        width: 117
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8836b5cf447a47c70800000000000000
+      internalID: 8967976672734962568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BladefishAttack_32
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 9
+        width: 117
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1545ec7439b4829a0800000000000000
+      internalID: -6257668586294324143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 181cfa220266eb84ab5322433649a6ac
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      BladefishAttack_0: 8301904634522090563
+      BladefishAttack_1: -2916907697176731001
+      BladefishAttack_10: -5210522193407886094
+      BladefishAttack_11: -822363337913041508
+      BladefishAttack_12: 8190725559618044548
+      BladefishAttack_13: -3573425537625122066
+      BladefishAttack_14: -5553420897022328583
+      BladefishAttack_15: 3804608237242200649
+      BladefishAttack_16: 1105193265985425592
+      BladefishAttack_17: 62904563486569208
+      BladefishAttack_18: 5321520795062760901
+      BladefishAttack_19: -4618162031057348700
+      BladefishAttack_2: -1206734355192322081
+      BladefishAttack_20: 3021667703228295795
+      BladefishAttack_21: 6102986841425852156
+      BladefishAttack_22: 9123567241810015181
+      BladefishAttack_23: -7105611472593870779
+      BladefishAttack_24: 5100622023434629511
+      BladefishAttack_25: 1749995166681083135
+      BladefishAttack_26: -5646359887761836201
+      BladefishAttack_27: -1058605622932652142
+      BladefishAttack_28: 7925724044446587565
+      BladefishAttack_29: 7642392788077992211
+      BladefishAttack_3: 5614511480966811107
+      BladefishAttack_30: -5455507464379321839
+      BladefishAttack_31: 8967976672734962568
+      BladefishAttack_32: -6257668586294324143
+      BladefishAttack_4: 9080933228626119604
+      BladefishAttack_5: -2795653348568773802
+      BladefishAttack_6: 3659987745994128977
+      BladefishAttack_7: -8570596997455678601
+      BladefishAttack_8: 1765735519825925243
+      BladefishAttack_9: 161399745076943082
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

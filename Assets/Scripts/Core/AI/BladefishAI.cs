@@ -39,6 +39,8 @@ public class BladefishAI : MonoBehaviour
     // private bool _hasHit = false;
     [SerializeField]
     private BoxCollider2D _blade;
+    [SerializeField]
+    private Animator _animator;
 
     [SerializeField]
     private float _speed;
@@ -172,8 +174,10 @@ public class BladefishAI : MonoBehaviour
         stabDirection = stabDirection.normalized;
         _rigidbody.velocity = stabDirection * 40f;
         _rigidbody.drag = 5f;
+        _animator.SetBool("IsAttacking", true);
 
         await Awaitable.WaitForSecondsAsync(1f);
+        _animator.SetBool("IsAttacking", false);
         await Awaitable.WaitForSecondsAsync(_attackCooldown);
         AfterSwing();
     }
