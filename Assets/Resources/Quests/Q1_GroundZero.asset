@@ -18,5 +18,6 @@ MonoBehaviour:
   - {fileID: 6123541703462181625, guid: 5d7ff3799924a9148b025ba52821848d, type: 3}
   - {fileID: 7334116987927943957, guid: 3a464fa7c23acd44d9929548b8dfa01d, type: 3}
   - {fileID: 6209933093998996700, guid: 56cdc75fc5b64f84e96c501a59f3d48a, type: 3}
+  - {fileID: 64133337610757349, guid: 62cc71a4da00e4644b0813084f75f363, type: 3}
   - {fileID: 6118116641743976019, guid: 87367fce2f1967f47a02c472d0cf0930, type: 3}
   Reward: {fileID: 11400000, guid: 9c1b30e5bfb02ea478524b7ba0fe84b5, type: 2}

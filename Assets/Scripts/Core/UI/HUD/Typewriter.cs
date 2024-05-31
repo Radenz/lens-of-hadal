@@ -41,7 +41,7 @@ public class Typewriter : MonoBehaviour
     private void Update()
     {
         if (!_isTyping) return;
-        _timeSinceLastChar += Time.deltaTime;
+        _timeSinceLastChar += Time.unscaledDeltaTime;
 
         if (_timeSinceLastChar >= Delay)
         {

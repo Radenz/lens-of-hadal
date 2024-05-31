@@ -702,7 +702,7 @@ MonoBehaviour:
     Let''s
     get started!'
   _speed: 50
-  _pauseTime: 0
+  _pauseTime: 1
 --- !u!1 &8314925927925766144
 GameObject:
   m_ObjectHideFlags: 0

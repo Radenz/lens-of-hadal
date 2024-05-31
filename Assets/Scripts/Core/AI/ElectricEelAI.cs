@@ -10,10 +10,14 @@ public class ElectricEelAI : MonoBehaviour
     private float _damage = 6;
     [SerializeField]
     private float _zapDelay = 1f;
+    [SerializeField]
+    private float _zapEscapeRadius = 3.5f;
 
     [Header("Others")]
     [SerializeField]
     private GameObject _zapPrefab;
+    [SerializeField]
+    private GameObject _static;
     [SerializeField]
     private Rigidbody2D _rigidbody;
 
@@ -62,7 +66,7 @@ public class ElectricEelAI : MonoBehaviour
     private bool _canZap = true;
     private bool _isTryingToZap = false;
     private bool _shouldZap = false;
-    private bool _isZapEscaped = false;
+    private bool _disabled = false;
 
     private void Start()
     {
@@ -71,7 +75,6 @@ public class ElectricEelAI : MonoBehaviour
 
         _detectionRange.Entered += OnDetectPlayer;
         _fleeingRange.Exited += OnLosePlayer;
-        _zapEscapeRange.Exited += OnZapEscape;
 
         _ai.maxSpeed = _speed;
         _ai.destination = _transform.RandomWithinRadius(_roamingRadius);
@@ -85,11 +88,13 @@ public class ElectricEelAI : MonoBehaviour
     {
         _lastMaxSpeed = _ai.maxSpeed;
         _ai.maxSpeed = 0;
+        _disabled = true;
     }
 
     private void EnableAI()
     {
         _ai.maxSpeed = _lastMaxSpeed;
+        _disabled = false;
     }
 
     private void Update()
@@ -110,25 +115,27 @@ public class ElectricEelAI : MonoBehaviour
 
     private async void TryZap()
     {
-        if (_isTryingToZap)
+        if (_isTryingToZap || _disabled)
             return;
         _isTryingToZap = true;
-        _isZapEscaped = false;
 
-        // TODO: show vfx
+        _static.SetActive(true);
         await Awaitable.WaitForSecondsAsync(_zapDelay);
+        _static.SetActive(false);
 
         _isTryingToZap = false;
-
-        if (_isZapEscaped)
-            return;
-
+        if (DistanceToPlayer() > _zapEscapeRadius) return;
         Zap();
+    }
+
+    private float DistanceToPlayer()
+    {
+        return Vector2.Distance(_player.position, _transform.position);
     }
 
     private void Zap()
     {
-        if (!_canZap) return;
+        if (!_canZap || _disabled) return;
         _canZap = false;
 
         AudioManager.Instance.PlaySFX(_zapSFX);
@@ -169,7 +176,7 @@ public class ElectricEelAI : MonoBehaviour
 
     private void OnFleeing(bool isForced = false)
     {
-        if (_canZap) Zap();
+        if (_canZap) TryZap();
 
         if (_ai.IsIdle() || !CanReachDestination() || isForced)
         {
@@ -204,11 +211,6 @@ public class ElectricEelAI : MonoBehaviour
     {
         State = ElectricEelState.Fleeing;
         _shouldZap = true;
-    }
-
-    private void OnZapEscape()
-    {
-        _isZapEscaped = true;
     }
 
     private void OnLosePlayer()

@@ -421,7 +421,7 @@ MonoBehaviour:
 
     Beware! It might bite.'
   _speed: 50
-  _pauseTime: 0
+  _pauseTime: 1
 --- !u!1 &4875258534072129642
 GameObject:
   m_ObjectHideFlags: 0

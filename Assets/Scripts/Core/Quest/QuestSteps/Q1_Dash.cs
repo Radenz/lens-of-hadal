@@ -1,53 +1,50 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Q1_Scan : QuestStep
+public class Q1_Dash : QuestStep
 {
-    private GameObject _scanStick;
-    private GameObject _bestiaryButton;
+    private GameObject _dashButton;
 
     [SerializeField]
-    private GameObject _scanTutorialPrefab;
-
+    private GameObject _dashTutorialPrefab;
     [SerializeField]
-    private GameObject _bestiaryTutorialPrefab;
+    private GameObject _outroTutorialPrefab;
 
     private GameObject _tutorial;
 
-    private bool _hasScannedPiranha = false;
+    private bool _hasScannedEel = false;
 
     protected override void Start()
     {
-        _scanStick = GameObject.FindGameObjectWithTag("ScanStick");
-        _bestiaryButton = GameObject.FindGameObjectWithTag("BestiaryButton");
+        _dashButton = GameObject.FindGameObjectWithTag("DashButton");
 
         base.Start();
 
         EventManager.Instance.CreatureScanned += OnCreatureScanned;
-        DisplayScanTutorial();
+        DisplayDashTutorial();
     }
 
     protected override void CheckCompletion()
     {
-        if (_hasScannedPiranha)
+        if (_hasScannedEel)
         {
             EventManager.Instance.EnableCreatures();
             Finish();
         }
     }
 
-    private void DisplayScanTutorial()
+    private void DisplayDashTutorial()
     {
-        _scanStick.transform.localScale = Vector3.one;
-        _tutorial = Instantiate(_scanTutorialPrefab);
+        _dashButton.transform.localScale = Vector3.one;
+        _tutorial = Instantiate(_dashTutorialPrefab);
         Typewriter typewriter = _tutorial.GetComponent<Typewriter>();
         typewriter.Completed += DestroyTutorial;
     }
 
-    private void DisplayBestiaryTutorial()
+    private void DisplayOutroTutorial()
     {
-        _bestiaryButton.transform.localScale = Vector3.one;
-        _tutorial = Instantiate(_bestiaryTutorialPrefab);
+        _dashButton.transform.localScale = Vector3.one;
+        _tutorial = Instantiate(_outroTutorialPrefab);
         Typewriter typewriter = _tutorial.GetComponent<Typewriter>();
         typewriter.Completed += DestroyTutorial;
     }
@@ -60,12 +57,12 @@ public class Q1_Scan : QuestStep
 
     private void OnCreatureScanned(string id)
     {
-        if (id == Creatures.Piranha)
+        if (id == Creatures.ElectricEel)
         {
             EventManager.Instance.CreatureScanned -= OnCreatureScanned;
-            _hasScannedPiranha = true;
+            _hasScannedEel = true;
             EventManager.Instance.DisableCreatures();
-            DisplayBestiaryTutorial();
+            DisplayOutroTutorial();
         }
     }
 }
