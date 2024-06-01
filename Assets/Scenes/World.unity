@@ -1041,8 +1041,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 6.7621994, y: -2.2668, z: 0}
-    m_Extent: {x: 87.6278, y: 34.3011, z: 0}
+    m_Center: {x: 6.7613487, y: -2.2666492, z: 0}
+    m_Extent: {x: 87.62715, y: 34.301453, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -15163,8 +15163,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 26.010399, y: -91.080154, z: 0}
-    m_Extent: {x: 125.3975, y: 36.87215, z: 0}
+    m_Center: {x: 26.011204, y: -91.080505, z: 0}
+    m_Extent: {x: 125.397705, y: 36.8725, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -16996,8 +16996,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 27.968502, y: -37.28525, z: 0}
-    m_Extent: {x: 123.056595, y: 48.00945, z: 0}
+    m_Center: {x: 27.968601, y: -37.28495, z: 0}
+    m_Extent: {x: 123.05681, y: 48.00995, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -23979,63 +23979,6 @@ MonoBehaviour:
   _creaturePrefab: {fileID: 3045631472178583046, guid: c2d65d7c0c54bd6469f82c1475a29223, type: 3}
   _boundsCollider: {fileID: 1364565617}
   _spawnAttemptIntervalBase: 2
---- !u!1001 &1383813207
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2696994504572696556, guid: ffd6d25eeb8d0da4484f592c398af972, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 104.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 2696994504572696556, guid: ffd6d25eeb8d0da4484f592c398af972, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -40.92
-      objectReference: {fileID: 0}
-    - target: {fileID: 2696994504572696556, guid: ffd6d25eeb8d0da4484f592c398af972, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 3.1208036
-      objectReference: {fileID: 0}
-    - target: {fileID: 2696994504572696556, guid: ffd6d25eeb8d0da4484f592c398af972, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2696994504572696556, guid: ffd6d25eeb8d0da4484f592c398af972, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2696994504572696556, guid: ffd6d25eeb8d0da4484f592c398af972, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2696994504572696556, guid: ffd6d25eeb8d0da4484f592c398af972, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2696994504572696556, guid: ffd6d25eeb8d0da4484f592c398af972, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2696994504572696556, guid: ffd6d25eeb8d0da4484f592c398af972, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2696994504572696556, guid: ffd6d25eeb8d0da4484f592c398af972, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8558878075661889301, guid: ffd6d25eeb8d0da4484f592c398af972, type: 3}
-      propertyPath: m_Name
-      value: Q5S2_ScanTheAnglerfish
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ffd6d25eeb8d0da4484f592c398af972, type: 3}
 --- !u!1 &1405434146
 GameObject:
   m_ObjectHideFlags: 0
@@ -38445,4 +38388,3 @@ SceneRoots:
   - {fileID: 179426141}
   - {fileID: 837221057}
   - {fileID: 1910461444}
-  - {fileID: 1383813207}

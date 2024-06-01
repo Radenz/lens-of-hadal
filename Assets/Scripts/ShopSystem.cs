@@ -40,6 +40,8 @@ public class ShopSystem : Singleton<ShopSystem>, IBind<ItemData>
     [SerializeField]
     private GameObject _scannerLv3;
 
+    private GameObject _activeItemMenu;
+
     protected override void Awake()
     {
         base.Awake();
@@ -60,8 +62,8 @@ public class ShopSystem : Singleton<ShopSystem>, IBind<ItemData>
     {
         _shelfItemContainer.SetActive(false);
         _shelfItemMenu.SetActive(true);
-        GameObject obj = Instantiate(_shopItemMenuPrefab, _shelfItemMenu.transform);
-        ShopItemMenu menu = obj.GetComponent<ShopItemMenu>();
+        _activeItemMenu = Instantiate(_shopItemMenuPrefab, _shelfItemMenu.transform);
+        ShopItemMenu menu = _activeItemMenu.GetComponent<ShopItemMenu>();
         menu.Bind(item);
         menu.Bind(_data.FromId(item.Id));
 
@@ -73,6 +75,7 @@ public class ShopSystem : Singleton<ShopSystem>, IBind<ItemData>
     {
         _shelfItemContainer.SetActive(true);
         _shelfItemMenu.SetActive(false);
+        Destroy(_activeItemMenu);
     }
 
     public void UnlockItem(string id)
