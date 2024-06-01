@@ -6,7 +6,7 @@ public class LevelManager : Singleton<LevelManager>
     private Reward[] _levelUpRewards;
 
     private int _exp;
-    private int _levelUpExp = 100;
+    private int _levelUpExp = 50;
     private int _level = 1;
 
     public int Level => _level;
@@ -16,7 +16,7 @@ public class LevelManager : Singleton<LevelManager>
 
     private static int GetRequiredExp(int level)
     {
-        return 100 + (level - 1) * 30;
+        return 25 + (level - 1) * 10;
     }
 
 
