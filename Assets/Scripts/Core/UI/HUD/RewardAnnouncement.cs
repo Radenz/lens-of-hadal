@@ -60,7 +60,8 @@ public class RewardAnnouncement : MonoBehaviour
         float offset = -Offset / 2 * (usedComponents - 1);
         foreach (GameObject component in components)
         {
-            component.transform.localPosition = component.transform.localPosition.With(y: offset);
+            RectTransform transform = (RectTransform)component.transform;
+            transform.anchoredPosition = transform.anchoredPosition.With(y: offset);
             offset += Offset;
         }
     }
