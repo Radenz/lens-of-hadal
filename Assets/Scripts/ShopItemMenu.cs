@@ -107,9 +107,11 @@ public class ShopItemMenu : MonoBehaviour, IBind<ItemInstanceData>
         {
             if (!container.activeSelf) continue;
 
-            Vector3 position = container.transform.localPosition;
+            RectTransform transform_ = container.transform.AsRect();
+            Vector3 position = transform_.anchoredPosition;
             position.x = offset;
             offset += 120;
+            transform_.anchoredPosition = position;
         }
 
         if (!CanUnlock()) _unlockButton.Disable();

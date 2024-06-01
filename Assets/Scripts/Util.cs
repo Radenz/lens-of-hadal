@@ -35,6 +35,11 @@ public static class MonoBehaviourExtensions
 
 public static class TransformExtensions
 {
+    public static RectTransform AsRect(this Transform transform)
+    {
+        return (RectTransform)transform;
+    }
+
     public static Vector3 With(this Vector3 vec, float? x = null, float? y = null, float? z = null)
     {
         vec.x = x ?? vec.x;
