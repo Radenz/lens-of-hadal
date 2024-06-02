@@ -136,6 +136,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: GenericTransparentFrameSliced
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1
+        width: 59
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 26, y: 8, z: 23, w: 10}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 136ffd34ec354534d89fbb5b39d8350e
+      internalID: -95130815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -148,7 +169,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       GenericTransparentFrame: 3050785419268063314
-      GenericTransparentFrame_0: 8673332274185737464
+      GenericTransparentFrameSliced: 8673332274185737464
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
