@@ -111,8 +111,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 6}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3846166903428966937}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -477,7 +477,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.7
+  m_Radius: 0.5
 --- !u!114 &6122238388119112151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -686,7 +686,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.6
+  m_Radius: 0.4
 --- !u!114 &6435904639542989363
 MonoBehaviour:
   m_ObjectHideFlags: 0
