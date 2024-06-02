@@ -12,6 +12,8 @@ public class Announcer : Singleton<Announcer>
     [SerializeField]
     private GameObject _scanAnnouncementPrefab;
     [SerializeField]
+    private GameObject _objectScanAnnouncementPrefab;
+    [SerializeField]
     private GameObject _discoveryAnnouncementPrefab;
     [SerializeField]
     private GameObject _rewardAnnouncementPrefab;
@@ -127,6 +129,16 @@ public class Announcer : Singleton<Announcer>
         GameObject obj = Instantiate(_scanAnnouncementPrefab);
         ScanAnnouncement announcement = obj.GetComponent<ScanAnnouncement>();
         announcement.Creature = creature;
+        announcement.EnergyPowder = energyPowder;
+        announcement.Seaweed = seaweed;
+        announcement.ScrapMetal = scrapMetal;
+    }
+
+    public void AnnounceObjectScan(Sprite sprite, int energyPowder, int seaweed, int scrapMetal)
+    {
+        GameObject obj = Instantiate(_objectScanAnnouncementPrefab);
+        ObjectScanAnnouncement announcement = obj.GetComponent<ObjectScanAnnouncement>();
+        announcement.Sprite = sprite;
         announcement.EnergyPowder = energyPowder;
         announcement.Seaweed = seaweed;
         announcement.ScrapMetal = scrapMetal;

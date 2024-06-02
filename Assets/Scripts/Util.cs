@@ -64,6 +64,14 @@ public static class TransformExtensions
     }
 }
 
+public static class VectorExtensions
+{
+    public static int PickBetween(this Vector2Int range)
+    {
+        return Random.Range(range.x, range.y);
+    }
+}
+
 public static class ColorExtensions
 {
     public static Color With(this Color color, float? r = null, float? g = null, float? b = null, float? a = null)
