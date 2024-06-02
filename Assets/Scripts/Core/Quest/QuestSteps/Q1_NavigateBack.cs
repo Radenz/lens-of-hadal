@@ -37,6 +37,7 @@ public class Q1_NavigateBack : QuestStep
         CinemachineVirtualCamera _playerVCam = GameObject.FindGameObjectWithTag("PlayerVCam").GetComponent<CinemachineVirtualCamera>();
         CameraManager.Instance.ChooseCamera(_gate1VCam);
 
+        EventManager.Instance.DisablePlayerActions();
         await Awaitable.WaitForSecondsAsync(2f);
 
         await _gate1.transform
@@ -44,6 +45,7 @@ public class Q1_NavigateBack : QuestStep
              .SetEase(Ease.InOutQuad)
              .AsyncWaitForCompletion();
 
+        EventManager.Instance.EnablePlayerActions();
         CameraManager.Instance.ChooseCamera(_playerVCam);
 
         DisplaySecondTarget();
@@ -58,6 +60,7 @@ public class Q1_NavigateBack : QuestStep
         CinemachineVirtualCamera _playerVCam = GameObject.FindGameObjectWithTag("PlayerVCam").GetComponent<CinemachineVirtualCamera>();
         CameraManager.Instance.ChooseCamera(_gate2VCam);
 
+        EventManager.Instance.DisablePlayerActions();
         await Awaitable.WaitForSecondsAsync(2f);
 
         await _gate2.transform
@@ -65,6 +68,7 @@ public class Q1_NavigateBack : QuestStep
              .SetEase(Ease.InOutQuad)
              .AsyncWaitForCompletion();
 
+        EventManager.Instance.EnablePlayerActions();
         CameraManager.Instance.ChooseCamera(_playerVCam);
 
         DisplayLastTarget();
