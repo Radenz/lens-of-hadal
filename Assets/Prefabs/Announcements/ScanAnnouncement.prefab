@@ -1057,6 +1057,7 @@ MonoBehaviour:
   ScrapMetal: 0
   _containerTransform: {fileID: 4391808413143933051}
   _image: {fileID: 1945572940109195569}
+  _imageTransform: {fileID: 8743146427450292382}
   _discoveryBar: {fileID: 2028094592182725898}
   _energyPowderRewardLabelContainer: {fileID: 1590772737871907980}
   _energyPowderRewardLabel: {fileID: 7415895915295229896}

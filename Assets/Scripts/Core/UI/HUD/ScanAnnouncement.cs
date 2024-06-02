@@ -16,6 +16,8 @@ public class ScanAnnouncement : MonoBehaviour
     [SerializeField]
     private Image _image;
     [SerializeField]
+    private RectTransform _imageTransform;
+    [SerializeField]
     private Bar _discoveryBar;
     [SerializeField]
     private GameObject _energyPowderRewardLabelContainer;
@@ -33,11 +35,21 @@ public class ScanAnnouncement : MonoBehaviour
     [SerializeField]
     private AudioClip _sfx;
 
+    private const float MaxWidth = 160;
+    private const float MaxHeight = 96;
+
     private void Start()
     {
         AudioManager.Instance.PlaySFX(_sfx);
 
         _image.sprite = Creature.Sprite;
+        Vector2 spriteSize = Creature.Sprite.rect.size;
+        float xMaxScale = MaxWidth / spriteSize.x;
+        float yMaxScale = MaxHeight / spriteSize.y;
+        float spriteScale = Mathf.Min(xMaxScale, yMaxScale);
+        _imageTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, spriteSize.x * spriteScale);
+        _imageTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, spriteSize.y * spriteScale);
+
         if (BestiaryManager.Instance.IsCreatureDiscovered(Creature))
         {
             _image.color = Color.white;
