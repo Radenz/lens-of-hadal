@@ -12,6 +12,11 @@ public class CreatureSpawner : MonoBehaviour
     [SerializeField]
     private float _spawnAttemptIntervalBase;
 
+    [SerializeField, Tooltip("How far does any creature considered to contribute to spawn attempt failure.")]
+    private float _spawnFailRadius = 6;
+    [SerializeField, Tooltip("How many creatures detected in the radius for spawn attempt to fail.")]
+    private int _spawnFailAmount = 3;
+
     private TimerSignal _signal;
 
     private float _xExtent;
@@ -39,16 +44,31 @@ public class CreatureSpawner : MonoBehaviour
         if (CreatureManager.Instance.CreatureCount < CreatureManager.Instance.MaxCreatures)
         {
             Vector3 spawnPoint = PickSpawnPoint();
-            float distanceToPlayer = DistanceToPlayer(spawnPoint);
 
-
-            if (distanceToPlayer >= CreatureManager.Instance.SpawnRadius
-                && distanceToPlayer < CreatureManager.Instance.DespawnRadius
-            )
+            if (CanSpawn(spawnPoint))
                 Spawn(spawnPoint);
         }
 
         _signal = Timer.Instance.SetTimer(AttemptPeriodicSpawn, SpawnAttemptInterval());
+    }
+
+    private bool CanSpawn(Vector3 spawnPoint)
+    {
+        float distanceToPlayer = DistanceToPlayer(spawnPoint);
+
+        if (distanceToPlayer < CreatureManager.Instance.SpawnRadius
+            || distanceToPlayer > CreatureManager.Instance.DespawnRadius)
+            return false;
+
+        int nearbyCreatures = 0;
+        foreach (CreatureDespawner creature in CreatureManager.Instance.Creatures)
+        {
+            Vector3 position = creature.transform.position;
+            if (Vector2.Distance(position, spawnPoint) < _spawnFailRadius)
+                nearbyCreatures++;
+        }
+
+        return nearbyCreatures <= _spawnFailAmount;
     }
 
     private float DistanceToPlayer(Vector3 position)

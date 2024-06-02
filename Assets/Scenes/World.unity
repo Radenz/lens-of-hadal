@@ -1041,8 +1041,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 6.762203, y: -2.2664013, z: 0}
-    m_Extent: {x: 87.627304, y: 34.302002, z: 0}
+    m_Center: {x: 6.761551, y: -2.2666492, z: 0}
+    m_Extent: {x: 87.62765, y: 34.302048, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1689,6 +1689,8 @@ MonoBehaviour:
   _creaturePrefab: {fileID: 7457342149956301026, guid: 6b8c2001973cb994297fd13042d64c83, type: 3}
   _boundsCollider: {fileID: 48135179}
   _spawnAttemptIntervalBase: 2
+  _spawnFailRadius: 6
+  _spawnFailAmount: 3
 --- !u!61 &48135179
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5819,8 +5821,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 4.4744034, y: -44.487648, z: 0}
-    m_Extent: {x: 123.7739, y: 49.71225, z: 0}
+    m_Center: {x: 4.4741974, y: -44.4867, z: 0}
+    m_Extent: {x: 123.773895, y: 49.7121, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -9962,11 +9964,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5794888017165219729, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -53.9
+      value: 13.34
       objectReference: {fileID: 0}
     - target: {fileID: 5794888017165219729, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -87.51
+      value: -58.28
       objectReference: {fileID: 0}
     - target: {fileID: 5794888017165219729, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10700,6 +10702,8 @@ MonoBehaviour:
   _creaturePrefab: {fileID: 7457342149956301026, guid: 6b8c2001973cb994297fd13042d64c83, type: 3}
   _boundsCollider: {fileID: 481464546}
   _spawnAttemptIntervalBase: 2
+  _spawnFailRadius: 6
+  _spawnFailAmount: 3
 --- !u!61 &481464546
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10905,6 +10909,8 @@ MonoBehaviour:
   _creaturePrefab: {fileID: 2203635375368680294, guid: bb9d276208ef5ca4aa2b0d07b275253f, type: 3}
   _boundsCollider: {fileID: 488292682}
   _spawnAttemptIntervalBase: 2
+  _spawnFailRadius: 6
+  _spawnFailAmount: 3
 --- !u!61 &488292682
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11879,7 +11885,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -53.9, y: -87.51, z: -11.48}
+  m_LocalPosition: {x: 13.34, y: -58.28, z: -11.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15247,8 +15253,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 26.011951, y: -91.0811, z: 0}
-    m_Extent: {x: 125.39755, y: 36.8722, z: 0}
+    m_Center: {x: 26.010647, y: -91.0797, z: 0}
+    m_Extent: {x: 125.397644, y: 36.8719, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -16393,6 +16399,8 @@ MonoBehaviour:
   _creaturePrefab: {fileID: 3045631472178583046, guid: c3c1d5d8b52491c49bbd8b754b49a3e3, type: 3}
   _boundsCollider: {fileID: 748580852}
   _spawnAttemptIntervalBase: 4
+  _spawnFailRadius: 6
+  _spawnFailAmount: 3
 --- !u!61 &748580852
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16726,6 +16734,8 @@ MonoBehaviour:
   _creaturePrefab: {fileID: 7457342149956301026, guid: 0402187fc3a108d4096725be79d0f2c1, type: 3}
   _boundsCollider: {fileID: 796822616}
   _spawnAttemptIntervalBase: 3
+  _spawnFailRadius: 6
+  _spawnFailAmount: 3
 --- !u!61 &796822616
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17080,8 +17090,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 27.969246, y: -37.28515, z: 0}
-    m_Extent: {x: 123.05555, y: 48.00905, z: 0}
+    m_Center: {x: 27.968899, y: -37.28485, z: 0}
+    m_Extent: {x: 123.0555, y: 48.00885, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -18119,6 +18129,8 @@ MonoBehaviour:
   _creaturePrefab: {fileID: 7457342149956301026, guid: 6b8c2001973cb994297fd13042d64c83, type: 3}
   _boundsCollider: {fileID: 894611574}
   _spawnAttemptIntervalBase: 2
+  _spawnFailRadius: 6
+  _spawnFailAmount: 3
 --- !u!61 &894611574
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21066,6 +21078,8 @@ MonoBehaviour:
   _creaturePrefab: {fileID: 3045631472178583046, guid: c2d65d7c0c54bd6469f82c1475a29223, type: 3}
   _boundsCollider: {fileID: 1153726449}
   _spawnAttemptIntervalBase: 2
+  _spawnFailRadius: 6
+  _spawnFailAmount: 3
 --- !u!1 &1162826632
 GameObject:
   m_ObjectHideFlags: 0
@@ -24063,6 +24077,8 @@ MonoBehaviour:
   _creaturePrefab: {fileID: 3045631472178583046, guid: c2d65d7c0c54bd6469f82c1475a29223, type: 3}
   _boundsCollider: {fileID: 1364565617}
   _spawnAttemptIntervalBase: 2
+  _spawnFailRadius: 6
+  _spawnFailAmount: 3
 --- !u!1 &1405434146
 GameObject:
   m_ObjectHideFlags: 0
@@ -25553,7 +25569,7 @@ Transform:
   m_GameObject: {fileID: 1510408523}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -53.9, y: -87.51, z: -11.48}
+  m_LocalPosition: {x: 13.34, y: -58.28, z: -11.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -32411,6 +32427,8 @@ MonoBehaviour:
   _creaturePrefab: {fileID: 2203635375368680294, guid: bb9d276208ef5ca4aa2b0d07b275253f, type: 3}
   _boundsCollider: {fileID: 1792356513}
   _spawnAttemptIntervalBase: 2
+  _spawnFailRadius: 6
+  _spawnFailAmount: 3
 --- !u!61 &1792356513
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32857,6 +32875,8 @@ MonoBehaviour:
   _creaturePrefab: {fileID: 3045631472178583046, guid: c2d65d7c0c54bd6469f82c1475a29223, type: 3}
   _boundsCollider: {fileID: 1809836691}
   _spawnAttemptIntervalBase: 2
+  _spawnFailRadius: 6
+  _spawnFailAmount: 3
 --- !u!1 &1814846102
 GameObject:
   m_ObjectHideFlags: 0

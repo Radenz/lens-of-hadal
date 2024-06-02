@@ -13,6 +13,7 @@ public class CreatureManager : Singleton<CreatureManager>
 
     private readonly List<CreatureDespawner> _creatures = new();
     public int CreatureCount => _creatures.Count;
+    public List<CreatureDespawner> Creatures => _creatures;
 
     public void LogCount()
     {
