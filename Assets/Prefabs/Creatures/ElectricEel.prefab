@@ -541,7 +541,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 6
+  m_Radius: 5
 --- !u!114 &7847607436234664453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -636,7 +636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 20
   _zapDelay: 2
-  _zapEscapeRadius: 2.5
+  _zapEscapeRadius: 3
   _zapPrefab: {fileID: 7934661190764542453, guid: 186c43387b8ed474ea4cd6fbc0dac865, type: 3}
   _static: {fileID: 400582320186431267}
   _rigidbody: {fileID: 6570103364093839564}
@@ -839,7 +839,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 4
+  m_Radius: 3
 --- !u!114 &5086855361259740972
 MonoBehaviour:
   m_ObjectHideFlags: 0

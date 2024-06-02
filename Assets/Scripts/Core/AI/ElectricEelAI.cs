@@ -75,6 +75,8 @@ public class ElectricEelAI : MonoBehaviour
 
         _detectionRange.Entered += OnDetectPlayer;
         _fleeingRange.Exited += OnLosePlayer;
+        _zapEscapeRange.Exited += OnEscapeZap;
+        _zapEscapeRange.Entered += OnReenterZapRadius;
 
         _ai.maxSpeed = _speed;
         _ai.destination = _transform.RandomWithinRadius(_roamingRadius);
@@ -121,9 +123,9 @@ public class ElectricEelAI : MonoBehaviour
 
         _static.SetActive(true);
         await Awaitable.WaitForSecondsAsync(_zapDelay);
+        _isTryingToZap = false;
         _static.SetActive(false);
 
-        _isTryingToZap = false;
         if (DistanceToPlayer() > _zapEscapeRadius) return;
         Zap();
     }
@@ -211,6 +213,17 @@ public class ElectricEelAI : MonoBehaviour
     {
         State = ElectricEelState.Fleeing;
         _shouldZap = true;
+    }
+
+    private void OnEscapeZap()
+    {
+        _static.SetActive(false);
+    }
+
+    private void OnReenterZapRadius()
+    {
+        if (_isTryingToZap)
+            _static.SetActive(true);
     }
 
     private void OnLosePlayer()
