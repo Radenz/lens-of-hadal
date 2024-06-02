@@ -38,7 +38,7 @@ public class QuestMaster : Singleton<QuestMaster>
         if (_transform.childCount > 0)
         {
             RectTransform lastChild = (RectTransform)_transform.GetChild(_transform.childCount - 1);
-            _totalHeight = lastChild.rect.height;
+            _totalHeight += lastChild.rect.height;
         }
 
         GameObject obj = Instantiate(_questPrefab, _transform);

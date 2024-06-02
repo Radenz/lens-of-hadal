@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +12,10 @@ public class RewardAnnouncement : MonoBehaviour
 
     [Header("References")]
     [SerializeField]
+    private TextMeshProUGUI _title;
+    [SerializeField]
+    private TextMeshProUGUI _titleOutline;
+    [SerializeField]
     private Image _image;
     [SerializeField]
     private TextMeshProUGUI _label;
@@ -21,7 +24,8 @@ public class RewardAnnouncement : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI _goldLabel;
 
-    private const float Offset = -160;
+    private const float Offset = 80;
+    private const float Margin = -240;
 
     [SerializeField]
     private AudioClip _sfx;
@@ -30,6 +34,9 @@ public class RewardAnnouncement : MonoBehaviour
     {
         AudioManager.Instance.PlaySFX(_sfx);
         EventManager.Instance.DisableCreatures();
+
+        _title.text = Title;
+        _titleOutline.text = Title;
 
         int usedComponents = 2;
         List<GameObject> components = new();
@@ -57,12 +64,13 @@ public class RewardAnnouncement : MonoBehaviour
             components.Add(_goldLabelContainer);
         }
 
-        float offset = -Offset / 2 * (usedComponents - 1);
+        float offset = (usedComponents - 1) * Offset;
+
         foreach (GameObject component in components)
         {
             RectTransform transform = (RectTransform)component.transform;
             transform.anchoredPosition = transform.anchoredPosition.With(y: offset);
-            offset += Offset;
+            offset += Margin;
         }
     }
 

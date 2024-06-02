@@ -67,7 +67,7 @@ public class QuestDisplay : MonoBehaviour
             return;
         }
 
-        quest.Reward.Give();
+        quest.Reward.Give(title: "QUEST COMPLETED");
         _claimRewardButton.SetActive(false);
         _completedLabel.SetActive(true);
     }

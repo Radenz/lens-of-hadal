@@ -50,6 +50,6 @@ public class LevelManager : Singleton<LevelManager>
             : null;
 
         if (reward != null)
-            reward.Give();
+            reward.Give(title: "LEVEL UP");
     }
 }
