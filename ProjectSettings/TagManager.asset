@@ -60,15 +60,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Water
+    uniqueID: 2019821833
+    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Creature
-    uniqueID: 2091877501
     locked: 0
   - name: Terrain
     uniqueID: 2536656197
     locked: 0
-  - name: Water
-    uniqueID: 2019821833
+  - name: Creature
+    uniqueID: 2091877501
+    locked: 0
+  - name: Entity
+    uniqueID: 3610044509
     locked: 0
