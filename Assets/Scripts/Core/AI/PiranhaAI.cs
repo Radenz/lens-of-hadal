@@ -1,4 +1,3 @@
-using NaughtyAttributes;
 using Pathfinding;
 using UnityEngine;
 
@@ -13,6 +12,8 @@ public class PiranhaAI : MonoBehaviour
     [Header("Others")]
     [SerializeField]
     private Rigidbody2D _rigidbody;
+    [SerializeField]
+    private Animator _animator;
 
     [SerializeField]
     private RangeTrigger _detectionRange;
@@ -113,13 +114,20 @@ public class PiranhaAI : MonoBehaviour
         _ai.destination = _player.position;
     }
 
-    private void OnAttack()
+    private async void OnAttack()
     {
         if (State != PiranhaState.Attacking) return;
         if (!PlayerController.Instance.IsInvincible)
+        {
             AudioManager.Instance.PlaySFX(_biteSFX);
-        PlayerController.Instance.Damage(_damage);
+            PlayerController.Instance.Damage(_damage);
+            _animator.SetBool("IsAttacking", true);
+        }
         State = PiranhaState.Retreating;
+
+        await Awaitable.WaitForSecondsAsync(.5f);
+        _animator.SetBool("IsAttacking", false);
+
     }
 
     private void OnRetreating()

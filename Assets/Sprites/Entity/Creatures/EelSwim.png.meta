@@ -1,0 +1,777 @@
+fileFormatVersion: 2
+guid: 9765ac111f314334caec67aa008eedf4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8215805398859435973
+    second: EelSwim_0
+  - first:
+      213: 4288141093979512696
+    second: EelSwim_1
+  - first:
+      213: 3490057879482472151
+    second: EelSwim_2
+  - first:
+      213: 5666302474869924252
+    second: EelSwim_3
+  - first:
+      213: -6778534358856725339
+    second: EelSwim_4
+  - first:
+      213: -7572648641062825858
+    second: EelSwim_5
+  - first:
+      213: 338165701519372356
+    second: EelSwim_6
+  - first:
+      213: 7667959977416445341
+    second: EelSwim_7
+  - first:
+      213: -7956520746343418676
+    second: EelSwim_8
+  - first:
+      213: -2359302756731354016
+    second: EelSwim_9
+  - first:
+      213: -554378394906218843
+    second: EelSwim_10
+  - first:
+      213: -3102778480742130063
+    second: EelSwim_11
+  - first:
+      213: 8760054001705895386
+    second: EelSwim_12
+  - first:
+      213: 4395693315334593609
+    second: EelSwim_13
+  - first:
+      213: -5011557305528341377
+    second: EelSwim_14
+  - first:
+      213: 9172225829700479604
+    second: EelSwim_15
+  - first:
+      213: 3887667377059728414
+    second: EelSwim_16
+  - first:
+      213: -8133386818132254561
+    second: EelSwim_17
+  - first:
+      213: 8436092134925897439
+    second: EelSwim_18
+  - first:
+      213: -3485603678128766840
+    second: EelSwim_19
+  - first:
+      213: 5014070938901553982
+    second: EelSwim_20
+  - first:
+      213: -7914084386494159391
+    second: EelSwim_21
+  - first:
+      213: 4868370171567982526
+    second: EelSwim_22
+  - first:
+      213: 4628015635673863249
+    second: EelSwim_23
+  - first:
+      213: 1667962080649844094
+    second: EelSwim_24
+  - first:
+      213: -1454944482451570563
+    second: EelSwim_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EelSwim_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 725
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d7b4ff75ce123b41b6c10b129648a41
+      internalID: 916907634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EelSwim_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 696
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba60087392d31b34f8036d82098e2fbf
+      internalID: -1450335523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EelSwim_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 667
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01bcb90eda2cb6e4bb045e6bad203167
+      internalID: -719940832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EelSwim_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 638
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cbb5fe4a8b2453499b7f07bd5b3d98b
+      internalID: 237902996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EelSwim_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 609
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de260a1d71bf231419b1709ba16e2e9d
+      internalID: 1329182769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EelSwim_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 580
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74bf52be46fcf874cb675ea9bbbf117f
+      internalID: -334538440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EelSwim_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 551
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 030153655570e2d4bb9f10fa8b48ff55
+      internalID: -696015446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EelSwim_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 522
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 323a251d5c6b7ed43a95c796e954eafd
+      internalID: 245719291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EelSwim_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 493
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b6a8581ca146024b8e699cf8838b158
+      internalID: -412952554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EelSwim_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 464
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 836bccbe235ce66439fc7fa5cade34d8
+      internalID: 271923857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EelSwim_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 435
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b5822c44aa32a44ba0ef95635086ea2
+      internalID: -1350811779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EelSwim_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 406
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fe01eec30f031e48a1844b2575ee78a
+      internalID: 402829570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EelSwim_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 377
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5e83a3a99cbf9544b40839ae6173cb7
+      internalID: -1974332113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EelSwim_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 348
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a47e132608be5e04a8f4511fed4ef1de
+      internalID: 823764302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EelSwim_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 319
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c86a288afab43ec43ac3ea21ff5b4748
+      internalID: -1911141285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EelSwim_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 290
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e3fac91d57e62d47af6201329625d58
+      internalID: 1932698489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EelSwim_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 261
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d5b3f655d7914f4a98d63b52cd940ca
+      internalID: 1909730752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EelSwim_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 232
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 090674f47733249428929f97b8de10bc
+      internalID: -1396485458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EelSwim_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 203
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a807c62268b5ea3448cc39372793e49e
+      internalID: 1030178306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EelSwim_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 174
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c7be603e6e7b8e46b0f7c74cb06fcce
+      internalID: 2127908566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EelSwim_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 145
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73abd965eb76823498df965f5ebedf55
+      internalID: 608961533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EelSwim_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 116
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eece5dd6355ba64c97386a7744a0db2
+      internalID: -1941431562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EelSwim_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 87
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49c11b00288b5904493c612f6d34aa96
+      internalID: -1512994620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EelSwim_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 58
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c50417969b48eb44b0d1616a06821f3
+      internalID: -1283912042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EelSwim_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 29
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feee39066e2fb624694578a6e6476e59
+      internalID: -1263604923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EelSwim_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 725e3dc201e824b479295ebed85b8d24
+      internalID: -397212267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5cd543a1ce493ff48b94f46f7751d468
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      EelSwim_0: 916907634
+      EelSwim_1: -1450335523
+      EelSwim_10: -1350811779
+      EelSwim_11: 402829570
+      EelSwim_12: -1974332113
+      EelSwim_13: 823764302
+      EelSwim_14: -1911141285
+      EelSwim_15: 1932698489
+      EelSwim_16: 1909730752
+      EelSwim_17: -1396485458
+      EelSwim_18: 1030178306
+      EelSwim_19: 2127908566
+      EelSwim_2: -719940832
+      EelSwim_20: 608961533
+      EelSwim_21: -1941431562
+      EelSwim_22: -1512994620
+      EelSwim_23: -1283912042
+      EelSwim_24: -1263604923
+      EelSwim_25: -397212267
+      EelSwim_3: 237902996
+      EelSwim_4: 1329182769
+      EelSwim_5: -334538440
+      EelSwim_6: -696015446
+      EelSwim_7: 245719291
+      EelSwim_8: -412952554
+      EelSwim_9: 271923857
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

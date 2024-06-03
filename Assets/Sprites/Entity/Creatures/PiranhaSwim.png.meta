@@ -1,0 +1,777 @@
+fileFormatVersion: 2
+guid: 052c61d9a0f1b1847bebef1599307da1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4356804856927287969
+    second: PiranhaSwim_0
+  - first:
+      213: -7403951424797917787
+    second: PiranhaSwim_1
+  - first:
+      213: -7914677705254814120
+    second: PiranhaSwim_2
+  - first:
+      213: 7663871831003055843
+    second: PiranhaSwim_3
+  - first:
+      213: 8462736612323833754
+    second: PiranhaSwim_4
+  - first:
+      213: -6474454434453884787
+    second: PiranhaSwim_5
+  - first:
+      213: -9049491510400275860
+    second: PiranhaSwim_6
+  - first:
+      213: 7769724716850772872
+    second: PiranhaSwim_7
+  - first:
+      213: -3397026777221444753
+    second: PiranhaSwim_8
+  - first:
+      213: 8150439830325138620
+    second: PiranhaSwim_9
+  - first:
+      213: -8555202780535525633
+    second: PiranhaSwim_10
+  - first:
+      213: 3725986184604086448
+    second: PiranhaSwim_11
+  - first:
+      213: 322168856109792744
+    second: PiranhaSwim_12
+  - first:
+      213: 7440863961261854500
+    second: PiranhaSwim_13
+  - first:
+      213: 901121022907017422
+    second: PiranhaSwim_14
+  - first:
+      213: 2720994593838786291
+    second: PiranhaSwim_15
+  - first:
+      213: 7822364246375008058
+    second: PiranhaSwim_16
+  - first:
+      213: 4425232530781606479
+    second: PiranhaSwim_17
+  - first:
+      213: -5436233220943224178
+    second: PiranhaSwim_18
+  - first:
+      213: -6235711570478428473
+    second: PiranhaSwim_19
+  - first:
+      213: 5689193663985740879
+    second: PiranhaSwim_20
+  - first:
+      213: 6080218232048703532
+    second: PiranhaSwim_21
+  - first:
+      213: -2941263664046124163
+    second: PiranhaSwim_22
+  - first:
+      213: 2099615780267954738
+    second: PiranhaSwim_23
+  - first:
+      213: 3090019171309636676
+    second: PiranhaSwim_24
+  - first:
+      213: -1009501075605115348
+    second: PiranhaSwim_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PiranhaSwim_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 725
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f550723e0158983c0800000000000000
+      internalID: -4356804856927287969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaSwim_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 696
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ad3cae2861ef3990800000000000000
+      internalID: -7403951424797917787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaSwim_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 667
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85e35929f8a692290800000000000000
+      internalID: -7914677705254814120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaSwim_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 638
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e64f0b43da8b5a60800000000000000
+      internalID: 7663871831003055843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaSwim_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 609
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9731458c1ea17570800000000000000
+      internalID: 8462736612323833754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaSwim_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 580
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d807ce7befd1626a0800000000000000
+      internalID: -6474454434453884787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaSwim_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 551
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6aada4ea6fb96280800000000000000
+      internalID: -9049491510400275860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaSwim_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 522
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88b7676d67b93db60800000000000000
+      internalID: 7769724716850772872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaSwim_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 493
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6bc933f4265bd0d0800000000000000
+      internalID: -3397026777221444753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaSwim_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 464
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb499b1c7dd2c1170800000000000000
+      internalID: 8150439830325138620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaSwim_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 435
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffeeeb40660d54980800000000000000
+      internalID: -8555202780535525633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaSwim_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 406
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b0f65b91bc55b330800000000000000
+      internalID: 3725986184604086448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaSwim_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 377
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ed3e122ed2987400800000000000000
+      internalID: 322168856109792744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaSwim_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 348
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42fc4017952434760800000000000000
+      internalID: 7440863961261854500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaSwim_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 319
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec86206cbcc618c00800000000000000
+      internalID: 901121022907017422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaSwim_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 290
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f6e489aa2ae2c520800000000000000
+      internalID: 2720994593838786291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaSwim_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 261
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3706e066de9e8c60800000000000000
+      internalID: 7822364246375008058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaSwim_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 232
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f429db57a85996d30800000000000000
+      internalID: 4425232530781606479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaSwim_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 203
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e82608d10be9e84b0800000000000000
+      internalID: -5436233220943224178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaSwim_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 174
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ce07d76d5d4679a0800000000000000
+      internalID: -6235711570478428473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaSwim_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 145
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4ce548ae7314fe40800000000000000
+      internalID: 5689193663985740879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaSwim_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 116
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c28dd168446416450800000000000000
+      internalID: 6080218232048703532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaSwim_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 87
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7354c1f7488e27d0800000000000000
+      internalID: -2941263664046124163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaSwim_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 58
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2321dab8d65532d10800000000000000
+      internalID: 2099615780267954738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaSwim_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 29
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44cce0f8014f1ea20800000000000000
+      internalID: 3090019171309636676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaSwim_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2eae2cce188df1f0800000000000000
+      internalID: -1009501075605115348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 08283dc5935ab5e4292290c01a4a411e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PiranhaSwim_0: -4356804856927287969
+      PiranhaSwim_1: -7403951424797917787
+      PiranhaSwim_10: -8555202780535525633
+      PiranhaSwim_11: 3725986184604086448
+      PiranhaSwim_12: 322168856109792744
+      PiranhaSwim_13: 7440863961261854500
+      PiranhaSwim_14: 901121022907017422
+      PiranhaSwim_15: 2720994593838786291
+      PiranhaSwim_16: 7822364246375008058
+      PiranhaSwim_17: 4425232530781606479
+      PiranhaSwim_18: -5436233220943224178
+      PiranhaSwim_19: -6235711570478428473
+      PiranhaSwim_2: -7914677705254814120
+      PiranhaSwim_20: 5689193663985740879
+      PiranhaSwim_21: 6080218232048703532
+      PiranhaSwim_22: -2941263664046124163
+      PiranhaSwim_23: 2099615780267954738
+      PiranhaSwim_24: 3090019171309636676
+      PiranhaSwim_25: -1009501075605115348
+      PiranhaSwim_3: 7663871831003055843
+      PiranhaSwim_4: 8462736612323833754
+      PiranhaSwim_5: -6474454434453884787
+      PiranhaSwim_6: -9049491510400275860
+      PiranhaSwim_7: 7769724716850772872
+      PiranhaSwim_8: -3397026777221444753
+      PiranhaSwim_9: 8150439830325138620
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

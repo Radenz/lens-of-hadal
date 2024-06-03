@@ -191,9 +191,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1456289847380572231}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9945da938e4f30243abc9d12269dec66, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1cd68727afb7dda4aae6da6e27835896, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -545,6 +545,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 15
   _rigidbody: {fileID: 6562847590079970757}
+  _animator: {fileID: 3541499616572644952}
   _detectionRange: {fileID: 5023998313401594405}
   _aggresionRange: {fileID: 8587315421901680420}
   _attackHitboxTrigger: {fileID: 6122238388119112151}

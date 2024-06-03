@@ -1,0 +1,777 @@
+fileFormatVersion: 2
+guid: 38f220353a08fc84ea62e7b31ac45588
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8599926843223402232
+    second: PiranhaAttack_0
+  - first:
+      213: -7355042950470640883
+    second: PiranhaAttack_1
+  - first:
+      213: 7504991447748995740
+    second: PiranhaAttack_2
+  - first:
+      213: -1500359636945979350
+    second: PiranhaAttack_3
+  - first:
+      213: -5753469826691346877
+    second: PiranhaAttack_4
+  - first:
+      213: 1808476522304007242
+    second: PiranhaAttack_5
+  - first:
+      213: 1710907492117156700
+    second: PiranhaAttack_6
+  - first:
+      213: -2565956179600698733
+    second: PiranhaAttack_7
+  - first:
+      213: 4179980535739296984
+    second: PiranhaAttack_8
+  - first:
+      213: 6354719220021208464
+    second: PiranhaAttack_9
+  - first:
+      213: -6376627607825879489
+    second: PiranhaAttack_10
+  - first:
+      213: -6008560823465093697
+    second: PiranhaAttack_11
+  - first:
+      213: 3121636967663663774
+    second: PiranhaAttack_12
+  - first:
+      213: 8577128060172522098
+    second: PiranhaAttack_13
+  - first:
+      213: 7873363346181564699
+    second: PiranhaAttack_14
+  - first:
+      213: 6140869920626335411
+    second: PiranhaAttack_15
+  - first:
+      213: -6471881446158659404
+    second: PiranhaAttack_16
+  - first:
+      213: 6727764887207727627
+    second: PiranhaAttack_17
+  - first:
+      213: 2301268597633501628
+    second: PiranhaAttack_18
+  - first:
+      213: 3989680099464617489
+    second: PiranhaAttack_19
+  - first:
+      213: 5691546599311113211
+    second: PiranhaAttack_20
+  - first:
+      213: -1865669590749318456
+    second: PiranhaAttack_21
+  - first:
+      213: -162130055580163927
+    second: PiranhaAttack_22
+  - first:
+      213: -7417441120991129755
+    second: PiranhaAttack_23
+  - first:
+      213: 7266362786012528034
+    second: PiranhaAttack_24
+  - first:
+      213: 8410076032940768226
+    second: PiranhaAttack_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PiranhaAttack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 725
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 036a81aaa7ced864fbc444c68698de39
+      internalID: 407369969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaAttack_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 696
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9832eac448d14045a05a2c6f7298b21
+      internalID: 928058483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaAttack_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 667
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baba8eb81753ad94c8a754a69f937b8f
+      internalID: -1455944901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaAttack_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 638
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4fdd90e3e5c2364aa7e8ea7fb523911
+      internalID: 1026043041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaAttack_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 609
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0ada7049b92d494b969aa860933ec4d
+      internalID: 597712488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaAttack_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 580
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2183ecbda74d95e4c8ac7761cb54587a
+      internalID: 566288528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaAttack_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 551
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa4fa83f099586541989b525251f6fb9
+      internalID: 474832269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaAttack_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 522
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dcdffec47a315f409c118f1a7fac933
+      internalID: -424122640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaAttack_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 493
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a139a4ecfb65d46a7c505fc9b50861
+      internalID: -2144567949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaAttack_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 464
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d443d2bbb1407464893ef1e802d51189
+      internalID: 69288458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaAttack_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 435
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bcd765da6d9ee4488180ae28a30072e
+      internalID: -605094176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaAttack_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 406
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba33a526355cd38428df2d48ddceed34
+      internalID: 1646151595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaAttack_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 377
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca33cc3b37b260347a84c1202e67b425
+      internalID: -1914307658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaAttack_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 348
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecea18229d4ced844aebf6cb59b081f5
+      internalID: 613127438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaAttack_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 319
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b293b3f44cc361a45803c39f2150d8bc
+      internalID: -203010704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaAttack_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 290
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82f58874f734a394692894273747143c
+      internalID: -1062406006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaAttack_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 261
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db898f268de1a841bd3108d7f734797
+      internalID: -2083441508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaAttack_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 232
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9827908276e6b3b4b890c93155f97373
+      internalID: -493588680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaAttack_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 203
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 547c46edd13a66b449b25046a7bb7b50
+      internalID: 1398554850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaAttack_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 174
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b536c60dd0b067b43ab6ad76e4f2c7d9
+      internalID: 1439784315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaAttack_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 145
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34dde4d9a3b497a4f91ee786f85ae22b
+      internalID: -1425986719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaAttack_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 116
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f42002d290f93fe4189ff5560a236fdf
+      internalID: -1184627321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaAttack_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 87
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4669ece1a013ebc4da7e8b9173a0ddfb
+      internalID: 1067546008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaAttack_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 58
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc9dc2b04637c2d4cbc99db15c3b9eec
+      internalID: -1269377839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaAttack_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 29
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 104f6309b300bb84a82a0626d311671e
+      internalID: 1561185561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PiranhaAttack_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c2cb6e4a529d6d42b65be0d1f7b42ec
+      internalID: 959287785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 56f20a374f49ba646a5b93b079c77b34
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PiranhaAttack_0: 407369969
+      PiranhaAttack_1: 928058483
+      PiranhaAttack_10: -605094176
+      PiranhaAttack_11: 1646151595
+      PiranhaAttack_12: -1914307658
+      PiranhaAttack_13: 613127438
+      PiranhaAttack_14: -203010704
+      PiranhaAttack_15: -1062406006
+      PiranhaAttack_16: -2083441508
+      PiranhaAttack_17: -493588680
+      PiranhaAttack_18: 1398554850
+      PiranhaAttack_19: 1439784315
+      PiranhaAttack_2: -1455944901
+      PiranhaAttack_20: -1425986719
+      PiranhaAttack_21: -1184627321
+      PiranhaAttack_22: 1067546008
+      PiranhaAttack_23: -1269377839
+      PiranhaAttack_24: 1561185561
+      PiranhaAttack_25: 959287785
+      PiranhaAttack_3: 1026043041
+      PiranhaAttack_4: 597712488
+      PiranhaAttack_5: 566288528
+      PiranhaAttack_6: 474832269
+      PiranhaAttack_7: -424122640
+      PiranhaAttack_8: -2144567949
+      PiranhaAttack_9: 69288458
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
