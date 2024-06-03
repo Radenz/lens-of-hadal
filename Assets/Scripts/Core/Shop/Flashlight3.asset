@@ -19,5 +19,5 @@ MonoBehaviour:
   Gold: 450
   EnergyPowder: 15
   Seaweed: 30
-  ScrapMetal: 10
+  ScrapMetal: 8
   IsOneTimePurchase: 1

@@ -18,8 +18,8 @@ MonoBehaviour:
   Description: 'Light up the deep sea
 
     for 10 seconds'
-  Gold: 10
+  Gold: 100
   EnergyPowder: 2
-  Seaweed: 5
+  Seaweed: 2
   ScrapMetal: 0
   IsOneTimePurchase: 0

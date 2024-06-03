@@ -18,6 +18,6 @@ MonoBehaviour:
   Description: Provides 2x2 upgrade slots
   Gold: 800
   EnergyPowder: 15
-  Seaweed: 50
+  Seaweed: 20
   ScrapMetal: 3
   IsOneTimePurchase: 1
