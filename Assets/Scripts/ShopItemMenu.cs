@@ -75,6 +75,10 @@ public class ShopItemMenu : MonoBehaviour, IBind<ItemInstanceData>
 
         if (DisableOnAssemble)
             ConfigureLabels(false, false);
+        else
+        {
+            _assembleButton.Reset();
+        }
 
         if (_data.TryDowncast(out UpgradableItemData upgradableItemData))
             upgradableItemData.IsAssembled = true;

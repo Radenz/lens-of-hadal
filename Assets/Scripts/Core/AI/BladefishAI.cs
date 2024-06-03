@@ -13,6 +13,8 @@ public class BladefishAI : MonoBehaviour
     private float _damage = 30;
     [SerializeField]
     private float _attackCooldown;
+    [SerializeField]
+    private float _thrustPower = 20f;
 
     [Header("Others")]
     [SerializeField]
@@ -172,11 +174,11 @@ public class BladefishAI : MonoBehaviour
         _blade.enabled = true;
         Vector2 stabDirection = PlayerController.Instance.Position - _transform.position;
         stabDirection = stabDirection.normalized;
-        _rigidbody.velocity = stabDirection * 40f;
+        _rigidbody.velocity = stabDirection * _thrustPower;
         _rigidbody.drag = 5f;
         _animator.SetBool("IsAttacking", true);
 
-        await Awaitable.WaitForSecondsAsync(1f);
+        await Awaitable.WaitForSecondsAsync(1.5f);
         _animator.SetBool("IsAttacking", false);
         await Awaitable.WaitForSecondsAsync(_attackCooldown);
         AfterSwing();

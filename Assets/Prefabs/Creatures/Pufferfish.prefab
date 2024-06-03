@@ -156,7 +156,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2091877501
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -8389596254231219563, guid: 2880906d148e6c341b918ce1ccfa4106, type: 3}
   m_Color: {r: 1, g: 0.796458, b: 0, a: 1}
@@ -473,7 +473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _creature: {fileID: 11400000, guid: 285cae1764cf52b4fa02630648a0e709, type: 2}
   _scanProgressBarPrefab: {fileID: 2265630043084495933, guid: b818d12cacafa9d4fba70b000920323e, type: 3}
-  _scanDuration: 4
+  _scanDuration: 5
   _scanTime: 0
   _spriteRenderer: {fileID: 242234207415032011}
   _textOffset: 1

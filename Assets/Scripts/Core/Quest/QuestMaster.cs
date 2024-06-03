@@ -14,6 +14,8 @@ public class QuestMaster : Singleton<QuestMaster>
 
     [Header("Quest Settings")]
     [SerializeField]
+    private RectTransform _questContentTransform;
+    [SerializeField]
     private List<QuestData> _quests;
 
     [SerializeField]
@@ -31,7 +33,7 @@ public class QuestMaster : Singleton<QuestMaster>
         EventManager.Instance.QuestUnlocked += OnQuestUnlocked;
     }
 
-    private void OnQuestUnlocked(QuestData quest)
+    private async void OnQuestUnlocked(QuestData quest)
     {
         if (QuestManager.Instance.IsUnlocked(quest)) return;
 
@@ -45,6 +47,8 @@ public class QuestMaster : Singleton<QuestMaster>
         QuestDisplay display = obj.GetComponent<QuestDisplay>();
         display.Quest = quest;
         display.SetOffsetY(-_totalHeight);
+        await Awaitable.NextFrameAsync();
+        _questContentTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, _totalHeight + display.Height() + _topMargin);
     }
 
     [Button]

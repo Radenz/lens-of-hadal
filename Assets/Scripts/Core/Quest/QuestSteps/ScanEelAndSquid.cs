@@ -12,7 +12,7 @@ public class ScanEelAndSquid : QuestStep
 
     protected override string GetDescription()
     {
-        return $"Scan {_targetEel} Electric Eels ({_scannedEel}/{_targetEel})\nScan {_targetSquid} Giant Squids ({_scannedSquid}/{_targetSquid})";
+        return $"Scan {_targetEel} Electric Eels ({_scannedEel}/{_targetEel})\nScan {_targetSquid} Giant Squid ({_scannedSquid}/{_targetSquid})";
     }
 
     protected override void Start()

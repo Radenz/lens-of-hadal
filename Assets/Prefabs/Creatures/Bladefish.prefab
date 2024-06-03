@@ -158,7 +158,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2091877501
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -6450574622688271893, guid: 043272d888a6ece4bac0a2512fa0b11a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -677,8 +677,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f8c36ed9dd9fa341af94b0012d87d1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 50
+  _damage: 35
   _attackCooldown: 2
+  _thrustPower: 20
   _orientation: {fileID: 887548900048771928}
   _rigidbody: {fileID: 6562847590079970757}
   _detectionRange: {fileID: 5023998313401594405}
@@ -791,7 +792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _creature: {fileID: 11400000, guid: b145a32b3cf0079448e5cbdaaad8a123, type: 2}
   _scanProgressBarPrefab: {fileID: 2265630043084495933, guid: b818d12cacafa9d4fba70b000920323e, type: 3}
-  _scanDuration: 10
+  _scanDuration: 7.5
   _scanTime: 0
   _spriteRenderer: {fileID: 3122924831791938811}
   _textOffset: 1

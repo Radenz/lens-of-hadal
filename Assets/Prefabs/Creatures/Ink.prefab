@@ -63,7 +63,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _duration: 3
-  _spriteRenderer: {fileID: 0}
+  _spriteRenderer: {fileID: 7176838604789645224}
 --- !u!58 &5199079493644882481
 CircleCollider2D:
   m_ObjectHideFlags: 0

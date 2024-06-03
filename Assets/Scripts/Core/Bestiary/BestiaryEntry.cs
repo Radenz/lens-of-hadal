@@ -55,7 +55,7 @@ public class BestiaryEntry : MonoBehaviour, IBind<CreatureData>
     private void OnCreatureDNAGained(Creature creature, float dna)
     {
         if (creature != _creature) return;
-        _dnaBar.Value += Mathf.Min(_dnaBar.Value + dna, 100);
+        _dnaBar.Value = Mathf.Min(_dnaBar.Value + dna, 100);
     }
 
     public void Bind(CreatureData data)

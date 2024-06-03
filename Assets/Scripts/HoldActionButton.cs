@@ -82,6 +82,12 @@ public class HoldActionButton : MonoBehaviour, IPointerDownHandler, IPointerUpHa
         _label.text = _text;
     }
 
+    public void Reset()
+    {
+        _progressTime = 0;
+        _active = true;
+    }
+
     private void ClampProgressTime()
     {
         if (_progressTime < 0)
