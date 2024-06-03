@@ -27,6 +27,7 @@ public class StaticScannable : Scannable
         int scrapMetal = _scrapMetalReward.PickBetween();
 
         Announcer.Instance.AnnounceObjectScan(_sprite, energyPowder, seaweed, scrapMetal);
+        EventManager.Instance.RewardPlayer(energyPowder, seaweed, scrapMetal);
         LevelManager.Instance.AddExp(_expReward);
 
         Timer.Instance.SetTimer(Regenerate, _regenDuration);
