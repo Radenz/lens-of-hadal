@@ -23,6 +23,6 @@ MonoBehaviour:
   BestiarySpriteScale: 8
   ExpPerScan: 25
   DNAPerScan: {x: 100, y: 100}
-  EnergyPowderPerScan: {x: 1, y: 20}
-  SeaweedPerScan: {x: 1, y: 20}
-  ScrapMetalPerScan: {x: 0, y: 20}
+  EnergyPowderPerScan: {x: 3, y: 5}
+  SeaweedPerScan: {x: 2, y: 5}
+  ScrapMetalPerScan: {x: 0, y: 0}

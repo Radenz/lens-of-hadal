@@ -19,7 +19,7 @@ MonoBehaviour:
   OutlineSprite: {fileID: 0}
   BestiarySpriteScale: 4
   ExpPerScan: 28
-  DNAPerScan: {x: 10, y: 15}
-  EnergyPowderPerScan: {x: 1, y: 3}
+  DNAPerScan: {x: 20, y: 25}
+  EnergyPowderPerScan: {x: 10, y: 18}
   SeaweedPerScan: {x: 0, y: 0}
   ScrapMetalPerScan: {x: 0, y: 0}
