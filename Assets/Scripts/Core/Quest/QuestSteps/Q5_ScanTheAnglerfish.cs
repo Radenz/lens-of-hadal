@@ -22,6 +22,7 @@ public class Q5_ScanTheAnglerfish : QuestStep
     private GameObject _cutsceneLurePrefab;
 
     private bool _hasScannedAnglerfish = false;
+    private bool _isSpawned = false;
 
     protected override void Start()
     {
@@ -67,12 +68,14 @@ public class Q5_ScanTheAnglerfish : QuestStep
     private void OnPlayerEntered()
     {
         _boundCollider.enabled = true;
-        if (_anglerfish == null)
+        if (!_isSpawned)
             SpawnAnglerfish();
     }
 
     public async void SpawnAnglerfish()
     {
+        _isSpawned = true;
+
         GameObject vCamObject = GameObject.FindGameObjectWithTag("AnglerfishLairVCam");
         GameObject focusVCamObject = GameObject.FindGameObjectWithTag("AnglerfishLairFocusVCam");
         CinemachineVirtualCamera vCam = vCamObject.GetComponent<CinemachineVirtualCamera>();
@@ -82,7 +85,7 @@ public class Q5_ScanTheAnglerfish : QuestStep
         focusVCam.LookAt = cutsceneLure.transform;
         CameraManager.Instance.ChooseCamera(focusVCam);
 
-        await Awaitable.WaitForSecondsAsync(3f);
+        await Awaitable.WaitForSecondsAsync(2f);
 
         CameraManager.Instance.ChooseCamera(vCam);
 
