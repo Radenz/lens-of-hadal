@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 8851639878421427968}
   - component: {fileID: 242234207415032011}
   - component: {fileID: 3296768187321851452}
+  - component: {fileID: 6303886688980342285}
   m_Layer: 6
   m_Name: Sprite
   m_TagString: Creature
@@ -158,8 +159,8 @@ SpriteRenderer:
   m_SortingLayerID: 2091877501
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8389596254231219563, guid: 2880906d148e6c341b918ce1ccfa4106, type: 3}
-  m_Color: {r: 1, g: 0.796458, b: 0, a: 1}
+  m_Sprite: {fileID: -371740909335319690, guid: 135f64d3faf6f6c45a9fe5ed0c35b5ea, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -182,6 +183,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ai: {fileID: 7353464936212607631}
+--- !u!95 &6303886688980342285
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304549771817877261}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 976acc1f77d4c744b92bf71eb35c353a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2203635375368680294
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,6 +285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 25
   _rigidbody: {fileID: 7776202624563031484}
+  _spriteTransform: {fileID: 8851639878421427968}
   _inflatedHitboxTrigger: {fileID: 6135181778057644147}
   _detectionRange: {fileID: 8153870059508056893}
   _aggresionRange: {fileID: 2543846954983996035}

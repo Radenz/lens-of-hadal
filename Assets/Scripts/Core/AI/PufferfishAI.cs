@@ -10,6 +10,8 @@ public class PufferfishAI : MonoBehaviour
     [Header("Others")]
     [SerializeField]
     private Rigidbody2D _rigidbody;
+    [SerializeField]
+    private Transform _spriteTransform;
 
     [SerializeField]
     private RangeTrigger _inflatedHitboxTrigger;
@@ -131,11 +133,13 @@ public class PufferfishAI : MonoBehaviour
     private void OnDetectPlayer()
     {
         State = PufferfishState.Inflated;
+        _spriteTransform.localScale = new(1.2f, 1.2f, 1.2f);
     }
 
     private void OnLosePlayer()
     {
         State = PufferfishState.Roaming;
+        _spriteTransform.localScale = Vector3.one;
     }
 }
 
