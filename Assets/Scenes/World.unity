@@ -1052,8 +1052,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 6.76165, y: -2.2667484, z: 0}
-    m_Extent: {x: 87.62845, y: 34.30155, z: 0}
+    m_Center: {x: 6.7607994, y: -2.2665005, z: 0}
+    m_Extent: {x: 87.6277, y: 34.301903, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6304,8 +6304,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 16.398952, y: -84.630356, z: 0}
-    m_Extent: {x: 142.47075, y: 87.49965, z: 0}
+    m_Center: {x: 16.398148, y: -84.629295, z: 0}
+    m_Extent: {x: 142.47055, y: 87.4992, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17318,8 +17318,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 26.011505, y: -91.08075, z: 0}
-    m_Extent: {x: 125.3972, y: 36.87165, z: 0}
+    m_Center: {x: 26.01165, y: -91.08055, z: 0}
+    m_Extent: {x: 125.39785, y: 36.871346, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -19327,8 +19327,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 27.80835, y: -25.574148, z: 0}
-    m_Extent: {x: 122.89485, y: 59.720047, z: 0}
+    m_Center: {x: 27.807652, y: -25.574749, z: 0}
+    m_Extent: {x: 122.89586, y: 59.72035, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -20309,8 +20309,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 16.398449, y: -84.63, z: 0}
-    m_Extent: {x: 142.47075, y: 87.4988, z: 0}
+    m_Center: {x: 16.3984, y: -84.630196, z: 0}
+    m_Extent: {x: 142.4703, y: 87.4999, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -24774,7 +24774,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6023130571959099983, guid: 9e0ece510c175c04bb3e1baaa813990c, type: 3}
+  m_Sprite: {fileID: -2793882010698597865, guid: c23baa17c1142f742883caa4de883719, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
