@@ -18,11 +18,11 @@ public class Scannable : MonoBehaviour
     private bool _isActivelyScanned;
     private Transform _transform;
 
-    public bool IsScanned { get; private set; }
+    public bool IsScanned { get; protected set; }
     public Vector2 Position => _transform.position;
 
-    private GameObject _scanProgressBarContainer;
-    private ScanProgressBar _scanProgressBar;
+    protected GameObject _scanProgressBarContainer;
+    protected ScanProgressBar _scanProgressBar;
 
     [SerializeField]
     private SpriteRenderer _spriteRenderer;
@@ -50,7 +50,8 @@ public class Scannable : MonoBehaviour
     {
         _scanTime -= Time.deltaTime;
         _scanProgressBarContainer.GetComponent<ScanProgressBar>().SetProgress(ScanProgress);
-        EventManager.Instance.UpdateScanProgress(_creature.Id, ScanProgress);
+        if (_creature != null)
+            EventManager.Instance.UpdateScanProgress(_creature.Id, ScanProgress);
     }
 
     [Button]
@@ -74,7 +75,7 @@ public class Scannable : MonoBehaviour
         _scanProgressBarContainer.SetActive(false);
     }
 
-    public void FinishScan()
+    public virtual void FinishScan()
     {
         IsScanned = true;
         _scanProgressBar.HideText();

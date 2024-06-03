@@ -69,7 +69,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.6
+  m_Radius: 2
 --- !u!114 &1333719043066184815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,7 +481,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1.5
+  m_Radius: 4
 --- !u!114 &7889474229006490485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -570,9 +570,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2091877501
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8389596254231219563, guid: 2880906d148e6c341b918ce1ccfa4106, type: 3}
+  m_Sprite: {fileID: -3315128824855716793, guid: d70d1992ba024cf4e810eb07a34771f5, type: 3}
   m_Color: {r: 0, g: 0.946707, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -604,9 +604,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6038043974177487287}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9945da938e4f30243abc9d12269dec66, type: 2}
+  m_Controller: {fileID: 9100000, guid: 60e101c7ad3d15a47b269cd4b7795cea, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -719,7 +719,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 3
+  m_Radius: 6
 --- !u!114 &7847607436234664453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -941,7 +941,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 2
 --- !u!1 &8246098235971194726
 GameObject:
   m_ObjectHideFlags: 0
