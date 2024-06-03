@@ -8,7 +8,7 @@ public class FPSDisplay : MonoBehaviour
 
     private void Update()
     {
-        float fps = 1f / Time.deltaTime;
+        float fps = Time.deltaTime == 0 ? 60 : 1f / Time.deltaTime;
         int intFps = Mathf.RoundToInt(fps);
         _label.text = intFps.ToString();
     }
