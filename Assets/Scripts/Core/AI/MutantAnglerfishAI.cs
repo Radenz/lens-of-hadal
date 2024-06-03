@@ -15,7 +15,11 @@ public class MutantAnglerfishAI : MonoBehaviour
 
     [Header("Others")]
     [SerializeField]
+    private AutoOrientation _orientation;
+    [SerializeField]
     private Rigidbody2D _rigidbody;
+    [SerializeField]
+    private Animator _animator;
 
     [SerializeField]
     private Scannable _scannable;
@@ -51,6 +55,7 @@ public class MutantAnglerfishAI : MonoBehaviour
     private MutantAnglerfishState _state = MutantAnglerfishState.Hidden;
     private bool _isMoving = false;
     private bool _canAttack = false;
+    private bool _aiming = false;
 
     private ManagedTween _lightTween = new();
     private bool _isDestroyed = false;
@@ -79,6 +84,13 @@ public class MutantAnglerfishAI : MonoBehaviour
 
     private void Update()
     {
+        if (_aiming)
+        {
+            Vector2 direction = PlayerController.Instance.Position - _transform.position;
+            float angle = Vector2.SignedAngle(Vector2.right, direction);
+            _orientation.SetAngle(angle);
+        }
+
         if (_isMoving) return;
         if (_state == MutantAnglerfishState.Hidden)
         {
@@ -94,10 +106,13 @@ public class MutantAnglerfishAI : MonoBehaviour
         _isDestroyed = true;
     }
 
-    private void OnAttack()
+    private async void OnAttack()
     {
         if (!_canAttack) return;
+        _animator.SetBool("IsAttacking", true);
         PlayerController.Instance.Damage(_damage);
+        await Awaitable.WaitForSecondsAsync(1f);
+        _animator.SetBool("IsAttacking", false);
     }
 
     private Vector2 PickEmergePoint()
@@ -121,7 +136,10 @@ public class MutantAnglerfishAI : MonoBehaviour
         Tween shine = Shine();
         _lightTween.Kill();
         _lightTween.Play(shine);
+
+        _aiming = true;
         await shine.AsyncWaitForCompletion();
+        _aiming = false;
 
         Vector3 direction = _player.position - _transform.position;
         _rigidbody.AddForce(direction.normalized * _dashImpulse);

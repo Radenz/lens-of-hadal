@@ -16,6 +16,8 @@ public class AutoOrientation : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (_ai == null) return;
+
         Vector2 velocity = _ai.velocity;
         float angle = Vector2.SignedAngle(Vector2.right, velocity);
 

@@ -966,8 +966,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 6.7619514, y: -2.2663002, z: 0}
-    m_Extent: {x: 87.62785, y: 34.3019, z: 0}
+    m_Center: {x: 6.7614517, y: -2.2665997, z: 0}
+    m_Extent: {x: 87.62725, y: 34.3021, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5671,8 +5671,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 16.399052, y: -84.63005, z: 0}
-    m_Extent: {x: 142.47105, y: 87.50015, z: 0}
+    m_Center: {x: 16.399147, y: -84.629845, z: 0}
+    m_Extent: {x: 142.46976, y: 87.49935, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7439,15 +7439,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7033202919007977257, guid: ef566d26637c333419e4e4632a0d99ca, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.235
+      value: 17.195
       objectReference: {fileID: 0}
     - target: {fileID: 7033202919007977257, guid: ef566d26637c333419e4e4632a0d99ca, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -68.532
+      value: -68.413
       objectReference: {fileID: 0}
     - target: {fileID: 7033202919007977257, guid: ef566d26637c333419e4e4632a0d99ca, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.7228477
+      value: 12.26
       objectReference: {fileID: 0}
     - target: {fileID: 7033202919007977257, guid: ef566d26637c333419e4e4632a0d99ca, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9253,16 +9253,24 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 101.3, y: 53.2, z: 0}
+    - position: {x: 157.3, y: 50.2, z: 0}
       leftTangent: {x: 0.29803467, y: 0.57873917, z: 0}
-      rightTangent: {x: -1.4394073, y: -2.7946167, z: 0}
+      rightTangent: {x: -0.39649963, y: -0.7698097, z: 0}
       mode: 1
       height: 1
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 101.3, y: -105.8, z: 0}
-      leftTangent: {x: 0.093688965, y: 0.33917236, z: 0}
+    - position: {x: 188.3, y: -6.799999, z: 0}
+      leftTangent: {x: 0.04145813, y: 17.551785, z: 0}
+      rightTangent: {x: -0.109313965, y: -46.15732, z: 0}
+      mode: 1
+      height: 1
+      spriteIndex: 0
+      corner: 1
+      m_CornerMode: 1
+    - position: {x: 139.3, y: -120.8, z: 0}
+      leftTangent: {x: 0.06788635, y: 0.2457428, z: 0}
       rightTangent: {x: -0.011169434, y: -0.040649414, z: 0}
       mode: 1
       height: 1
@@ -9797,8 +9805,8 @@ SpriteShapeRenderer:
   - {fileID: -5580278955495141622, guid: 4035e5d9232a6b24fbc7cfe09dd62bff, type: 3}
   - {fileID: -5580278955495141622, guid: 4035e5d9232a6b24fbc7cfe09dd62bff, type: 3}
   m_LocalAABB:
-    m_Center: {x: -28.374817, y: -27.659355, z: 0}
-    m_Extent: {x: 130.14981, y: 81.38872, z: 0}
+    m_Center: {x: 15.126343, y: -34.77736, z: 0}
+    m_Extent: {x: 173.64859, y: 86.45662, z: 0}
   m_SpriteSortPoint: 0
 --- !u!224 &403307725 stripped
 RectTransform:
@@ -9955,11 +9963,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5794888017165219729, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.6
+      value: 3.1
       objectReference: {fileID: 0}
     - target: {fileID: 5794888017165219729, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.5
+      value: -6.2
       objectReference: {fileID: 0}
     - target: {fileID: 5794888017165219729, guid: 7ab9d62eeede872479a8a9a5e1caa1e0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11823,7 +11831,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.6, y: -6.5, z: -11.48}
+  m_LocalPosition: {x: 3.1, y: -6.2, z: -11.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15194,8 +15202,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 26.011951, y: -91.0804, z: 0}
-    m_Extent: {x: 125.397156, y: 36.872902, z: 0}
+    m_Center: {x: 26.0116, y: -91.08065, z: 0}
+    m_Extent: {x: 125.3972, y: 36.871452, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17031,8 +17039,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 27.968548, y: -37.2854, z: 0}
-    m_Extent: {x: 123.05534, y: 48.0091, z: 0}
+    m_Center: {x: 27.807903, y: -25.5735, z: 0}
+    m_Extent: {x: 122.8958, y: 59.7202, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17045,7 +17053,13 @@ MonoBehaviour:
   m_ShapePath:
   - {x: -85.08725, y: -74.68309, z: 0}
   - {x: 140.70375, y: -75.29412, z: 0}
-  - {x: 141.02467, y: -1.0903301, z: 0}
+  - {x: 139.70528, y: 21.99917, z: 0}
+  - {x: 69.954666, y: 24.147493, z: 0}
+  - {x: 46.70024, y: -11.476305, z: 0}
+  - {x: 30.042816, y: -10.321833, z: 0}
+  - {x: 14.869717, y: -17.578531, z: 0}
+  - {x: 15.694342, y: -35.720284, z: 0}
+  - {x: -6.4056053, y: -29.782984, z: 0}
   - {x: -84.914536, y: 0.72507095, z: 0}
 --- !u!4 &818501019
 Transform:
@@ -17726,8 +17740,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 16.399246, y: -84.630356, z: 0}
-    m_Extent: {x: 142.47095, y: 87.49965, z: 0}
+    m_Center: {x: 16.398647, y: -84.62995, z: 0}
+    m_Extent: {x: 142.47095, y: 87.49995, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -25776,7 +25790,7 @@ Transform:
   m_GameObject: {fileID: 1510408523}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.6, y: -6.5, z: -11.48}
+  m_LocalPosition: {x: 3.1, y: -6.2, z: -11.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -29381,6 +29395,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _quests:
+  - {fileID: 11400000, guid: c06508e44cc26b24886e6cc18f50856b, type: 2}
+  - {fileID: 11400000, guid: 4cfa1bc0c79eb374080f7f8c45ffb76f, type: 2}
+  - {fileID: 11400000, guid: f81c5eef547180b44bac4b810d65d481, type: 2}
+  - {fileID: 11400000, guid: 1c3380343f5818141b02947a71b6c8f8, type: 2}
   - {fileID: 11400000, guid: c5d074d84c004654eaccaeac3aa06506, type: 2}
 --- !u!114 &1671386529
 MonoBehaviour:

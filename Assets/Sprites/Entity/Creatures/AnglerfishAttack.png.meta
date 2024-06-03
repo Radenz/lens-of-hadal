@@ -1,0 +1,3502 @@
+fileFormatVersion: 2
+guid: 0b4d2197aebffeb45874eaf92e7e5af0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2622526100736911827
+    second: AnglerfishSwim_0
+  - first:
+      213: 9163616523622295853
+    second: AnglerfishSwim_1
+  - first:
+      213: -7752154838070944843
+    second: AnglerfishSwim_2
+  - first:
+      213: -3975618084632313201
+    second: AnglerfishSwim_3
+  - first:
+      213: -8339826971077515477
+    second: AnglerfishSwim_4
+  - first:
+      213: -8997762710503196072
+    second: AnglerfishSwim_5
+  - first:
+      213: -930902299094986783
+    second: AnglerfishSwim_6
+  - first:
+      213: -3645469293692331636
+    second: AnglerfishSwim_7
+  - first:
+      213: -8874073755519597323
+    second: AnglerfishSwim_8
+  - first:
+      213: -2434447963264022426
+    second: AnglerfishSwim_9
+  - first:
+      213: 823313452748510458
+    second: AnglerfishSwim_10
+  - first:
+      213: 8347205175768032518
+    second: AnglerfishSwim_11
+  - first:
+      213: 2045588551486300810
+    second: AnglerfishSwim_12
+  - first:
+      213: -9086839950586669531
+    second: AnglerfishSwim_13
+  - first:
+      213: -6772360565972441559
+    second: AnglerfishSwim_14
+  - first:
+      213: 4333363180875309773
+    second: AnglerfishSwim_15
+  - first:
+      213: 3173216998193864463
+    second: AnglerfishSwim_16
+  - first:
+      213: -6135493893831797124
+    second: AnglerfishSwim_17
+  - first:
+      213: -5089923852095375153
+    second: AnglerfishSwim_18
+  - first:
+      213: -5696495591044337334
+    second: AnglerfishSwim_19
+  - first:
+      213: 199111803298738811
+    second: AnglerfishSwim_20
+  - first:
+      213: 8589446709949309216
+    second: AnglerfishSwim_21
+  - first:
+      213: 4476837477645926534
+    second: AnglerfishSwim_22
+  - first:
+      213: 8403829698706260662
+    second: AnglerfishSwim_23
+  - first:
+      213: -7398805188248568191
+    second: AnglerfishSwim_24
+  - first:
+      213: -7210024311395491201
+    second: AnglerfishSwim_25
+  - first:
+      213: 8341420832513499251
+    second: AnglerfishSwim_26
+  - first:
+      213: 2539962433894751617
+    second: AnglerfishSwim_27
+  - first:
+      213: 5639621332799621845
+    second: AnglerfishSwim_28
+  - first:
+      213: 118370282308729172
+    second: AnglerfishSwim_29
+  - first:
+      213: 8895614173103366932
+    second: AnglerfishSwim_30
+  - first:
+      213: -8112714873892812357
+    second: AnglerfishSwim_31
+  - first:
+      213: -5652721081554961143
+    second: AnglerfishSwim_32
+  - first:
+      213: 2666979579471506049
+    second: AnglerfishSwim_33
+  - first:
+      213: -2178909258912404576
+    second: AnglerfishSwim_34
+  - first:
+      213: -6014808765113260931
+    second: AnglerfishSwim_35
+  - first:
+      213: 6214190312892730499
+    second: AnglerfishSwim_36
+  - first:
+      213: 2965742042467270044
+    second: AnglerfishSwim_37
+  - first:
+      213: -1596592453884605492
+    second: AnglerfishSwim_38
+  - first:
+      213: 8631452112369907275
+    second: AnglerfishSwim_39
+  - first:
+      213: -1047737097402019086
+    second: AnglerfishSwim_40
+  - first:
+      213: -8547029023948460205
+    second: AnglerfishSwim_41
+  - first:
+      213: 7535110019128107816
+    second: AnglerfishSwim_42
+  - first:
+      213: -6632922470834217010
+    second: AnglerfishSwim_43
+  - first:
+      213: 6210776758816614059
+    second: AnglerfishSwim_44
+  - first:
+      213: -242161113432897114
+    second: AnglerfishSwim_45
+  - first:
+      213: 2845149759393588659
+    second: AnglerfishSwim_46
+  - first:
+      213: 3092756102091833520
+    second: AnglerfishSwim_47
+  - first:
+      213: 4194131084298580703
+    second: AnglerfishSwim_48
+  - first:
+      213: -8340082720135210108
+    second: AnglerfishSwim_49
+  - first:
+      213: 341500552013814159
+    second: AnglerfishSwim_50
+  - first:
+      213: 4220605560946949034
+    second: AnglerfishSwim_51
+  - first:
+      213: -850239866727241559
+    second: AnglerfishSwim_52
+  - first:
+      213: 4429878589247200755
+    second: AnglerfishSwim_53
+  - first:
+      213: 2330718364463922019
+    second: AnglerfishSwim_54
+  - first:
+      213: 7262149896915311326
+    second: AnglerfishSwim_55
+  - first:
+      213: -6672212204324662764
+    second: AnglerfishSwim_56
+  - first:
+      213: 8583196066490325326
+    second: AnglerfishSwim_57
+  - first:
+      213: -3600968154113053186
+    second: AnglerfishSwim_58
+  - first:
+      213: -5648653117450989876
+    second: AnglerfishSwim_59
+  - first:
+      213: -1802354712709008339
+    second: AnglerfishSwim_60
+  - first:
+      213: 8458298835769357546
+    second: AnglerfishSwim_61
+  - first:
+      213: -8392435302032653588
+    second: AnglerfishSwim_62
+  - first:
+      213: -9115218339723383302
+    second: AnglerfishSwim_63
+  - first:
+      213: -6549168368932752890
+    second: AnglerfishSwim_64
+  - first:
+      213: -4635909278451853399
+    second: AnglerfishSwim_65
+  - first:
+      213: 9030782619026669435
+    second: AnglerfishSwim_66
+  - first:
+      213: 2787277650360333425
+    second: AnglerfishSwim_67
+  - first:
+      213: -36199246537806197
+    second: AnglerfishSwim_68
+  - first:
+      213: 1711335796212261518
+    second: AnglerfishSwim_69
+  - first:
+      213: 4472546261902438748
+    second: AnglerfishSwim_70
+  - first:
+      213: -6871573426002557774
+    second: AnglerfishSwim_71
+  - first:
+      213: -4146435508149773608
+    second: AnglerfishSwim_72
+  - first:
+      213: -1043118463868941214
+    second: AnglerfishSwim_73
+  - first:
+      213: -2367173771560551355
+    second: AnglerfishSwim_74
+  - first:
+      213: 2193938586988543480
+    second: AnglerfishSwim_75
+  - first:
+      213: -6920960245280671476
+    second: AnglerfishSwim_76
+  - first:
+      213: 828866167212305927
+    second: AnglerfishSwim_77
+  - first:
+      213: 180971780315229617
+    second: AnglerfishSwim_78
+  - first:
+      213: -6381539488792359860
+    second: AnglerfishSwim_79
+  - first:
+      213: 5995661354945345760
+    second: AnglerfishSwim_80
+  - first:
+      213: -8492952726777049568
+    second: AnglerfishSwim_81
+  - first:
+      213: 4820829598497001979
+    second: AnglerfishSwim_82
+  - first:
+      213: 4905012233485800893
+    second: AnglerfishSwim_83
+  - first:
+      213: -6507237428334912049
+    second: AnglerfishSwim_84
+  - first:
+      213: -9085075777296865453
+    second: AnglerfishSwim_85
+  - first:
+      213: -9051899626933562287
+    second: AnglerfishSwim_86
+  - first:
+      213: -2023227032117488089
+    second: AnglerfishSwim_87
+  - first:
+      213: 6146795352421270459
+    second: AnglerfishSwim_88
+  - first:
+      213: -2088491440642584521
+    second: AnglerfishSwim_89
+  - first:
+      213: -6152198478702746522
+    second: AnglerfishSwim_90
+  - first:
+      213: -6347728243911851944
+    second: AnglerfishSwim_91
+  - first:
+      213: 6225635177280289182
+    second: AnglerfishSwim_92
+  - first:
+      213: 1269420497463235957
+    second: AnglerfishSwim_93
+  - first:
+      213: -2061151272950659522
+    second: AnglerfishSwim_94
+  - first:
+      213: 4125337128729616064
+    second: AnglerfishSwim_95
+  - first:
+      213: 8135311024745428018
+    second: AnglerfishSwim_96
+  - first:
+      213: 8455617924179567729
+    second: AnglerfishSwim_97
+  - first:
+      213: 7711759714158030771
+    second: AnglerfishSwim_98
+  - first:
+      213: -2435484602695212673
+    second: AnglerfishSwim_99
+  - first:
+      213: -5067788007444099855
+    second: AnglerfishSwim_100
+  - first:
+      213: 688049302555687046
+    second: AnglerfishSwim_101
+  - first:
+      213: 6864887488772453012
+    second: AnglerfishSwim_102
+  - first:
+      213: 8666418375336492951
+    second: AnglerfishSwim_103
+  - first:
+      213: -6488649587224289165
+    second: AnglerfishSwim_104
+  - first:
+      213: 1398168786278344031
+    second: AnglerfishSwim_105
+  - first:
+      213: -8223204482331266565
+    second: AnglerfishSwim_106
+  - first:
+      213: -7517650781776587551
+    second: AnglerfishSwim_107
+  - first:
+      213: 4043914248953542474
+    second: AnglerfishSwim_108
+  - first:
+      213: -4688071941240701186
+    second: AnglerfishSwim_109
+  - first:
+      213: 2396506220005351675
+    second: AnglerfishSwim_110
+  - first:
+      213: -3791435997818571195
+    second: AnglerfishSwim_111
+  - first:
+      213: 5452274589307229677
+    second: AnglerfishSwim_112
+  - first:
+      213: -685651820211334326
+    second: AnglerfishSwim_113
+  - first:
+      213: -8037649305758920365
+    second: AnglerfishSwim_114
+  - first:
+      213: 5282204650679621242
+    second: AnglerfishSwim_115
+  - first:
+      213: -7673680459413925189
+    second: AnglerfishSwim_116
+  - first:
+      213: -2012849727732922443
+    second: AnglerfishSwim_117
+  - first:
+      213: -4001591248416079380
+    second: AnglerfishSwim_118
+  - first:
+      213: -2594244447770607894
+    second: AnglerfishSwim_119
+  - first:
+      213: 9043554768350089257
+    second: AnglerfishSwim_120
+  - first:
+      213: 5729465465183043424
+    second: AnglerfishSwim_121
+  - first:
+      213: 8459128107954863751
+    second: AnglerfishSwim_122
+  - first:
+      213: -5342274594489244753
+    second: AnglerfishSwim_123
+  - first:
+      213: -5928690863445174330
+    second: AnglerfishSwim_124
+  - first:
+      213: 6707509953174796920
+    second: AnglerfishSwim_125
+  - first:
+      213: 3724072834126209624
+    second: AnglerfishSwim_126
+  - first:
+      213: 54492330493834412
+    second: AnglerfishSwim_127
+  - first:
+      213: 1208909086100925038
+    second: AnglerfishSwim_128
+  - first:
+      213: 6143740036671450893
+    second: AnglerfishSwim_129
+  - first:
+      213: -7029535383718649111
+    second: AnglerfishSwim_130
+  - first:
+      213: 5673277040360399406
+    second: AnglerfishSwim_131
+  - first:
+      213: 7222846683424560779
+    second: AnglerfishSwim_132
+  - first:
+      213: 6595417896642389753
+    second: AnglerfishSwim_133
+  - first:
+      213: 2466588623539412577
+    second: AnglerfishSwim_134
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AnglerfishAttack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2800
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e759a0e82b92e41a94cd7200867a3a
+      internalID: 433401955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_1
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 2800
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 583d8c949ef01fc40b205d3e28d0b3e4
+      internalID: -1949431974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_2
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 2800
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c561fd0770d1c4441a760f73b2cd444a
+      internalID: -461302499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_3
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 2800
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a65432e2ff5144428c48da987cb812b
+      internalID: 308838382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_4
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 2800
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c2ce2466aebc1742931b89478586f15
+      internalID: 1925189204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_5
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 2800
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75e03cea8f48e6e468ee49aabc060c89
+      internalID: 1513206902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_6
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 2800
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 766a9c396a757df49ae0b74390b785bb
+      internalID: 1572411161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_7
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 2800
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71c44834ff7bb9e479a83fdbd3c4fcaa
+      internalID: 1050749706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_8
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 2800
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cc13f2d49122604a82c75e09b7cb6ec
+      internalID: -270639141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2600
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b17c7a7cfa43a3c428043a8111be505b
+      internalID: 2053385627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_10
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 2600
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 569d56108d7dd9546b1bb89bd7ca85aa
+      internalID: -1129469686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_11
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 2600
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e33a1900996c80f4fa17df66e593cb94
+      internalID: 1915829426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_12
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 2600
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d048f43a6441894999d4d591eb909ea
+      internalID: -34319605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_13
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 2600
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09a17b75ee1277f4498adcdcf47830c1
+      internalID: -667380539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_14
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 2600
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a32100f99a6df742ad91d891219ea73
+      internalID: 480774965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_15
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 2600
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89546c75b6e6f1d45ba83d366de2496d
+      internalID: -675178932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_16
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 2600
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb0c06b9da1918047a2fa605407b62e5
+      internalID: 1399071917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_17
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 2600
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63837ac09ea731049be3d972ef1b469b
+      internalID: -428881452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2400
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d39ddd4e132ad074a81a98b3fdeaac7f
+      internalID: 951524805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_19
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 2400
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c09a2885590e334bbb0ae7f993f722a
+      internalID: 883799920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_20
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 2400
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44c32ee4763d21a47a1bd69641910741
+      internalID: -1685181052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_21
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 2400
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df38727aedf991d408fad082ce423b57
+      internalID: -1368568461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_22
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 2400
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71861e0e7c7ba994291d1d0b71ddb505
+      internalID: 649549313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_23
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 2400
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00594f49c969fb744b4e1281fd7575f7
+      internalID: -1930999897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_24
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 2400
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d942a48f3031a9147aac47d88e006aa8
+      internalID: 1376270073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_25
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 2400
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 870f9af4989eabf45abc54a38c388421
+      internalID: 2117277136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_26
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 2400
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a808d99f3e60086409a5b5ac27f4e921
+      internalID: 2065445035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2200
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a410bb46e21880498a2604c62a44f64
+      internalID: -1755378943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_28
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 2200
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47720858cc3609948ae25b1fed62d42e
+      internalID: -2020914178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_29
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 2200
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 641168b20c74fa64c9c7efac90c6fd71
+      internalID: 1021583979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_30
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 2200
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d3f5a84326d90e4684f04c8008c208e
+      internalID: 1790443545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_31
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 2200
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0237d66725a8ea499023db2d527ae7e
+      internalID: -1059379584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_32
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 2200
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c965da9f165d084fa550e03cebffa6e
+      internalID: -39942214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_33
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 2200
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c2bdcabce31efa4e9a63a0a6444ac34
+      internalID: -1713359898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_34
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 2200
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 565c2279dd9bcdc418df0f6f285b6bc8
+      internalID: -1203034261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_35
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 2200
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09b900d4d7ecbbb4daa38646b2253cb8
+      internalID: -545108929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2000
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5e13bb36fc60544d8c1a6b46ecf4e98
+      internalID: 704541214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_37
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 2000
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a06f38c5258bbf5458315ea58cb98f07
+      internalID: 377789273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_38
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 2000
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bd6e1bcabab0fa4a82af30253db53de
+      internalID: -1986216856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_39
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 2000
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ed1e1b52d2d5ab44ad00dca959e09f6
+      internalID: 343988519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_40
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 2000
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3a832000c2baa3479d2089d76cc2686
+      internalID: 2019763102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_41
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 2000
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2008ab914a888b64e9a71d15bcd76b13
+      internalID: 47686675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_42
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 2000
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 552a98e93f052364eb5612db216d33c2
+      internalID: -1910167514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_43
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 2000
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c823fa0f00346e418d1c910fbc28886
+      internalID: 758570878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_44
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 2000
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cb492086058311498f916e22da818f7
+      internalID: -2027562239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1800
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d841fc485e9bde4aaa8b4a3d478530e
+      internalID: -586232236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_46
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 1800
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 873a294a8b646a240b57d6700f35bd47
+      internalID: 852745888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_47
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 1800
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0587e3e3b4e04cb4d96e45207cd9a503
+      internalID: 34616157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_48
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 1800
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 483b1bbf7252af747a0be144a92bf1ef
+      internalID: -1043825782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_49
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 1800
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 172526faeec2aa441b06aca0cfaf3a2f
+      internalID: -229851854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_50
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 1800
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af43f7b874f6084478dbe20f101bf828
+      internalID: -1850864129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_51
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 1800
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54286bbea68c5c1438577545e8eb6b49
+      internalID: -712812302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_52
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 1800
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd828b11888dfc741b102f7fbbac66c6
+      internalID: -2110607763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_53
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 1800
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa945f4f41cd82a489d6ee7a8b8465fa
+      internalID: -193731370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1600
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aba7b83dd4158840bcde29a117b46a8
+      internalID: -902066581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_55
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 1600
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa73d8050979d6e428676affb1585c0b
+      internalID: 930341235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_56
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 1600
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ed5e019835891547a06b23b0fd773fd
+      internalID: 1530365353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_57
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 1600
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b57e898e554b868418232ee91744baa1
+      internalID: -550582378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_58
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 1600
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4fb90ee604d7df4294aebf059bfa0ca
+      internalID: -1100506705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_59
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 1600
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 170a175082e93fb45b4ace6b705767d1
+      internalID: -1953003053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_60
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 1600
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91bea5736712a9c429f919e8bce56190
+      internalID: -1643369718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_61
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 1600
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04dd5aeb85a69424ea94343ac1d43ee3
+      internalID: 1301481346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_62
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 1600
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e9202134e3a0ed46b752d6a1d35ce00
+      internalID: -1079297739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1400
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab7cdf29b720e4458c78019a3b646f4
+      internalID: 1460491575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_64
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 1400
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36cd9645da8dc0b41b636c3d12656feb
+      internalID: -851826218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_65
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 1400
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f49ab8a5578297a4cb845d5c47536f9e
+      internalID: 1701489070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_66
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 1400
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd881733ee9982d4da0c3a10412f188b
+      internalID: 1974848410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_67
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 1400
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 823d1238372aea247a1d728aba6547bc
+      internalID: -1796215917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_68
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 1400
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10908a730f738b344a86d6fe717b8ddf
+      internalID: -393324338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_69
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 1400
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72c833e45f0120f4c8ebd2ec4bd2e3d4
+      internalID: 2025340870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_70
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 1400
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a729b208528460b4a9e103d201cb8c53
+      internalID: 843087853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_71
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 1400
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11e889906dbe3ad4791c11d19fef5da3
+      internalID: 968502977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1200
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca0fec53701ff1146907345b400371f9
+      internalID: -2065427759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_73
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 1200
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ddc1fa51c188e4f9b897e76bf7be48
+      internalID: 107403010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_74
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 1200
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a98aff7269b96a34bada75b80e89a1f7
+      internalID: -1844169677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_75
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 1200
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0738390a09ebb24e9b5ca21ae4015bc
+      internalID: 821112005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_76
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 1200
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6e15f890c73cd042974de98a99135ae
+      internalID: -627531865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_77
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 1200
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21a4f1e95e5abc5458b1b107658422c1
+      internalID: 899850072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_78
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 1200
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca1ba72096331694fb9187b13ff4c1b7
+      internalID: -417221659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_79
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 1200
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f41f7d149ac9b34a821799832696efc
+      internalID: -1052330927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_80
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 1200
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3edcf6642466d5e44a4ded5f5ea1e6c3
+      internalID: -1933063420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_81
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73ea08df7cea4dc4d914429f457732c7
+      internalID: 1420660825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_82
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 1000
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 352c7d62977166c4cb7781594cf4393f
+      internalID: 595215238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_83
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 1000
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1225215f317a7a54ca3026321e64938d
+      internalID: 1659532771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_84
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 1000
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2115cd225c9dcb42803ba0b83736743
+      internalID: 1891069874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_85
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 1000
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8fc34680538bad42af1a754be805697
+      internalID: 64093242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_86
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 1000
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d204bdf73c43094498a080dbfe2e93d7
+      internalID: -2104869408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_87
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 1000
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ade2f788004c00e459e2bcf459e72ed0
+      internalID: -1588930714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_88
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 1000
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ecb19824eeaf5e49900a5fc2241bdfd
+      internalID: 2005257411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_89
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 1000
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 077eeac3600ab6c478afae57637f895d
+      internalID: 944505299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b0a40ae91f0584f9c5a7d425c0e6f9
+      internalID: 462828837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_91
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 800
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 200c77097f17d8c42b7c79e351944371
+      internalID: -1820047254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_92
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 800
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b03c2f4dda95d564facd3b935db7dc46
+      internalID: 44314820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_93
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 800
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1764301d8bd4ea478822595593a961a
+      internalID: -1847728943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_94
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 800
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ebf3077d642526408024ea5b30bc16a
+      internalID: -170263916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_95
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 800
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c551aab0cb1d79469b4745e430533cd
+      internalID: 2118720577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_96
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 800
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 679bb024601cf85409460046759ded7f
+      internalID: 1048040255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_97
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 800
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6310573d27e0de843bac9e8fa2475b84
+      internalID: -631480695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_98
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 800
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0288b1c077617124d9a8474bc9b9045d
+      internalID: 1620202722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_99
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e5132a7ef917944e9b98167e490dfa2
+      internalID: -909531085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_100
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 600
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c37995b10d1a77439103e79343147f2
+      internalID: -2018739008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_101
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 600
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 278f61a5901863c4c8abe0a70c4524b5
+      internalID: -1657789009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_102
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 600
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee37e6dffae8bd54c9b48c08074a0e34
+      internalID: 1469666005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_103
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 600
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8e421c2e3608784f901d7ef9f85589d
+      internalID: -1808242702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_104
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 600
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef1033a2be3624848b8858f2ea081d54
+      internalID: 340560243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_105
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 600
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca0a9b4d914dacd48b8fcec74cbcc473
+      internalID: -1385477951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_106
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 600
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dff0ccb7affad1443b9fd572c24e4137
+      internalID: 1907551432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_107
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 600
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86dabb612d12212449eab6aa755aa67d
+      internalID: -1872345383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_108
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e44b263cf8c963a498927d62ace18b73
+      internalID: 874950902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_109
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 400
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a69bdb4f1f645794898a2b82d89ad4b6
+      internalID: 1543244718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_110
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 400
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8b229ef34e32c849bf6dc6177e581d2
+      internalID: -640387745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_111
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 400
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21ff4c567f242e44c8f622af8107e1c2
+      internalID: 529498217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_112
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 400
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a36b3387dd60ea24c911e08fdf842776
+      internalID: -839835634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_113
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 400
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d285fce69317f0488241c3419b05766
+      internalID: -422679893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_114
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 400
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09543bbbbdf3c3e419618d3c7a599b08
+      internalID: -266195167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_115
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 400
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6776bd5688966ea4bba7be75ab95d8b5
+      internalID: 1916778171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_116
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 400
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e74bf266e4ffe14c927378696721fcf
+      internalID: -1651663020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_117
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13574799817bdbf498d23c44ebf8794d
+      internalID: -496838602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_118
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 200
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1afbd8d49a7009f49a2518c96c68ad03
+      internalID: -1279612737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_119
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 200
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00204da48143c964a966f2f00aeef6da
+      internalID: 839719578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_120
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 200
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aeb0cd4efd475243927226fad5ccb6e
+      internalID: -1492713283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_121
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 200
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94166caf67926c944b8706da36221b2c
+      internalID: 2086936788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_122
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 200
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b90a6cea68b988489b3ed176ea45be0
+      internalID: -1777036551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_123
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 200
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 860511ed7202e3048a225ce004f2a094
+      internalID: 260385231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_124
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 200
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39b9baadf30bf29409c19213836b75a8
+      internalID: 1359658848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_125
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 200
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23f2394591ba66b46807c5b551db8b32
+      internalID: 869106728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_126
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a8a939568fa4304ca0e597ee763c724
+      internalID: 487467737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_127
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 0
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 480022ce0b0ae4042890ad1ee436d822
+      internalID: -1535587728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_128
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 0
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 542cb0e87f53b2c40ab9804216d67b3d
+      internalID: 536017703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_129
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 0
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46b49b61ac952f145a43d325aa30951e
+      internalID: 238419117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_130
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 0
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0984ae257b74ec459fdfc897cc993e8
+      internalID: 1903331213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_131
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 0
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8852e910bf758e348ae46d7f82f2b314
+      internalID: 478962683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_132
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 0
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d81979092f23bf49925bc32c85999da
+      internalID: 923660417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_133
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 0
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06853ab3e51f9a7498ea6945a32d6f16
+      internalID: -672483367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnglerfishAttack_134
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 0
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c401a4b82c61cbe4386d6d50cc020fa8
+      internalID: -685228531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: bc93245043982d1468b551f10d49a216
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      AnglerfishAttack_0: 433401955
+      AnglerfishAttack_1: -1949431974
+      AnglerfishAttack_10: -1129469686
+      AnglerfishAttack_100: -2018739008
+      AnglerfishAttack_101: -1657789009
+      AnglerfishAttack_102: 1469666005
+      AnglerfishAttack_103: -1808242702
+      AnglerfishAttack_104: 340560243
+      AnglerfishAttack_105: -1385477951
+      AnglerfishAttack_106: 1907551432
+      AnglerfishAttack_107: -1872345383
+      AnglerfishAttack_108: 874950902
+      AnglerfishAttack_109: 1543244718
+      AnglerfishAttack_11: 1915829426
+      AnglerfishAttack_110: -640387745
+      AnglerfishAttack_111: 529498217
+      AnglerfishAttack_112: -839835634
+      AnglerfishAttack_113: -422679893
+      AnglerfishAttack_114: -266195167
+      AnglerfishAttack_115: 1916778171
+      AnglerfishAttack_116: -1651663020
+      AnglerfishAttack_117: -496838602
+      AnglerfishAttack_118: -1279612737
+      AnglerfishAttack_119: 839719578
+      AnglerfishAttack_12: -34319605
+      AnglerfishAttack_120: -1492713283
+      AnglerfishAttack_121: 2086936788
+      AnglerfishAttack_122: -1777036551
+      AnglerfishAttack_123: 260385231
+      AnglerfishAttack_124: 1359658848
+      AnglerfishAttack_125: 869106728
+      AnglerfishAttack_126: 487467737
+      AnglerfishAttack_127: -1535587728
+      AnglerfishAttack_128: 536017703
+      AnglerfishAttack_129: 238419117
+      AnglerfishAttack_13: -667380539
+      AnglerfishAttack_130: 1903331213
+      AnglerfishAttack_131: 478962683
+      AnglerfishAttack_132: 923660417
+      AnglerfishAttack_133: -672483367
+      AnglerfishAttack_134: -685228531
+      AnglerfishAttack_14: 480774965
+      AnglerfishAttack_15: -675178932
+      AnglerfishAttack_16: 1399071917
+      AnglerfishAttack_17: -428881452
+      AnglerfishAttack_18: 951524805
+      AnglerfishAttack_19: 883799920
+      AnglerfishAttack_2: -461302499
+      AnglerfishAttack_20: -1685181052
+      AnglerfishAttack_21: -1368568461
+      AnglerfishAttack_22: 649549313
+      AnglerfishAttack_23: -1930999897
+      AnglerfishAttack_24: 1376270073
+      AnglerfishAttack_25: 2117277136
+      AnglerfishAttack_26: 2065445035
+      AnglerfishAttack_27: -1755378943
+      AnglerfishAttack_28: -2020914178
+      AnglerfishAttack_29: 1021583979
+      AnglerfishAttack_3: 308838382
+      AnglerfishAttack_30: 1790443545
+      AnglerfishAttack_31: -1059379584
+      AnglerfishAttack_32: -39942214
+      AnglerfishAttack_33: -1713359898
+      AnglerfishAttack_34: -1203034261
+      AnglerfishAttack_35: -545108929
+      AnglerfishAttack_36: 704541214
+      AnglerfishAttack_37: 377789273
+      AnglerfishAttack_38: -1986216856
+      AnglerfishAttack_39: 343988519
+      AnglerfishAttack_4: 1925189204
+      AnglerfishAttack_40: 2019763102
+      AnglerfishAttack_41: 47686675
+      AnglerfishAttack_42: -1910167514
+      AnglerfishAttack_43: 758570878
+      AnglerfishAttack_44: -2027562239
+      AnglerfishAttack_45: -586232236
+      AnglerfishAttack_46: 852745888
+      AnglerfishAttack_47: 34616157
+      AnglerfishAttack_48: -1043825782
+      AnglerfishAttack_49: -229851854
+      AnglerfishAttack_5: 1513206902
+      AnglerfishAttack_50: -1850864129
+      AnglerfishAttack_51: -712812302
+      AnglerfishAttack_52: -2110607763
+      AnglerfishAttack_53: -193731370
+      AnglerfishAttack_54: -902066581
+      AnglerfishAttack_55: 930341235
+      AnglerfishAttack_56: 1530365353
+      AnglerfishAttack_57: -550582378
+      AnglerfishAttack_58: -1100506705
+      AnglerfishAttack_59: -1953003053
+      AnglerfishAttack_6: 1572411161
+      AnglerfishAttack_60: -1643369718
+      AnglerfishAttack_61: 1301481346
+      AnglerfishAttack_62: -1079297739
+      AnglerfishAttack_63: 1460491575
+      AnglerfishAttack_64: -851826218
+      AnglerfishAttack_65: 1701489070
+      AnglerfishAttack_66: 1974848410
+      AnglerfishAttack_67: -1796215917
+      AnglerfishAttack_68: -393324338
+      AnglerfishAttack_69: 2025340870
+      AnglerfishAttack_7: 1050749706
+      AnglerfishAttack_70: 843087853
+      AnglerfishAttack_71: 968502977
+      AnglerfishAttack_72: -2065427759
+      AnglerfishAttack_73: 107403010
+      AnglerfishAttack_74: -1844169677
+      AnglerfishAttack_75: 821112005
+      AnglerfishAttack_76: -627531865
+      AnglerfishAttack_77: 899850072
+      AnglerfishAttack_78: -417221659
+      AnglerfishAttack_79: -1052330927
+      AnglerfishAttack_8: -270639141
+      AnglerfishAttack_80: -1933063420
+      AnglerfishAttack_81: 1420660825
+      AnglerfishAttack_82: 595215238
+      AnglerfishAttack_83: 1659532771
+      AnglerfishAttack_84: 1891069874
+      AnglerfishAttack_85: 64093242
+      AnglerfishAttack_86: -2104869408
+      AnglerfishAttack_87: -1588930714
+      AnglerfishAttack_88: 2005257411
+      AnglerfishAttack_89: 944505299
+      AnglerfishAttack_9: 2053385627
+      AnglerfishAttack_90: 462828837
+      AnglerfishAttack_91: -1820047254
+      AnglerfishAttack_92: 44314820
+      AnglerfishAttack_93: -1847728943
+      AnglerfishAttack_94: -170263916
+      AnglerfishAttack_95: 2118720577
+      AnglerfishAttack_96: 1048040255
+      AnglerfishAttack_97: -631480695
+      AnglerfishAttack_98: 1620202722
+      AnglerfishAttack_99: -909531085
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
