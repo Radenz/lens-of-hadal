@@ -458,6 +458,7 @@ MonoBehaviour:
     Key: 9
     StaminaCost: 15
   _dashSFX: {fileID: 0}
+  _animator: {fileID: 9068213177843874828}
 --- !u!58 &8522675064028508534
 CircleCollider2D:
   m_ObjectHideFlags: 0

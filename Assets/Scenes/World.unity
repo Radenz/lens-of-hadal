@@ -1052,8 +1052,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 6.7614517, y: -2.2665997, z: 0}
-    m_Extent: {x: 87.62725, y: 34.3021, z: 0}
+    m_Center: {x: 6.7618523, y: -2.2667484, z: 0}
+    m_Extent: {x: 87.62785, y: 34.30155, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6046,8 +6046,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 16.399147, y: -84.629845, z: 0}
-    m_Extent: {x: 142.46976, y: 87.49935, z: 0}
+    m_Center: {x: 16.398098, y: -84.62945, z: 0}
+    m_Extent: {x: 142.4704, y: 87.499245, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -16263,8 +16263,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 26.0116, y: -91.08065, z: 0}
-    m_Extent: {x: 125.3972, y: 36.871452, z: 0}
+    m_Center: {x: 26.011349, y: -91.08085, z: 0}
+    m_Extent: {x: 125.396545, y: 36.87265, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -18186,8 +18186,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 27.8079, y: -25.574799, z: 0}
-    m_Extent: {x: 122.8955, y: 59.7203, z: 0}
+    m_Center: {x: 27.807297, y: -25.573599, z: 0}
+    m_Extent: {x: 122.895096, y: 59.720695, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -19082,8 +19082,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 16.398647, y: -84.62995, z: 0}
-    m_Extent: {x: 142.47095, y: 87.49995, z: 0}
+    m_Center: {x: 16.399048, y: -84.6301, z: 0}
+    m_Extent: {x: 142.46985, y: 87.4986, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

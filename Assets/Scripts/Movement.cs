@@ -16,6 +16,8 @@ public class Movement : MonoBehaviour
     private DashProperties _dashProperties;
     [SerializeField]
     private AudioClip _dashSFX;
+    [SerializeField]
+    private Animator _animator;
 
     private PlayerInputActions _playerInputActions;
 
@@ -57,6 +59,7 @@ public class Movement : MonoBehaviour
     private void FixedUpdate()
     {
         _direction = _playerInputActions.World.Move.ReadValue<Vector2>();
+        _animator.SetBool("IsMoving", _direction.magnitude != 0);
 
         if (_isDashing || _isBouncing) return;
 
