@@ -133,13 +133,13 @@ public class PufferfishAI : MonoBehaviour
     private void OnDetectPlayer()
     {
         State = PufferfishState.Inflated;
-        _spriteTransform.localScale = new(1.2f, 1.2f, 1.2f);
+        _spriteTransform.localScale = new(2.4f, 2.4f, 2.4f);
     }
 
     private void OnLosePlayer()
     {
         State = PufferfishState.Roaming;
-        _spriteTransform.localScale = Vector3.one;
+        _spriteTransform.localScale = new(2f, 2f, 2f);
     }
 }
 

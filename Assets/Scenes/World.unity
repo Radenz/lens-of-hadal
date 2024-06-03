@@ -1052,8 +1052,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 6.7607994, y: -2.2665005, z: 0}
-    m_Extent: {x: 87.6277, y: 34.301903, z: 0}
+    m_Center: {x: 6.7621994, y: -2.2667007, z: 0}
+    m_Extent: {x: 87.6279, y: 34.3013, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6304,8 +6304,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 16.398148, y: -84.629295, z: 0}
-    m_Extent: {x: 142.47055, y: 87.4992, z: 0}
+    m_Center: {x: 16.399002, y: -84.62935, z: 0}
+    m_Extent: {x: 142.4707, y: 87.499146, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17318,8 +17318,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 26.01165, y: -91.08055, z: 0}
-    m_Extent: {x: 125.39785, y: 36.871346, z: 0}
+    m_Center: {x: 26.0121, y: -91.0812, z: 0}
+    m_Extent: {x: 125.3976, y: 36.8723, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -19327,8 +19327,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 27.807652, y: -25.574749, z: 0}
-    m_Extent: {x: 122.89586, y: 59.72035, z: 0}
+    m_Center: {x: 27.808147, y: -25.5736, z: 0}
+    m_Extent: {x: 122.89455, y: 59.7201, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -20309,8 +20309,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 16.3984, y: -84.630196, z: 0}
-    m_Extent: {x: 142.4703, y: 87.4999, z: 0}
+    m_Center: {x: 16.3987, y: -84.6299, z: 0}
+    m_Extent: {x: 142.4707, y: 87.4993, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
