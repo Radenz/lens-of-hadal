@@ -1052,8 +1052,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 6.761898, y: -2.2668, z: 0}
-    m_Extent: {x: 87.627396, y: 34.3022, z: 0}
+    m_Center: {x: 6.7626, y: -2.26655, z: 0}
+    m_Extent: {x: 87.6277, y: 34.300552, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6396,8 +6396,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 16.398903, y: -84.62955, z: 0}
-    m_Extent: {x: 142.46991, y: 87.499146, z: 0}
+    m_Center: {x: 16.398098, y: -84.630005, z: 0}
+    m_Extent: {x: 142.4704, y: 87.4993, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17990,8 +17990,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 26.011604, y: -91.0797, z: 0}
-    m_Extent: {x: 125.398, y: 36.8719, z: 0}
+    m_Center: {x: 26.010849, y: -91.08075, z: 0}
+    m_Extent: {x: 125.397446, y: 36.87265, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -20231,8 +20231,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 27.807598, y: -25.57435, z: 0}
-    m_Extent: {x: 122.895096, y: 59.720253, z: 0}
+    m_Center: {x: 27.8084, y: -25.5738, z: 0}
+    m_Extent: {x: 122.895706, y: 59.7212, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -21213,8 +21213,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 16.399555, y: -84.630005, z: 0}
-    m_Extent: {x: 142.47086, y: 87.5002, z: 0}
+    m_Center: {x: 16.398804, y: -84.630646, z: 0}
+    m_Extent: {x: 142.4709, y: 87.49945, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -30551,7 +30551,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -0.00012207031, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1445394196
@@ -30693,7 +30693,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96

@@ -626,7 +626,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _creature: {fileID: 11400000, guid: 1be2889e9eb2e684587507a9ff5b7c3b, type: 2}
   _scanProgressBarPrefab: {fileID: 2265630043084495933, guid: b818d12cacafa9d4fba70b000920323e, type: 3}
-  _scanDuration: 45
+  _scanDuration: 20
   _scanTime: 0
   _spriteRenderer: {fileID: 3122924831791938811}
   _textOffset: 5
