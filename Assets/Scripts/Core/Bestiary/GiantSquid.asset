@@ -19,9 +19,9 @@ MonoBehaviour:
     The gigantic size is
     a result of evolution and adaptation to live in such a dark area with barely
     no food.'
-  Sprite: {fileID: -8389596254231219563, guid: 2880906d148e6c341b918ce1ccfa4106, type: 3}
+  Sprite: {fileID: -3315128824855716793, guid: d70d1992ba024cf4e810eb07a34771f5, type: 3}
   OutlineSprite: {fileID: 0}
-  BestiarySpriteScale: 8
+  BestiarySpriteScale: 4
   ExpPerScan: 40
   DNAPerScan: {x: 40, y: 80}
   EnergyPowderPerScan: {x: 5, y: 40}

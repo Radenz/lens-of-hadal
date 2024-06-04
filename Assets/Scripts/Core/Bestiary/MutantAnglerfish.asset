@@ -19,9 +19,9 @@ MonoBehaviour:
 
     The mutant anglerfish is very aggressive against
     any moving thing.'
-  Sprite: {fileID: -8389596254231219563, guid: 2880906d148e6c341b918ce1ccfa4106, type: 3}
+  Sprite: {fileID: -795696644, guid: c58df9f8d7b6c174bab9cf9a32323e63, type: 3}
   OutlineSprite: {fileID: 0}
-  BestiarySpriteScale: 8
+  BestiarySpriteScale: 4
   ExpPerScan: 0
   DNAPerScan: {x: 100, y: 100}
   EnergyPowderPerScan: {x: 5, y: 10}
