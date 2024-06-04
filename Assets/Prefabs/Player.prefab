@@ -454,7 +454,7 @@ MonoBehaviour:
   _dashProperties:
     Speed: 6
     Duration: 0.3
-    Cooldown: 2
+    Cooldown: 1.5
     Key: 9
     StaminaCost: 10
   _dashSFX: {fileID: 0}
@@ -570,7 +570,7 @@ MonoBehaviour:
   _invincibilityDuration: 2
   _recoveryDelay: 5
   _recoverySpeed: 10
-  _staminaRecoveryDelay: 3
+  _staminaRecoveryDelay: 2.5
   _staminaRecoverySpeed: 15
   _respawnPoint: {fileID: 0}
   _hudContainer: {fileID: 0}
