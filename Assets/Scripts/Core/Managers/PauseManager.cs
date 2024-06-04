@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PauseManager : Singleton<PauseManager>
@@ -20,6 +21,11 @@ public class PauseManager : Singleton<PauseManager>
         Time.timeScale = 1f;
         _pauseMenu.SetActive(false);
         _scrim.raycastTarget = false;
+    }
+
+    public void GotoMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void Quit()
