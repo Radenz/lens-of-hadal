@@ -1052,8 +1052,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 6.7616005, y: -2.2661514, z: 0}
-    m_Extent: {x: 87.6268, y: 34.30135, z: 0}
+    m_Center: {x: 6.761799, y: -2.2661, z: 0}
+    m_Extent: {x: 87.627304, y: 34.3015, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6396,8 +6396,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 16.398499, y: -84.62945, z: 0}
-    m_Extent: {x: 142.4702, y: 87.499855, z: 0}
+    m_Center: {x: 16.39825, y: -84.62975, z: 0}
+    m_Extent: {x: 142.47025, y: 87.49905, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17990,8 +17990,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 26.010601, y: -91.0805, z: 0}
-    m_Extent: {x: 125.3974, y: 36.873, z: 0}
+    m_Center: {x: 26.01165, y: -91.0809, z: 0}
+    m_Extent: {x: 125.39745, y: 36.872597, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -20231,8 +20231,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 27.807499, y: -25.574049, z: 0}
-    m_Extent: {x: 122.8956, y: 59.720848, z: 0}
+    m_Center: {x: 27.807999, y: -25.5742, z: 0}
+    m_Extent: {x: 122.895996, y: 59.7205, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -20914,7 +20914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExpAmount: 0
-  ItemId: 
+  ItemId: F
   AnglerfishSpawnPoint: {x: 3.9, y: -60, z: -1.5}
   AnglerfishPrefab: {fileID: 3045631472178583046, guid: 96dd582b47747e142b060074cc968cb0, type: 3}
 --- !u!4 &837221057
@@ -21213,8 +21213,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 16.39825, y: -84.63055, z: 0}
-    m_Extent: {x: 142.47055, y: 87.49905, z: 0}
+    m_Center: {x: 16.398754, y: -84.62945, z: 0}
+    m_Extent: {x: 142.47095, y: 87.49935, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
