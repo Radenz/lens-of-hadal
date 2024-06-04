@@ -1052,8 +1052,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 6.761902, y: -2.26655, z: 0}
-    m_Extent: {x: 87.6269, y: 34.30095, z: 0}
+    m_Center: {x: 6.761898, y: -2.2668, z: 0}
+    m_Extent: {x: 87.627396, y: 34.3022, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6396,8 +6396,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 16.3989, y: -84.63, z: 0}
-    m_Extent: {x: 142.4705, y: 87.498695, z: 0}
+    m_Center: {x: 16.398903, y: -84.62955, z: 0}
+    m_Extent: {x: 142.46991, y: 87.499146, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7575,7 +7575,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &278150187
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17990,8 +17990,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 26.011349, y: -91.08025, z: 0}
-    m_Extent: {x: 125.39784, y: 36.87265, z: 0}
+    m_Center: {x: 26.011604, y: -91.0797, z: 0}
+    m_Extent: {x: 125.398, y: 36.8719, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -20231,8 +20231,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 27.808052, y: -25.573349, z: 0}
-    m_Extent: {x: 122.89495, y: 59.71985, z: 0}
+    m_Center: {x: 27.807598, y: -25.57435, z: 0}
+    m_Extent: {x: 122.895096, y: 59.720253, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -21213,8 +21213,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 16.399204, y: -84.6297, z: 0}
-    m_Extent: {x: 142.4705, y: 87.498795, z: 0}
+    m_Center: {x: 16.399555, y: -84.630005, z: 0}
+    m_Extent: {x: 142.47086, y: 87.5002, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
