@@ -22,8 +22,8 @@ MonoBehaviour:
   Sprite: {fileID: -3315128824855716793, guid: d70d1992ba024cf4e810eb07a34771f5, type: 3}
   OutlineSprite: {fileID: 0}
   BestiarySpriteScale: 4
-  ExpPerScan: 40
+  ExpPerScan: 30
   DNAPerScan: {x: 40, y: 80}
-  EnergyPowderPerScan: {x: 5, y: 40}
-  SeaweedPerScan: {x: 5, y: 20}
+  EnergyPowderPerScan: {x: 5, y: 10}
+  SeaweedPerScan: {x: 5, y: 10}
   ScrapMetalPerScan: {x: 0, y: 0}

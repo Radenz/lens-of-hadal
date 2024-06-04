@@ -17,7 +17,7 @@ MonoBehaviour:
   Name: Scanner Lv 2
   Description: +20% Radius
   Gold: 250
-  EnergyPowder: 2
-  Seaweed: 10
+  EnergyPowder: 10
+  Seaweed: 2
   ScrapMetal: 0
   IsOneTimePurchase: 1

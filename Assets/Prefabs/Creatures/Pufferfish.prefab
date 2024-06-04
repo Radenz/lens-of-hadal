@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c185f82e11476034e90e0f68b4618e5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 25
+  _damage: 20
   _rigidbody: {fileID: 7776202624563031484}
   _spriteTransform: {fileID: 8851639878421427968}
   _inflatedHitboxTrigger: {fileID: 6135181778057644147}

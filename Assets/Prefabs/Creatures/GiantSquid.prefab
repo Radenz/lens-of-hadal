@@ -84,7 +84,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _creature: {fileID: 11400000, guid: 8d44e6b2a0db4aa408edb821183d79be, type: 2}
   _scanProgressBarPrefab: {fileID: 2265630043084495933, guid: b818d12cacafa9d4fba70b000920323e, type: 3}
-  _scanDuration: 10
+  _scanDuration: 5
   _scanTime: 0
   _spriteRenderer: {fileID: 520938186015157012}
   _textOffset: 1
