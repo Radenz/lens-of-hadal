@@ -97,6 +97,7 @@ public class Q5_ScanTheAnglerfish : QuestStep
     {
         Destroy(_anglerfish);
         Destroy(_bossfightBar);
+        _isSpawned = false;
         _anglerfish = null;
     }
 
