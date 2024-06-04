@@ -48,7 +48,7 @@ public class QuestMaster : Singleton<QuestMaster>
         display.Quest = quest;
         display.SetOffsetY(-_totalHeight);
         await Awaitable.NextFrameAsync();
-        _questContentTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, _totalHeight + display.Height() + _topMargin);
+        _questContentTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, _totalHeight + display.Height() + 400 + _topMargin);
     }
 
     [Button]
