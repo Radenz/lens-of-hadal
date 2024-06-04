@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 077c5e9fdb71d49469dd2c69d06bdeb3
+guid: b38a9685297989240b8fe5a9c2811acb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4849012609474686122
-    second: Flare_0
+      213: -3988769855312385993
+    second: Gold_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,22 +113,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Flare_0
+      name: Gold_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 26
-        width: 74
-        height: 74
+        x: 2
+        y: 2
+        width: 25
+        height: 27
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6531fdc09b8d4bcb0800000000000000
-      internalID: -4849012609474686122
+      spriteID: 738a15333fa05a8c0800000000000000
+      internalID: -3988769855312385993
       vertices: []
       indices: 
       edges: []
@@ -136,7 +136,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 1bfba5ea586577d4b86229099b05cdc4
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -144,7 +144,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Flare_0: -4849012609474686122
+      Gold_0: -3988769855312385993
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

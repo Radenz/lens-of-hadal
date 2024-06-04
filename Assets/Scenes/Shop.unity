@@ -783,7 +783,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 297831781}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -4375,7 +4375,7 @@ PrefabInstance:
     - target: {fileID: 487575630510424531, guid: 82145f3f6773ba843bb05c1250017a2f, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+      objectReference: {fileID: -3988769855312385993, guid: b38a9685297989240b8fe5a9c2811acb, type: 3}
     - target: {fileID: 487575630510424531, guid: 82145f3f6773ba843bb05c1250017a2f, type: 3}
       propertyPath: m_Color.b
       value: 0
