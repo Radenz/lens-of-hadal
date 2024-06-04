@@ -1052,8 +1052,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 6.7621994, y: -2.2667007, z: 0}
-    m_Extent: {x: 87.6279, y: 34.3013, z: 0}
+    m_Center: {x: 6.7612, y: -2.2672997, z: 0}
+    m_Extent: {x: 87.6272, y: 34.3013, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6304,8 +6304,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 16.399002, y: -84.62935, z: 0}
-    m_Extent: {x: 142.4707, y: 87.499146, z: 0}
+    m_Center: {x: 16.399197, y: -84.6297, z: 0}
+    m_Extent: {x: 142.4699, y: 87.4996, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17318,8 +17318,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 26.0121, y: -91.0812, z: 0}
-    m_Extent: {x: 125.3976, y: 36.8723, z: 0}
+    m_Center: {x: 26.0116, y: -91.08045, z: 0}
+    m_Extent: {x: 125.396805, y: 36.871246, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -19327,8 +19327,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 27.808147, y: -25.5736, z: 0}
-    m_Extent: {x: 122.89455, y: 59.7201, z: 0}
+    m_Center: {x: 27.807999, y: -25.5744, z: 0}
+    m_Extent: {x: 122.8954, y: 59.7202, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -20309,8 +20309,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 16.3987, y: -84.6299, z: 0}
-    m_Extent: {x: 142.4707, y: 87.4993, z: 0}
+    m_Center: {x: 16.3984, y: -84.6295, z: 0}
+    m_Extent: {x: 142.47049, y: 87.4991, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
