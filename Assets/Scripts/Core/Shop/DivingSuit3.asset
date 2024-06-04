@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20356fd78a2563c45af99904580ebc12, type: 3}
   m_Name: DivingSuit3
   m_EditorClassIdentifier: 
-  Sprite: {fileID: -285346849858095890, guid: b52d61028a0ba544baea0c58a23efa8c, type: 3}
+  Sprite: {fileID: -1672163156837633514, guid: b67c6f4d39d36454890a89023b985ddc, type: 3}
   Id: DivingSuit3
   Name: Diving Suit Lv 3
   Description: Provides 2x2 upgrade slots

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20356fd78a2563c45af99904580ebc12, type: 3}
   m_Name: Scanner3
   m_EditorClassIdentifier: 
-  Sprite: {fileID: -285346849858095890, guid: b52d61028a0ba544baea0c58a23efa8c, type: 3}
+  Sprite: {fileID: 8736235079828217468, guid: 8b8099fc069f51d4f9e8a6020dd48b5a, type: 3}
   Id: Scanner3
   Name: Scanner Lv 3
   Description: +40% Radius

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20356fd78a2563c45af99904580ebc12, type: 3}
   m_Name: SonarDrone
   m_EditorClassIdentifier: 
-  Sprite: {fileID: -285346849858095890, guid: b52d61028a0ba544baea0c58a23efa8c, type: 3}
+  Sprite: {fileID: -8208395574503935361, guid: 98c98b92562c8f746af012464ab4f6df, type: 3}
   Id: SonarDrone
   Name: Sonar Drone
   Description: Detects nearby creatures
