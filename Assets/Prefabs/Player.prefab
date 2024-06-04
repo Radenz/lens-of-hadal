@@ -456,7 +456,7 @@ MonoBehaviour:
     Duration: 0.3
     Cooldown: 2
     Key: 9
-    StaminaCost: 15
+    StaminaCost: 10
   _dashSFX: {fileID: 0}
   _animator: {fileID: 9068213177843874828}
 --- !u!58 &8522675064028508534
